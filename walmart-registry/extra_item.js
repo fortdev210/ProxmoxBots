@@ -1,4 +1,4 @@
-const PuppeteerBase = require("../lib/puppeteer");
+const PuppeteerBase = require("../lib/puppeeteer");
 
 class ExtraItemHandler extends PuppeteerBase {
   constructor(customerInfo) {
@@ -70,3 +70,5 @@ class ExtraItemHandler extends PuppeteerBase {
     }
   }
 }
+
+module.exports = ExtraItemHandler;
