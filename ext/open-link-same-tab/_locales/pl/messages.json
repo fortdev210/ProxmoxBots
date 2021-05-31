@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Stronie:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Dodaj do czarnej listy"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Dodaj do białej listy"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Anuluj"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Strona internetowa została dodana do czarnej listy"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Strona internetowa została dodana do białej listy"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Strona internetowa znajduje się na czarnej liście"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Strona internetowa znajduje się na białej liście"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Brak danych"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Dodaj do czarnej/białej listy"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Czarna lista"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Zamknij"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Otwórz link w tej karcie"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Przekonwertuj linków na stronach internetowych"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Przekonwertuj linków"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Pokaż pozycję »Otwórz link w tej karcie« w menu kontekstowym"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Wyczyść zaznaczenie"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Powoduj linki aby otworzyć w tej samej karcie"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Opcje"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Przywróć domyślne"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Ograniczaj do białej listy"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Biała lista"
+	}
+}

@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Website:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Zur schwarzen Liste hinzufügen"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Zur weißen Liste hinzufügen"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Abbrechen"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Die Website wurde der schwarzen Liste hinzugefügt"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Die Website wurde der weißen Liste hinzugefügt"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Die Website ist bereits in der schwarzen Liste"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Die Website ist bereits in der weißen Liste"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Die gespeicherten Daten fehlen"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Zur schwarzen/weißen Liste hinzufügen"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Schwarze Liste"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Schließen"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Link im selben Tab öffnen"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Links in Webseiten konvertieren"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Links konvertieren"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Der Kontextmenüpunkt \"Link im selben Tab öffnen\" anzeigen"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Auswahl löschen"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Es verursacht Links im selben Tab zu öffnen"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Optionen"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Auf Standardwerte zurücksetzen"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Auf die weißgelisteten Webseiten beschränken"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Weiße Liste"
+	}
+}

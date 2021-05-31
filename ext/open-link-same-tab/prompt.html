@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title data-i18n-text="prompt_title">Open link in same tab</title>
+<style type="text/css">
+html:not(#messagePage) {
+	user-select: none;
+	-moz-user-select: none;
+	min-width: 300px;
+}
+div#messageDiv {font-size: 1.3em;}
+div#inputDiv {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	margin: 14px 0 12px 0;
+	max-width: 400px;
+}
+div#inputDiv>span {flex: 0 0 auto;}
+input#hostnameInput {
+	flex: 1 1 auto;
+ 	-webkit-margin-start: 6px;
+ 	-moz-margin-start: 6px;
+}
+span.buttonSpan {
+	display: inline-block;
+	margin: 6px 0;
+	white-space: nowrap;
+}
+span.buttonSpan:not(:last-child) {
+	-webkit-margin-end: 10px;
+	-moz-margin-end: 10px;
+}
+</style>
+<script src="prompt.js" defer></script>
+</head>
+
+<body>
+<div id="inputDiv">
+<span data-i18n-text="prompt_input_label">&nbsp;</span>
+<input type="text" id="hostnameInput" spellcheck="false" autocomplete="off" required disabled>
+</div>
+<div>
+<span class="buttonSpan">
+<button type="button" id="blacklistButton" disabled data-i18n-text="blacklist_button">&nbsp;</button>
+</span>
+<span class="buttonSpan">
+<button type="button" id="whitelistButton" disabled data-i18n-text="whitelist_button">&nbsp;</button>
+</span>
+</div>
+<div>
+<span class="buttonSpan">
+<button type="button" id="cancelButton" data-i18n-text="cancel_button">&nbsp;</button>
+</span>
+</div>
+</body>
+
+</html>

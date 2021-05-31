@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Nettsted:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Legg til i svartelisten"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Legg til i hvitelisten"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Avbryt"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Nettstedet ble lagt til i svartelisten"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Nettstedet ble lagt til i hvitelisten"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Nettstedet er allerede på svartelisten"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Nettstedet er allerede på hvitelisten"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Lagrede dataene mangler"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Legg til i svartelisten eller hvitliste"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Svarteliste"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Lukk"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Åpne linken i denne fane"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Konverter linker på websider"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Konverter linker"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Vis kontekstmenyelementet \"Åpne linken i denne fane\""
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Slet valg"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Forårsaker linker til å åpne i samme fane"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Alternativer"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Gjenopprett standardinnstillingene"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Begrens til hvitelisten"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Hviteliste"
+	}
+}

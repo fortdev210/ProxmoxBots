@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Веб-сайт:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Добавить в чёрный список"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Добавить в белый список"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Отмена"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Веб-сайт был добавлен в чёрный список"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Веб-сайт был добавлен в белый список"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Веб-сайт уже включен в чёрный список"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Веб-сайт уже включен в белый список"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Сохраненные данные отсутствуют"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Добавить в чёрный/белый список"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Чёрный список"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Закрыть"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Открыть ссылку в этой вкладке"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Конвертировать ссылки внутри веб-страницах"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Конвертировать ссылки"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Показывать пункт «Открыть ссылку в этой вкладке» в контекстном меню"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Удалить выделение"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Заставлять ссылки открываются в той же вкладке"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Параметры"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Сбросить параметры"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Ограничить на веб-сайты в белом списке"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Белый список"
+	}
+}

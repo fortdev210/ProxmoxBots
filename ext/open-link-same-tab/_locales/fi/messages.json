@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Verkkosivusto:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Lisää mustalle listalle"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Lisää valkoiselle listalle"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Peruuta"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Verkkosivusto lisättiin mustalle listalle"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Verkkosivusto lisättiin valkoiselle listalle"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Verkkosivusto on jo mustalla listalla"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Verkkosivusto on jo valkoisella listalla"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Tallennetut tiedot puuttuvat"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Lisää mustalle/valkoiselle listalle"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Musta lista"
+	},
+	"close_button": {
+		"description": "Close",
+ 		"message": "Sulje"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Avaa linkki samassa välilehdessä"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Muunna linkit verkkosivuissa"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Muunna linkit"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Näytä kontekstivalikko kohta \"Avaa linkki samassa välilehdessä\""
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Poista valinta"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Se aiheuttaa linkit avautumaan samassa välilehteen"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Asetukset"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Palauta oletus"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Käytä valkoinen lista"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Valkoinen lista"
+	}
+}

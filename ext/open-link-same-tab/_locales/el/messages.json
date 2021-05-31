@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Ιστότοπος:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Προσθήκη στη μαύρη λίστα"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Προσθήκη στη λευκή λίστα"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Ακύρωση"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Ο ιστότοπος προστέθηκε στη μαύρη λίστα"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Ο ιστότοπος προστέθηκε στη λευκή λίστα"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Ο ιστότοπος βρίσκεται ήδη στη μαύρη λίστα"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Ο ιστότοπος βρίσκεται ήδη στη λευκή λίστα"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Τα αποθηκευμένα δεδομένα λείπουν"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Προσθήκη στη μαύρη/λευκή λίστα"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Μαύρη λίστα"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Κλείσιμο"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Άνοιγμα συνδέσμου σε αυτήν καρτέλα"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Μετατροπή συνδέσμων βρέθηκαν σε ιστοσελίδες"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Μετατροπή συνδέσμων"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Εμφάνιση της στοιχείο «Άνοιγμα συνδέσμου σε αυτήν καρτέλα» στο μενού περιβάλλοντος"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Διαγραφή επιλογής"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Αυτό προκαλεί το άνοιγμα των συνδέσεων στην ίδια καρτέλα"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Επιλογές"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Επαναφορά προεπιλογών"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Περιορισμός σε λευκή λίστα"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Λευκή λίστα"
+	}
+}

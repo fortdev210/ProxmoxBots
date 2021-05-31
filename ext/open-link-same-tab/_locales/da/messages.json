@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Websted:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Tilføj til sortlisten"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Tilføj til hvidlisten"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Annuller"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Websted tilføjet til sortlisten"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Websted tilføjet til hvidlisten"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Websted er allerede sortlistet"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Websted er allerede hvidlistet"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Gemte data mangler"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Tilføj til sortlisten eller hvidlisten"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Sortliste"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Luk"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Åbn link i dette fane"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Konverter links i websider"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Konverter links"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Vis den kontekst menupunktet \"Åbn link i dette fane\""
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Slet markerede"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Forårsage links til at åbne i samme fane"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Valgmuligheder"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Gendan standarder"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Begræns til hvidliste"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Hvidliste"
+	}
+}

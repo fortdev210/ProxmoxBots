@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "Canvas Fingerprint Generator",
+  "version" : "1.0",
+  "description": "Creates a unique and persistent noise that masks your real canvas fingerprint",
+   "permissions": [ "webNavigation", "tabs", "storage", "notifications", "http://*/*", "https://*/*"],
+  "icons": { "16": "img/16x16.png", "48": "img/48x48.png", "128": "img/128x128.png" },
+  "browser_action": {
+    "default_icon": "img/16x16.png",
+    "default_title": "Create unique canvas fingerprint",
+    "default_popup": "html/panel.html"
+  },
+  "background": {
+    "scripts": [
+      "js/md5.js",
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["*://*/*"],
+      "js": ["js/content.js"],
+      "all_frames": true
+    }
+  ],
+  "options_page": "html/options.html",
+  "manifest_version": 2
+}
