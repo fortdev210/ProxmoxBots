@@ -8,6 +8,7 @@ async function main() {
     const flagInstance = new Flag_Order();
     const dsOrders = await dbInstance.getOrders();
     console.log(`Get ${dsOrders.length} ds orders in total.`.bgGreen);
+    console.log(dsOrders)
     for (let i =0; i < dsOrders.length; i++) {
         const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
         const currentOrderInfo = await dbInstance.getOrderDetails();
