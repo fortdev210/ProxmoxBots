@@ -267,6 +267,14 @@ class ExtraItemHandler extends PuppeteerBase {
       // await this.luminatiProxyManager('ON');
       await this.page.reload();
       await this.signInWalmart();
+      const captchaDetected = await this.checkCaptcha(5000);
+      if (captchaDetected){
+        console.log('Use another proxy to bypass captcha...')
+        // await this.luminatiProxyManager('OFF');
+        // await this.luminatiProxyManager('ON');
+        await this.page.reload();
+        await this.signInWalmart();
+      }
     } 
     console.log('Successfully signed in, registering...');
     await this.registerCustomerInfo();
@@ -278,6 +286,7 @@ class ExtraItemHandler extends PuppeteerBase {
       await this.closePage();
       await this.addPrimaryItem();
       await this.addExtraItem();
+      await this.closeBrowser();
     }
     
   }
