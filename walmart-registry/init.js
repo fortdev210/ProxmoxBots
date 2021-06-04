@@ -7,13 +7,21 @@ async function main() {
   const dbInstance = new STLPRO_MANAGER();
   const flagInstance = new Flag_Order();
   const dsOrders = await dbInstance.getOrders();
+  await dbInstance.closeBrowser();
   if (dsOrders.length) {
     console.log(`Get ${dsOrders.length} ds orders in total.`.bgGreen);
     console.log(dsOrders);
-    for (let i = 0; i < dsOrders.length; i++) {
+    for (let i = 0; i < 1; i++) {
       const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
       const currentOrderInfo = await dbInstance.getOrderDetails();
       console.log(currentOrderInfo);
+      if (currentOrderInfo.extraItem !== 'N/A') {
+        const extraItemHandler = new ExtraItemHandler(currentOrderInfo)
+        extraItemHandler.browser = dbInstance.browser;
+        await extraItemHandler.process();
+      } else {
+
+      }
     }
   } else {
     console.log(`No orders at the moment. Restarting in 10 minutes...`.bgGreen);

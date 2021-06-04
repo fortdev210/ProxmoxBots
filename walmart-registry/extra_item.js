@@ -10,8 +10,8 @@ class ExtraItemHandler extends PuppeteerBase {
   }
 
   async goSignInPage() {
-    await this.init();
-    await this.luminatiProxyManager("ON");
+    await this.openNewPage();
+    // await this.luminatiProxyManager("ON");
     await this.openLink(this.link);
     await this.waitForLoadingElement(
       '[data-automation-id="signup-sign-in-btn"]'
@@ -68,6 +68,11 @@ class ExtraItemHandler extends PuppeteerBase {
       console.log("Old Signin Page...");
       await this.fillOldSignInForm();
     }
+  }
+
+  async process() {
+    await this.goSignInPage();
+    await this.signInWalmart();
   }
 }
 
