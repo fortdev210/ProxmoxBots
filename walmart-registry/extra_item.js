@@ -149,14 +149,22 @@ class ExtraItemHandler extends PuppeteerBase {
 
   async verifyAddress() {
     try {
-      await this.waitForLoadingElement('[class*="alert-warning"]');
+      await this.page.waitForXPath(
+        '//*[contains(text(), "This information is required. Please provide a shipping address.")]',
+        { timeout: 10000 }
+      );
+      await this.sleep(1000);
       await this.clickButton('[data-automation-id="address-form-submit"]');
     } catch (error) {
       console.log("No address warning");
     }
     try {
-      await this.waitForLoadingElement('[class="validation-wrap"]', 20000);
+      await this.page.waitForXPath(
+        '//*[contains(text(), "We can\'t verify this address. Want to save it anyway?")]',
+        { timeout: 10000 }
+      );
       console.log("Verify address");
+      await this.sleep(1000);
       await this.clickButton('[class*="button-save-address"]');
     } catch (error) {
       console.log("No address error");
@@ -182,6 +190,73 @@ class ExtraItemHandler extends PuppeteerBase {
     });
   }
 
+  async checkRegisterStatus() {
+    await this.sleep(5000);
+    const created = await this.page.evaluate(() => {
+      const link = window.location.href;
+      return (
+        link ===
+        "https://www.walmart.com/lists/manage-events-registry-items?created"
+      );
+    });
+    return created
+  }
+
+  async addPrimaryItem() {
+    const itemLink = `http://www.walmart.com/ip/${this.customerInfo.primaryItem}?selected=true`;
+    await this.openNewPage();
+    await this.openLink(itemLink);
+    //--- click registry button ---//
+    await this.waitForLoadingElement('[class*="AddToRegistry-text"]', 30000);
+    await this.sleep(1500);
+    await this.clickButton('[class*="AddToRegistry-text"]');
+    await this.waitForLoadingElement('[class="Registry-btn-row"]');
+    await this.page.evaluate(() => {
+      document
+      .querySelector('[class="Registry-btn-row"]')
+      .querySelector("button")
+      .click();
+    })
+    console.log("Add To Registry Button Clicked");
+    await this.waitForLoadingElement('[class="select-field"]');
+    await this.sleep(1500);
+    await this.clickButton('[data-tl-id="cta_add_to_cart_button"]');
+    console.log("Primary Item Added");
+
+    ///--- Add qty in the cart ---///
+    if (this.customerInfo.qty !== "1") {
+      console.log("Add qty");
+      try {
+        await this.openLink("https://www.walmart.com/cart");
+        await this.waitForLoadingElement('[class*="field-input "]', 45000);
+        const dropDowns = await this.page.$$('[class*="field-input "]');
+        const purchased = dropDowns[0];
+        await purchased.focus();
+        await this.page.keyboard.type(customerInfo.qty);
+      } catch (error) {
+        console.log("Should reload the page");
+        await this.page.reload();
+        await this.waitForLoadingElement('[class*="field-input "]', 45000);
+        const dropDowns = await this.page.$$('[class*="field-input "]');
+        const purchased = dropDowns[0];
+        await purchased.focus();
+        await this.page.keyboard.type(customerInfo.qty);
+      }
+    }
+  }
+
+  async addExtraItem() {
+    const extraItemLink = `http://www.walmart.com/ip/${this.customerInfo.extraItem}?selected=true`;
+    await this.openNewPage();
+    await this.openLink(extraItemLink);
+    await this.waitForLoadingElement(
+      '[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]'
+    );
+    await this.sleep(2000);
+    await this.clickButton('[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]');
+    console.log('Extra item added.');
+  }
+
   async process() {
     await this.goSignInPage();
     await this.signInWalmart();
@@ -197,6 +272,14 @@ class ExtraItemHandler extends PuppeteerBase {
     await this.registerCustomerInfo();
     await this.verifyAddress();
     await this.makeRegistryPublic();
+    const registered = await this.checkRegisterStatus();
+    if (registered) {
+      console.log('Successfully registered.');
+      await this.closePage();
+      await this.addPrimaryItem();
+      await this.addExtraItem();
+    }
+    
   }
 }
 
