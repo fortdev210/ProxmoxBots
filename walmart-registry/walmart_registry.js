@@ -246,7 +246,7 @@ class WalmartRegistry extends PuppeteerBase {
     await this.waitForLoadingElement('[class*="AddToRegistry-text"]', 30000);
     await this.sleep(1500);
     await this.clickButton('[class*="AddToRegistry-text"]');
-    await this.waitForLoadingElement('[class="Registry-btn-row"]');
+    await this.waitForLoadingElement('[class="Registry-btn-row"]', 30000);
     await this.page.evaluate(() => {
       document
         .querySelector('[class="Registry-btn-row"]')
@@ -268,7 +268,7 @@ class WalmartRegistry extends PuppeteerBase {
         const dropDowns = await this.page.$$('[class*="field-input "]');
         const purchased = dropDowns[0];
         await purchased.focus();
-        await this.page.keyboard.type(customerInfo.qty);
+        await this.page.keyboard.type(this.customerInfo.qty);
       } catch (error) {
         console.log("Should reload the page");
         await this.page.reload();
@@ -276,7 +276,7 @@ class WalmartRegistry extends PuppeteerBase {
         const dropDowns = await this.page.$$('[class*="field-input "]');
         const purchased = dropDowns[0];
         await purchased.focus();
-        await this.page.keyboard.type(customerInfo.qty);
+        await this.page.keyboard.type(this.customerInfo.qty);
       }
     }
   }
@@ -301,20 +301,22 @@ class WalmartRegistry extends PuppeteerBase {
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Use another proxy to bypass captcha...");
-      // await this.luminatiProxyManager('OFF');
-      // await this.luminatiProxyManager('ON');
+      await this.luminatiProxyManager('OFF');
+      await this.luminatiProxyManager('ON');
       await this.page.reload();
       await this.signInWalmart();
       const captchaDetected = await this.checkCaptcha(5000);
       if (captchaDetected) {
         console.log("Use another proxy to bypass captcha...");
-        // await this.luminatiProxyManager('OFF');
-        // await this.luminatiProxyManager('ON');
+        await this.luminatiProxyManager('OFF');
+        await this.luminatiProxyManager('ON');
         await this.page.reload();
         await this.signInWalmart();
       }
     }
     console.log("Successfully signed in, registering...");
+    await this.sleep(2000);
+    await this.luminatiProxyManager('OFF');
     await this.registerCustomerInfo();
     await this.verifyAddress();
     await this.makeRegistryPublic();
@@ -334,15 +336,15 @@ class WalmartRegistry extends PuppeteerBase {
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Use another proxy to bypass captcha...");
-      // await this.luminatiProxyManager('OFF');
-      // await this.luminatiProxyManager('ON');
+      await this.luminatiProxyManager('OFF');
+      await this.luminatiProxyManager('ON');
       await this.page.reload();
       await this.fillSignUpForm();
       const captchaDetected = await this.checkCaptcha(5000);
       if (captchaDetected) {
         console.log("Use another proxy to bypass captcha...");
-        // await this.luminatiProxyManager('OFF');
-        // await this.luminatiProxyManager('ON');
+        await this.luminatiProxyManager('OFF');
+        await this.luminatiProxyManager('ON');
         await this.page.reload();
         await this.fillSignUpForm();
       }
@@ -350,6 +352,8 @@ class WalmartRegistry extends PuppeteerBase {
       await this.checkAlreadyExist();
     }
     console.log("Successfully signed up, registering...");
+    await this.sleep(2000);
+    await this.luminatiProxyManager('OFF');
     await this.registerCustomerInfo();
     await this.verifyAddress();
     await this.makeRegistryPublic();

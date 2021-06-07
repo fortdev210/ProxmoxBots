@@ -10,7 +10,7 @@ async function main() {
   if (dsOrders.length) {
     console.log(`Get ${dsOrders.length} ds orders in total.`.bgGreen);
     console.log(dsOrders);
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < dsOrders.length; i++) {
       const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
       const currentOrderInfo = await dbInstance.getOrderDetails();
       const flagInstance = new Flag_Order(dsOrders[i]);
@@ -27,7 +27,11 @@ async function main() {
         console.log("Order moved to Walmart Preprocessed")
       } else {
         console.log('No extra item found, registering...');
+        await flagInstance.putInProcessingFlag();
+        console.log("Order moved to Walmart Processing")
         await registryHandler.noExtraItemProcess();
+        await flagInstance.putInBuyer1Flag();
+        console.log("Order moved to Walmart Preprocessed")
       }
     }
   } else {
