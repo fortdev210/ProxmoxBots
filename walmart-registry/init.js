@@ -27,7 +27,7 @@ async function main() {
       }
     }
   } else {
-    console.log(`No orders at the moment. Restart the bot after put some orders in this folder...`.bgGreen);
+    console.log(`No orders at the moment. Restart the bot after put some orders in this folder...`.inverse);
   }
 }
 

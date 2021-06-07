@@ -313,6 +313,12 @@ class WalmartRegistry extends PuppeteerBase {
         await this.luminatiProxyManager('ON');
         await this.page.reload();
         await this.signInWalmart();
+        const captchaDetected = await this.checkCaptcha(5000);
+        if (captchaDetected){
+          console.log('Captcha detected.');
+          await this.closeBrowser();
+          return;
+        }
       }
     }
     console.log("Successfully signed in, registering...");
