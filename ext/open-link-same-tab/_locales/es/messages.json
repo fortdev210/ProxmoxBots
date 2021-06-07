@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Sitio:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Añadir a la lista negra"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Añadir a la lista blanca"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Cancelar"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ El sitio web se agregó a la lista negra"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ El sitio web se agregó a la lista blanca"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ El sitio web ya está en la lista negra"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ El sitio web ya está en la lista blanca"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Los datos almacenados no se encuentra"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Añadir a la lista negra/lista blanca"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Lista negra"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Cerrar"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Abrir enlace en esta pestaña"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Convertir los enlaces dentro de las páginas web"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Convertir los enlaces"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Mostrar el elemento «Abrir enlace en esta pestaña» en el menú contextual"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Eliminar selección"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Hace que los enlaces se abran en la misma pestaña"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Configuración"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Restaurar configuración"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Limitar a los sitios en la lista blanca"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Lista blanca"
+	}
+}

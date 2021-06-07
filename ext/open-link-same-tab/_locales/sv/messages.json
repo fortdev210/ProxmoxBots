@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Hemsida:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Lägg till på svartlistan"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Lägg till på vitlistan"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Avbryt"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Webbplatsen har lagts till på svartlistan"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Webbplatsen har lagts till på vitlistan"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Webbplatsen finns redan på svartlistan"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Webbplatsen finns redan på vitlistan"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Lagrade data saknas"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Lägg till på svartlistan eller vitlistan"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Svartlista"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Stäng"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Öppna länk på den här fliken"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Konvertera länkar på webbsidor"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Konvertera länkar"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Visa snabbmenyn posten \"Öppna länk på den här fliken\""
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Ta bort markering"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Orsakar länkar för att öppna i samma flik"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Alternativ"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Återgå till grundinställningarna"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Begränsa till vitlista"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Vitlista"
+	}
+}

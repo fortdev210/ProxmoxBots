@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Site:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Adicionar à lista negra"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Adicionar à lista branca"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Cancelar"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ O site foi adicionado à lista negra"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ O site foi adicionado à lista branca"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ O site já está na lista negra"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ O site já está na lista branca"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Os dados armazenados não foram encontrados"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Adicionar à lista negra/lista branca"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Lista negra"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Fechar"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Abrir link neste separador"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Converter links em páginas da web"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Converter links"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Mostrar item «Abrir link neste separador» no menu de contexto"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Eliminar itens selecionados"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Faz com que links para abrir na mesma separador"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Opções"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Restaurar padrões"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Restringir aos sites na lista branca"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Lista branca"
+	}
+}

@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Website:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Add to blacklist"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Add to whitelist"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Cancel"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Website added to blacklist"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Website added to whitelist"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Website already in blacklist"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Website already in whitelist"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Stored data missing"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Add website to blacklist or whitelist"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Blacklist"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Close"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Convert links in webpages"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Convert links"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Show \"Open link in same tab\" context menu item"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Delete selection"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Makes links open in the same tab"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Options"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Restore defaults"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Restrict to whitelist"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Whitelist"
+	}
+}

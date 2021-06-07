@@ -10,5 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Xiaoping@stlpro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "colors": "^1.4.0",
+    "puppeteer": "^10.0.0",
+    "random-useragent": "^0.5.0",
+    "xmlhttprequest": "^1.8.0"
+  }
 }

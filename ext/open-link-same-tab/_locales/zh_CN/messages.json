@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "网站："
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "添加到黑名单"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "添加到白名单"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "取消"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ 该网站被添加到黑名单"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ 该网站被添加到白名单"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ 该网站已经在黑名单中"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ 该网站已经在白名单中"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ 数据丢失"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "将网站添加到黑名单或白名单"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "黑名单"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "关闭"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "在此标签页中打开链接"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "转换链接在网页"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "转换链接"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "上下文菜单项［在此标签页中打开链接］显示"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "删除所选项目"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "导致链接在同一标签页中打开"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "选项"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "恢复默认值"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "限制到白名单"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "白名单"
+	}
+}

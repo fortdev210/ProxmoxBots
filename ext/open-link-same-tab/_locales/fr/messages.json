@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Site:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Ajouter à la liste noire"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Ajouter à la liste blanche"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Annuler"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Le site Web a été ajouté à la liste noire"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Le site Web a été ajouté à la liste blanche"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Le site Web se trouve déjà sur la liste noire"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Le site Web se trouve déjà sur la liste blanche"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Les données stockées sont absentes"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Ajouter à la liste noire/liste blanche"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Liste noire"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Fermer"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Ouvrir le lien dans cet onglet"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Convertir des liens dans les pages web"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Convertir des liens"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Afficher l'élément « Ouvrir le lien dans cet onglet » dans le menu contextuel"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Supprimer la sélection"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Cela provoque des liens pour ouvrir dans le même onglet"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Options"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Réinitialiser"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Limiter aux sites sur la liste blanche"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Liste blanche"
+	}
+}

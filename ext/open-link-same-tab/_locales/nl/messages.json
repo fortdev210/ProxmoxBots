@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Website:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Toevoegen aan zwarte lijst"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Toevoegen aan witte lijst"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Annuleren"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ De website werd toegevoegd aan de zwarte lijst"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ De website werd toegevoegd aan de witte lijst"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ De website staat al in de zwarte lijst"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ De website staat al in de witte lijst"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ De opgeslagen gegevens ontbreken"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Toevoegen aan de zwarte/witte lijst"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Zwarte lijst"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Sluiten"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Link openen in dit tabblad"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Links in webpagina's converteren"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Links converteren"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "De contextmenupositie \"Link openen in dit tabblad\" weergeven"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Selectie verwijderen"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Veroorzaakt links om te openen in hetzelfde tabblad"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Opties"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Standaardinstellingen herstellen"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Tot de witte lijst beperken"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Witte lijst"
+	}
+}

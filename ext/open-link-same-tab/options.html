@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title data-i18n-text="optionspage_title">Options</title>
+<style type="text/css"> 
+html {
+	user-select: none;
+	-moz-user-select: none;
+}
+h2 {margin: 0 0 6px 0;}
+select {
+	display: block;
+	width: 400px;
+	margin-bottom: 6px;
+}
+div.tr {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-bottom: 6px;
+}
+div.buttonDiv {margin: 12px 0;}
+span.buttonSpan {
+	display: inline-block;
+	margin: 6px 0;
+}
+span.buttonSpan:not(:last-child) {
+	-webkit-margin-end: 12px;
+	-moz-margin-end: 12px;
+}
+div#select0 {margin: 14px 0 10px 0;}
+div#select1 {margin: 16px 0 12px 0;}
+label.cbLabel {
+	-webkit-padding-end: 12px;
+	-moz-padding-end: 12px;
+}
+label.cbLabel:not(.disabled):not(:hover)+div>label:not(:hover) {opacity: 0.8;}
+label.disabled+div>label {opacity: 0.5;}
+</style>
+<script src="options.js" defer></script>
+</head>
+
+<body>
+<form id="form">
+<div class="tr">
+<label class="cbLabel"><input type="checkbox" name="optionCheckbox" id="convertLinksCheckbox" value="convertLinks" disabled></label>
+<div><label for="convertLinksCheckbox" data-i18n-text="convert_checkbox">&nbsp;</label></div>
+</div>
+<div class="tr">
+<label class="cbLabel"><input type="checkbox" name="optionCheckbox" id="menuItemCheckbox" value="showMenuItem" disabled></label>
+<div><label for="menuItemCheckbox" data-i18n-text="menu_item_checkbox">&nbsp;</label></div>
+</div>
+<div class="tr">
+<label class="cbLabel"><input type="checkbox" name="optionCheckbox" id="whitelistCheckbox" value="useWhitelist" disabled></label>
+<div><label for="whitelistCheckbox" data-i18n-text="whitelist_checkbox">&nbsp;</label></div>
+</div>
+<div id="select0">
+<h2 data-i18n-text="whitelist_title">&nbsp;</h2>
+<select name="select" id="whitelist" data-key="whitelist" size="6" multiple disabled>
+</select>
+<div class="buttonDiv">
+<button type="button" name="deleteButton" id="whitelistDeleteButton" data-key="whitelist" disabled data-i18n-text="delete_button">&nbsp;</button>
+</div>
+</div>
+<div id="select1">
+<h2 data-i18n-text="blacklist_title">&nbsp;</h2>
+<select name="select" id="blacklist" data-key="blacklist" size="6" multiple disabled>
+</select>
+<div class="buttonDiv">
+<button type="button" name="deleteButton" id="blacklistDeleteButton" data-key="blacklist" disabled data-i18n-text="delete_button">&nbsp;</button>
+</div>
+</div>
+<div>
+<span class="buttonSpan">
+<button type="button" id="resetButton" disabled data-i18n-text="reset_button">&nbsp;</button>
+</span>
+<span class="buttonSpan">
+<button type="button" id="closeButton" data-i18n-text="close_button">&nbsp;</button>
+</span>
+</div>
+</form>
+</body>
+
+</html>

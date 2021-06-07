@@ -1,0 +1,102 @@
+{
+	"bidi_dir": {
+		"description": "ltr",
+		"message": "ltr"
+	},
+	"prompt_title": {
+		"description": "Open link in same tab",
+		"message": "Open link in same tab"
+	},
+	"prompt_input_label": {
+		"description": "Website:",
+		"message": "Trang web:"
+	},
+	"blacklist_button": {
+		"description": "Add to blacklist",
+		"message": "Thêm vào danh sách đen"
+	},
+	"whitelist_button": {
+		"description": "Add to whitelist",
+		"message": "Thêm vào danh sách trắng"
+	},
+	"cancel_button": {
+		"description": "Cancel",
+		"message": "Hủy"
+	},
+	"blacklist_add": {
+		"description": "✓ Website added to blacklist",
+		"message": "✓ Trang web đã được thêm vào danh sách đen"
+	},
+	"whitelist_add": {
+		"description": "✓ Website added to whitelist",
+		"message": "✓ Trang web đã được thêm vào danh sách trắng"
+	},
+	"already_blacklisted": {
+		"description": "⚠ Website already in blacklist",
+		"message": "⚠ Trang web nằm trong danh sách đen"
+	},
+	"already_whitelisted": {
+		"description": "⚠ Website already in whitelist",
+		"message": "⚠ Trang web nằm trong danh sách trắng"
+	},
+	"missing_data": {
+		"description": "⚠ Stored data missing",
+		"message": "⚠ Dữ liệu bị thiếu"
+	},
+	"blacklist_key": {
+		"description": "Add website to blacklist or whitelist",
+		"message": "Thêm vào danh sách đen/trắng"
+	},
+	"blacklist_title": {
+		"description": "Blacklist",
+		"message": "Danh sách đen"
+	},
+	"close_button": {
+		"description": "Close",
+		"message": "Đóng"
+	},
+	"context_menu_label": {
+		"description": "Open link in same tab",
+		"message": "Mở liên kết trong tab này"
+	},
+	"convert_checkbox": {
+		"description": "Convert links in webpages",
+		"message": "Chuyển đổi liên kết trong trang web"
+	},
+	"convert_checkbox_cm": {
+		"description": "Convert links",
+		"message": "Chuyển đổi liên kết"
+	},
+	"menu_item_checkbox": {
+		"description": "Show \"Open link in same tab\" context menu item",
+		"message": "Hiển thị mục «Mở liên kết trong tab này» trong trình đơn ngữ cảnh"
+	},
+	"delete_button": {
+		"description": "Delete selection",
+		"message": "Xóa vùng chọn"
+	},
+	"description": {
+		"description": "Makes links open in the same tab",
+		"message": "Nguyên nhân liên kết để mở trong cùng một tab"
+	},
+	"extension_name": {
+		"description": "Open Link in Same Tab",
+		"message": "Open Link in Same Tab"
+	},
+	"optionspage_title": {
+		"description": "Options",
+		"message": "Tùy chọn"
+	},
+	"reset_button": {
+		"description": "Restore defaults",
+		"message": "Khôi phục mặc định"
+	},
+	"whitelist_checkbox": {
+		"description": "Restrict to whitelist",
+		"message": "Hạn chế đến danh sách trắng"
+	},
+	"whitelist_title": {
+		"description": "Whitelist",
+		"message": "Danh sách trắng"
+	}
+}

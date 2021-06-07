@@ -1,0 +1,54 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "STL Pro AutoDS",
+  "version": "1.7.12",
+  "manifest_version": 2,
+  "description": "Automate TRU, Target, and Home Depot Buying processes. For STL PRO, Inc. use only.",
+  "homepage_url": "https://chrome.google.com/webstore/detail/stl-pro-autods/dgdnlfgccblcfcmpjhpbokhfojdakcdh",
+  "background": {
+    "scripts": [
+      "jquery-1.4.2.min.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "commands": {
+	"_execute_browser_action": {
+	"suggested_key": {
+		"default": "Alt+X",
+		"windows": "Alt+X"
+		},
+	"description": "toggle extension"
+	}
+	},
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "STL Pro AutoDS"
+  },
+  "externally_connectable": {
+    "matches": ["*://*.homedepot.com/*", "*://*.bestbuy.com/*", "*://*.walmart.com/*", "*://admin.stlpro.com/*"]
+  },
+  "icons": { 
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png" },
+  "options_page": "options.html",
+  "permissions": [
+	"storage",
+	"unlimitedStorage",
+	"webRequest",
+	"webRequestBlocking",
+    "http://*/*",
+	"https://*/*",
+    "tabs",
+	"clipboardWrite",
+	"clipboardRead"
+  ],
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["steps.js"]
+    }
+  ]
+}

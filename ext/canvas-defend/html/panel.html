@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/style.css"/>
+    <script src="../js/panel.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="content">
+    <p id="noise_info">
+        Current canvas fingerprint mask: <br>
+        <div id="active">
+            <b>#<span id="data_hash"></span></b><br><br>
+            <span hidden="hidden">Last changed: <span id="latest_changed"></span> <span id="schedule_wrap">(Scheduled change: <span id="schedule"></span>)</span></span>
+        </div>
+        <b id="inactive">Plugin is inactive</b>
+    </p>
+	<br/>
+    <button type="button" id="generate_fingerprint">New Canvas Fingerprint Mask</button>
+    <button type="button" id="disable">Disable Plugin</button>
+    <br/>
+</div>
+
+</body>
+</html>
