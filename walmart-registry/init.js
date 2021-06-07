@@ -8,7 +8,7 @@ async function main() {
   const dsOrders = await dbInstance.getOrders();
   await dbInstance.closeBrowser();
   if (dsOrders.length) {
-    console.log(`Get ${dsOrders.length} ds orders in total.`.bgGreen);
+    console.log(`Get ${dsOrders.length} ds orders in total.`.green);
     console.log(dsOrders);
     for (let i = 0; i < dsOrders.length; i++) {
       const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
