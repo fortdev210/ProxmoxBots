@@ -20,11 +20,7 @@ async function main() {
       registryHandler.browser = dbInstance.browser;
       if (currentOrderInfo.extraItem !== 'N/A') {
         console.log('Extra item found...')
-        await flagInstance.putInProcessingFlag();
-        console.log("Order moved to Walmart Processing")
         await registryHandler.extraItemProcess();
-        await flagInstance.putInBuyer1Flag();
-        console.log("Order moved to Walmart Preprocessed")
       } else {
         console.log('No extra item found, registering...');
         await registryHandler.noExtraItemProcess();

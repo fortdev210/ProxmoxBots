@@ -316,6 +316,8 @@ class WalmartRegistry extends PuppeteerBase {
       }
     }
     console.log("Successfully signed in, registering...");
+    await this.flagInstance.putInProcessingFlag();
+    console.log("Order moved to Walmart Processing")
     await this.luminatiProxyManager('OFF');
     await this.registerCustomerInfo();
     await this.verifyAddress();
@@ -328,6 +330,8 @@ class WalmartRegistry extends PuppeteerBase {
       await this.addExtraItem();
       await this.closeBrowser();
     }
+    await this.flagInstance.putInBuyer1Flag();
+    console.log("Order moved to Walmart Preprocessed")
   }
 
   async noExtraItemProcess() {
@@ -353,6 +357,8 @@ class WalmartRegistry extends PuppeteerBase {
       await this.checkAlreadyExist();
     }
     console.log("Successfully signed up, registering...");
+    await this.flagInstance.putInProcessingFlag();
+    console.log("Order moved to Walmart Processing")
     await this.luminatiProxyManager('OFF');
     await this.registerCustomerInfo();
     await this.verifyAddress();
@@ -364,6 +370,8 @@ class WalmartRegistry extends PuppeteerBase {
       await this.addPrimaryItem();
       await this.closeBrowser();
     }
+    await this.flagInstance.putInBuyer1Flag();
+    console.log("Order moved to Walmart Preprocessed")
   }
 }
 
