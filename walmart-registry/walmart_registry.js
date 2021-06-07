@@ -1,22 +1,29 @@
 const PuppeteerBase = require("../lib/puppeeteer");
 
-class ExtraItemHandler extends PuppeteerBase {
-  constructor(customerInfo) {
+class WalmartRegistry extends PuppeteerBase {
+  constructor(customerInfo, flagInstance) {
     super();
     this.customerInfo = customerInfo;
     this.passwords = ["Forte1long!", "forte1long", "forte1"];
-    this.link =
+    this.regLink =
       "https://www.walmart.com/account/signup?returnUrl=%2Flists%2Fcreate-events-registry%3Fr%3Dyes";
+    this.flagInstance = flagInstance
   }
 
   async goSignInPage() {
     await this.openNewPage();
     // await this.luminatiProxyManager("ON");
-    await this.openLink(this.link);
+    await this.openLink(this.regLink);
     await this.waitForLoadingElement(
       '[data-automation-id="signup-sign-in-btn"]'
     );
     await this.clickButton('[data-automation-id="signup-sign-in-btn"]');
+  }
+
+  async goSignUpPage() {
+    await this.openNewPage();
+    // await this.luminatiProxyManager("ON");
+    await this.openLink(this.regLink);
   }
 
   async fillOldSignInForm() {
@@ -61,9 +68,36 @@ class ExtraItemHandler extends PuppeteerBase {
     } catch (error) {}
   }
 
+  async fillSignUpForm() {
+    await this.waitForLoadingElement('[id="first-name-su"]');
+    await this.insertValue('[id="first-name-su"]', this.customerInfo.firstName);
+    await this.insertValue('[id="last-name-su"]', this.customerInfo.lastName);
+    await this.insertValue('[id="email-su"]', this.customerInfo.email);
+    await this.insertValue('[id="password-su"]', this.passwords[0]);
+    await this.clickButton('[id="su-newsletter"]');
+    await this.sleep(3000);
+    await this.waitForLoadingElement(
+      '[data-automation-id="signup-submit-btn"]'
+    );
+    await this.clickButton('[data-automation-id="signup-submit-btn"]');
+  }
+
+  async checkAlreadyExist() {
+    try {
+      await this.page.waitForXPath(
+        '//*[contains(text(), "The email address you entered is associated with another Walmart.com account.")]',
+        { timeout: 3000 }
+      );
+      console.log("Account with this email already exists...");
+      await this.flagInstance.removeEmailFromPrep();
+    } catch (error) {
+      console.log("Account has not been used.");
+    }
+  }
+
   async signInWalmart() {
     try {
-      await this.waitForLoadingElement('#password');
+      await this.waitForLoadingElement("#password");
       console.log("Old Signin Page...");
       await this.fillOldSignInForm();
     } catch (error) {
@@ -71,47 +105,49 @@ class ExtraItemHandler extends PuppeteerBase {
     }
   }
 
-  scheduleDate(){
+  scheduleDate() {
     const now = Date.parse(new Date());
     const schedule = new Date(now + 1000 * 24 * 3600 * 14);
     const scheduleDate =
       schedule.getMonth() +
       1 +
       "/" +
-      (schedule.getDate() < 10 ? "0" + schedule.getDate() : schedule.getDate()) +
+      (schedule.getDate() < 10
+        ? "0" + schedule.getDate()
+        : schedule.getDate()) +
       "/" +
       schedule.getFullYear();
-    return scheduleDate
+    return scheduleDate;
   }
 
   async addEventDate() {
     const eventDate = this.scheduleDate();
     try {
-      await this.waitForLoadingElement('#eventDate');
-      await this.insertValue('#eventDate', eventDate)
+      await this.waitForLoadingElement("#eventDate");
+      await this.insertValue("#eventDate", eventDate);
     } catch (error) {
       console.log("Error while loading the page, should reload.");
       await this.page.reload();
-      await this.waitForLoadingElement('#eventDate');
-      await this.insertValue('#eventDate', eventDate)
+      await this.waitForLoadingElement("#eventDate");
+      await this.insertValue("#eventDate", eventDate);
     }
   }
 
   async addLocation() {
     const state = this.getFullState(this.customerInfo.state);
-    await this.waitForLoadingElement('#regstate');
-    await this.insertValue('#regstate', state);
+    await this.waitForLoadingElement("#regstate");
+    await this.insertValue("#regstate", state);
   }
 
   async addOrganization() {
-    await this.waitForLoadingElement('#lastname');
-    await this.reInsertValue('#lastname', this.customerInfo.lastName);
+    await this.waitForLoadingElement("#lastname");
+    await this.reInsertValue("#lastname", this.customerInfo.lastName);
   }
 
   async removeOldAddress() {
     try {
       await this.waitForLoadingElement('[class="shipping-address-footer"]');
-      await this.clickButton('[class*="delete-button "]')
+      await this.clickButton('[class*="delete-button "]');
     } catch (error) {
       console.log("No old address exists!");
     }
@@ -119,7 +155,7 @@ class ExtraItemHandler extends PuppeteerBase {
 
   async addPersonalInfo() {
     try {
-      await this.waitForLoadingElement('#firstName');
+      await this.waitForLoadingElement("#firstName");
     } catch (error) {
       await this.page.reload();
       await this.addEventDate();
@@ -127,16 +163,16 @@ class ExtraItemHandler extends PuppeteerBase {
       await this.addOrganization();
       await this.removeOldAddress();
     }
-    await this.insertValue('#firstName', this.customerInfo.firstName);
-    await this.insertValue('#lastName', this.customerInfo.lastName);
-    await this.insertValue('#phone', this.customerInfo.phoneNum);
-    await this.insertValue('#addressLineOne', this.customerInfo.addressOne);
-    await this.insertValue('#addressLineTwo', this.customerInfo.addressTwo);
-    await this.insertValue('#city', this.customerInfo.city);
-    await this.insertValue('#state', this.customerInfo.state);
-    await this.insertValue('#postalCode', this.customerInfo.zipCode);
-    await this.clickButton('[data-automation-id="address-form-submit"]')
-    console.log('All information successfully registered.')
+    await this.insertValue("#firstName", this.customerInfo.firstName);
+    await this.insertValue("#lastName", this.customerInfo.lastName);
+    await this.insertValue("#phone", this.customerInfo.phoneNum);
+    await this.insertValue("#addressLineOne", this.customerInfo.addressOne);
+    await this.insertValue("#addressLineTwo", this.customerInfo.addressTwo);
+    await this.insertValue("#city", this.customerInfo.city);
+    await this.insertValue("#state", this.customerInfo.state);
+    await this.insertValue("#postalCode", this.customerInfo.zipCode);
+    await this.clickButton('[data-automation-id="address-form-submit"]');
+    console.log("All information successfully registered.");
   }
 
   async registerCustomerInfo() {
@@ -199,7 +235,7 @@ class ExtraItemHandler extends PuppeteerBase {
         "https://www.walmart.com/lists/manage-events-registry-items?created"
       );
     });
-    return created
+    return created;
   }
 
   async addPrimaryItem() {
@@ -213,10 +249,10 @@ class ExtraItemHandler extends PuppeteerBase {
     await this.waitForLoadingElement('[class="Registry-btn-row"]');
     await this.page.evaluate(() => {
       document
-      .querySelector('[class="Registry-btn-row"]')
-      .querySelector("button")
-      .click();
-    })
+        .querySelector('[class="Registry-btn-row"]')
+        .querySelector("button")
+        .click();
+    });
     console.log("Add To Registry Button Clicked");
     await this.waitForLoadingElement('[class="select-field"]');
     await this.sleep(1500);
@@ -253,43 +289,78 @@ class ExtraItemHandler extends PuppeteerBase {
       '[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]'
     );
     await this.sleep(2000);
-    await this.clickButton('[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]');
-    console.log('Extra item added.');
+    await this.clickButton(
+      '[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]'
+    );
+    console.log("Extra item added.");
   }
 
-  async process() {
+  async extraItemProcess() {
     await this.goSignInPage();
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      console.log('Use another proxy to bypass captcha...')
+      console.log("Use another proxy to bypass captcha...");
       // await this.luminatiProxyManager('OFF');
       // await this.luminatiProxyManager('ON');
       await this.page.reload();
       await this.signInWalmart();
       const captchaDetected = await this.checkCaptcha(5000);
-      if (captchaDetected){
-        console.log('Use another proxy to bypass captcha...')
+      if (captchaDetected) {
+        console.log("Use another proxy to bypass captcha...");
         // await this.luminatiProxyManager('OFF');
         // await this.luminatiProxyManager('ON');
         await this.page.reload();
         await this.signInWalmart();
       }
-    } 
-    console.log('Successfully signed in, registering...');
+    }
+    console.log("Successfully signed in, registering...");
     await this.registerCustomerInfo();
     await this.verifyAddress();
     await this.makeRegistryPublic();
     const registered = await this.checkRegisterStatus();
     if (registered) {
-      console.log('Successfully registered.');
+      console.log("Successfully registered.");
       await this.closePage();
       await this.addPrimaryItem();
       await this.addExtraItem();
       await this.closeBrowser();
     }
-    
+  }
+
+  async noExtraItemProcess() {
+    await this.goSignUpPage();
+    await this.fillSignUpForm();
+    const captchaDetected = await this.checkCaptcha(5000);
+    if (captchaDetected) {
+      console.log("Use another proxy to bypass captcha...");
+      // await this.luminatiProxyManager('OFF');
+      // await this.luminatiProxyManager('ON');
+      await this.page.reload();
+      await this.fillSignUpForm();
+      const captchaDetected = await this.checkCaptcha(5000);
+      if (captchaDetected) {
+        console.log("Use another proxy to bypass captcha...");
+        // await this.luminatiProxyManager('OFF');
+        // await this.luminatiProxyManager('ON');
+        await this.page.reload();
+        await this.fillSignUpForm();
+      }
+    } else {
+      await this.checkAlreadyExist();
+    }
+    console.log("Successfully signed up, registering...");
+    await this.registerCustomerInfo();
+    await this.verifyAddress();
+    await this.makeRegistryPublic();
+    const registered = await this.checkRegisterStatus();
+    if (registered) {
+      console.log("Successfully registered.");
+      await this.closePage();
+      await this.addPrimaryItem();
+      await this.closeBrowser();
+    }
   }
 }
 
-module.exports = ExtraItemHandler;
+module.exports = WalmartRegistry;
