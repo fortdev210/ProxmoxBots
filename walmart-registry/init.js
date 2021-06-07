@@ -11,6 +11,7 @@ async function main() {
     console.log(`Get ${dsOrders.length} ds orders in total.`.bgGreen);
     console.log(dsOrders);
     for (let i = 0; i < dsOrders.length; i++) {
+      console.log(`STARTING: Order ${i + 1}: ${currentOrder}`.green.bold);
       const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
       const currentOrderInfo = await dbInstance.getOrderDetails();
       const flagInstance = new Flag_Order(dsOrders[i]);
@@ -34,6 +35,7 @@ async function main() {
         console.log("Order moved to Walmart Preprocessed")
       }
     }
+    console.dir("All the orders are preprocessed. Please put more orders to process.".bgGreen);
   } else {
     console.log(`No orders at the moment. Restart the bot after put some orders in this folder...`.bgGreen);
   }
