@@ -11,19 +11,20 @@ async function main() {
     console.log(`Get ${dsOrders.length} ds orders in total.`.green);
     console.log(dsOrders);
     for (let i = 0; i < dsOrders.length; i++) {
+      console.log(`STARTING: Order ${i + 1}: ${dsOrders[i]}`.green.bold);
       const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
       const currentOrderInfo = await dbInstance.getOrderDetails();
       const flagInstance = new Flag_Order(dsOrders[i]);
-      await flagInstance.setRequestInstance();
       console.log(currentOrderInfo);
       const registryHandler = new WalmartRegistryHandler(currentOrderInfo, flagInstance)
       registryHandler.browser = dbInstance.browser;
+      let isProcessed = false;
       if (currentOrderInfo.extraItem !== 'N/A') {
         console.log('Extra item found...')
-        await registryHandler.extraItemProcess();
+        isProcessed = await registryHandler.extraItemProcess();
       } else {
         console.log('No extra item found, registering...');
-        await registryHandler.noExtraItemProcess();
+        isProcessed = await registryHandler.noExtraItemProcess();
       }
     }
   } else {
