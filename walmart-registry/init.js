@@ -16,21 +16,27 @@ async function main() {
       const currentOrderInfo = await dbInstance.getOrderDetails();
       const flagInstance = new Flag_Order(dsOrders[i]);
       console.log(currentOrderInfo);
-      const registryHandler = new WalmartRegistryHandler(currentOrderInfo, flagInstance)
+      const registryHandler = new WalmartRegistryHandler(
+        currentOrderInfo,
+        flagInstance
+      );
       registryHandler.browser = dbInstance.browser;
       let isProcessed = false;
-      if (currentOrderInfo.extraItem !== 'N/A') {
-        console.log('Extra item found...')
+      if (currentOrderInfo.extraItem !== "N/A") {
+        console.log("Extra item found...");
         isProcessed = await registryHandler.extraItemProcess();
       } else {
-        console.log('No extra item found, registering...');
+        console.log("No extra item found, registering...");
         isProcessed = await registryHandler.noExtraItemProcess();
       }
-      if (isProcessed === 'Captcha') i--;
+      if (isProcessed === "Captcha") i--;
     }
-    console.log('Set up completed'.inverse);
+    console.log("Set up completed".inverse);
   } else {
-    console.log(`No orders at the moment. Restart the bot after put some orders in this folder...`.inverse);
+    console.log(
+      `No orders at the moment. Restart the bot after put some orders in this folder...`
+        .inverse
+    );
   }
 }
 

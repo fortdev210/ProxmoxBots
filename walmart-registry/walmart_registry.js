@@ -7,7 +7,7 @@ class WalmartRegistry extends PuppeteerBase {
     this.passwords = ["Forte1long!", "forte1long", "forte1"];
     this.regLink =
       "https://www.walmart.com/account/signup?returnUrl=%2Flists%2Fcreate-events-registry%3Fr%3Dyes";
-    this.flagInstance = flagInstance
+    this.flagInstance = flagInstance;
   }
 
   async goSignInPage() {
@@ -192,7 +192,7 @@ class WalmartRegistry extends PuppeteerBase {
       console.log("No address warning");
     }
     try {
-      await this.waitForLoadingElement('[class="validation-wrap"]', 30000)
+      await this.waitForLoadingElement('[class="validation-wrap"]', 30000);
       console.log("Verify address");
       await this.sleep(1000);
       await this.clickButton('[class*="button-save-address"]');
@@ -240,7 +240,7 @@ class WalmartRegistry extends PuppeteerBase {
     await this.waitForLoadingElement('[class*="AddToRegistry-text"]', 30000);
     await this.sleep(1500);
     await this.clickButton('[class*="AddToRegistry-text"]');
-    await this.waitForLoadingElement('[class="Registry-btn-row"]');
+    await this.waitForLoadingElement('[class="Registry-btn-row"]', 30000);
     await this.page.evaluate(() => {
       document
         .querySelector('[class="Registry-btn-row"]')
@@ -270,7 +270,7 @@ class WalmartRegistry extends PuppeteerBase {
         const dropDowns = await this.page.$$('[class*="field-input "]');
         const purchased = dropDowns[0];
         await purchased.focus();
-        await this.page.keyboard.type(customerInfo.qty);
+        await this.page.keyboard.type(this.customerInfo.qty);
       }
     }
   }
@@ -290,38 +290,41 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async extraItemProcess() {
-    await this.luminatiProxyManager('ON', [this.customerInfo.ip, this.customerInfo.port])
-    await this.sleep(3000)
+    await this.luminatiProxyManager("ON", [
+      this.customerInfo.ip,
+      this.customerInfo.port,
+    ]);
+    await this.sleep(3000);
     await this.goSignInPage();
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Use another proxy to bypass captcha...");
-      await this.luminatiProxyManager('OFF');
-      await this.sleep(3000)
-      await this.luminatiProxyManager('ON');
+      await this.luminatiProxyManager("OFF");
+      await this.sleep(3000);
+      await this.luminatiProxyManager("ON");
       await this.page.reload();
       await this.signInWalmart();
       const captchaDetected = await this.checkCaptcha(5000);
       if (captchaDetected) {
         console.log("Use another proxy to bypass captcha...");
-        await this.luminatiProxyManager('OFF');
-        await this.sleep(3000)
-        await this.luminatiProxyManager('ON');
+        await this.luminatiProxyManager("OFF");
+        await this.sleep(3000);
+        await this.luminatiProxyManager("ON");
         await this.page.reload();
         await this.signInWalmart();
         const captchaDetected = await this.checkCaptcha(5000);
-        if (captchaDetected){
-          console.log('Captcha detected.');
+        if (captchaDetected) {
+          console.log("Captcha detected.");
           await this.closeBrowser();
-          return 'Captcha';
+          return "Captcha";
         }
       }
     }
     console.log("Successfully signed in, registering...");
     await this.flagInstance.putInProcessingFlag();
-    console.log("Order moved to Walmart Processing")
-    await this.luminatiProxyManager('OFF');
+    console.log("Order moved to Walmart Processing");
+    await this.luminatiProxyManager("OFF");
     await this.registerCustomerInfo();
     await this.verifyAddress();
     await this.makeRegistryPublic();
@@ -333,41 +336,44 @@ class WalmartRegistry extends PuppeteerBase {
       await this.addExtraItem();
       await this.closeBrowser();
       await this.flagInstance.putInBuyer1Flag();
-      console.log("Order moved to Walmart Preprocessed")
+      console.log("Order moved to Walmart Preprocessed");
     } else {
-      console.error('An error happened while processing. Trying again...');
+      console.error("An error happened while processing. Trying again...");
       await this.closeBrowser();
-      await this.sleep(3000)
-      return false
+      await this.sleep(3000);
+      return false;
     }
   }
 
   async noExtraItemProcess() {
-    await this.luminatiProxyManager('ON', [this.customerInfo.ip, this.customerInfo.port])
-    await this.sleep(3000)
+    await this.luminatiProxyManager("ON", [
+      this.customerInfo.ip,
+      this.customerInfo.port,
+    ]);
+    await this.sleep(3000);
     await this.goSignUpPage();
     await this.fillSignUpForm();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Use another proxy to bypass captcha...");
-      await this.luminatiProxyManager('OFF');
-      await this.sleep(3000)
-      await this.luminatiProxyManager('ON');
+      await this.luminatiProxyManager("OFF");
+      await this.sleep(3000);
+      await this.luminatiProxyManager("ON");
       await this.page.reload();
       await this.fillSignUpForm();
       const captchaDetected = await this.checkCaptcha(5000);
       if (captchaDetected) {
         console.log("Use another proxy to bypass captcha...");
-        await this.luminatiProxyManager('OFF');
-        await this.sleep(3000)
-        await this.luminatiProxyManager('ON');
+        await this.luminatiProxyManager("OFF");
+        await this.sleep(3000);
+        await this.luminatiProxyManager("ON");
         await this.page.reload();
         await this.fillSignUpForm();
         const captchaDetected = await this.checkCaptcha(5000);
-        if (captchaDetected){
-          console.log('Captcha detected.');
+        if (captchaDetected) {
+          console.log("Captcha detected.");
           await this.closeBrowser();
-          return 'Captcha';
+          return "Captcha";
         }
       }
     } else {
@@ -375,8 +381,8 @@ class WalmartRegistry extends PuppeteerBase {
     }
     console.log("Successfully signed up, registering...");
     await this.flagInstance.putInProcessingFlag();
-    console.log("Order moved to Walmart Processing")
-    await this.luminatiProxyManager('OFF');
+    console.log("Order moved to Walmart Processing");
+    await this.luminatiProxyManager("OFF");
     await this.registerCustomerInfo();
     await this.verifyAddress();
     await this.makeRegistryPublic();
@@ -387,12 +393,12 @@ class WalmartRegistry extends PuppeteerBase {
       await this.addPrimaryItem();
       await this.closeBrowser();
       await this.flagInstance.putInBuyer1Flag();
-      console.log("Order moved to Walmart Preprocessed")
+      console.log("Order moved to Walmart Preprocessed");
     } else {
-      console.error('An error happened while processing. Trying again...');
+      console.error("An error happened while processing. Trying again...");
       await this.closeBrowser();
-      await this.sleep(3000)
-      return false
+      await this.sleep(3000);
+      return false;
     }
   }
 }
