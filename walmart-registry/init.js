@@ -29,7 +29,6 @@ async function main() {
         console.log("No extra item found, registering...");
         isProcessed = await registryHandler.noExtraItemProcess();
       }
-      if (isProcessed === "Captcha") i--;
     }
     console.log("Set up completed".inverse);
   } else {

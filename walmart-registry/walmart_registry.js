@@ -327,6 +327,7 @@ class WalmartRegistry extends PuppeteerBase {
     await this.luminatiProxyManager("OFF");
     await this.registerCustomerInfo();
     await this.verifyAddress();
+    await this.flagInstance.putEmailInPrep(this.customerInfo.email);
     await this.makeRegistryPublic();
     const registered = await this.checkRegisterStatus();
     if (registered) {
@@ -385,6 +386,7 @@ class WalmartRegistry extends PuppeteerBase {
     await this.luminatiProxyManager("OFF");
     await this.registerCustomerInfo();
     await this.verifyAddress();
+    await this.flagInstance.putEmailInPrep(this.customerInfo.email);
     await this.makeRegistryPublic();
     const registered = await this.checkRegisterStatus();
     if (registered) {
