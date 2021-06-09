@@ -26,7 +26,9 @@ async function main() {
         console.log('No extra item found, registering...');
         isProcessed = await registryHandler.noExtraItemProcess();
       }
+      if (isProcessed === 'Captcha') i--;
     }
+    console.log('Set up completed'.inverse);
   } else {
     console.log(`No orders at the moment. Restart the bot after put some orders in this folder...`.inverse);
   }

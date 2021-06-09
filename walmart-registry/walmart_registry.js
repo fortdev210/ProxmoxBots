@@ -128,7 +128,7 @@ class WalmartRegistry extends PuppeteerBase {
     } catch (error) {
       console.log("Error while loading the page, should reload.");
       await this.page.reload();
-      await this.waitForLoadingElement("#eventDate");
+      await this.waitForLoadingElement("#eventDate", 20000);
       await this.insertValue("#eventDate", eventDate);
     }
   }
@@ -262,7 +262,7 @@ class WalmartRegistry extends PuppeteerBase {
         const dropDowns = await this.page.$$('[class*="field-input "]');
         const purchased = dropDowns[0];
         await purchased.focus();
-        await this.page.keyboard.type(customerInfo.qty);
+        await this.page.keyboard.type(this.customerInfo.qty);
       } catch (error) {
         console.log("Should reload the page");
         await this.page.reload();
@@ -298,23 +298,23 @@ class WalmartRegistry extends PuppeteerBase {
     if (captchaDetected) {
       console.log("Use another proxy to bypass captcha...");
       await this.luminatiProxyManager('OFF');
-      await this.luminatiProxyManager('ON');
       await this.sleep(3000)
+      await this.luminatiProxyManager('ON');
       await this.page.reload();
       await this.signInWalmart();
       const captchaDetected = await this.checkCaptcha(5000);
       if (captchaDetected) {
         console.log("Use another proxy to bypass captcha...");
         await this.luminatiProxyManager('OFF');
-        await this.luminatiProxyManager('ON');
         await this.sleep(3000)
+        await this.luminatiProxyManager('ON');
         await this.page.reload();
         await this.signInWalmart();
         const captchaDetected = await this.checkCaptcha(5000);
         if (captchaDetected){
           console.log('Captcha detected.');
           await this.closeBrowser();
-          return false;
+          return 'Captcha';
         }
       }
     }
@@ -351,23 +351,23 @@ class WalmartRegistry extends PuppeteerBase {
     if (captchaDetected) {
       console.log("Use another proxy to bypass captcha...");
       await this.luminatiProxyManager('OFF');
-      await this.luminatiProxyManager('ON');
       await this.sleep(3000)
+      await this.luminatiProxyManager('ON');
       await this.page.reload();
       await this.fillSignUpForm();
       const captchaDetected = await this.checkCaptcha(5000);
       if (captchaDetected) {
         console.log("Use another proxy to bypass captcha...");
         await this.luminatiProxyManager('OFF');
-        await this.luminatiProxyManager('ON');
         await this.sleep(3000)
+        await this.luminatiProxyManager('ON');
         await this.page.reload();
         await this.fillSignUpForm();
         const captchaDetected = await this.checkCaptcha(5000);
         if (captchaDetected){
           console.log('Captcha detected.');
           await this.closeBrowser();
-          return false;
+          return 'Captcha';
         }
       }
     } else {
