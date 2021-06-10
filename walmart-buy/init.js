@@ -11,6 +11,11 @@ console.log(" For tips, please run the bot by executing:    ".inverse);
 console.log(" node init.js                                  ".inverse);
 console.log("");
 
-async function main() {}
+async function main() {
+    const dbInstance = new STLPRO_MANAGER();
+    const dsOrders = await dbInstance.getOrders();
+    await dbInstance.closeBrowser();
+    console.log("ds orders", dsOrders)
+}
 
 main();
