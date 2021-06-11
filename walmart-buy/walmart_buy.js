@@ -1,5 +1,7 @@
 const PuppeteerBase = require("../lib/puppeeteer");
 const colors = require("colors");
+const API_MANAGER = require("../lib/api");
+const apiInstance = new API_MANAGER();
 
 class WalmartBuy extends PuppeteerBase {
   constructor(customerInfo, flagInstance, payMethod) {
@@ -9,6 +11,8 @@ class WalmartBuy extends PuppeteerBase {
     this.passwords = ["Forte1long!", "forte1long", "forte1"];
     this.signInLink = "https://www.walmart.com/account/login?returnUrl=%2Fcart";
     this.payMethod = payMethod;
+    this.apiInstance = apiInstance;
+    this.numOfGCs = 5; // number of giftcards for applying each order
   }
 
   async goSignInPage() {
@@ -117,10 +121,19 @@ class WalmartBuy extends PuppeteerBase {
 
   async continue() {
     await this.sleep(3000);
-    await this.waitForLoadingElement(
-      '[data-automation-id="fulfillment-continue"]',
-      20000
-    );
+    try {
+      await this.waitForLoadingElement(
+        '[data-automation-id="fulfillment-continue"]',
+        20000
+      );
+    } catch (error) {
+      console.log('Unexpected error while loading. Reloading...');
+      await this.page.reload();
+      await this.waitForLoadingElement(
+        '[data-automation-id="fulfillment-continue"]',
+        20000
+      );
+    }
     await this.clickButton('[data-automation-id="fulfillment-continue"]');
   }
 
@@ -193,7 +206,7 @@ class WalmartBuy extends PuppeteerBase {
         this.customerInfo.email
       );
       await this.waitForLoadingElement('[name="senderName"]');
-      await this.reInsertValue(
+      await this.reInsertValue2(
         '[name="senderName"]',
         this.customerInfo.lastName
       );
@@ -263,7 +276,118 @@ class WalmartBuy extends PuppeteerBase {
     }
   }
 
-  async payWithGiftCard() {}
+  async sendTotalPriceToDB() {
+    try {
+      const totalPrice = await this.page.evaluate(() => {
+        value = document.querySelector(
+          '[data-automation-id="pos-grand-total-amount"]'
+        ).innerText;
+        value = value.replace("$", "");
+        return parseFloat(value);
+      });
+      console.log("Total price is ", totalPrice);
+      await this.apiInstance.sendTotal(totalPrice, this.customerInfo.orderId);
+    } catch (error) {
+      console.log('Error while sending the total value to db', error);
+    }
+  }
+
+  async addNewGiftCard(i) {
+    console.log(`Adding ${i+1}th gift card using api...`);
+    if (i !== 0) {
+      // click `Add new gift card` button.
+      await this.waitForLoadingElement(
+        '[data-automation-id="payment-add-new-gift-card"]'
+      );
+      await this.sleep(2000);
+      await this.clickButton('[data-automation-id="payment-add-new-gift-card"]');
+    }
+    const giftCardInfo = await this.apiInstance.getGiftCardByAPI(this.customerInfo.orderId);
+    await this.waitForLoadingElement('[data-automation-id="enter-gift-card-number"]');
+    await this.insertValue('[data-automation-id="enter-gift-card-number"]', giftCardInfo.cardNumber);
+    await this.sleep(1000);
+    await this.insertValue('[data-automation-id="enter-gift-card-pin"]',giftCardInfo.pinCode)
+    await this.waitForLoadingElement('[data-tl-id="submit"]')
+    await this.sleep(1500)
+    await this.clickButton('[data-tl-id="submit"]')
+    await this.sleep(3000)
+    const gcAmount = await this.page.evaluate((i) => {
+      value = document
+        .querySelectorAll('[class="price gc-amount-paid-price"]')
+        [i].querySelector('[class="visuallyhidden"]').innerText;
+      value = value.replace("$", "");
+      return value;
+    }, i);
+    console.log(
+      `Gift Card Number is ${giftCardInfo.cardNumber} and Amount is ${gcAmount}`
+        .green
+    );
+    try {
+      await this.apiInstance.sendCurrentGiftCard(giftCardInfo.cardNumber, gcAmount, this.customerInfo.orderId);
+    } catch (error) {
+      console.log("Error while sending current gift card info ", error);
+    }
+
+    const balanceStatus = await this.page.$('[data-automation-id="pos-balance-due"]');
+    if (balanceStatus === null) { 
+      return true
+    }
+    await this.waitForLoadingElement(
+      '[data-automation-id="payment-add-new-gift-card"]'
+    );
+    await this.sleep(2000);
+    await this.clickButton('[data-automation-id="payment-add-new-gift-card"]');
+    return false
+  }
+
+  async getAlreadyAddedGiftcard() {
+    try {
+      await this.waitForLoadingElement('[class="gift-card-tile"]');
+      const number = await this.page.evaluate(() => {
+        return document.querySelectorAll('[class="gift-card-tile"]').length
+      });
+      console.log(`${number} gift cards already added.`.green);
+      // Apply each card to order
+      for (let i = 0;  i < number; i++) {
+        try {
+          await this.page.evaluate((i)=> {
+            document.querySelectorAll('[class="gift-card-tile"]').querySelector('[type="checkbox"]').click();
+          }, [i])
+          console.log(`Applied ${i}st card again.`)
+          await this.sleep(2000)
+        } catch (error) {
+          console.log('Cant apply the card again.', error)
+        }
+      }
+      return number
+    } catch (error) {
+      console.log('No giftcard applied. Fetching from the db...');
+      return 0;
+    }
+  }
+
+  async payWithGiftCard() {
+    try {
+      await this.waitForLoadingElement('[id="payment-option-radio-1"]', 20000);
+      await this.selectPaymentMethod();
+    } catch (error) {
+      await this.prepareForCheckout();
+      await this.selectPaymentMethod();
+    }
+    await this.sleep(3000);
+    const numOfAlreadyApplied = await this.getAlreadyAddedGiftcard();
+    for (let i = numOfAlreadyApplied; i < this.numOfGCs; i++) {
+      const payComplete = await this.addNewGiftCard(i)
+      if (payComplete) {
+        console.log("Good news! Your order total is covered.".green);
+        break;
+      }
+    }
+    await this.waitForLoadingElement('[data-automation-id="submit-payment-gc"]');
+    await this.sleep(1000);
+    await this.clickButton('[data-automation-id="submit-payment-gc"]');
+    console.log("Click review order");
+  }
 
   async payWithCash() {
     try {

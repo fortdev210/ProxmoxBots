@@ -29,7 +29,12 @@ async function main() {
         const flagInstance = new Flag_Order(dsOrders[i]);
         const wmBuyHandler = new WalmartBuyHandler(currentOrderInfo, flagInstance, paymentMethod);
         wmBuyHandler.browser = dbInstance.browser;
-        await wmBuyHandler.processBuyOrder();
+        try {
+          await wmBuyHandler.processBuyOrder();
+        } catch (error) {
+          console.log("Error while processing ", error)
+        }
+        
     }
   } else {
     console.log(
