@@ -311,7 +311,7 @@ class WalmartBuy extends PuppeteerBase {
     await this.waitForLoadingElement('[data-tl-id="submit"]')
     await this.sleep(1500)
     await this.clickButton('[data-tl-id="submit"]')
-    await this.sleep(3000)
+    await this.sleep(5000)
     const gcAmount = await this.page.evaluate((i) => {
       value = document
         .querySelectorAll('[class="price gc-amount-paid-price"]')
@@ -352,7 +352,7 @@ class WalmartBuy extends PuppeteerBase {
       for (let i = 0;  i < number; i++) {
         try {
           await this.page.evaluate((i)=> {
-            document.querySelectorAll('[class="gift-card-tile"]')[i].querySelector('[type="checkbox"]').click();
+            document.querySelectorAll('[class="gift-card-tile"]').querySelector('[type="checkbox"]').click();
           }, [i])
           console.log(`Applied ${i+1}st card again.`)
           await this.sleep(4000)
@@ -378,10 +378,6 @@ class WalmartBuy extends PuppeteerBase {
     await this.sleep(3000);
     await this.sendTotalPriceToDB()
     const numOfAlreadyApplied = await this.getAlreadyAddedGiftcard();
-    if (numOfAlreadyApplied) {
-      await this.flagInstance.putInKelly(); 
-      return;
-    }
     for (let i = numOfAlreadyApplied; i < this.numOfGCs; i++) {
       const payComplete = await this.addNewGiftCard(i)
       if (payComplete) {
@@ -568,11 +564,40 @@ class WalmartBuy extends PuppeteerBase {
     } catch (error) {
         console.log("No sign in widget.")
     }
+    console.log('Extra item cancelled successfully.');
+    await this.closePage();
   }
 
-  async applyDB() {
-      const pages = await this.browser.pages();
-      
+  async applyDB(orderNumber) {
+    const pages = await this.browser.pages();
+    const orderPage = pages[pages.length - 2];
+    await orderPage.bringToFront();
+    this.page = orderPage
+    this.page.on("dialog", async (dialog) => {
+      console.log("Dialog popup");
+      await dialog.accept();
+    });
+    await this.waitForLoadingElement('[name="supplier_order_number"]');
+    await this.sleep(2000);
+    await this.page.evaluate((totalCustomInfo) => {
+      return (document.querySelector('[name*="quantity_bought_"]').value =
+        totalCustomInfo.qty);
+    }, this.customerInfo);
+    await this.sleep(1500);
+    await this.insertValue('[name="supplier_order_number"]', orderNumber)
+    await this.sleep(1000);
+    await this.clickButton('[value="Submit & Finish Order"]');
+    console.log("Click the submit and finish order button");
+    await this.waitForLoadingElement('[class="ui-dialog-buttonset"]');
+    await this.sleep(1500);
+    await this.page.evaluate(() => {
+      document
+        .querySelectorAll('[class="ui-dialog-buttonset"]')[0]
+        .childNodes[0].click();
+    });
+    await this.sleep(3000);
+    await this.waitForLoadingElement('[class="redTd"]');
+    console.log("Purchased correctly".green.bold);
   }
 
   async processBuyOrder() {
@@ -622,7 +647,10 @@ class WalmartBuy extends PuppeteerBase {
     await this.prepareForCheckout();
     await this.checkout();
     await this.placeOrder();
-    await this.cancelExtraItem();
+    const orderNumber = await this.getOrderNumber();
+    await this.cancelExtraItem(orderNumber);
+    await this.applyDB(orderNumber);
+    await this.closeBrowser();
   }
 }
 
