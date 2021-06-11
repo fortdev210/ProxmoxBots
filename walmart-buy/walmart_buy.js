@@ -127,7 +127,7 @@ class WalmartBuy extends PuppeteerBase {
         20000
       );
     } catch (error) {
-      console.log('Unexpected error while loading. Reloading...');
+      console.log('Unexpected error while loading. Reloading...', error);
       await this.page.reload();
       await this.waitForLoadingElement(
         '[data-automation-id="fulfillment-continue"]',
@@ -142,6 +142,7 @@ class WalmartBuy extends PuppeteerBase {
     try {
         await this.waitForLoadingElement('[class="address-tile-clickable"]', 20000);
     } catch (error) {
+        console.log('Error while waiting for addresss. Reloading...')
         await this.page.reload();
         await this.continue();
         await this.waitForLoadingElement('[class="address-tile-clickable"]', 20000);
@@ -351,10 +352,10 @@ class WalmartBuy extends PuppeteerBase {
       for (let i = 0;  i < number; i++) {
         try {
           await this.page.evaluate((i)=> {
-            document.querySelectorAll('[class="gift-card-tile"]').querySelector('[type="checkbox"]').click();
+            document.querySelectorAll('[class="gift-card-tile"]')[i].querySelector('[type="checkbox"]').click();
           }, [i])
-          console.log(`Applied ${i}st card again.`)
-          await this.sleep(2000)
+          console.log(`Applied ${i+1}st card again.`)
+          await this.sleep(4000)
         } catch (error) {
           console.log('Cant apply the card again.', error)
         }
@@ -375,7 +376,12 @@ class WalmartBuy extends PuppeteerBase {
       await this.selectPaymentMethod();
     }
     await this.sleep(3000);
+    await this.sendTotalPriceToDB()
     const numOfAlreadyApplied = await this.getAlreadyAddedGiftcard();
+    if (numOfAlreadyApplied) {
+      await this.flagInstance.putInKelly(); 
+      return;
+    }
     for (let i = numOfAlreadyApplied; i < this.numOfGCs; i++) {
       const payComplete = await this.addNewGiftCard(i)
       if (payComplete) {
