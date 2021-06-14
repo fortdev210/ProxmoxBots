@@ -12,6 +12,7 @@
   "author": "Xiaoping@stlpro",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "btoa": "^1.2.1",
     "colors": "^1.4.0",
     "puppeteer": "^10.0.0",
