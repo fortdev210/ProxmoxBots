@@ -21,7 +21,7 @@ async function main() {
   if (dsOrders.length) {
     console.log(`Get ${dsOrders.length} ds orders in total.`.green);
     console.log(dsOrders);
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < dsOrders.length; i++) {
         console.log(`STARTING: Order ${i + 1}: ${dsOrders[i]}`.green.bold);
         const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
         const currentOrderInfo = await dbInstance.getOrderDetails();
@@ -32,9 +32,10 @@ async function main() {
         try {
           await wmBuyHandler.processBuyOrder();
         } catch (error) {
-          console.log("Error while processing ", error)
+          console.log("Error while processing, restarting...");
+          i --;
+          await wmBuyHandler.closeBrowser();
         }
-        
     }
   } else {
     console.log(

@@ -127,12 +127,18 @@ class WalmartBuy extends PuppeteerBase {
         20000
       );
     } catch (error) {
-      console.log('Unexpected error while loading. Reloading...', error);
+      console.log('Unexpected error while loading. Reloading...');
       await this.page.reload();
-      await this.waitForLoadingElement(
-        '[data-automation-id="fulfillment-continue"]',
-        20000
-      );
+      try {
+        await this.waitForLoadingElement(
+          '[data-automation-id="fulfillment-continue"]',
+          20000
+        );
+      } catch (error) {
+        console.log("Error while loading page again.");
+        await this.closeBrowser();
+        return 'Bad Proxy.' 
+      }  
     }
     await this.clickButton('[data-automation-id="fulfillment-continue"]');
   }
@@ -405,6 +411,7 @@ class WalmartBuy extends PuppeteerBase {
       await this.waitForLoadingElement(
         '[data-automation-id="review-your-order-cash"]'
       );
+      await this.sleep(2000)
       await this.clickButton('[data-automation-id="review-your-order-cash"]');
       console.log("Checkout successfully.");
     } catch (error) {
@@ -601,36 +608,18 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async processBuyOrder() {
-    // await this.luminatiProxyManager("ON", [
-    //     this.customerInfo.ip,
-    //     this.customerInfo.port,
-    // ]);
+    await this.luminatiProxyManager("ON", [
+        this.customerInfo.ip,
+        this.customerInfo.port,
+    ]);
     await this.sleep(3000);
     await this.goSignInPage();
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      console.log("Use another proxy to bypass captcha...");
-      // await this.luminatiProxyManager("OFF");
-      await this.sleep(3000);
-      // await this.luminatiProxyManager("ON");
-      await this.page.reload();
-      await this.signInWalmart();
-      const captchaDetected = await this.checkCaptcha(5000);
-      if (captchaDetected) {
-        console.log("Use another proxy to bypass captcha...");
-        //   await this.luminatiProxyManager("OFF");
-        await this.sleep(3000);
-        //   await this.luminatiProxyManager("ON");
-        await this.page.reload();
-        await this.signInWalmart();
-        const captchaDetected = await this.checkCaptcha(5000);
-        if (captchaDetected) {
-          console.log("Captcha detected.");
-          await this.closeBrowser();
-          return "Captcha";
-        }
-      }
+      console.log("Captcha detected.");
+      await this.closeBrowser();
+      return "Captcha";
     }
     console.log("Successfully signed in, processing now...");
     const isWellProcessed = await this.checkProcessed();
