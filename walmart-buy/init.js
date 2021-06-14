@@ -15,10 +15,10 @@ console.log("");
 async function main() {
   const dbInstance = new STLPRO_MANAGER();
   const dsOrders = await dbInstance.getOrders();
-  const paymentMethod = await dbInstance.getPaymentMethods();
-  console.log('Current payment option is ' +`${paymentMethod}`.green);
-  await dbInstance.closeBrowser();
   if (dsOrders.length) {
+    const paymentMethod = await dbInstance.getPaymentMethods();
+    console.log('Current payment option is ' +`${paymentMethod}`.green);
+    await dbInstance.closeBrowser();
     console.log(`Get ${dsOrders.length} ds orders in total.`.green);
     console.log(dsOrders);
     for (let i = 0; i < dsOrders.length; i++) {
