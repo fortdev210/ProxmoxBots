@@ -30,7 +30,11 @@ async function main() {
         const wmBuyHandler = new WalmartBuyHandler(currentOrderInfo, flagInstance, paymentMethod);
         wmBuyHandler.browser = dbInstance.browser;
         try {
-          await wmBuyHandler.processBuyOrder();
+          let res = await wmBuyHandler.processBuyOrder();
+          if (res === 'BAD_ORDER') {
+            console.log('Error: this order was ill processed, Please check manually.'.bgRed)
+            wmBuyHandler.sleep(300000)
+          }
         } catch (error) {
           console.log("Error while processing, restarting...");
           i --;
