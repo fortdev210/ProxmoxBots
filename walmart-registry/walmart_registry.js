@@ -299,27 +299,9 @@ class WalmartRegistry extends PuppeteerBase {
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      console.log("Use another proxy to bypass captcha...");
-      await this.luminatiProxyManager("OFF");
-      await this.sleep(3000);
-      await this.luminatiProxyManager("ON");
-      await this.page.reload();
-      await this.signInWalmart();
-      const captchaDetected = await this.checkCaptcha(5000);
-      if (captchaDetected) {
-        console.log("Use another proxy to bypass captcha...");
-        await this.luminatiProxyManager("OFF");
-        await this.sleep(3000);
-        await this.luminatiProxyManager("ON");
-        await this.page.reload();
-        await this.signInWalmart();
-        const captchaDetected = await this.checkCaptcha(5000);
-        if (captchaDetected) {
-          console.log("Captcha detected.");
-          await this.closeBrowser();
-          return "Captcha";
-        }
-      }
+      console.log("Captcha detected.");
+      await this.closeBrowser();
+      return "Captcha";
     }
     console.log("Successfully signed in, registering...");
     await this.flagInstance.putInProcessingFlag();
@@ -356,27 +338,9 @@ class WalmartRegistry extends PuppeteerBase {
     await this.fillSignUpForm();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      console.log("Use another proxy to bypass captcha...");
-      await this.luminatiProxyManager("OFF");
-      await this.sleep(3000);
-      await this.luminatiProxyManager("ON");
-      await this.page.reload();
-      await this.fillSignUpForm();
-      const captchaDetected = await this.checkCaptcha(5000);
-      if (captchaDetected) {
-        console.log("Use another proxy to bypass captcha...");
-        await this.luminatiProxyManager("OFF");
-        await this.sleep(3000);
-        await this.luminatiProxyManager("ON");
-        await this.page.reload();
-        await this.fillSignUpForm();
-        const captchaDetected = await this.checkCaptcha(5000);
-        if (captchaDetected) {
-          console.log("Captcha detected.");
-          await this.closeBrowser();
-          return "Captcha";
-        }
-      }
+      console.log("Captcha detected.");
+      await this.closeBrowser();
+      return "Captcha";
     } else {
       await this.checkAlreadyExist();
     }
