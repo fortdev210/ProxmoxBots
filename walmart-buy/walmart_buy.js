@@ -626,10 +626,7 @@ class WalmartBuy extends PuppeteerBase {
     if (isWellProcessed) {
       console.log("This order was well preprocessed, doing next...");
     } else {
-      console.log("This order was ill preprocessed. Needs manual checking...");
-      await this.flagInstance.putInKelly();
-      await this.closeBrowser();
-      return;
+      return 'BAD_ORDER'
     }
     await this.clickGiftCheck();
     await this.goCheckout();
