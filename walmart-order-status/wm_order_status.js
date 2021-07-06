@@ -5,6 +5,7 @@ const apiInstance = new API_MANAGER();
 
 class WalmartOrderStatusScraper extends WalmartBase {
   constructor(startIndex, endIndex) {
+    super();
     this.startIndex = startIndex;
     this.endIndex = endIndex;
     this.apiInstance = apiInstance;
@@ -18,6 +19,7 @@ class WalmartOrderStatusScraper extends WalmartBase {
 
   async shuffleDSOrders() {
     let dsOrders = await this.apiInstance.getDsOrders(this.supplier);
+    console.log(`Get ${dsOrders.length} orders. Getting the status...`)
     dsOrders = dsOrders.slice(this.startIndex, this.endIndex);
     this.dsOrders = dsOrders;
   }
@@ -38,7 +40,6 @@ class WalmartOrderStatusScraper extends WalmartBase {
 
   async goSignInPage() {
     await this.init(this.proxy);
-    await this.openNewPage();
     await this.openLink(this.signInLink);
     try {
       await this.waitForLoadingElement("#email");
@@ -49,15 +50,57 @@ class WalmartOrderStatusScraper extends WalmartBase {
     }
   }
 
+  async getPurchaseHistory() {
+    const link = "https://www.walmart.com/account/wmpurchasehistory";
+    await this.openLink(link);
+    await this.sleep(3000);
+    try {
+      await this.waitForLoadingElement('[data-title="Walmart.com"]')
+    } catch (error) {
+      console.log('Error while opening purchase history page.');
+      return 'Captcha'
+    }
+    let bodyHTML = await this.page.evaluate(() => document.body.innerHTML);
+    var pattern = /window.__WML_REDUX_INITIAL_STATE__ = (.*?);<\/script>/i;
+    ordersJson = bodyHTML.match(pattern)[1];
+    return ordersJson
+  }
+
   async processDSOrder() {
     await this.goSignInPage();
-    await this.signInWalmart(); 
+    await this.signInWalmart(this.email); 
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      console.log("Captcha detected.");
       await this.closeBrowser();
       return "Captcha";
     }
+    const orderData = await this.getPurchaseHistory();
+    if (orderData === 'Captcha') {
+      return orderData
+    } else {
+      await apiInstance.updateDsOrder(this.dsOrder, orderData, this.supplier);
+    }
   }
-  
+
+  async getAllOrderStatus() {
+    await this.shuffleDSOrders();
+    await this.getProxies();
+    let numOfProcessed = 0;
+    while (true) {
+      console.log(`Starting ${numOfProcessed+1}th order...`)
+      this.dsOrder = this.dsOrders[numOfProcessed];
+      await this.getRandProxy();
+      console.log('Proxy being used: ', this.proxy.ip, this.proxy.port)
+      this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
+      console.log('Current Order: ', this.dsOrder)
+      await this.processDSOrder();
+      await this.closeBrowser();
+      console.log('')
+      numOfProcessed ++;
+      await this.sleep(3000);
+      if (numOfProcessed === this.dsOrders.length) break;
+    }
+  }
 }
+
+module.exports = WalmartOrderStatusScraper

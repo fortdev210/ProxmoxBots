@@ -27,8 +27,8 @@ class WalmartBuy extends PuppeteerBase {
     }
   }
 
-  async fillOldSignInForm() {
-    await this.insertValue('[id="email"]', this.customerInfo.email);
+  async fillOldSignInForm(email) {
+    await this.insertValue('[id="email"]', email);
     await this.insertValue('[id="password"]', this.passwords[0]);
     await this.clickButton('[data-automation-id="signin-submit-btn"]');
     try {
@@ -49,8 +49,8 @@ class WalmartBuy extends PuppeteerBase {
     } catch (error) {}
   }
 
-  async fillNewSignInForm() {
-    await this.insertValue('[id="email"]', this.customerInfo.email);
+  async fillNewSignInForm(email) {
+    await this.insertValue('[id="email"]', email);
     await this.waitForLoadingElement(
       '[data-automation-id="signin-continue-submit-btn"]'
     );
@@ -69,13 +69,13 @@ class WalmartBuy extends PuppeteerBase {
     } catch (error) {}
   }
 
-  async signInWalmart() {
+  async signInWalmart(email) {
     try {
       await this.waitForLoadingElement("#password");
       console.log("Old Signin Page...");
-      await this.fillOldSignInForm();
+      await this.fillOldSignInForm(email);
     } catch (error) {
-      await this.fillNewSignInForm();
+      await this.fillNewSignInForm(email);
     }
   }
 
@@ -614,7 +614,7 @@ class WalmartBuy extends PuppeteerBase {
     ]);
     await this.sleep(3000);
     await this.goSignInPage();
-    await this.signInWalmart();
+    await this.signInWalmart(this.customerInfo.email);
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Captcha detected.");
