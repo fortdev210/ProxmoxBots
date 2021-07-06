@@ -91,14 +91,16 @@ class WalmartOrderStatusScraper extends WalmartBase {
       this.dsOrder = this.dsOrders[numOfProcessed];
       await this.getRandProxy();
       console.log('Proxy being used: ', this.proxy.ip, this.proxy.port)
-      this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
       console.log('Current Order: ', this.dsOrder)
+      this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
+      
       await this.processDSOrder();
-      await this.closeBrowser();
+      
+      // await this.closeBrowser();
       console.log('')
       numOfProcessed ++;
       await this.sleep(3000);
-      if (numOfProcessed === this.dsOrders.length) break;
+      // if (numOfProcessed === this.dsOrders.length) break;
     }
   }
 }
