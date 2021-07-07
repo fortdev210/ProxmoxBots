@@ -57,7 +57,7 @@ class WalmartOrderStatusScraper extends WalmartBase {
     try {
       await this.waitForLoadingElement('[data-title="Walmart.com"]')
     } catch (error) {
-      console.log('Error while opening purchase history page.');
+      console.log('Error while opening purchase history page.', error);
       return 'Captcha'
     }
     let bodyHTML = await this.page.evaluate(() => document.body.innerHTML);
@@ -96,11 +96,11 @@ class WalmartOrderStatusScraper extends WalmartBase {
       
       await this.processDSOrder();
       
-      // await this.closeBrowser();
+      await this.closeBrowser();
       console.log('')
       numOfProcessed ++;
       await this.sleep(3000);
-      // if (numOfProcessed === this.dsOrders.length) break;
+      if (numOfProcessed === this.dsOrders.length) break;
     }
   }
 }
