@@ -29,17 +29,7 @@ async function main() {
         const flagInstance = new Flag_Order(dsOrders[i]);
         const wmBuyHandler = new WalmartBuyHandler(currentOrderInfo, flagInstance, paymentMethod);
         wmBuyHandler.browser = dbInstance.browser;
-        try {
-          let res = await wmBuyHandler.processBuyOrder();
-          if (res === 'BAD_ORDER') {
-            console.log('Error: this order was ill processed, Please check manually.'.bgRed)
-            await wmBuyHandler.sleep(300000)
-          }
-        } catch (error) {
-          console.log("Error while processing, restarting...");
-          i --;
-          await wmBuyHandler.closeBrowser();
-        }
+        await wmBuyHandler.processBuyOrder();
     }
   } else {
     console.log(

@@ -181,10 +181,17 @@ class WalmartBuy extends PuppeteerBase {
         return scrapedNum
       })
       console.log('Order number is ', orderNumber);
-      await this.cancelExtraItemOnBadOrder();
+      try {
+        await this.cancelExtraItemOnBadOrder();
+      } catch (error) {
+        console.log('Failed to cancel the extra item. Extra item doesnt exist or already canceled.'.red)
+      }   
       await this.applyDB(orderNumber)
+      await this.closeBrowser()
+      return
     } else {
-      console.log('No need to cancel.')
+      console.log('No need to cancel. Needs manual checking.'.bgRed);
+      console.log(stopHERE)
     }
   }
 
@@ -722,23 +729,22 @@ class WalmartBuy extends PuppeteerBase {
     if (isWellProcessed) {
       console.log("This order was well preprocessed, doing next...");
     } else {
-      try {
-        await this.handleBadOrder();
-      } catch (error) {
-        console.log(error)
-      }
-     
-      return 'BAD_ORDER'
+      await this.handleBadOrder();
     }
-    await this.clickGiftCheck();
-    await this.goCheckout();
-    await this.prepareForCheckout();
-    await this.checkout();
-    await this.placeOrder();
-    const orderNumber = await this.getOrderNumber();
-    await this.cancelExtraItem(orderNumber);
-    await this.applyDB(orderNumber);
-    await this.closeBrowser();
+    try {
+      await this.clickGiftCheck();
+      await this.goCheckout();
+      await this.prepareForCheckout();
+      await this.checkout();
+      await this.placeOrder();
+      const orderNumber = await this.getOrderNumber();
+      await this.cancelExtraItem(orderNumber);
+      await this.applyDB(orderNumber);
+      await this.closeBrowser();
+    } catch (error) {
+      console.log('Error while in processing.'.red);
+      await this.closeBrowser();
+    }
   }
 }
 
