@@ -33,7 +33,7 @@ async function main() {
           let res = await wmBuyHandler.processBuyOrder();
           if (res === 'BAD_ORDER') {
             console.log('Error: this order was ill processed, Please check manually.'.bgRed)
-            wmBuyHandler.sleep(300000)
+            await wmBuyHandler.sleep(300000)
           }
         } catch (error) {
           console.log("Error while processing, restarting...");
