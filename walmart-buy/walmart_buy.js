@@ -711,10 +711,10 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async processBuyOrder() {
-    // await this.luminatiProxyManager("ON", [
-    //     this.customerInfo.ip,
-    //     this.customerInfo.port,
-    // ]);
+    await this.luminatiProxyManager("ON", [
+        this.customerInfo.ip,
+        this.customerInfo.port,
+    ]);
     await this.sleep(3000);
     await this.goSignInPage();
     await this.signInWalmart();
