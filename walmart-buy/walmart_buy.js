@@ -92,6 +92,109 @@ class WalmartBuy extends PuppeteerBase {
     return isCorrectProcessed;
   }
 
+  isWithinDayOrder(lastOrderDate) {
+    const orderDate = new Date(lastOrderDate);
+    const now = new Date();
+    const aDay = 1000*3600*24
+    const diff = now - orderDate
+    return diff < aDay
+  }
+
+  async trackOrders() {
+    //--- click account button ---//
+    await this.waitForLoadingElement('[aria-label="Your Account"]');
+    await this.clickButton('[aria-label="Your Account"]')
+    //--- wait for account menu root open ---//
+    await this.waitForLoadingElement('[id="vh-account-menu-root"]');
+    await this.waitForLoadingElement('[title="Track Orders"]');
+    await this.clickButton('[title="Track Orders"]');
+    //--- wait for purchase history page open ---//
+    try {
+      await this.waitForLoadingElement('[data-automation-id="purchase-history"]',30000);
+    } catch (error) {
+      await this.page.reload()
+    }
+     
+    const lastOrderDate = await this.page.evaluate(()=> {
+      return document.querySelector('[data-automation-id="order-date"]').innerText
+    })
+    console.log("The last order date is ", lastOrderDate);
+    return this.isWithinDayOrder(lastOrderDate)
+  }
+
+  async cancelExtraItemOnBadOrder() {
+    const extraItemStatus = await this.page.evaluate((extraItemNumber) => {
+      const selector = `[href=\"/ip/${extraItemNumber}\"]`;
+      const parent = document.querySelector([selector]).parentElement
+        .parentElement.parentElement.parentElement.parentElement;
+      return parent.querySelector('[data-automation-id="shipment-status"]')
+        .innerText;
+    }, this.customerInfo.extraItem);
+    console.log(`Extra Item is in ${extraItemStatus}`.bgGreen);
+    if (extraItemStatus.toLowerCase() === "canceled") {
+      console.log('Extra item is already cancelled.'.bgGreen)
+    } else if (extraItemStatus.toLowerCase().indexOf("arrives by") > -1) {
+      ///---- Cancel the extra item ----///
+      await this.page.evaluate((extraItemNumber) => {
+        const selector = `[href=\"/ip/${extraItemNumber}\"]`;
+        const parent = document.querySelector([selector]).parentElement
+          .parentElement.parentElement.parentElement.parentElement;
+        try {
+          parent
+          .querySelector('[class="order-details-cancellation"]')
+          .querySelector("button")
+          .click();
+        } catch (error) {
+          
+        }
+      }, this.customerInfo.extraItem);
+      console.log("Clicked cancel button");
+      await this.sleep(3000);
+      try {
+        await this.waitForLoadingElement('form[class="cancellation-form"]');
+        console.log("Select the reason");
+        await this.page.evaluate(() => {
+          document.querySelectorAll('[name="subReasonCode"]')[0].click();
+        });
+        await this.sleep(2010);
+        await this.page.evaluate(() => {
+          document
+            .querySelector('[class="cancellation-form"]')
+            .querySelector('[type="submit"]')
+            .click();
+        });
+        console.log("Successfully canceled extra item".bgGreen);
+      } catch (error) {
+         console.log('Failed to select the reason'.red)
+      }
+    }
+  }
+
+  async handleBadOrder() {
+    const needCancel =  await this.trackOrders()
+    if (needCancel) {
+      console.log('There is an order within 24 hours')
+      const orderNumber = await this.page.evaluate(()=>{
+        let scrapedNum = document.querySelector('[data-automation-id="order-number"]').innerText;
+        scrapedNum = scrapedNum.match(/#(.*)/g)[0]
+        scrapedNum = scrapedNum.replace('#','')
+        return scrapedNum
+      })
+      console.log('Order number is ', orderNumber);
+      try {
+        await this.cancelExtraItemOnBadOrder();
+      } catch (error) {
+        console.log('Failed to cancel the extra item. Extra item doesnt exist or already canceled.'.red)
+      }   
+      await this.applyDB(orderNumber)
+      await this.closeBrowser()
+      return
+    } else {
+      console.log('No need to cancel. Needs manual checking.'.bgRed);
+      console.log(stopHERE)
+    }
+  }
+
   async clickGiftCheck() {
     try {
       await this.waitForLoadingElement('[data-tl-id="CartGiftChk"]');
@@ -608,10 +711,10 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async processBuyOrder() {
-    await this.luminatiProxyManager("ON", [
-        this.customerInfo.ip,
-        this.customerInfo.port,
-    ]);
+    // await this.luminatiProxyManager("ON", [
+    //     this.customerInfo.ip,
+    //     this.customerInfo.port,
+    // ]);
     await this.sleep(3000);
     await this.goSignInPage();
     await this.signInWalmart();
@@ -626,17 +729,22 @@ class WalmartBuy extends PuppeteerBase {
     if (isWellProcessed) {
       console.log("This order was well preprocessed, doing next...");
     } else {
-      return 'BAD_ORDER'
+      await this.handleBadOrder();
     }
-    await this.clickGiftCheck();
-    await this.goCheckout();
-    await this.prepareForCheckout();
-    await this.checkout();
-    await this.placeOrder();
-    const orderNumber = await this.getOrderNumber();
-    await this.cancelExtraItem(orderNumber);
-    await this.applyDB(orderNumber);
-    await this.closeBrowser();
+    try {
+      await this.clickGiftCheck();
+      await this.goCheckout();
+      await this.prepareForCheckout();
+      await this.checkout();
+      await this.placeOrder();
+      const orderNumber = await this.getOrderNumber();
+      await this.cancelExtraItem(orderNumber);
+      await this.applyDB(orderNumber);
+      await this.closeBrowser();
+    } catch (error) {
+      console.log('Error while in processing.'.red);
+      await this.closeBrowser();
+    }
   }
 }
 
