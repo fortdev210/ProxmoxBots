@@ -718,13 +718,13 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async processBuyOrder() {
-    await this.clearSiteSettings();
     await this.luminatiProxyManager("ON", [
         this.customerInfo.ip,
         this.customerInfo.port,
     ]);
     await this.sleep(3000);
     await this.goSignInPage();
+    await this.clearSiteSettings();
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
