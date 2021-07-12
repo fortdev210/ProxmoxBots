@@ -39,9 +39,17 @@ class WalmartOrderStatusScraper extends WalmartBase {
     this.proxy = proxy;
   }
 
+  async clearSiteSettings() {
+    const client = await this.page.target().createCDPSession();
+    await client.send('Network.clearBrowserCookies');
+    await client.send('Network.clearBrowserCache');
+    console.log('Clear cookies and caches.'.green)
+  }
+
   async goSignInPage() {
     await this.init(this.proxy);
     if (this.useLuminati) await this.luminatiProxyManager("ON");
+    await this.clearSiteSettings();
     await this.sleep(3000);
     await this.openLink(this.signInLink);
     try {
