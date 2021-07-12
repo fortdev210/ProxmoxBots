@@ -40,6 +40,8 @@ class WalmartOrderStatusScraper extends WalmartBase {
 
   async goSignInPage() {
     await this.init(this.proxy);
+    await this.luminatiProxyManager("ON");
+    await this.sleep(3000);
     await this.openLink(this.signInLink);
     try {
       await this.waitForLoadingElement("#email");
@@ -55,15 +57,15 @@ class WalmartOrderStatusScraper extends WalmartBase {
     await this.openLink(link);
     await this.sleep(3000);
     try {
-      await this.waitForLoadingElement('[data-title="Walmart.com"]')
-    } catch (error) {
-      console.log('Error while opening purchase history page.', error);
-      return 'Captcha'
-    }
-    let bodyHTML = await this.page.evaluate(() => document.body.innerHTML);
+      let bodyHTML = await this.page.evaluate(() => document.body.innerHTML);
     var pattern = /window.__WML_REDUX_INITIAL_STATE__ = (.*?);<\/script>/i;
-    ordersJson = bodyHTML.match(pattern)[1];
+    let ordersJson = bodyHTML.match(pattern)[1];
     return ordersJson
+    } catch (error) {
+      console.log('Getting order data error.');
+      return "Captcha"
+    }
+    
   }
 
   async processDSOrder() {
@@ -92,9 +94,6 @@ class WalmartOrderStatusScraper extends WalmartBase {
       console.log(`Starting ${numOfProcessed+1}th order...`)
       this.dsOrder = this.dsOrders[numOfProcessed];
       // await this.getRandProxy();
-      await this.luminatiProxyManager("ON");
-      await this.sleep(3000);
-      console.log('Proxy being used: ', this.proxy.ip, this.proxy.port)
       console.log('Current Order: ', this.dsOrder)
       this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
       
