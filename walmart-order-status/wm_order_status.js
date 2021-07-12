@@ -71,9 +71,10 @@ class WalmartOrderStatusScraper extends WalmartBase {
     await this.signInWalmart(this.email); 
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      await this.closeBrowser();
+      // await this.closeBrowser();
       return "Captcha";
     }
+    await this.luminatiProxyManager('OFF')
     const orderData = await this.getPurchaseHistory();
     if (orderData === 'Captcha') {
       return orderData
@@ -86,10 +87,13 @@ class WalmartOrderStatusScraper extends WalmartBase {
     await this.shuffleDSOrders();
     await this.getProxies();
     let numOfProcessed = 0;
+    
     while (true) {
       console.log(`Starting ${numOfProcessed+1}th order...`)
       this.dsOrder = this.dsOrders[numOfProcessed];
-      await this.getRandProxy();
+      // await this.getRandProxy();
+      await this.luminatiProxyManager("ON");
+      await this.sleep(3000);
       console.log('Proxy being used: ', this.proxy.ip, this.proxy.port)
       console.log('Current Order: ', this.dsOrder)
       this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
