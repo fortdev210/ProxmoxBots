@@ -740,6 +740,7 @@ class WalmartBuy extends PuppeteerBase {
       const orderNumber = await this.getOrderNumber();
       await this.cancelExtraItem(orderNumber);
       await this.applyDB(orderNumber);
+      await this.clearSiteSettings();
       await this.closeBrowser();
     } catch (error) {
       console.log('Error while in processing.'.red);
