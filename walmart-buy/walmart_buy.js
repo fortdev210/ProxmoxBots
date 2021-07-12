@@ -730,6 +730,7 @@ class WalmartBuy extends PuppeteerBase {
       console.log("This order was well preprocessed, doing next...");
     } else {
       await this.handleBadOrder();
+      return
     }
     try {
       await this.clickGiftCheck();
