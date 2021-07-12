@@ -10,6 +10,13 @@ class WalmartRegistry extends PuppeteerBase {
     this.flagInstance = flagInstance;
   }
 
+  async clearSiteSettings() {
+    const client = await this.page.target().createCDPSession();
+    await client.send('Network.clearBrowserCookies');
+    await client.send('Network.clearBrowserCache');
+    console.log('Clear cookies and caches.'.green)
+  }
+
   async goSignInPage() {
     await this.openNewPage();
     // await this.luminatiProxyManager("ON");
@@ -290,6 +297,7 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async extraItemProcess() {
+    await this.clearSiteSettings()
     await this.luminatiProxyManager("ON", [
       this.customerInfo.ip,
       this.customerInfo.port,
@@ -329,6 +337,7 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async noExtraItemProcess() {
+    await this.clearSiteSettings()
     await this.luminatiProxyManager("ON", [
       this.customerInfo.ip,
       this.customerInfo.port,
