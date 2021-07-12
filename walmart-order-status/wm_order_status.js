@@ -4,7 +4,7 @@ const API_MANAGER = require("../lib/api");
 const apiInstance = new API_MANAGER();
 
 class WalmartOrderStatusScraper extends WalmartBase {
-  constructor(startIndex, endIndex) {
+  constructor(startIndex, endIndex, useLuminati) {
     super();
     this.startIndex = startIndex;
     this.endIndex = endIndex;
@@ -15,6 +15,7 @@ class WalmartOrderStatusScraper extends WalmartBase {
     this.dsOrder = null;
     this.proxy = null;
     this.signInLink = 'https://www.walmart.com/account/login';
+    this.useLuminati = useLuminati
   }
 
   async shuffleDSOrders() {
@@ -40,6 +41,8 @@ class WalmartOrderStatusScraper extends WalmartBase {
 
   async goSignInPage() {
     await this.init(this.proxy);
+    if (this.useLuminati) await this.luminatiProxyManager("ON");
+    await this.sleep(3000);
     await this.openLink(this.signInLink);
     try {
       await this.waitForLoadingElement("#email");
@@ -74,7 +77,7 @@ class WalmartOrderStatusScraper extends WalmartBase {
       // await this.closeBrowser();
       return "Captcha";
     }
-    await this.luminatiProxyManager('OFF')
+    if(this.useLuminati) await this.luminatiProxyManager('OFF')
     const orderData = await this.getPurchaseHistory();
     if (orderData === 'Captcha') {
       return orderData
@@ -91,13 +94,10 @@ class WalmartOrderStatusScraper extends WalmartBase {
     while (true) {
       console.log(`Starting ${numOfProcessed+1}th order...`)
       this.dsOrder = this.dsOrders[numOfProcessed];
-      // await this.getRandProxy();
-      await this.luminatiProxyManager("ON");
-      await this.sleep(3000);
+      if (!this.useLuminati) await this.getRandProxy();
       console.log('Proxy being used: ', this.proxy.ip, this.proxy.port)
       console.log('Current Order: ', this.dsOrder)
       this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
-      
       await this.processDSOrder();
       
       await this.closeBrowser();
