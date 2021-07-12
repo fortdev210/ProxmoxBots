@@ -12,10 +12,17 @@ console.log("");
 const WalmartOrderStatusScraper = require('./wm_order_status')
 
 async function main() {
-    let startIndex, endIndex;
-    startIndex = process.argv[process.argv.length-2];
-    endIndex = process.argv[process.argv.length-1];
-    const scraper = new WalmartOrderStatusScraper(startIndex, endIndex);
+    let startIndex = 0, endIndex = 100, useLuminati = 0;
+    const args = process.argv.slice(2);
+    startIndex = args[0]
+    endIndex = args[1];
+    try {
+        useLuminati = args[2];
+    } catch (error) {
+        useLuminati = 0;
+    }
+    
+    const scraper = new WalmartOrderStatusScraper(startIndex, endIndex,useLuminati);
     await scraper.getAllOrderStatus();
 }
 

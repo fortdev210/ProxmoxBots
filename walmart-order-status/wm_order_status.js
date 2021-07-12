@@ -58,15 +58,15 @@ class WalmartOrderStatusScraper extends WalmartBase {
     await this.openLink(link);
     await this.sleep(3000);
     try {
-      await this.waitForLoadingElement('[data-title="Walmart.com"]')
+      let bodyHTML = await this.page.evaluate(() => document.body.innerHTML);
+      var pattern = /window.__WML_REDUX_INITIAL_STATE__ = (.*?);<\/script>/i;
+      let ordersJson = bodyHTML.match(pattern)[1];
+      return ordersJson
     } catch (error) {
-      console.log('Error while opening purchase history page.', error);
-      return 'Captcha'
+      console.log('Getting order data error.');
+      return "Captcha"
     }
-    let bodyHTML = await this.page.evaluate(() => document.body.innerHTML);
-    var pattern = /window.__WML_REDUX_INITIAL_STATE__ = (.*?);<\/script>/i;
-    ordersJson = bodyHTML.match(pattern)[1];
-    return ordersJson
+    
   }
 
   async processDSOrder() {
@@ -94,12 +94,15 @@ class WalmartOrderStatusScraper extends WalmartBase {
     while (true) {
       console.log(`Starting ${numOfProcessed+1}th order...`)
       this.dsOrder = this.dsOrders[numOfProcessed];
-      if (!this.useLuminati) await this.getRandProxy();
-      console.log('Proxy being used: ', this.proxy.ip, this.proxy.port)
+      if (!this.useLuminati) {
+        console.log('Using buyproxies now.'.green)
+        await this.getRandProxy()
+      } else {
+        console.log('Using Luminati Proxies Now.'.green)
+      }
       console.log('Current Order: ', this.dsOrder)
       this.email =  this.dsOrder.username ? this.dsOrder.username : this.dsOrder.email
       await this.processDSOrder();
-      
       await this.closeBrowser();
       console.log('')
       numOfProcessed ++;
