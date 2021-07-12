@@ -14,6 +14,7 @@ console.log("");
 
 async function main() {
   const dbInstance = new STLPRO_MANAGER();
+  await dbInstance.clearSiteSettings();
   const dsOrders = await dbInstance.getOrders();
   if (dsOrders.length) {
     const paymentMethod = await dbInstance.getPaymentMethods();
