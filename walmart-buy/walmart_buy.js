@@ -177,7 +177,7 @@ class WalmartBuy extends PuppeteerBase {
       const orderNumber = await this.page.evaluate(()=>{
         let scrapedNum = document.querySelector('[data-automation-id="order-number"]').innerText;
         scrapedNum = scrapedNum.match(/#(.*)/g)[0]
-        scrapedNum = scrapedNum.replace('#','')
+        scrapedNum = scrapedNum.replace('#','').replace('-','')
         return scrapedNum
       })
       console.log('Order number is ', orderNumber);
@@ -721,6 +721,7 @@ class WalmartBuy extends PuppeteerBase {
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Captcha detected.");
+      await this.clearSiteSettings();
       await this.closeBrowser();
       return "Captcha";
     }
