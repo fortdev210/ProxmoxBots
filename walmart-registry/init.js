@@ -30,6 +30,10 @@ async function main() {
           console.log("No extra item found, registering...");
           isProcessed = await registryHandler.noExtraItemProcess();
         }
+        if (isProcessed === "Captcha") {
+           console.log('Captcha detected. Try later...'.red);
+           break
+        }
       } catch (error) {
         console.log('Error while processing the order. Retrying...');
         i--;
