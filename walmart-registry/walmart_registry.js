@@ -303,7 +303,6 @@ class WalmartRegistry extends PuppeteerBase {
     ]);
     await this.sleep(3000);
     await this.goSignInPage();
-    await this.clearSiteSettings()
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
