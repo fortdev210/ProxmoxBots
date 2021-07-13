@@ -177,7 +177,7 @@ class WalmartBuy extends PuppeteerBase {
       const orderNumber = await this.page.evaluate(()=>{
         let scrapedNum = document.querySelector('[data-automation-id="order-number"]').innerText;
         scrapedNum = scrapedNum.match(/#(.*)/g)[0]
-        scrapedNum = scrapedNum.replace('#','')
+        scrapedNum = scrapedNum.replace('#','').replace('-','')
         return scrapedNum
       })
       console.log('Order number is ', orderNumber);
@@ -711,16 +711,17 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async processBuyOrder() {
-    // await this.luminatiProxyManager("ON", [
-    //     this.customerInfo.ip,
-    //     this.customerInfo.port,
-    // ]);
+    await this.luminatiProxyManager("ON", [
+        this.customerInfo.ip,
+        this.customerInfo.port,
+    ]);
     await this.sleep(3000);
     await this.goSignInPage();
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Captcha detected.");
+      await this.clearSiteSettings();
       await this.closeBrowser();
       return "Captcha";
     }
@@ -730,6 +731,7 @@ class WalmartBuy extends PuppeteerBase {
       console.log("This order was well preprocessed, doing next...");
     } else {
       await this.handleBadOrder();
+      return
     }
     try {
       await this.clickGiftCheck();
@@ -740,6 +742,7 @@ class WalmartBuy extends PuppeteerBase {
       const orderNumber = await this.getOrderNumber();
       await this.cancelExtraItem(orderNumber);
       await this.applyDB(orderNumber);
+      await this.clearSiteSettings();
       await this.closeBrowser();
     } catch (error) {
       console.log('Error while in processing.'.red);
