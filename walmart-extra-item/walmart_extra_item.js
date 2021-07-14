@@ -54,7 +54,7 @@ class WalmartExtraItemCancel extends WalmartBase {
     await this.insertValue('[name="password"]', this.password);
     await this.clickButton('[value="Log in"]');
 
-    await this.waitForLoadingElement('[id="id_extra_items_canceled_at_0"]');
+    await this.waitForLoadingElement('[id="id_extra_items_canceled_at_0"]', 30000);
     ///---- Input the canceled date YYYY-MM-DD ----///
     let isEmpty = await this.page.evaluate(() => {
       const orgDate = document.querySelector(
