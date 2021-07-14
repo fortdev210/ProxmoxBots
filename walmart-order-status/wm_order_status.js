@@ -47,10 +47,8 @@ class WalmartOrderStatusScraper extends WalmartBase {
   }
 
   async goSignInPage() {
-    console.log("Proxy being used: ", this.proxy)
     await this.init(this.proxy);
     if (this.useLuminati) await this.luminatiProxyManager("ON");
-    await this.clearSiteSettings();
     await this.sleep(3000);
     await this.openLink(this.signInLink);
     try {

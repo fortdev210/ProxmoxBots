@@ -9,6 +9,7 @@ class WalmartExtraItemCancel extends WalmartBase {
     this.username = "buybot";
     this.password = "forte1long";
     this.signInLink = "https://www.walmart.com/account/login?ref=domain";
+    
   }
 
   async getDsOrdersToCancel() {
@@ -24,11 +25,14 @@ class WalmartExtraItemCancel extends WalmartBase {
 
   async processOneOrder() {
     await this.goSignInPage();
+    const cookies = await this.page.cookies();
+    console.log(cookies)
+    
     await this.signInWalmart(this.email);
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
-      // await this.closeBrowser();
       await this.clearSiteSettings();
+      await this.closeBrowser();
       return "Captcha";
     }
     await this.openHistoryPage();
@@ -54,7 +58,10 @@ class WalmartExtraItemCancel extends WalmartBase {
     await this.insertValue('[name="password"]', this.password);
     await this.clickButton('[value="Log in"]');
 
-    await this.waitForLoadingElement('[id="id_extra_items_canceled_at_0"]', 30000);
+    await this.waitForLoadingElement(
+      '[id="id_extra_items_canceled_at_0"]',
+      30000
+    );
     ///---- Input the canceled date YYYY-MM-DD ----///
     let isEmpty = await this.page.evaluate(() => {
       const orgDate = document.querySelector(
@@ -95,22 +102,22 @@ class WalmartExtraItemCancel extends WalmartBase {
     await this.getDsOrdersToCancel();
     await this.getProxies();
 
-    for (let i = 0; i < this.dsOrders.length; i ++) {
-        this.dsOrder = this.dsOrders[i];
-        console.log(`Starting ${i+1}th order...`);
-        if (!this.useLuminati) {
-            console.log('Using buyproxies now.'.green)
-            await this.getRandProxy()
-        } else {
-            console.log('Using Luminati Proxies Now.'.green)
-        }
-        try {
-            this.email = this.dsOrder.account_supplier.username;
-        } catch (error) {
-            this.email = this.dsOrder.email;
-        }
-        await this.processOneOrder();
-    }  
+    for (let i = 0; i < this.dsOrders.length; i++) {
+      this.dsOrder = this.dsOrders[i];
+      console.log(`Starting ${i + 1}th order...`);
+      if (!this.useLuminati) {
+        console.log("Using buyproxies now.".green);
+        await this.getRandProxy();
+      } else {
+        console.log("Using Luminati Proxies Now.".green);
+      }
+      try {
+        this.email = this.dsOrder.account_supplier.username;
+      } catch (error) {
+        this.email = this.dsOrder.email;
+      }
+      await this.processOneOrder();
+    }
   }
 }
 

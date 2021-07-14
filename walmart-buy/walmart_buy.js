@@ -147,7 +147,7 @@ class WalmartBuy extends PuppeteerBase {
         } catch (error) {
           
         }
-      }, this.customerInfo.extraItem);
+      }, extraItemNumber);
       console.log("Clicked cancel button");
       await this.sleep(3000);
       try {
