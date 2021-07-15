@@ -36,9 +36,8 @@ async function main() {
         }
       } catch (error) {
         console.log('Error while processing the order. Retrying...');
-        i--;
+        await registryHandler.closeBrowser();
       }
-      
     }
     console.log("Set up completed".inverse);
   } else {
