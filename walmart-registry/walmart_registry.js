@@ -10,6 +10,13 @@ class WalmartRegistry extends PuppeteerBase {
     this.flagInstance = flagInstance;
   }
 
+  async clearSiteSettings() {
+    const client = await this.page.target().createCDPSession();
+    await client.send('Network.clearBrowserCookies');
+    await client.send('Network.clearBrowserCache');
+    console.log('Clear cookies and caches.'.green)
+  }
+
   async goSignInPage() {
     await this.openNewPage();
     // await this.luminatiProxyManager("ON");
@@ -296,10 +303,12 @@ class WalmartRegistry extends PuppeteerBase {
     ]);
     await this.sleep(3000);
     await this.goSignInPage();
+    await this.clearSiteSettings();
     await this.signInWalmart();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
       console.log("Captcha detected.");
+      await this.clearSiteSettings();
       await this.closeBrowser();
       return "Captcha";
     }
@@ -335,6 +344,7 @@ class WalmartRegistry extends PuppeteerBase {
     ]);
     await this.sleep(3000);
     await this.goSignUpPage();
+    await this.clearSiteSettings();
     await this.fillSignUpForm();
     const captchaDetected = await this.checkCaptcha(5000);
     if (captchaDetected) {
