@@ -97,7 +97,10 @@ class WalmartOrderStatusScraper extends WalmartBase {
     await this.shuffleDSOrders();
     await this.getProxies();
     let numOfProcessed = 0;
-    
+    if (this.dsOrders.length === 0) {
+      console.log('There are no orders to scrape.'.green);
+      return
+    }
     while (true) {
       console.log(`Starting ${numOfProcessed+1}th order...`)
       this.dsOrder = this.dsOrders[numOfProcessed];
