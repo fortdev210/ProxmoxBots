@@ -129,14 +129,14 @@ class WalmartBuy extends PuppeteerBase {
     return this.isWithinDayOrder(lastOrderDate)
   }
 
-  async cancelExtraItemOnBadOrder() {
+  async cancelExtraItemOnBadOrder(extraItemNumber) {
     const extraItemStatus = await this.page.evaluate((extraItemNumber) => {
       const selector = `[href=\"/ip/${extraItemNumber}\"]`;
       const parent = document.querySelector([selector]).parentElement
         .parentElement.parentElement.parentElement.parentElement;
       return parent.querySelector('[data-automation-id="shipment-status"]')
         .innerText;
-    }, this.customerInfo.extraItem);
+    }, extraItemNumber);
     console.log(`Extra Item is in ${extraItemStatus}`.bgGreen);
     if (extraItemStatus.toLowerCase() === "canceled") {
       console.log('Extra item is already cancelled.'.bgGreen)
@@ -154,7 +154,7 @@ class WalmartBuy extends PuppeteerBase {
         } catch (error) {
           
         }
-      }, this.customerInfo.extraItem);
+      }, extraItemNumber);
       console.log("Clicked cancel button");
       await this.sleep(3000);
       try {
@@ -175,6 +175,7 @@ class WalmartBuy extends PuppeteerBase {
          console.log('Failed to select the reason'.red)
       }
     }
+    return extraItemStatus
   }
 
   async handleBadOrder() {
