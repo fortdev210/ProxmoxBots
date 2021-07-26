@@ -16,11 +16,18 @@ console.log(" For tips, please run the bot by executing:    ".inverse);
 console.log(" node wmCancelExtraItem.js                     ".inverse);
 console.log("");
 
-const ExtraItemCancelManager = require('./walmart_extra_item')
+const ExtraItemCancelManager = require("./walmart_extra_item");
 
 async function main() {
   const manager = new ExtraItemCancelManager();
   await manager.processAllOrders();
 }
 
-main()
+async function run() {
+  await main();
+  console.log("Automatically restarts".inverse.bold);
+  setTimeout(function () {
+    run();
+  }, 300000);
+}
+run();
