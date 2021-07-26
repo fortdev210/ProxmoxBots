@@ -21,9 +21,16 @@ async function main() {
     } catch (error) {
         useLuminati = 0;
     }
-    
     const scraper = new WalmartOrderStatusScraper(startIndex, endIndex,useLuminati);
     await scraper.getAllOrderStatus();
 }
 
-main();
+
+async function run() {
+  await main();
+  console.log("Automatically restarts".inverse.bold);
+  setTimeout(function () {
+    run();
+  }, 300000);
+}
+run();
