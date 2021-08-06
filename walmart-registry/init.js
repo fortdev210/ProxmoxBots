@@ -22,21 +22,16 @@ async function main() {
       );
       registryHandler.browser = dbInstance.browser;
       let isProcessed = false;
-      try {
-        if (currentOrderInfo.extraItem !== "N/A") {
-          console.log("Extra item found...");
-          isProcessed = await registryHandler.extraItemProcess();
-        } else {
-          console.log("No extra item found, registering...");
-          isProcessed = await registryHandler.noExtraItemProcess();
-        }
-        if (isProcessed === "Captcha") {
-           console.log('Captcha detected. Try later...'.red);
-           break
-        }
-      } catch (error) {
-        console.log('Error while processing the order. Retrying...');
-        await registryHandler.closeBrowser();
+      if (currentOrderInfo.extraItem !== "N/A") {
+        console.log("Extra item found...");
+        isProcessed = await registryHandler.extraItemProcess();
+      } else {
+        console.log("No extra item found, registering...");
+        isProcessed = await registryHandler.noExtraItemProcess();
+      }
+      if (isProcessed === "Captcha") {
+         console.log('Captcha detected. Try later...'.red);
+         break
       }
     }
     console.log("Set up completed".inverse);

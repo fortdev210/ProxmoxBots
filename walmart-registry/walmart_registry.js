@@ -371,7 +371,7 @@ class WalmartRegistry extends PuppeteerBase {
       await this.flagInstance.putInBuyer1Flag();
       console.log("Order moved to Walmart Preprocessed");
     } else {
-      console.error("An error happened while processing. Trying again...");
+      console.error("Not registered correctly.");
       await this.closeBrowser();
       await this.sleep(3000);
       return false;
