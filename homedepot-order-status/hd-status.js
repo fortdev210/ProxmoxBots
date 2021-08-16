@@ -67,12 +67,22 @@ class HDOrderStatusManager extends PuppeteerBase {
       return "Captcha Detected";
     }
 
+    try {
+      await this.page.waitForXPath(
+        '//*[contains(text(), "We\'re sorry. There was a temporary technical error with displaying your order details. Please try again shortly.")]'
+      );
+    } catch (error) {
+      console.log("Access Denied, trying another proxy...");
+      await this.closeBrowser();
+      return "Captcha Detected";
+    }
+
     //------ Get detailed info from the api ------//
     let orderData = null;
     const getResponsePromise = (page) => {
       return new Promise((resolve, reject) => {
         page.on("response", async (response) => {
-          if (response.url() === responseURL) {
+          if (response.url() === this.responseURL) {
             try {
               const orderData = await response.json();
               resolve(orderData);
@@ -117,6 +127,7 @@ class HDOrderStatusManager extends PuppeteerBase {
           this.supplier
         );
       }
+      numOfProcessed++;
       await this.sleep(1000);
       if (numOfProcessed === this.dsOrders.length) break;
     }
