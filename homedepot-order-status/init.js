@@ -16,4 +16,9 @@ async function main() {
   await hdInstance.scrapeTotalHDState();
 }
 
-main();
+async function infinite_run() {
+  await main();
+  setTimeout(() => infinite_run(), 5000);
+}
+
+infinite_run();
