@@ -228,13 +228,11 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async checkRegisterStatus() {
+    await this.page.waitForNavigation();
     await this.sleep(10000);
     const created = await this.page.evaluate(() => {
       const link = window.location.href;
-      return (
-        link ===
-        "https://www.walmart.com/lists/manage-events-registry-items?created"
-      );
+      return link.includes("created");
     });
     return created;
   }
@@ -328,9 +326,14 @@ class WalmartRegistry extends PuppeteerBase {
       await this.addExtraItem();
       await this.closeBrowser();
       await this.flagInstance.putInBuyer1Flag();
-      console.log("Order moved to Walmart Preprocessed");
+      console.log("Order moved to Walmart Preprocessed".bgGreen);
+      return true;
     } else {
-      console.error("An error happened while registering. Trying again...");
+      console.error(
+        "An error happened while registering. Trying again...".bgRed
+      );
+      await this.closeBrowser();
+      await this.sleep(3000);
       return false;
     }
   }
@@ -367,9 +370,10 @@ class WalmartRegistry extends PuppeteerBase {
       await this.addPrimaryItem();
       await this.closeBrowser();
       await this.flagInstance.putInBuyer1Flag();
-      console.log("Order moved to Walmart Preprocessed");
+      console.log("Order moved to Walmart Preprocessed".bgGreen);
+      return true;
     } else {
-      console.error("Not registered correctly.");
+      console.error("Not registered correctly.".bgRed);
       await this.closeBrowser();
       await this.sleep(3000);
       return false;
