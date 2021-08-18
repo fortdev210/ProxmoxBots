@@ -30,8 +30,10 @@ async function main() {
         isProcessed = await registryHandler.noExtraItemProcess();
       }
       if (isProcessed === "Captcha") {
-         console.log('Captcha detected. Try later...'.red);
-         break
+        console.log("Captcha detected. Try later...".red);
+        break;
+      } else if (!isProcessed) {
+        console.log("Captcha detected. Try later...", stop);
       }
     }
     console.log("Set up completed".inverse);
