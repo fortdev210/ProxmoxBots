@@ -2,6 +2,7 @@ const colors = require("colors");
 const STLPRO_MANAGER = require("../lib/stlpro");
 const WalmartRegistryHandler = require("./walmart_registry");
 const Flag_Order = require("../lib/flag");
+const { is } = require("useragent");
 
 async function main() {
   const dbInstance = new STLPRO_MANAGER();
@@ -29,9 +30,9 @@ async function main() {
         console.log("No extra item found, registering...");
         isProcessed = await registryHandler.noExtraItemProcess();
       }
-      if (isProcessed === "Captcha") {
-         console.log('Captcha detected. Try later...'.red);
-         break
+      if (isProcessed === "Captcha" || !isProcessed) {
+        console.log("Captcha detected. Try later...".red);
+        break;
       }
     }
     console.log("Set up completed".inverse);
