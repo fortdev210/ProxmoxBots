@@ -12,9 +12,9 @@ class WalmartRegistry extends PuppeteerBase {
 
   async clearSiteSettings() {
     const client = await this.page.target().createCDPSession();
-    await client.send('Network.clearBrowserCookies');
-    await client.send('Network.clearBrowserCache');
-    console.log('Clear cookies and caches.'.green)
+    await client.send("Network.clearBrowserCookies");
+    await client.send("Network.clearBrowserCache");
+    console.log("Clear cookies and caches.".green);
   }
 
   async goSignInPage() {
@@ -228,7 +228,7 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async checkRegisterStatus() {
-    await this.sleep(5000);
+    await this.sleep(10000);
     const created = await this.page.evaluate(() => {
       const link = window.location.href;
       return (
@@ -330,9 +330,7 @@ class WalmartRegistry extends PuppeteerBase {
       await this.flagInstance.putInBuyer1Flag();
       console.log("Order moved to Walmart Preprocessed");
     } else {
-      console.error("An error happened while processing. Trying again...");
-      await this.closeBrowser();
-      await this.sleep(3000);
+      console.error("An error happened while registering. Trying again...");
       return false;
     }
   }
