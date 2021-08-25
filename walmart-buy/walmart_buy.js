@@ -17,11 +17,11 @@ class WalmartBuy extends PuppeteerBase {
 
   async clearSiteSettings() {
     const client = await this.page.target().createCDPSession();
-    await client.send('Network.clearBrowserCookies');
-    await client.send('Network.clearBrowserCache');
-    console.log('Clear cookies and caches.'.green)
+    await client.send("Network.clearBrowserCookies");
+    await client.send("Network.clearBrowserCache");
+    console.log("Clear cookies and caches.".green);
   }
-  
+
   async goSignInPage() {
     await this.openNewPage();
     await this.openLink(this.signInLink);
@@ -102,31 +102,35 @@ class WalmartBuy extends PuppeteerBase {
   isWithinDayOrder(lastOrderDate) {
     const orderDate = new Date(lastOrderDate);
     const now = new Date();
-    const aDay = 1000*3600*24
-    const diff = now - orderDate
-    return diff < aDay
+    const aDay = 1000 * 3600 * 24;
+    const diff = now - orderDate;
+    return diff < aDay;
   }
 
   async trackOrders() {
     //--- click account button ---//
     await this.waitForLoadingElement('[aria-label="Your Account"]');
-    await this.clickButton('[aria-label="Your Account"]')
+    await this.clickButton('[aria-label="Your Account"]');
     //--- wait for account menu root open ---//
     await this.waitForLoadingElement('[id="vh-account-menu-root"]');
     await this.waitForLoadingElement('[title="Track Orders"]');
     await this.clickButton('[title="Track Orders"]');
     //--- wait for purchase history page open ---//
     try {
-      await this.waitForLoadingElement('[data-automation-id="purchase-history"]',30000);
+      await this.waitForLoadingElement(
+        '[data-automation-id="purchase-history"]',
+        30000
+      );
     } catch (error) {
-      await this.page.reload()
+      await this.page.reload();
     }
-     
-    const lastOrderDate = await this.page.evaluate(()=> {
-      return document.querySelector('[data-automation-id="order-date"]').innerText
-    })
+
+    const lastOrderDate = await this.page.evaluate(() => {
+      return document.querySelector('[data-automation-id="order-date"]')
+        .innerText;
+    });
     console.log("The last order date is ", lastOrderDate);
-    return this.isWithinDayOrder(lastOrderDate)
+    return this.isWithinDayOrder(lastOrderDate);
   }
 
   async cancelExtraItemOnBadOrder(extraItemNumber) {
@@ -139,7 +143,7 @@ class WalmartBuy extends PuppeteerBase {
     }, extraItemNumber);
     console.log(`Extra Item is in ${extraItemStatus}`.bgGreen);
     if (extraItemStatus.toLowerCase() === "canceled") {
-      console.log('Extra item is already cancelled.'.bgGreen)
+      console.log("Extra item is already cancelled.".bgGreen);
     } else if (extraItemStatus.toLowerCase().indexOf("arrives by") > -1) {
       ///---- Cancel the extra item ----///
       await this.page.evaluate((extraItemNumber) => {
@@ -148,12 +152,10 @@ class WalmartBuy extends PuppeteerBase {
           .parentElement.parentElement.parentElement.parentElement;
         try {
           parent
-          .querySelector('[class="order-details-cancellation"]')
-          .querySelector("button")
-          .click();
-        } catch (error) {
-          
-        }
+            .querySelector('[class="order-details-cancellation"]')
+            .querySelector("button")
+            .click();
+        } catch (error) {}
       }, extraItemNumber);
       console.log("Clicked cancel button");
       await this.sleep(3000);
@@ -172,34 +174,39 @@ class WalmartBuy extends PuppeteerBase {
         });
         console.log("Successfully canceled extra item".bgGreen);
       } catch (error) {
-         console.log('Failed to select the reason'.red)
+        console.log("Failed to select the reason".red);
       }
     }
-    return extraItemStatus
+    return extraItemStatus;
   }
 
   async handleBadOrder() {
-    const needCancel =  await this.trackOrders()
+    const needCancel = await this.trackOrders();
     if (needCancel) {
-      console.log('There is an order within 24 hours')
-      const orderNumber = await this.page.evaluate(()=>{
-        let scrapedNum = document.querySelector('[data-automation-id="order-number"]').innerText;
-        scrapedNum = scrapedNum.match(/#(.*)/g)[0]
-        scrapedNum = scrapedNum.replace('#','').replace('-','')
-        return scrapedNum
-      })
-      console.log('Order number is ', orderNumber);
+      console.log("There is an order within 24 hours");
+      const orderNumber = await this.page.evaluate(() => {
+        let scrapedNum = document.querySelector(
+          '[data-automation-id="order-number"]'
+        ).innerText;
+        scrapedNum = scrapedNum.match(/#(.*)/g)[0];
+        scrapedNum = scrapedNum.replace("#", "").replace("-", "");
+        return scrapedNum;
+      });
+      console.log("Order number is ", orderNumber);
       try {
         await this.cancelExtraItemOnBadOrder();
       } catch (error) {
-        console.log('Failed to cancel the extra item. Extra item doesnt exist or already canceled.'.red)
-      }   
-      await this.applyDB(orderNumber)
-      await this.closeBrowser()
-      return
+        console.log(
+          "Failed to cancel the extra item. Extra item doesnt exist or already canceled."
+            .red
+        );
+      }
+      await this.applyDB(orderNumber);
+      await this.closeBrowser();
+      return;
     } else {
-      console.log('No need to cancel. Needs manual checking.'.bgRed);
-      console.log(stopHERE)
+      console.log("No need to cancel. Needs manual checking.".bgRed);
+      console.log(stopHERE);
     }
   }
 
@@ -238,7 +245,7 @@ class WalmartBuy extends PuppeteerBase {
         20000
       );
     } catch (error) {
-      console.log('Unexpected error while loading. Reloading...');
+      console.log("Unexpected error while loading. Reloading...");
       await this.page.reload();
       try {
         await this.waitForLoadingElement(
@@ -248,8 +255,8 @@ class WalmartBuy extends PuppeteerBase {
       } catch (error) {
         console.log("Error while loading page again.");
         await this.closeBrowser();
-        return 'Bad Proxy.' 
-      }  
+        return "Bad Proxy.";
+      }
     }
     await this.clickButton('[data-automation-id="fulfillment-continue"]');
   }
@@ -257,12 +264,18 @@ class WalmartBuy extends PuppeteerBase {
   async confirmAddress() {
     console.log("Confirm recipient’s address");
     try {
-        await this.waitForLoadingElement('[class="address-tile-clickable"]', 20000);
+      await this.waitForLoadingElement(
+        '[class="address-tile-clickable"]',
+        20000
+      );
     } catch (error) {
-        console.log('Error while waiting for addresss. Reloading...')
-        await this.page.reload();
-        await this.continue();
-        await this.waitForLoadingElement('[class="address-tile-clickable"]', 20000);
+      console.log("Error while waiting for addresss. Reloading...");
+      await this.page.reload();
+      await this.continue();
+      await this.waitForLoadingElement(
+        '[class="address-tile-clickable"]',
+        20000
+      );
     }
     let isAddressSelected = await this.page.evaluate(() => {
       return document
@@ -406,29 +419,41 @@ class WalmartBuy extends PuppeteerBase {
       console.log("Total price is ", totalPrice);
       await this.apiInstance.sendTotal(totalPrice, this.customerInfo.orderId);
     } catch (error) {
-      console.log('Error while sending the total value to db', error);
+      console.log("Error while sending the total value to db", error);
     }
   }
 
   async addNewGiftCard(i) {
-    console.log(`Adding ${i+1}th gift card using api...`);
+    console.log(`Adding ${i + 1}th gift card using api...`);
     if (i !== 0) {
       // click `Add new gift card` button.
       await this.waitForLoadingElement(
         '[data-automation-id="payment-add-new-gift-card"]'
       );
       await this.sleep(2000);
-      await this.clickButton('[data-automation-id="payment-add-new-gift-card"]');
+      await this.clickButton(
+        '[data-automation-id="payment-add-new-gift-card"]'
+      );
     }
-    const giftCardInfo = await this.apiInstance.getGiftCardByAPI(this.customerInfo.orderId);
-    await this.waitForLoadingElement('[data-automation-id="enter-gift-card-number"]');
-    await this.insertValue('[data-automation-id="enter-gift-card-number"]', giftCardInfo.cardNumber);
+    const giftCardInfo = await this.apiInstance.getGiftCardByAPI(
+      this.customerInfo.orderId
+    );
+    await this.waitForLoadingElement(
+      '[data-automation-id="enter-gift-card-number"]'
+    );
+    await this.insertValue(
+      '[data-automation-id="enter-gift-card-number"]',
+      giftCardInfo.cardNumber
+    );
     await this.sleep(1000);
-    await this.insertValue('[data-automation-id="enter-gift-card-pin"]',giftCardInfo.pinCode)
-    await this.waitForLoadingElement('[data-tl-id="submit"]')
-    await this.sleep(1500)
-    await this.clickButton('[data-tl-id="submit"]')
-    await this.sleep(5000)
+    await this.insertValue(
+      '[data-automation-id="enter-gift-card-pin"]',
+      giftCardInfo.pinCode
+    );
+    await this.waitForLoadingElement('[data-tl-id="submit"]');
+    await this.sleep(1500);
+    await this.clickButton('[data-tl-id="submit"]');
+    await this.sleep(5000);
     const gcAmount = await this.page.evaluate((i) => {
       value = document
         .querySelectorAll('[class="price gc-amount-paid-price"]')
@@ -441,45 +466,57 @@ class WalmartBuy extends PuppeteerBase {
         .green
     );
     try {
-      await this.apiInstance.sendCurrentGiftCard(giftCardInfo.cardNumber, gcAmount, this.customerInfo.orderId);
+      await this.apiInstance.sendCurrentGiftCard(
+        giftCardInfo.cardNumber,
+        gcAmount,
+        this.customerInfo.orderId
+      );
     } catch (error) {
       console.log("Error while sending current gift card info ", error);
     }
 
-    const balanceStatus = await this.page.$('[data-automation-id="pos-balance-due"]');
-    if (balanceStatus === null) { 
-      return true
+    const balanceStatus = await this.page.$(
+      '[data-automation-id="pos-balance-due"]'
+    );
+    if (balanceStatus === null) {
+      return true;
     }
     await this.waitForLoadingElement(
       '[data-automation-id="payment-add-new-gift-card"]'
     );
     await this.sleep(2000);
     await this.clickButton('[data-automation-id="payment-add-new-gift-card"]');
-    return false
+    return false;
   }
 
   async getAlreadyAddedGiftcard() {
     try {
       await this.waitForLoadingElement('[class="gift-card-tile"]');
       const number = await this.page.evaluate(() => {
-        return document.querySelectorAll('[class="gift-card-tile"]').length
+        return document.querySelectorAll('[class="gift-card-tile"]').length;
       });
       console.log(`${number} gift cards already added.`.green);
       // Apply each card to order
-      for (let i = 0;  i < number; i++) {
+      for (let i = 0; i < number; i++) {
         try {
-          await this.page.evaluate((i)=> {
-            document.querySelectorAll('[class="gift-card-tile"]').querySelector('[type="checkbox"]').click();
-          }, [i])
-          console.log(`Applied ${i+1}st card again.`)
-          await this.sleep(4000)
+          await this.page.evaluate(
+            (i) => {
+              document
+                .querySelectorAll('[class="gift-card-tile"]')
+                .querySelector('[type="checkbox"]')
+                .click();
+            },
+            [i]
+          );
+          console.log(`Applied ${i + 1}st card again.`);
+          await this.sleep(4000);
         } catch (error) {
-          console.log('Cant apply the card again.', error)
+          console.log("Cant apply the card again.", error);
         }
       }
-      return number
+      return number;
     } catch (error) {
-      console.log('No giftcard applied. Fetching from the db...');
+      console.log("No giftcard applied. Fetching from the db...");
       return 0;
     }
   }
@@ -493,16 +530,18 @@ class WalmartBuy extends PuppeteerBase {
       await this.selectPaymentMethod();
     }
     await this.sleep(3000);
-    await this.sendTotalPriceToDB()
+    await this.sendTotalPriceToDB();
     const numOfAlreadyApplied = await this.getAlreadyAddedGiftcard();
     for (let i = numOfAlreadyApplied; i < this.numOfGCs; i++) {
-      const payComplete = await this.addNewGiftCard(i)
+      const payComplete = await this.addNewGiftCard(i);
       if (payComplete) {
         console.log("Good news! Your order total is covered.".green);
         break;
       }
     }
-    await this.waitForLoadingElement('[data-automation-id="submit-payment-gc"]');
+    await this.waitForLoadingElement(
+      '[data-automation-id="submit-payment-gc"]'
+    );
     await this.sleep(1000);
     await this.clickButton('[data-automation-id="submit-payment-gc"]');
     console.log("Click review order");
@@ -522,7 +561,7 @@ class WalmartBuy extends PuppeteerBase {
       await this.waitForLoadingElement(
         '[data-automation-id="review-your-order-cash"]'
       );
-      await this.sleep(2000)
+      await this.sleep(2000);
       await this.clickButton('[data-automation-id="review-your-order-cash"]');
       console.log("Checkout successfully.");
     } catch (error) {
@@ -561,7 +600,7 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async cancelExtraItem(orderNumber) {
-    if (this.customerInfo.extraItem === 'N/A') return;
+    if (this.customerInfo.extraItem === "N/A") return;
     const cancelLink = `https://www.walmart.com/account/order/${orderNumber}/cancel`;
     await this.openNewPage();
     await this.openLink(cancelLink);
@@ -676,13 +715,13 @@ class WalmartBuy extends PuppeteerBase {
     }, this.customerInfo);
 
     try {
-        await this.waitForLoadingElement('[id="sign-in-widget"]');
-        await this.insertValue('#password', this.passwords[0]);
-        await this.clickButton('[type="submit"]')
+      await this.waitForLoadingElement('[id="sign-in-widget"]');
+      await this.insertValue("#password", this.passwords[0]);
+      await this.clickButton('[type="submit"]');
     } catch (error) {
-        console.log("No sign in widget.")
+      console.log("No sign in widget.");
     }
-    console.log('Extra item cancelled successfully.');
+    console.log("Extra item cancelled successfully.");
     await this.closePage();
   }
 
@@ -690,7 +729,7 @@ class WalmartBuy extends PuppeteerBase {
     const pages = await this.browser.pages();
     const orderPage = pages[pages.length - 2];
     await orderPage.bringToFront();
-    this.page = orderPage
+    this.page = orderPage;
     this.page.on("dialog", async (dialog) => {
       console.log("Dialog popup");
       await dialog.accept();
@@ -702,7 +741,7 @@ class WalmartBuy extends PuppeteerBase {
         totalCustomInfo.qty);
     }, this.customerInfo);
     await this.sleep(1500);
-    await this.insertValue('[name="supplier_order_number"]', orderNumber)
+    await this.insertValue('[name="supplier_order_number"]', orderNumber);
     await this.sleep(1000);
     await this.clickButton('[value="Submit & Finish Order"]');
     console.log("Click the submit and finish order button");
@@ -720,13 +759,13 @@ class WalmartBuy extends PuppeteerBase {
 
   async processBuyOrder() {
     await this.luminatiProxyManager("ON", [
-        this.customerInfo.ip,
-        this.customerInfo.port,
+      this.customerInfo.ip,
+      this.customerInfo.port,
     ]);
     await this.sleep(3000);
     await this.goSignInPage();
     await this.signInWalmart(this.customerInfo.email);
-    const captchaDetected = await this.checkCaptcha(5000);
+    const captchaDetected = await this.resolveCaptcha();
     if (captchaDetected) {
       console.log("Captcha detected.");
       await this.clearSiteSettings();
@@ -739,7 +778,7 @@ class WalmartBuy extends PuppeteerBase {
       console.log("This order was well preprocessed, doing next...");
     } else {
       await this.handleBadOrder();
-      return
+      return;
     }
     try {
       await this.clickGiftCheck();
@@ -753,7 +792,7 @@ class WalmartBuy extends PuppeteerBase {
       await this.clearSiteSettings();
       await this.closeBrowser();
     } catch (error) {
-      console.log('Error while in processing.'.red);
+      console.log("Error while in processing.".red);
       await this.closeBrowser();
     }
   }
