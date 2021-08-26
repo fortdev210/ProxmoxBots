@@ -14,6 +14,7 @@ async function main() {
     for (let i = 0; i < dsOrders.length; i++) {
       console.log(`STARTING: Order ${i + 1}: ${dsOrders[i]}`.green.bold);
       const dbInstance = new STLPRO_MANAGER(dsOrders[i]);
+      await dbInstance.clearSiteSettings();
       const currentOrderInfo = await dbInstance.getOrderDetails();
       const flagInstance = new Flag_Order(dsOrders[i]);
       console.log(currentOrderInfo);
