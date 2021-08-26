@@ -580,6 +580,11 @@ class WalmartBuy extends PuppeteerBase {
     await this.clickButton('button[class*="auto-submit-place-order"]');
   }
 
+  async reviewOrder() {
+    await this.waitForLoadingElement('[data-automation-id="review-your-order-more"]');
+    await this.clickButton('[data-automation-id="review-your-order-more"]')
+  }
+
   async getOrderNumber() {
     await this.sleep(3000);
     await this.waitForLoadingElement('[class="thankyou-main-heading"]');
@@ -780,12 +785,26 @@ class WalmartBuy extends PuppeteerBase {
       await this.checkout();
       await this.placeOrder();
       await this.resolveCaptcha();
+      try {
+        await this.reviewOrder();
+        console.log('Review order')
+      } catch (error) {
+        console.error(error)
+        await this.sleep(100000)
+      }
+      try {
+        await this.placeOrder();
+      } catch (error) {
+        console.error(error)
+      }
+      
       const orderNumber = await this.getOrderNumber();
       await this.cancelExtraItem(orderNumber);
       await this.applyDB(orderNumber);
       await this.clearSiteSettings();
       await this.closeBrowser();
     } catch (error) {
+      console.error(error)
       console.log("Error while in processing.".red);
       await this.closeBrowser();
     }
