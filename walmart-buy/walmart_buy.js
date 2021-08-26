@@ -15,13 +15,6 @@ class WalmartBuy extends PuppeteerBase {
     this.numOfGCs = 5; // number of giftcards for applying each order
   }
 
-  async clearSiteSettings() {
-    const client = await this.page.target().createCDPSession();
-    await client.send("Network.clearBrowserCookies");
-    await client.send("Network.clearBrowserCache");
-    console.log("Clear cookies and caches.".green);
-  }
-
   async goSignInPage() {
     await this.openNewPage();
     await this.openLink(this.signInLink);
@@ -786,7 +779,7 @@ class WalmartBuy extends PuppeteerBase {
       await this.prepareForCheckout();
       await this.checkout();
       await this.placeOrder();
-      await this.resolveCaptcha()
+      await this.resolveCaptcha();
       const orderNumber = await this.getOrderNumber();
       await this.cancelExtraItem(orderNumber);
       await this.applyDB(orderNumber);
