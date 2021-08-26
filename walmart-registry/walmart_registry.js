@@ -303,7 +303,7 @@ class WalmartRegistry extends PuppeteerBase {
     await this.goSignInPage();
     await this.clearSiteSettings();
     await this.signInWalmart();
-    const captchaDetected = await this.checkCaptcha(5000);
+    let captchaDetected = await this.resolveCaptcha();
     if (captchaDetected) {
       console.log("Captcha detected.");
       await this.clearSiteSettings();
@@ -347,7 +347,7 @@ class WalmartRegistry extends PuppeteerBase {
     await this.goSignUpPage();
     await this.clearSiteSettings();
     await this.fillSignUpForm();
-    const captchaDetected = await this.checkCaptcha(5000);
+    const captchaDetected = await this.resolveCaptcha();
     if (captchaDetected) {
       console.log("Captcha detected.");
       await this.closeBrowser();
