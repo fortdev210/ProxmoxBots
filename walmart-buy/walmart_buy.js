@@ -786,6 +786,7 @@ class WalmartBuy extends PuppeteerBase {
       await this.prepareForCheckout();
       await this.checkout();
       await this.placeOrder();
+      await this.resolveCaptcha()
       const orderNumber = await this.getOrderNumber();
       await this.cancelExtraItem(orderNumber);
       await this.applyDB(orderNumber);
