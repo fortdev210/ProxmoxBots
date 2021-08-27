@@ -580,10 +580,17 @@ class WalmartBuy extends PuppeteerBase {
   }
 
   async reviewOrder() {
-    await this.waitForLoadingElement(
-      '[data-automation-id="review-your-order-more"]'
-    );
-    await this.clickButton('[data-automation-id="review-your-order-more"]');
+    try {
+      await this.waitForLoadingElement(
+        '[data-automation-id="review-your-order-more"]'
+      );
+      await this.clickButton('[data-automation-id="review-your-order-more"]');
+    } catch (error) {
+      await this.waitForLoadingElement(
+        '[data-automation-id="submit-payment-gc"]'
+      );
+      await this.clickButton('[data-automation-id="submit-payment-gc"]');
+    }
   }
 
   async getOrderNumber() {
@@ -789,12 +796,12 @@ class WalmartBuy extends PuppeteerBase {
       await this.reviewOrder();
       console.log("Review order");
     } catch (error) {
-      console.error(error);
+      console.error("No review order visible.");
     }
     try {
       await this.placeOrder();
     } catch (error) {
-      console.error(error);
+      console.error("No place order visible.");
     }
     const orderNumber = await this.getOrderNumber();
     await this.cancelExtraItem(orderNumber);
