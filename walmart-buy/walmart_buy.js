@@ -199,7 +199,6 @@ class WalmartBuy extends PuppeteerBase {
       return;
     } else {
       console.log("No need to cancel. Needs manual checking.".bgRed);
-      console.log(stopHERE);
     }
   }
 
@@ -780,34 +779,27 @@ class WalmartBuy extends PuppeteerBase {
       await this.handleBadOrder();
       return;
     }
+    await this.clickGiftCheck();
+    await this.goCheckout();
+    await this.prepareForCheckout();
+    await this.checkout();
+    await this.placeOrder();
+    await this.resolveCaptcha();
     try {
-      await this.clickGiftCheck();
-      await this.goCheckout();
-      await this.prepareForCheckout();
-      await this.checkout();
-      await this.placeOrder();
-      await this.resolveCaptcha();
-      try {
-        await this.reviewOrder();
-        console.log("Review order");
-      } catch (error) {
-        console.error(error);
-      }
-      try {
-        await this.placeOrder();
-      } catch (error) {
-        console.error(error);
-      }
-      const orderNumber = await this.getOrderNumber();
-      await this.cancelExtraItem(orderNumber);
-      await this.applyDB(orderNumber);
-      await this.clearSiteSettings();
-      await this.closeBrowser();
+      await this.reviewOrder();
+      console.log("Review order");
     } catch (error) {
       console.error(error);
-      console.log("Error while in processing.".red);
-      await this.closeBrowser();
     }
+    try {
+      await this.placeOrder();
+    } catch (error) {
+      console.error(error);
+    }
+    const orderNumber = await this.getOrderNumber();
+    await this.cancelExtraItem(orderNumber);
+    await this.applyDB(orderNumber);
+    await this.closeBrowser();
   }
 }
 
