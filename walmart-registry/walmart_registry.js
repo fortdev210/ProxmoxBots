@@ -407,6 +407,8 @@ class WalmartRegistry extends PuppeteerBase {
         const regitryLink = await this.shareRegistry();
         console.log(regitryLink);
         await this.flagInstance.putInBuyer1Flag(regitryLink);
+        console.log("Order moved to Walmart Preprocessed".bgGreen);
+        await this.closeBrowser();
         return true;
       } else {
         await this.closePage();
@@ -467,6 +469,8 @@ class WalmartRegistry extends PuppeteerBase {
         const regitryLink = await this.shareRegistry();
         console.log(regitryLink);
         await this.flagInstance.putInBuyer1Flag(regitryLink);
+        console.log("Order moved to Walmart Preprocessed".bgGreen);
+        await this.closeBrowser();
         return true;
       }
       await this.closePage();
