@@ -8,6 +8,7 @@ class WalmartRegistry extends PuppeteerBase {
     this.regLink =
       "https://www.walmart.com/account/signup?returnUrl=%2Flists%2Fcreate-events-registry%3Fr%3Dyes";
     this.flagInstance = flagInstance;
+    this.isNewWalmart = false;
   }
 
   async clearSiteSettings() {
@@ -237,6 +238,15 @@ class WalmartRegistry extends PuppeteerBase {
     return created;
   }
 
+  async checkWalmartNew() {
+    const currentLink = await this.page.evaluate(() => {
+      return window.location.href;
+    });
+    if (currentLink.includes("my-registries?created")) {
+      this.isNewWalmart = true;
+    }
+  }
+
   async addPrimaryItem() {
     const itemLink = `http://www.walmart.com/ip/${this.customerInfo.primaryItem}?selected=true`;
     await this.openNewPage();
@@ -294,6 +304,69 @@ class WalmartRegistry extends PuppeteerBase {
     console.log("Extra item added.");
   }
 
+  // For new walmart process
+  async registryPrimaryItem() {
+    const itemLink = `http://www.walmart.com/ip/${this.customerInfo.primaryItem}?selected=true`;
+    await this.openNewPage();
+    await this.openLink(itemLink);
+    await this.page.waitForXPath('//*[contains(text(), "Add to registry")]', {
+      timeout: 10000,
+    });
+    const elements = await this.page.$x(
+      '//*[contains(text(), "Add to registry")]'
+    );
+    await elements[0].click();
+    // wait for dialog pop up
+    await this.waitForLoadingElement('[role="dialog"]');
+    await this.page.evaluate(() => {
+      document
+        .querySelectorAll('[class="w_Fk"]')[0]
+        .querySelector("button")
+        .click();
+    });
+    console.log("Successfully registered primary item");
+  }
+
+  async registryExtraItem() {
+    const extraItemLink = `http://www.walmart.com/ip/${this.customerInfo.extraItem}?selected=true`;
+    await this.openNewPage();
+    await this.openLink(extraItemLink);
+    await this.page.waitForXPath('//*[contains(text(), "Add to registry")]', {
+      timeout: 10000,
+    });
+    const elements = await this.page.$x(
+      '//*[contains(text(), "Add to registry")]'
+    );
+    await elements[0].click();
+    // wait for dialog pop up
+    await this.waitForLoadingElement('[role="dialog"]');
+    await this.page.evaluate(() => {
+      document
+        .querySelectorAll('[class="w_Fk"]')[0]
+        .querySelector("button")
+        .click();
+    });
+    console.log("Successfully registered extra item");
+  }
+
+  async shareRegistry() {
+    await this.waitForLoadingElement('[link-identifier="viewRegistry"]');
+    await this.clickButton('[link-identifier="viewRegistry"]');
+    await this.page.waitForXPath(
+      '//*[contains(text(), "Share this registry")]'
+    );
+    const elements = await this.page.$x(
+      '//*[contains(text(), "Share this registry")]'
+    );
+    await elements[0].click();
+    // get the registry link
+    await this.waitForLoadingElement('[id="ld_ui_textfield_0"]');
+    const registryLink = await this.page.evaluate(() => {
+      return document.querySelector('[id="ld_ui_textfield_0"]').value;
+    });
+    return registryLink;
+  }
+
   async extraItemProcess() {
     await this.luminatiProxyManager("ON", [
       this.customerInfo.ip,
@@ -311,27 +384,46 @@ class WalmartRegistry extends PuppeteerBase {
       return "Captcha";
     }
     console.log("Successfully signed in, registering...");
-    await this.flagInstance.putInProcessingFlag();
+
+    // await this.flagInstance.putInProcessingFlag();
     console.log("Order moved to Walmart Processing");
     await this.luminatiProxyManager("OFF");
     await this.registerCustomerInfo();
     await this.verifyAddress();
-    await this.flagInstance.putEmailInPrep(this.customerInfo.email);
+    // await this.flagInstance.putEmailInPrep(this.customerInfo.email);
     await this.makeRegistryPublic();
     const registered = await this.checkRegisterStatus();
     if (registered) {
       console.log("Successfully registered.");
-      await this.closePage();
-      await this.addPrimaryItem();
-      await this.addExtraItem();
-      await this.closeBrowser();
-      await this.flagInstance.putInBuyer1Flag();
-      console.log("Order moved to Walmart Preprocessed".bgGreen);
-      return true;
+      await this.checkWalmartNew();
+      if (this.isNewWalmart) {
+        console.log("New Walmart Page.");
+        await this.registryPrimaryItem();
+        await this.registryExtraItem();
+        const pages = await this.browser.pages();
+        const registryPage = pages[pages.length - 3];
+        await registryPage.bringToFront();
+        this.page = registryPage;
+        const regitryLink = await this.shareRegistry();
+        console.log(regitryLink);
+        await this.flagInstance.putInBuyer1Flag(regitryLink);
+        console.log("Order moved to Walmart Preprocessed".bgGreen);
+        await this.closeBrowser();
+        return true;
+      } else {
+        await this.closePage();
+        await this.addPrimaryItem();
+        await this.addExtraItem();
+        await this.closeBrowser();
+        await this.flagInstance.putInBuyer1Flag();
+        console.log("Order moved to Walmart Preprocessed".bgGreen);
+        return true;
+      }
     } else {
       console.error(
         "An error happened while registering. Trying again...".bgRed
       );
+      await this.sleep(9999999);
       await this.closeBrowser();
       await this.sleep(3000);
       return false;
@@ -364,8 +456,23 @@ class WalmartRegistry extends PuppeteerBase {
     await this.flagInstance.putEmailInPrep(this.customerInfo.email);
     await this.makeRegistryPublic();
     const registered = await this.checkRegisterStatus();
+
     if (registered) {
       console.log("Successfully registered.");
+      await this.checkWalmartNew();
+      if (this.isNewWalmart) {
+        await this.registryPrimaryItem();
+        const pages = await this.browser.pages();
+        const registryPage = pages[pages.length - 2];
+        await registryPage.bringToFront();
+        this.page = registryPage;
+        const regitryLink = await this.shareRegistry();
+        console.log(regitryLink);
+        await this.flagInstance.putInBuyer1Flag(regitryLink);
+        console.log("Order moved to Walmart Preprocessed".bgGreen);
+        await this.closeBrowser();
+        return true;
+      }
       await this.closePage();
       await this.addPrimaryItem();
       await this.closeBrowser();
