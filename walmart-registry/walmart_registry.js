@@ -433,8 +433,8 @@ class WalmartRegistry extends PuppeteerBase {
         await this.addPrimaryItem();
         await this.addExtraItem();
         const registryLink = await this.getSharedRegistryLinkInOldWalmart();
-        console.log(regitryLink);
-        await this.flagInstance.putInBuyer1Flag(regitryLink);
+        console.log(registryLink);
+        await this.flagInstance.putInBuyer1Flag(registryLink);
         await this.closeBrowser();
         console.log("Order moved to Walmart Preprocessed".bgGreen);
         return true;
