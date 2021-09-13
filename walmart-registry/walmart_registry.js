@@ -263,47 +263,65 @@ class WalmartRegistry extends PuppeteerBase {
         .click();
     });
     console.log("Add To Registry Button Clicked");
-    await this.waitForLoadingElement('[class="select-field"]');
-    await this.sleep(1500);
-    await this.clickButton('[data-tl-id="cta_add_to_cart_button"]');
-    console.log("Primary Item Added");
+    // we dont need this feature for new walmart registry
+    // await this.waitForLoadingElement('[class="select-field"]');
+    // await this.sleep(1500);
+    // await this.clickButton('[data-tl-id="cta_add_to_cart_button"]');
+    // console.log("Primary Item Added");
 
-    ///--- Add qty in the cart ---///
-    if (this.customerInfo.qty !== "1") {
-      console.log("Add qty");
-      try {
-        await this.openLink("https://www.walmart.com/cart");
-        await this.waitForLoadingElement('[class*="field-input "]', 45000);
-        const dropDowns = await this.page.$$('[class*="field-input "]');
-        const purchased = dropDowns[0];
-        await purchased.focus();
-        await this.page.keyboard.type(this.customerInfo.qty);
-      } catch (error) {
-        console.log("Should reload the page");
-        await this.page.reload();
-        await this.waitForLoadingElement('[class*="field-input "]', 45000);
-        const dropDowns = await this.page.$$('[class*="field-input "]');
-        const purchased = dropDowns[0];
-        await purchased.focus();
-        await this.page.keyboard.type(this.customerInfo.qty);
-      }
-    }
+    // ///--- Add qty in the cart ---///
+    // if (this.customerInfo.qty !== "1") {
+    //   console.log("Add qty");
+    //   try {
+    //     await this.openLink("https://www.walmart.com/cart");
+    //     await this.waitForLoadingElement('[class*="field-input "]', 45000);
+    //     const dropDowns = await this.page.$$('[class*="field-input "]');
+    //     const purchased = dropDowns[0];
+    //     await purchased.focus();
+    //     await this.page.keyboard.type(this.customerInfo.qty);
+    //   } catch (error) {
+    //     console.log("Should reload the page");
+    //     await this.page.reload();
+    //     await this.waitForLoadingElement('[class*="field-input "]', 45000);
+    //     const dropDowns = await this.page.$$('[class*="field-input "]');
+    //     const purchased = dropDowns[0];
+    //     await purchased.focus();
+    //     await this.page.keyboard.type(this.customerInfo.qty);
+    //   }
+    // }
   }
 
   async addExtraItem() {
     const extraItemLink = `http://www.walmart.com/ip/${this.customerInfo.extraItem}?selected=true`;
     await this.openNewPage();
     await this.openLink(extraItemLink);
-    await this.waitForLoadingElement(
-      '[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]'
-    );
-    await this.sleep(2000);
-    await this.clickButton(
-      '[data-tl-id="ProductPrimaryCTA-cta_add_to_cart_button"]'
-    );
-    console.log("Extra item added.");
+    //--- click registry button ---//
+    await this.waitForLoadingElement('[class*="AddToRegistry-text"]', 30000);
+    await this.sleep(1500);
+    await this.clickButton('[class*="AddToRegistry-text"]');
+    await this.waitForLoadingElement('[class="Registry-btn-row"]', 30000);
+    await this.page.evaluate(() => {
+      document
+        .querySelector('[class="Registry-btn-row"]')
+        .querySelector("button")
+        .click();
+    });
+    console.log("Add To Registry Button Clicked");
   }
 
+  async getSharedRegistryLinkInOldWalmart() {
+    const link = "https://www.walmart.com/lists/manage-events-registry-items";
+    await this.openLink(link);
+    await this.waitForLoadingElement('[aria-label="more info"]');
+    await this.clickButton('[aria-label="more info"]');
+    await this.waitForLoadingElement('[class*="flowtip-flyout-modal"]');
+    const registryLink = await this.page.evaluate(() => {
+      return document
+        .querySelector('[class*="flowtip-flyout-modal"]')
+        .querySelector("input").value;
+    });
+    return registryLink;
+  }
   // For new walmart process
   async registryPrimaryItem() {
     const itemLink = `http://www.walmart.com/ip/${this.customerInfo.primaryItem}?selected=true`;
@@ -385,12 +403,12 @@ class WalmartRegistry extends PuppeteerBase {
     }
     console.log("Successfully signed in, registering...");
 
-    // await this.flagInstance.putInProcessingFlag();
+    await this.flagInstance.putInProcessingFlag();
     console.log("Order moved to Walmart Processing");
     await this.luminatiProxyManager("OFF");
     await this.registerCustomerInfo();
     await this.verifyAddress();
-    // await this.flagInstance.putEmailInPrep(this.customerInfo.email);
+    await this.flagInstance.putEmailInPrep(this.customerInfo.email);
     await this.makeRegistryPublic();
     const registered = await this.checkRegisterStatus();
     if (registered) {
@@ -414,8 +432,10 @@ class WalmartRegistry extends PuppeteerBase {
         await this.closePage();
         await this.addPrimaryItem();
         await this.addExtraItem();
+        const registryLink = await this.getSharedRegistryLinkInOldWalmart();
+        console.log(regitryLink);
+        await this.flagInstance.putInBuyer1Flag(regitryLink);
         await this.closeBrowser();
-        await this.flagInstance.putInBuyer1Flag();
         console.log("Order moved to Walmart Preprocessed".bgGreen);
         return true;
       }
@@ -423,7 +443,6 @@ class WalmartRegistry extends PuppeteerBase {
       console.error(
         "An error happened while registering. Trying again...".bgRed
       );
-      await this.sleep(9999999);
       await this.closeBrowser();
       await this.sleep(3000);
       return false;
@@ -475,8 +494,9 @@ class WalmartRegistry extends PuppeteerBase {
       }
       await this.closePage();
       await this.addPrimaryItem();
+      const registryLink = await this.getSharedRegistryLinkInOldWalmart();
       await this.closeBrowser();
-      await this.flagInstance.putInBuyer1Flag();
+      await this.flagInstance.putInBuyer1Flag(registryLink);
       console.log("Order moved to Walmart Preprocessed".bgGreen);
       return true;
     } else {
