@@ -263,32 +263,6 @@ class WalmartRegistry extends PuppeteerBase {
         .click();
     });
     console.log("Add To Registry Button Clicked");
-    // we dont need this feature for new walmart registry
-    // await this.waitForLoadingElement('[class="select-field"]');
-    // await this.sleep(1500);
-    // await this.clickButton('[data-tl-id="cta_add_to_cart_button"]');
-    // console.log("Primary Item Added");
-
-    // ///--- Add qty in the cart ---///
-    // if (this.customerInfo.qty !== "1") {
-    //   console.log("Add qty");
-    //   try {
-    //     await this.openLink("https://www.walmart.com/cart");
-    //     await this.waitForLoadingElement('[class*="field-input "]', 45000);
-    //     const dropDowns = await this.page.$$('[class*="field-input "]');
-    //     const purchased = dropDowns[0];
-    //     await purchased.focus();
-    //     await this.page.keyboard.type(this.customerInfo.qty);
-    //   } catch (error) {
-    //     console.log("Should reload the page");
-    //     await this.page.reload();
-    //     await this.waitForLoadingElement('[class*="field-input "]', 45000);
-    //     const dropDowns = await this.page.$$('[class*="field-input "]');
-    //     const purchased = dropDowns[0];
-    //     await purchased.focus();
-    //     await this.page.keyboard.type(this.customerInfo.qty);
-    //   }
-    // }
   }
 
   async addExtraItem() {
