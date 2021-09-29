@@ -1,4 +1,5 @@
 const PuppeteerBase = require("../lib/puppeeteer");
+require("dotenv").config();
 
 class WalmartRegistry extends PuppeteerBase {
   constructor(customerInfo, flagInstance) {
@@ -105,11 +106,19 @@ class WalmartRegistry extends PuppeteerBase {
 
   async signInWalmart() {
     try {
-      await this.waitForLoadingElement("#password");
-      console.log("Old Signin Page...");
-      await this.fillOldSignInForm();
+      await this.waitForLoadingElement('[id="sign-in-with-email-validation"]');
+      console.log("New Signin Page.");
+      await this.insertValue('[id="email"]', email);
+      await this.waitForLoadingElement(
+        '[data-automation-id="signin-continue-submit-btn"]'
+      );
+      await this.pressEnter();
+      await this.insertValue("#password", this.passwords[0]);
+      await this.pressEnter();
     } catch (error) {
-      await this.fillNewSignInForm();
+      console.log("Error", error);
+      console.log("Old sign in page.");
+      await this.fillOldSignInForm();
     }
   }
 
@@ -229,11 +238,11 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async checkRegisterStatus() {
-    await this.page.waitForNavigation();
+    await this.sleep(5000);
     await this.sleep(10000);
     const created = await this.page.evaluate(() => {
       const link = window.location.href;
-      return link.includes("created");
+      return link.includes("created") || link.includes("registry/ER");
     });
     return created;
   }
@@ -247,40 +256,21 @@ class WalmartRegistry extends PuppeteerBase {
     }
   }
 
-  async addPrimaryItem() {
-    const itemLink = `http://www.walmart.com/ip/${this.customerInfo.primaryItem}?selected=true`;
+  async addItemToRegistry(itemNumber) {
+    const itemLink = `http://www.walmart.com/ip/${itemNumber}?selected=true`;
     await this.openNewPage();
     await this.openLink(itemLink);
     //--- click registry button ---//
-    await this.waitForLoadingElement('[class*="AddToRegistry-text"]', 30000);
+    await this.page.waitForXPath('//*[contains(text(), "Add to registry")]');
     await this.sleep(1500);
-    await this.clickButton('[class*="AddToRegistry-text"]');
-    await this.waitForLoadingElement('[class="Registry-btn-row"]', 30000);
     await this.page.evaluate(() => {
-      document
-        .querySelector('[class="Registry-btn-row"]')
-        .querySelector("button")
-        .click();
+      $("button:contains(Add to registry)").click();
     });
-    console.log("Add To Registry Button Clicked");
-  }
-
-  async addExtraItem() {
-    const extraItemLink = `http://www.walmart.com/ip/${this.customerInfo.extraItem}?selected=true`;
-    await this.openNewPage();
-    await this.openLink(extraItemLink);
-    //--- click registry button ---//
-    await this.waitForLoadingElement('[class*="AddToRegistry-text"]', 30000);
-    await this.sleep(1500);
-    await this.clickButton('[class*="AddToRegistry-text"]');
-    await this.waitForLoadingElement('[class="Registry-btn-row"]', 30000);
+    await this.page.waitForXPath('//*[contains(text(), "Save")]');
     await this.page.evaluate(() => {
-      document
-        .querySelector('[class="Registry-btn-row"]')
-        .querySelector("button")
-        .click();
+      $("button:contains(Save)").click();
     });
-    console.log("Add To Registry Button Clicked");
+    console.log("Successfully registered");
   }
 
   async getSharedRegistryLinkInOldWalmart() {
@@ -342,15 +332,17 @@ class WalmartRegistry extends PuppeteerBase {
   }
 
   async shareRegistry() {
-    await this.waitForLoadingElement('[link-identifier="viewRegistry"]');
-    await this.clickButton('[link-identifier="viewRegistry"]');
+    await this.page.addScriptTag({
+      url: "https://code.jquery.com/jquery-3.2.1.min.js",
+    });
+    this.sleep(2000);
     await this.page.waitForXPath(
       '//*[contains(text(), "Share this registry")]'
     );
-    const elements = await this.page.$x(
-      '//*[contains(text(), "Share this registry")]'
-    );
-    await elements[0].click();
+    await this.page.evaluate(() => {
+      $("button:contains(Share this registry)").click();
+    });
+    await this.sleep(3000);
     // get the registry link
     await this.waitForLoadingElement('[id="ld_ui_textfield_0"]');
     const registryLink = await this.page.evaluate(() => {
@@ -376,43 +368,32 @@ class WalmartRegistry extends PuppeteerBase {
       return "Captcha";
     }
     console.log("Successfully signed in, registering...");
-
-    await this.flagInstance.putInProcessingFlag();
+    if (process.env.TEST_MODE !== "true")
+      await this.flagInstance.putInProcessingFlag();
     console.log("Order moved to Walmart Processing");
     await this.luminatiProxyManager("OFF");
-    await this.registerCustomerInfo();
-    await this.verifyAddress();
-    await this.flagInstance.putEmailInPrep(this.customerInfo.email);
-    await this.makeRegistryPublic();
+
+    const currentURL = await this.getCurrentURL();
+    if (currentURL.indexOf("create-events-registry") > -1) {
+      await this.registerCustomerInfo();
+      await this.verifyAddress();
+      await this.flagInstance.putEmailInPrep(this.customerInfo.email);
+      await this.makeRegistryPublic();
+    }
     const registered = await this.checkRegisterStatus();
     if (registered) {
       console.log("Successfully registered.");
-      await this.checkWalmartNew();
-      if (this.isNewWalmart) {
-        console.log("New Walmart Page.");
-        await this.registryPrimaryItem();
-        await this.registryExtraItem();
-        const pages = await this.browser.pages();
-        const registryPage = pages[pages.length - 3];
-        await registryPage.bringToFront();
-        this.page = registryPage;
-        const regitryLink = await this.shareRegistry();
-        console.log(regitryLink);
-        await this.flagInstance.putInBuyer1Flag(regitryLink);
-        console.log("Order moved to Walmart Preprocessed".bgGreen);
-        await this.closeBrowser();
-        return true;
-      } else {
-        await this.closePage();
-        await this.addPrimaryItem();
-        await this.addExtraItem();
-        const registryLink = await this.getSharedRegistryLinkInOldWalmart();
-        console.log(registryLink);
-        await this.flagInstance.putInBuyer1Flag(registryLink);
-        await this.closeBrowser();
-        console.log("Order moved to Walmart Preprocessed".bgGreen);
-        return true;
-      }
+      await this.addItemToRegistry(this.customerInfo.primaryItem);
+      await this.addItemToRegistry(this.customerInfo.extraItem);
+      const pages = await this.browser.pages();
+      const registryPage = pages[pages.length - 3];
+      await registryPage.bringToFront();
+      this.page = registryPage;
+      const regitryLink = await this.shareRegistry();
+      console.log(regitryLink);
+      await this.flagInstance.putInBuyer1Flag(regitryLink);
+      console.log("Order moved to Walmart Preprocessed".bgGreen);
+      await this.closeBrowser();
     } else {
       console.error(
         "An error happened while registering. Trying again...".bgRed
@@ -467,7 +448,7 @@ class WalmartRegistry extends PuppeteerBase {
         return true;
       }
       await this.closePage();
-      await this.addPrimaryItem();
+      await this.addItemToRegistry();
       const registryLink = await this.getSharedRegistryLinkInOldWalmart();
       await this.closeBrowser();
       await this.flagInstance.putInBuyer1Flag(registryLink);
