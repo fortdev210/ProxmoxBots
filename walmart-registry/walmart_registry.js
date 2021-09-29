@@ -116,7 +116,6 @@ class WalmartRegistry extends PuppeteerBase {
       await this.insertValue("#password", this.passwords[0]);
       await this.pressEnter();
     } catch (error) {
-      console.log("Error", error);
       console.log("Old sign in page.");
       await this.fillOldSignInForm();
     }
@@ -202,9 +201,12 @@ class WalmartRegistry extends PuppeteerBase {
 
   async verifyAddress() {
     try {
-      await this.waitForLoadingElement('[class*="alert-warning"]', 20000);
-      await this.sleep(1000);
-      await this.clickButton('[data-automation-id="address-form-submit"]');
+      await this.page.waitForXPath(
+        '//*[contains(text(), "We can\'t verify this address. Want to save it anyway")]',
+        { timeout: 3000 }
+      );
+      await this.sleep(3000);
+      await this.clickButton('[class*="button-save-address"]');
     } catch (error) {
       console.log("No address warning");
     }
@@ -395,6 +397,7 @@ class WalmartRegistry extends PuppeteerBase {
       console.log("Order moved to Walmart Preprocessed".bgGreen);
       await this.closeBrowser();
     } else {
+      await this.sleep(500000);
       console.error(
         "An error happened while registering. Trying again...".bgRed
       );
