@@ -15,21 +15,41 @@ class WalmartRegistry extends WalmartBase {
   }
 
   async addAddress() {
-    await this.page.evaluate(() => {
-      $("button:contains(+ Add address)").click();
-    });
-    await this.sleep(1000);
-    // Input address details
-    await this.insertValue("#ld_select_7", this.orderInfo.firstName);
-    await this.insertValue("#ld_select_8", this.orderInfo.lastName);
-    await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
-    await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
-    await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
-    await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
-    await this.insertValue("#ld_select_3", this.orderInfo.city);
-    await this.insertValue("#ld_select_4", this.orderInfo.state);
-    await this.clickButton('[id="isDefault"]');
-    await this.clickButton('[type="submit"]');
+    try {
+      await this.page.evaluate(() => {
+        $("button:contains(+ Add address)").click();
+      });
+      await this.sleep(1000);
+      // Input address details
+      await this.insertValue('[name="firstName"]', this.orderInfo.firstName);
+      await this.insertValue('[name="lastName"]', this.orderInfo.lastName);
+      await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
+      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
+      await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
+      await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
+      await this.insertValue("#ld_select_3", this.orderInfo.city);
+      await this.insertValue("#ld_select_4", this.orderInfo.state);
+      await this.clickButton('[id="isDefault"]');
+      await this.clickButton('[type="submit"]');
+    } catch (error) {
+      await this.loadJqueryIntoPage();
+      await this.page.evaluate(() => {
+        $("button:contains(Add)").click();
+      });
+      await this.sleep(1000);
+      // Input address details
+      await this.insertValue('[name="firstName"]', this.orderInfo.firstName);
+      await this.insertValue('[name="lastName"]', this.orderInfo.lastName);
+      await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
+      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
+      await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
+      await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
+      await this.insertValue("#ld_select_3", this.orderInfo.city);
+      await this.insertValue("#ld_select_4", this.orderInfo.state);
+      await this.clickButton('[id="isDefault"]');
+      await this.clickButton('[type="submit"]');
+    }
+    LOGGER.info("Address successfully inserted.");
   }
 
   async manageRegistry() {
@@ -58,6 +78,7 @@ class WalmartRegistry extends WalmartBase {
     await this.page.evaluate(() => {
       $("button:contains(Create registry)").click(); // Click create registry button.
     });
+    LOGGER.info("Successfully Managed.");
   }
 
   async addItemToRegistry(itemNumber) {
@@ -100,33 +121,40 @@ class WalmartRegistry extends WalmartBase {
       this.orderInfo.proxyIp,
       this.orderInfo.proxyPort,
     ]);
+    await this.initPuppeteer();
     await this.openSignInPage();
-    await this.signInWalmart();
-    const captchaDetected = await this.resolveCaptcha();
-    if (captchaDetected) {
-      LOGGER.error("Captcha detected.");
-      await this.clearSiteSettings();
-      await this.closeBrowser();
-      return;
+
+    try {
+      await this.signInWalmart(this.orderInfo.email);
+      const captchaDetected = await this.resolveCaptcha();
+      if (captchaDetected) {
+        LOGGER.error("Captcha detected.");
+        await this.clearSiteSettings();
+        await this.closeBrowser();
+        return;
+      }
+      LOGGER.info("Sign In Success. Registering...");
+      if (process.env.TEST_MODE !== "true") {
+        await api.putInProcessingFlag(this.orderInfo.id);
+      }
+      await this.luminatiProxyManager("OFF");
+      //////////////////////////////////////////////////////
+      await this.navigateToAddress();
+      await this.addAddress();
+      await this.manageRegistry();
+      await this.addItemToRegistry(this.orderInfo.primaryItem);
+      await this.addItemToRegistry(this.orderInfo.extraItem);
+      const pages = await this.browser.pages();
+      const registerPage = pages[pages.length - 3];
+      await registerPage.bringToFront();
+      this.page = registerPage;
+      const registryLink = await this.getRegistryLink();
+      LOGGER.info("Registry Link: " + registryLink);
+      await api.addRegistryLink(this.orderInfo.id, registryLink);
+    } catch (error) {
+      LOGGER.error(error);
+      await this.sleep(10000000);
     }
-    LOGGER.info("Sign In Success. Registering...");
-    if (process.env.TEST_MODE !== "true") {
-      await api.putInProcessingFlag(this.orderInfo.id);
-    }
-    await this.luminatiProxyManager("OFF");
-    //////////////////////////////////////////////////////
-    await this.navigateToAddress();
-    await this.addAddress();
-    await this.manageRegistry();
-    await this.addItemToRegistry(this.orderInfo.primaryItem);
-    await this.addItemToRegistry(this.orderInfo.extraItem);
-    const pages = await this.browser.pages();
-    const registerPage = pages[pages.length - 3];
-    await registerPage.bringToFront();
-    this.page = registerPage;
-    const registryLink = await this.getRegistryLink();
-    LOGGER.info("Registry Link: " + registryLink);
-    await api.addRegistryLink(this.orderInfo.id, registryLink);
   }
 }
 

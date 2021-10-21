@@ -3,3 +3,136 @@
 2021-10-20 16:14:10.459 INFO  Order Item IDs: ["29859890683618","36270389330162"] 
 2021-10-20 16:14:16.487 INFO  {"id":1518083,"billing_last_name":null,"billing_phone":null,"verification":null,"ds_status":"0","ds_status_display":"Started","order_status_last_checked":null,"supplier_order_numbers_str":"","zip_code":"71753-9343","email":null,"created_at":"2021-10-20T15:14:11.325729-05:00","credit_card":"","ip_supplier":{"ip":"127.0.0.1","port":24056},"account_supplier":{"username":"suztrench@yahoo.com","password":"forte1long"},"items":[{"order_item_id":"29859890683618","note":"","flag":"Walmart Prep3","supplier_item_id":"41158744","supplier":"W","buyer_email_prep":null,"link_display":"<a href=\"/admin/products/orderitem/29859890683618/change/\" target=\"_blank\">29859890683618</a>","order":{"link_display":"<a href=\"https://sellercentral.amazon.com/orders-v3/details?ie=UTF8&orderID=111-1728895-5449860\" target=\"_blank\">111-1728895-5449860</a>","amazon_order_status":"Unshipped","latest_ship_date":"2021-10-25 11-59 PM","ship_name":"Sarah VanBruggen","zipcode":"71753-9343","amazon_order_id":"111-1728895-5449860"},"product":{"link_display":"<a href=\"/admin/products/product/87151/change/\" target=\"_blank\">DR B000KKMKK8 HK39DS070C.M Poly.Americ</a>","supplier_name":"Walmart","exact_supplier_price":"15.14","coupon_code":"","comments":""},"filled_shipment_links":"","tracking_codes":"","false_confirm_codes":"","drop_ship_order_links":"","started_at":"","order_status":"New Order","quantity_ordered":1,"quantity_shipped":0,"local_quantity_shipped":0,"purchased_on":"2021-10-20 06-38 AM","manual_note":"","box_size":"1","ship_service_level":"Standard","asin_title":"Poly-America Yard Bag, 39 gal, 3 ft 4 in L x 2 ft 9 in W x 1 mil T, Clear","limit_code":"1","extra_item_links":"<a href=\"http://www.walmart.com/ip/922484274?selected=true\" target=\"_blank\">922484274</a>","supplier_order_numbers_str":"","current_quantity_bought":0,"buyer_info":"VanBruggen, Sarah - AR, MAGNOLIA","amazon_sku":"DR B000KKMKK8 HK39DS070C.M Poly.Americ"}],"gift_cards_info":"","extra_items":[{"supplier":"W","item_number":"922484274","exact_price":"20.00","in_stock":true,"last_checked":"2021-10-15T08:48:37-05:00","supplier_link":"http://www.walmart.com/ip/922484274?selected=true"}],"paid":false,"not_found":false,"supplier_site_total":"0.00"} 
 2021-10-20 16:14:19.756 INFO  {"id":1518084,"billing_last_name":null,"billing_phone":null,"verification":null,"ds_status":"0","ds_status_display":"Started","order_status_last_checked":null,"supplier_order_numbers_str":"","zip_code":"45879","email":null,"created_at":"2021-10-20T15:14:17.369842-05:00","credit_card":"","ip_supplier":{"ip":"127.0.0.1","port":24046},"account_supplier":{"username":"openworkn@yahoo.com","password":"forte1long"},"items":[{"order_item_id":"36270389330162","note":"","flag":"Walmart Prep3","supplier_item_id":"53967682","supplier":"W","buyer_email_prep":null,"link_display":"<a href=\"/admin/products/orderitem/36270389330162/change/\" target=\"_blank\">36270389330162</a>","order":{"link_display":"<a href=\"https://sellercentral.amazon.com/orders-v3/details?ie=UTF8&orderID=113-8533322-7845042\" target=\"_blank\">113-8533322-7845042</a>","amazon_order_status":"Unshipped","latest_ship_date":"2021-10-25 11-59 PM","ship_name":"Leslie A. Moser","zipcode":"45879","amazon_order_id":"113-8533322-7845042"},"product":{"link_display":"<a href=\"/admin/products/product/83383/change/\" target=\"_blank\">DR B071VPM9G6 111251.04R The.Pioneer.W</a>","supplier_name":"Walmart","exact_supplier_price":"14.48","coupon_code":"","comments":""},"filled_shipment_links":"","tracking_codes":"","false_confirm_codes":"","drop_ship_order_links":"","started_at":"","order_status":"New Order","quantity_ordered":1,"quantity_shipped":0,"local_quantity_shipped":0,"purchased_on":"2021-10-20 05-36 AM","manual_note":"","box_size":"1","ship_service_level":"Standard","asin_title":"Charming Antique Style Farmhouse Lace Mug Set (LINEN)","limit_code":"1","extra_item_links":"<a href=\"http://www.walmart.com/ip/913225897?selected=true\" target=\"_blank\">913225897</a>","supplier_order_numbers_str":"","current_quantity_bought":0,"buyer_info":"Moser, Leslie - OH, Paulding","amazon_sku":"DR B071VPM9G6 111251.04R The.Pioneer.W"}],"gift_cards_info":"","extra_items":[{"supplier":"W","item_number":"913225897","exact_price":"25.00","in_stock":true,"last_checked":"2021-10-15T08:46:15-05:00","supplier_link":"http://www.walmart.com/ip/913225897?selected=true"}],"paid":false,"not_found":false,"supplier_site_total":"0.00"} 
+2021-10-21 12:14:22.414 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:14:27.126 INFO  ORDER: {"id":1518206,"proxyIp":"127.0.0.1","proxyPort":24046,"email":"kotpmlo@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:14:30.188 INFO  ORDER: {"id":1518207,"proxyIp":"127.0.0.1","proxyPort":24084,"email":"coelton@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 12:16:40.413 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:16:44.981 INFO  ORDER: {"id":1518209,"proxyIp":"127.0.0.1","proxyPort":24045,"email":"characire@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:17:14.779 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:17:18.432 INFO  ORDER: {"id":1518210,"proxyIp":"127.0.0.1","proxyPort":24040,"email":"ribaces@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:18:22.922 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:18:28.585 INFO  ORDER: {"id":1518212,"proxyIp":"127.0.0.1","proxyPort":24037,"email":"afterbeot@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:18:32.173 INFO  ORDER: {"id":1518213,"proxyIp":"127.0.0.1","proxyPort":24027,"email":"outwastud@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 12:19:01.805 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:19:05.304 INFO  ORDER: {"id":1518214,"proxyIp":"127.0.0.1","proxyPort":24022,"email":"l.madison87@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:19:19.126 INFO  New Signin Page. 
+2021-10-21 12:19:19.126 INFO  Old sign in page. 
+2021-10-21 12:20:06.135 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:20:09.208 INFO  ORDER: {"id":1518215,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"perezisabella762@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:20:24.693 INFO  New Signin Page. 
+2021-10-21 12:20:24.693 INFO  Old sign in page. 
+2021-10-21 12:20:56.453 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:20:59.589 INFO  ORDER: {"id":1518216,"proxyIp":"127.0.0.1","proxyPort":24026,"email":"muitoon@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:21:45.835 INFO  Old sign in page. 
+2021-10-21 12:22:22.809 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:22:27.487 INFO  ORDER: {"id":1518217,"proxyIp":"127.0.0.1","proxyPort":24034,"email":"mackenzieking685@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:23:12.758 INFO  Old sign in page. 
+2021-10-21 12:24:12.278 INFO  No captcha detected. 
+2021-10-21 12:24:12.278 INFO  Sign In Success. Registering... 
+2021-10-21 12:26:04.866 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:26:09.665 INFO  ORDER: {"id":1518218,"proxyIp":"127.0.0.1","proxyPort":24047,"email":"baltome@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:26:23.337 INFO  New Signin Page. 
+2021-10-21 12:26:28.589 INFO  Old sign in page. 
+2021-10-21 12:26:57.518 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:27:02.924 INFO  ORDER: {"id":1518219,"proxyIp":"127.0.0.1","proxyPort":24009,"email":"pirkman@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:27:23.620 INFO  Old sign in page. 
+2021-10-21 12:28:21.835 INFO  No captcha detected. 
+2021-10-21 12:28:21.835 INFO  Sign In Success. Registering... 
+2021-10-21 12:31:09.537 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:31:14.471 INFO  ORDER: {"id":1518220,"proxyIp":"127.0.0.1","proxyPort":24076,"email":"balsaoea@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:31:37.665 INFO  Old sign in page. 
+2021-10-21 12:32:36.484 INFO  No captcha detected. 
+2021-10-21 12:32:36.484 INFO  Sign In Success. Registering... 
+2021-10-21 12:32:45.340 ERROR No node found for selector: [name="firstName"]
+{}
+Error: No node found for selector: [name="firstName"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.type (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:307:21)
+    at async WalmartRegistry.insertValue (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:153:5)
+    at async WalmartRegistry.addAddress (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:23:5)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:122:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 12:33:21.395 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:33:24.753 INFO  ORDER: {"id":1518222,"proxyIp":"127.0.0.1","proxyPort":24085,"email":"phescum@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:34:03.534 INFO  New Signin Page. 
+2021-10-21 12:34:08.960 INFO  Old sign in page. 
+2021-10-21 12:34:11.173 ERROR No node found for selector: [id="password"]
+{}
+Error: No node found for selector: [id="password"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.type (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:307:21)
+    at async WalmartRegistry.insertValue (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:153:5)
+    at async WalmartRegistry.fillOldSignInForm (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:66:5)
+    at async WalmartRegistry.signInWalmart (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:133:7)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:107:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 12:35:43.462 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:35:48.044 INFO  ORDER: {"id":1518223,"proxyIp":"127.0.0.1","proxyPort":24006,"email":"jacksonallison174@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:36:26.953 INFO  New Signin Page. 
+2021-10-21 12:37:21.116 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:37:25.765 INFO  ORDER: {"id":1518224,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"ryvulets@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:38:04.602 INFO  New Signin Page. 
+2021-10-21 12:39:04.890 INFO  No captcha detected. 
+2021-10-21 12:39:04.890 INFO  Sign In Success. Registering... 
+2021-10-21 12:39:11.907 ERROR No node found for selector: [name="firstName"]
+{}
+Error: No node found for selector: [name="firstName"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.type (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:307:21)
+    at async WalmartRegistry.insertValue (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:153:5)
+    at async WalmartRegistry.addAddress (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:23:5)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:122:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 12:42:46.574 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:42:51.373 INFO  ORDER: {"id":1518225,"proxyIp":"127.0.0.1","proxyPort":24013,"email":"bikyut@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:43:37.330 INFO  Old sign in page. 
+2021-10-21 12:44:35.205 INFO  No captcha detected. 
+2021-10-21 12:44:35.205 INFO  Sign In Success. Registering... 
+2021-10-21 12:45:18.435 ERROR waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:148:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:63:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:141:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 12:46:46.546 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:46:50.988 INFO  ORDER: {"id":1518227,"proxyIp":"127.0.0.1","proxyPort":24007,"email":"moietef@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:47:37.601 INFO  Old sign in page. 
+2021-10-21 12:48:35.473 INFO  No captcha detected. 
+2021-10-21 12:48:35.473 INFO  Sign In Success. Registering... 
+2021-10-21 12:49:05.557 ERROR Evaluation failed: ReferenceError: $ is not defined
+    at __puppeteer_evaluation_script__:2:9
+{}
+Error: Evaluation failed: ReferenceError: $ is not defined
+    at __puppeteer_evaluation_script__:2:9
+    at ExecutionContext._evaluateInternal (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at async ExecutionContext.evaluate (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async WalmartRegistry.addAddress (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:35:7)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:142:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 12:50:20.080 ERROR Error while fetching order items 
+2021-10-21 12:51:18.417 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:51:22.752 INFO  ORDER: {"id":1518229,"proxyIp":"127.0.0.1","proxyPort":24059,"email":"waimyos@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:51:38.723 INFO  New Signin Page. 
+2021-10-21 12:52:38.691 INFO  No captcha detected. 
+2021-10-21 12:52:38.691 INFO  Sign In Success. Registering... 
+2021-10-21 12:53:02.712 INFO  Address successfully inserted. 
+2021-10-21 12:53:21.970 ERROR waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:148:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:65:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:144:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
