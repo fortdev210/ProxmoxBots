@@ -1,13 +1,14 @@
 const LOGGER = require("../lib/logger");
 const WalmartBase = require("../lib/walmart");
-const { scheduleDate } = require("../lib/utils");
+const { getScheduleDate } = require("../lib/utils");
 const API = require("../lib/api");
 const api = new API();
 
 class WalmartRegistry extends WalmartBase {
-  constructor(orderInfo) {
+  constructor(orderInfo, orderItemId) {
     super();
     this.orderInfo = orderInfo;
+    this.orderItemId = orderItemId;
   }
 
   async navigateToAddress() {
@@ -21,14 +22,14 @@ class WalmartRegistry extends WalmartBase {
       });
       await this.sleep(1000);
       // Input address details
-      await this.insertValue('[name="firstName"]', this.orderInfo.firstName);
-      await this.insertValue('[name="lastName"]', this.orderInfo.lastName);
-      await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
-      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
+      await this.insertValue("#ld_select_0", this.orderInfo.firstName);
+      await this.insertValue("#ld_select_1", this.orderInfo.lastName);
+      await this.insertValue("#ld_select_3", this.orderInfo.city);
       await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
       await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
-      await this.insertValue("#ld_select_3", this.orderInfo.city);
       await this.insertValue("#ld_select_4", this.orderInfo.state);
+      await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
+      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
       await this.clickButton('[id="isDefault"]');
       await this.clickButton('[type="submit"]');
     } catch (error) {
@@ -38,17 +39,30 @@ class WalmartRegistry extends WalmartBase {
       });
       await this.sleep(1000);
       // Input address details
-      await this.insertValue('[name="firstName"]', this.orderInfo.firstName);
-      await this.insertValue('[name="lastName"]', this.orderInfo.lastName);
-      await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
-      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
+      await this.insertValue("#ld_select_0", this.orderInfo.firstName);
+      await this.insertValue("#ld_select_1", this.orderInfo.lastName);
+      await this.insertValue("#ld_select_3", this.orderInfo.city);
       await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
       await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
-      await this.insertValue("#ld_select_3", this.orderInfo.city);
       await this.insertValue("#ld_select_4", this.orderInfo.state);
+      await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
+      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
       await this.clickButton('[id="isDefault"]');
       await this.clickButton('[type="submit"]');
     }
+    try {
+      await this.page.waitForXPath(
+        '//*[contains(text(), "Use this address")]',
+        { timeout: 1000 }
+      );
+      LOGGER.info("Address Check Modal Pops Up.");
+      await this.page.evaluate(() => {
+        $("button:contains(Use this address)").click();
+      });
+    } catch (error) {
+      LOGGER.info("No Address Check Modal Pops Up.");
+    }
+    await this.sleep(5000);
     LOGGER.info("Address successfully inserted.");
   }
 
@@ -62,13 +76,18 @@ class WalmartRegistry extends WalmartBase {
     await this.clickButton(
       '[aria-label="Event, Customize a registry for any occasion"]'
     );
+    await this.resolveCaptcha();
     await this.waitForLoadingElement('[name="registryName"]');
     await this.insertValue("#ld_ui_textfield_0", this.orderInfo.lastName);
     await this.clickButton('[form="create-registry-form"]');
+    await this.sleep(2000);
     await this.waitForLoadingElement("#ld_ui_textfield_1");
-    const scheduleDate = scheduleDate();
+    const scheduleDate = getScheduleDate();
+    LOGGER.info("Schedule date: " + scheduleDate);
     await this.insertValue("#ld_ui_textfield_1", scheduleDate); // Set the schedule date.
+    await this.sleep(1000);
     await this.clickButton('[form="create-registry-form"]');
+    await this.sleep(2000);
     await this.waitForLoadingElement("#ld_radio_0");
     await this.clickButton("#ld_radio_0"); // Select the 1st radio for address.
     await this.sleep(2000);
@@ -85,13 +104,19 @@ class WalmartRegistry extends WalmartBase {
     const itemLink = `http://www.walmart.com/ip/${itemNumber}?selected=true`;
     await this.openNewPage();
     await this.openLink(itemLink);
-    await this.page.waitForXPath('//*[contains(text(), "Add to registry")]', {
-      timeout: 10000,
-    });
+    try {
+      await this.page.waitForXPath('//*[contains(text(), "Add to registry")]', {
+        timeout: 10000,
+      });
+    } catch (error) {
+      await this.resolveCaptcha();
+    }
     await this.page.evaluate(() => {
       $("button:contains(Add to registry)").click();
     });
+    await this.sleep(3000);
     await this.page.waitForXPath('//*[contains(text(), "Save")]');
+    await this.sleep(1000);
     await this.page.evaluate(() => {
       $("button:contains(Save)").click();
     });
@@ -109,9 +134,9 @@ class WalmartRegistry extends WalmartBase {
     });
     await this.sleep(3000);
     // get the registry link
-    await this.waitForLoadingElement('[id="ld_ui_textfield_0"]');
+    await this.waitForLoadingElement('[id="ld_ui_textfield_2"]');
     const registryLink = await this.page.evaluate(() => {
-      return document.querySelector('[id="ld_ui_textfield_0"]').value;
+      return document.querySelector('[id="ld_ui_textfield_2"]').value;
     });
     return registryLink;
   }
@@ -150,10 +175,13 @@ class WalmartRegistry extends WalmartBase {
       this.page = registerPage;
       const registryLink = await this.getRegistryLink();
       LOGGER.info("Registry Link: " + registryLink);
-      await api.addRegistryLink(this.orderInfo.id, registryLink);
+      await api.addRegistryLink(this.orderItemId, registryLink);
+      await this.closeBrowser();
+      LOGGER.info(" ");
     } catch (error) {
       LOGGER.error(error);
-      await this.sleep(10000000);
+      await this.closeBrowser();
+      return;
     }
   }
 }

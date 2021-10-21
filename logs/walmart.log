@@ -136,3 +136,593 @@ TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000
     at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:65:16)
     at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:144:7)
     at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 12:56:44.491 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 12:56:48.953 INFO  ORDER: {"id":1518230,"proxyIp":"127.0.0.1","proxyPort":24073,"email":"sleatir@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 12:57:12.242 INFO  Old sign in page. 
+2021-10-21 12:58:13.284 INFO  No captcha detected. 
+2021-10-21 12:58:13.284 INFO  Sign In Success. Registering... 
+2021-10-21 12:58:51.569 INFO  Address successfully inserted. 
+2021-10-21 12:59:18.141 ERROR Cannot access 'scheduleDate' before initialization
+{}
+ReferenceError: Cannot access 'scheduleDate' before initialization
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:69:26)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:144:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 13:01:59.540 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:02:04.354 INFO  ORDER: {"id":1518231,"proxyIp":"127.0.0.1","proxyPort":24014,"email":"disastebs@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:02:54.112 INFO  Old sign in page. 
+2021-10-21 13:03:56.622 INFO  No captcha detected. 
+2021-10-21 13:03:56.623 INFO  Sign In Success. Registering... 
+2021-10-21 13:04:39.717 INFO  Address successfully inserted. 
+2021-10-21 13:05:49.546 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:05:54.315 INFO  ORDER: {"id":1518232,"proxyIp":"127.0.0.1","proxyPort":24015,"email":"noskpaj@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:06:17.722 INFO  Old sign in page. 
+2021-10-21 13:06:26.574 WARN  Captcha detected. 
+2021-10-21 13:06:54.900 INFO  Tried to solve captcha 1 times 
+2021-10-21 13:06:55.087 WARN  Captcha detected. 
+2021-10-21 13:07:12.997 INFO  Tried to solve captcha 2 times 
+2021-10-21 13:07:53.024 INFO  No captcha detected. 
+2021-10-21 13:07:53.024 INFO  Sign In Success. Registering... 
+2021-10-21 13:08:24.045 INFO  Address successfully inserted. 
+2021-10-21 13:09:04.341 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:72:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:144:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 13:11:03.712 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:11:08.088 INFO  ORDER: {"id":1518233,"proxyIp":"127.0.0.1","proxyPort":24067,"email":"cassiqoid@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:11:48.729 INFO  New Signin Page. 
+2021-10-21 13:12:56.053 INFO  No captcha detected. 
+2021-10-21 13:12:56.053 INFO  Sign In Success. Registering... 
+2021-10-21 13:13:34.697 INFO  Address successfully inserted. 
+2021-10-21 13:13:55.306 ERROR waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:66:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:149:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 13:14:19.674 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:14:22.840 INFO  ORDER: {"id":1518235,"proxyIp":"127.0.0.1","proxyPort":24028,"email":"nataliethompson875@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:15:04.122 INFO  New Signin Page. 
+2021-10-21 13:15:19.466 WARN  Captcha detected. 
+2021-10-21 13:15:46.086 INFO  Tried to solve captcha 1 times 
+2021-10-21 13:15:46.272 WARN  Captcha detected. 
+2021-10-21 13:15:59.931 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:16:04.043 INFO  ORDER: {"id":1518236,"proxyIp":"127.0.0.1","proxyPort":24057,"email":"dovuning@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:16:21.250 INFO  New Signin Page. 
+2021-10-21 13:17:25.935 INFO  No captcha detected. 
+2021-10-21 13:17:25.935 INFO  Sign In Success. Registering... 
+2021-10-21 13:18:08.414 INFO  Address successfully inserted. 
+2021-10-21 13:32:43.439 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:32:48.499 INFO  ORDER: {"id":1518239,"proxyIp":"127.0.0.1","proxyPort":24078,"email":"seafraft@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:33:12.437 INFO  Old sign in page. 
+2021-10-21 13:33:30.414 ERROR this.page.content(...).includes is not a function
+{}
+TypeError: this.page.content(...).includes is not a function
+    at WalmartRegistry.checkCaptcha (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:19:27)
+    at WalmartRegistry.resolveCaptcha (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:54:38)
+    at WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:134:42)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 13:35:14.079 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:35:18.675 INFO  ORDER: {"id":1518240,"proxyIp":"127.0.0.1","proxyPort":24095,"email":"uberousqy@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:36:05.138 INFO  Old sign in page. 
+2021-10-21 13:36:47.078 INFO  Sign In Success. Registering... 
+2021-10-21 13:37:23.901 INFO  Address successfully inserted. 
+2021-10-21 13:37:45.634 ERROR waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:66:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:149:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 13:39:52.545 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:39:56.680 INFO  ORDER: {"id":1518241,"proxyIp":"127.0.0.1","proxyPort":24077,"email":"thomas.abigail33@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:40:43.122 INFO  Old sign in page. 
+2021-10-21 13:41:24.986 INFO  Sign In Success. Registering... 
+2021-10-21 13:42:05.008 INFO  Address successfully inserted. 
+2021-10-21 13:48:03.531 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:48:07.924 INFO  ORDER: {"id":1518242,"proxyIp":"127.0.0.1","proxyPort":24020,"email":"wleathes@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:48:56.066 INFO  Old sign in page. 
+2021-10-21 13:49:38.369 INFO  Sign In Success. Registering... 
+2021-10-21 13:50:19.874 INFO  Address Check Modal Pops Up. 
+2021-10-21 13:50:26.408 INFO  Address successfully inserted. 
+2021-10-21 13:51:19.149 ERROR waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:79:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:162:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 13:53:01.883 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:53:06.233 INFO  ORDER: {"id":1518244,"proxyIp":"127.0.0.1","proxyPort":24090,"email":"newwham@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:53:55.090 INFO  Old sign in page. 
+2021-10-21 13:54:36.912 INFO  Sign In Success. Registering... 
+2021-10-21 13:55:12.162 INFO  Address Check Modal Pops Up. 
+2021-10-21 13:55:20.046 INFO  Address successfully inserted. 
+2021-10-21 13:55:30.532 WARN  [id="px-captcha"] 
+2021-10-21 13:55:49.914 INFO  Tried to solve captcha 1 times 
+2021-10-21 13:55:50.138 WARN  [id="px-captcha"] 
+2021-10-21 13:56:23.013 INFO  Tried to solve captcha 2 times 
+2021-10-21 13:56:23.238 WARN  [id="px-captcha"] 
+2021-10-21 13:56:42.293 INFO  Tried to solve captcha 3 times 
+2021-10-21 13:56:52.694 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 13:56:56.282 INFO  ORDER: {"id":1518245,"proxyIp":"127.0.0.1","proxyPort":24044,"email":"vkmeanc@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 13:57:42.923 INFO  Old sign in page. 
+2021-10-21 13:58:24.513 INFO  Sign In Success. Registering... 
+2021-10-21 13:58:55.995 INFO  Address Check Modal Pops Up. 
+2021-10-21 13:59:02.780 INFO  Address successfully inserted. 
+2021-10-21 13:59:16.213 WARN  [id="px-captcha"] 
+2021-10-21 13:59:44.909 INFO  Tried to solve captcha 1 times 
+2021-10-21 13:59:45.135 WARN  [id="px-captcha"] 
+2021-10-21 14:00:04.784 INFO  Tried to solve captcha 2 times 
+2021-10-21 14:00:49.646 INFO  Schedule date: 11/04/2021 
+2021-10-21 14:01:12.597 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:90:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:162:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 14:35:21.060 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 14:35:24.108 INFO  ORDER: {"id":1518254,"proxyIp":"127.0.0.1","proxyPort":24055,"email":"pinjsa@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 14:36:12.766 INFO  Old sign in page. 
+2021-10-21 14:36:55.069 INFO  Sign In Success. Registering... 
+2021-10-21 14:37:28.196 INFO  No Address Check Modal Pops Up. 
+2021-10-21 14:37:33.458 INFO  Address successfully inserted. 
+2021-10-21 14:37:44.842 WARN  [id="px-captcha"] 
+2021-10-21 14:38:09.026 INFO  Tried to solve captcha 1 times 
+2021-10-21 14:38:56.395 INFO  Schedule date: 11/04/2021 
+2021-10-21 14:39:18.328 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:90:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:162:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 14:42:24.836 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 14:42:29.459 INFO  ORDER: {"id":1518258,"proxyIp":"127.0.0.1","proxyPort":24032,"email":"pnootgp@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 14:43:16.986 INFO  Old sign in page. 
+2021-10-21 14:43:57.708 INFO  Sign In Success. Registering... 
+2021-10-21 14:44:36.326 INFO  No Address Check Modal Pops Up. 
+2021-10-21 14:44:41.401 INFO  Address successfully inserted. 
+2021-10-21 14:44:53.386 WARN  [id="px-captcha"] 
+2021-10-21 14:45:14.985 INFO  Tried to solve captcha 1 times 
+2021-10-21 14:45:15.209 WARN  [id="px-captcha"] 
+2021-10-21 14:45:34.538 INFO  Tried to solve captcha 2 times 
+2021-10-21 14:46:18.030 INFO  Schedule date: 11/04/2021 
+2021-10-21 14:46:37.754 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:102:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:174:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 14:46:55.991 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 14:47:00.435 INFO  ORDER: {"id":1518260,"proxyIp":"127.0.0.1","proxyPort":24008,"email":"vetitism@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 14:47:40.938 INFO  New Signin Page. 
+2021-10-21 14:48:25.609 INFO  Sign In Success. Registering... 
+2021-10-21 14:48:59.063 INFO  No Address Check Modal Pops Up. 
+2021-10-21 14:49:04.439 INFO  Address successfully inserted. 
+2021-10-21 14:49:20.655 WARN  [id="px-captcha"] 
+2021-10-21 14:49:51.718 INFO  Tried to solve captcha 1 times 
+2021-10-21 14:49:51.943 WARN  [id="px-captcha"] 
+2021-10-21 14:50:20.593 INFO  Tried to solve captcha 2 times 
+2021-10-21 14:51:04.081 INFO  Schedule date: 11/04/2021 
+2021-10-21 14:51:32.240 INFO  Successfully Managed. 
+2021-10-21 14:51:41.144 INFO  Successfully Added. 
+2021-10-21 14:51:46.396 INFO  Successfully Added. 
+2021-10-21 14:52:05.390 ERROR waiting for selector `[id="ld_ui_textfield_0"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[id="ld_ui_textfield_0"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.getRegistryLink (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:139:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:178:28)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 15:01:43.604 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:01:47.799 INFO  ORDER: {"id":1518265,"proxyIp":"127.0.0.1","proxyPort":24075,"email":"patroonru@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:02:12.360 INFO  Old sign in page. 
+2021-10-21 15:02:55.744 INFO  Sign In Success. Registering... 
+2021-10-21 15:03:27.070 INFO  No Address Check Modal Pops Up. 
+2021-10-21 15:03:34.536 INFO  Address successfully inserted. 
+2021-10-21 15:03:48.275 WARN  [id="px-captcha"] 
+2021-10-21 15:04:15.926 INFO  Tried to solve captcha 1 times 
+2021-10-21 15:04:58.242 INFO  Schedule date: 11/04/2021 
+2021-10-21 15:05:24.981 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:165:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 15:05:59.516 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:06:03.739 INFO  ORDER: {"id":1518266,"proxyIp":"127.0.0.1","proxyPort":24086,"email":"jayavano@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:06:50.830 INFO  Old sign in page. 
+2021-10-21 15:07:31.958 INFO  Sign In Success. Registering... 
+2021-10-21 15:08:08.836 INFO  No Address Check Modal Pops Up. 
+2021-10-21 15:08:15.601 INFO  Address successfully inserted. 
+2021-10-21 15:09:11.565 INFO  Schedule date: 11/04/2021 
+2021-10-21 15:09:32.342 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:165:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 15:15:29.896 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:15:34.215 INFO  ORDER: {"id":1518267,"proxyIp":"127.0.0.1","proxyPort":24012,"email":"absurje@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:16:21.105 INFO  Old sign in page. 
+2021-10-21 15:16:32.214 WARN  [id="px-captcha"] 
+2021-10-21 15:16:52.407 INFO  Tried to solve captcha 1 times 
+2021-10-21 15:16:52.637 WARN  [id="px-captcha"] 
+2021-10-21 15:17:15.447 INFO  Tried to solve captcha 2 times 
+2021-10-21 15:17:45.502 INFO  Sign In Success. Registering... 
+2021-10-21 15:18:24.848 INFO  No Address Check Modal Pops Up. 
+2021-10-21 15:18:30.416 INFO  Address successfully inserted. 
+2021-10-21 15:19:26.767 INFO  Schedule date: 11/04/2021 
+2021-10-21 15:19:50.276 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:165:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 15:20:53.715 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:20:58.114 INFO  ORDER: {"id":1518268,"proxyIp":"127.0.0.1","proxyPort":24050,"email":"leezoe781@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:21:20.590 INFO  Old sign in page. 
+2021-10-21 15:21:33.948 WARN  [id="px-captcha"] 
+2021-10-21 15:21:51.626 INFO  Tried to solve captcha 1 times 
+2021-10-21 15:21:51.855 WARN  [id="px-captcha"] 
+2021-10-21 15:22:18.962 INFO  Tried to solve captcha 2 times 
+2021-10-21 15:22:19.188 WARN  [id="px-captcha"] 
+2021-10-21 15:22:41.106 INFO  Tried to solve captcha 3 times 
+2021-10-21 15:23:11.175 INFO  Sign In Success. Registering... 
+2021-10-21 15:23:46.738 INFO  No Address Check Modal Pops Up. 
+2021-10-21 15:23:52.314 INFO  Address successfully inserted. 
+2021-10-21 15:24:52.316 INFO  Schedule date: 2021-11-Th 
+2021-10-21 15:25:40.871 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:25:45.159 INFO  ORDER: {"id":1518269,"proxyIp":"127.0.0.1","proxyPort":24052,"email":"bargelibe@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:26:33.018 INFO  Old sign in page. 
+2021-10-21 15:27:15.065 INFO  Sign In Success. Registering... 
+2021-10-21 15:27:53.651 INFO  No Address Check Modal Pops Up. 
+2021-10-21 15:27:59.497 INFO  Address successfully inserted. 
+2021-10-21 15:28:14.160 WARN  [id="px-captcha"] 
+2021-10-21 15:28:43.137 INFO  Tried to solve captcha 1 times 
+2021-10-21 15:29:32.984 INFO  Schedule date: 11-04-2021 
+2021-10-21 15:30:01.675 INFO  Successfully Managed. 
+2021-10-21 15:30:15.689 INFO  Successfully Added. 
+2021-10-21 15:30:28.145 INFO  Successfully Added. 
+2021-10-21 15:30:38.283 INFO  Registry Link: https://www.walmart.com/registry/ER/8d05fbe2-b25f-4443-b5a7-6b4809e5d89d 
+2021-10-21 15:30:38.283 INFO  Adding registry link... 
+2021-10-21 15:30:39.218 ERROR Error while adding registry link to order. 
+2021-10-21 15:30:44.043 INFO  ORDER: {"id":1518270,"proxyIp":"127.0.0.1","proxyPort":24062,"email":"ashleyqvft5johnson@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 15:31:01.825 INFO  New Signin Page. 
+2021-10-21 15:31:18.711 ERROR Execution context was destroyed, most likely because of a navigation.
+{}
+Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:265:23)
+    at async ExecutionContext._evaluateInternal (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:219:60)
+    at async ExecutionContext.evaluate (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async DOMWorld.content (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:127:16)
+    at async Page.content (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:815:16)
+    at async WalmartRegistry.checkCaptcha (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:15:25)
+    at async WalmartRegistry.resolveCaptcha (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:38:27)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:150:31)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 15:53:31.892 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:53:36.413 INFO  ORDER: {"id":1518271,"proxyIp":"127.0.0.1","proxyPort":24064,"email":"milletke@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:54:24.945 INFO  Old sign in page. 
+2021-10-21 15:55:03.750 INFO  Sign In Success. Registering... 
+2021-10-21 15:55:40.195 INFO  No Address Check Modal Pops Up. 
+2021-10-21 15:55:47.997 INFO  Address successfully inserted. 
+2021-10-21 15:56:43.450 INFO  Schedule date: 11-04-2021 
+2021-10-21 15:57:11.454 INFO  Successfully Managed. 
+2021-10-21 15:57:23.532 ERROR waiting for XPath `//*[contains(text(), "Add to registry")]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for XPath `//*[contains(text(), "Add to registry")]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForXPath (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:445:26)
+    at Frame.waitForXPath (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:865:51)
+    at Page.waitForXPath (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1338:33)
+    at WalmartRegistry.addItemToRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:106:21)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:165:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 15:58:40.584 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 15:58:45.096 INFO  ORDER: {"id":1518272,"proxyIp":"127.0.0.1","proxyPort":24080,"email":"kibxawv@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 15:59:30.522 INFO  Old sign in page. 
+2021-10-21 16:00:09.691 INFO  Sign In Success. Registering... 
+2021-10-21 16:00:42.301 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:00:49.997 INFO  Address successfully inserted. 
+2021-10-21 16:01:06.736 WARN  [id="px-captcha"] 
+2021-10-21 16:01:32.589 INFO  Tried to solve captcha 1 times 
+2021-10-21 16:02:16.831 INFO  Schedule date: 11-04-2021 
+2021-10-21 16:02:41.858 INFO  Successfully Managed. 
+2021-10-21 16:02:54.989 INFO  Successfully Added. 
+2021-10-21 16:03:07.455 INFO  Successfully Added. 
+2021-10-21 16:03:19.606 INFO  Registry Link: https://www.walmart.com/registry/ER/5283b22f-3844-4aaf-a70b-4ad9b2656f7a 
+2021-10-21 16:03:19.606 INFO  Adding registry link... 
+2021-10-21 16:03:20.476 ERROR Error while adding registry link to order.Request failed with status code 405
+{"message":"Request failed with status code 405","name":"Error","stack":"Error: Request failed with status code 405\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"http://admin.stlpro.com/v1/order_item/1518272/","method":"post","data":"{\"note\":\"Preprocessed by Walmart Registry Bot\",\"flag\":\"Walmart Preprocessed\",\"shared_registry_link\":\"https://www.walmart.com/registry/ER/5283b22f-3844-4aaf-a70b-4ad9b2656f7a\"}","headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json;charset=utf-8","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1","Content-Length":175},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 405
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-21 16:03:26.461 INFO  ORDER: {"id":1518273,"proxyIp":"127.0.0.1","proxyPort":24005,"email":"kaitlyn.r53@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 16:06:29.379 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 16:06:33.846 INFO  ORDER: {"id":1518274,"proxyIp":"127.0.0.1","proxyPort":24100,"email":"cadqied@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 16:07:22.026 INFO  Old sign in page. 
+2021-10-21 16:08:04.208 INFO  Sign In Success. Registering... 
+2021-10-21 16:08:45.260 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:08:52.055 INFO  Address successfully inserted. 
+2021-10-21 16:09:04.788 WARN  [id="px-captcha"] 
+2021-10-21 16:09:27.417 INFO  Tried to solve captcha 1 times 
+2021-10-21 16:10:12.585 INFO  Schedule date: 11-04-2021 
+2021-10-21 16:10:47.098 INFO  Successfully Managed. 
+2021-10-21 16:11:04.899 INFO  Successfully Added. 
+2021-10-21 16:11:18.613 INFO  Successfully Added. 
+2021-10-21 16:11:30.989 INFO  Registry Link: https://www.walmart.com/registry/ER/41d08bdf-dff3-498a-a2b5-9e35530da481 
+2021-10-21 16:11:30.989 INFO  Adding registry link... 
+2021-10-21 16:11:32.132 ERROR Error while adding registry link to order.Request failed with status code 405
+{"message":"Request failed with status code 405","name":"Error","stack":"Error: Request failed with status code 405\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"https://admin.stlpro.com/v1/order_item/1518274/","method":"post","data":"{\"note\":\"Preprocessed by Walmart Registry Bot\",\"flag\":\"Walmart Preprocessed\",\"shared_registry_link\":\"https://www.walmart.com/registry/ER/41d08bdf-dff3-498a-a2b5-9e35530da481\"}","headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json;charset=utf-8","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1","Content-Length":175},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 405
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-21 16:11:36.863 INFO  ORDER: {"id":1518275,"proxyIp":"127.0.0.1","proxyPort":24030,"email":"lauqdry@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 16:16:28.559 INFO  Adding registry link... 
+2021-10-21 16:16:29.696 ERROR Error while adding registry link to order.Request failed with status code 405
+{"message":"Request failed with status code 405","name":"Error","stack":"Error: Request failed with status code 405\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"https://admin.stlpro.com/v1/order_item/1518274/","method":"post","data":"{\"note\":\"Preprocessed by Walmart Registry Bot\",\"flag\":\"Walmart Preprocessed\",\"shared_registry_link\":\"https://www.walmart.com/registry/ER/41d08bdf-dff3-498a-a2b5-9e35530da481\"}","headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json;charset=utf-8","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1","Content-Length":175},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 405
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-21 16:16:49.689 INFO  Adding registry link... 
+2021-10-21 16:16:51.668 ERROR Error while adding registry link to order.Request failed with status code 404
+{"message":"Request failed with status code 404","name":"Error","stack":"Error: Request failed with status code 404\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"https://admin.stlpro.com/v1/order_item/1518274","method":"post","data":"{\"note\":\"Preprocessed by Walmart Registry Bot\",\"flag\":\"Walmart Preprocessed\",\"shared_registry_link\":\"https://www.walmart.com/registry/ER/41d08bdf-dff3-498a-a2b5-9e35530da481\"}","headers":{"Accept":"application/json, text/plain, */*","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 404
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-21 16:19:22.331 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 16:19:25.114 INFO  ORDER: {"id":1518277,"proxyIp":"127.0.0.1","proxyPort":24035,"email":"alyssa.w43@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 16:20:13.203 INFO  Old sign in page. 
+2021-10-21 16:20:55.856 INFO  Sign In Success. Registering... 
+2021-10-21 16:21:34.660 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:21:42.005 INFO  Address successfully inserted. 
+2021-10-21 16:21:53.173 WARN  [id="px-captcha"] 
+2021-10-21 16:22:20.577 INFO  Tried to solve captcha 1 times 
+2021-10-21 16:22:20.802 WARN  [id="px-captcha"] 
+2021-10-21 16:22:48.274 INFO  Tried to solve captcha 2 times 
+2021-10-21 16:22:48.498 WARN  [id="px-captcha"] 
+2021-10-21 16:23:20.834 INFO  Tried to solve captcha 3 times 
+2021-10-21 16:23:21.058 WARN  [id="px-captcha"] 
+2021-10-21 16:23:39.362 INFO  Tried to solve captcha 4 times 
+2021-10-21 16:23:39.585 WARN  [id="px-captcha"] 
+2021-10-21 16:24:10.070 INFO  Tried to solve captcha 5 times 
+2021-10-21 16:24:10.295 WARN  [id="px-captcha"] 
+2021-10-21 16:24:20.306 ERROR waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `[name="registryName"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:79:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 16:26:30.804 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 16:26:35.412 INFO  ORDER: {"id":1518278,"proxyIp":"127.0.0.1","proxyPort":24068,"email":"leucippuc@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 16:27:23.681 INFO  Old sign in page. 
+2021-10-21 16:28:05.202 INFO  Sign In Success. Registering... 
+2021-10-21 16:28:39.288 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:28:45.668 INFO  Address successfully inserted. 
+2021-10-21 16:29:00.844 WARN  [id="px-captcha"] 
+2021-10-21 16:29:18.254 INFO  Tried to solve captcha 1 times 
+2021-10-21 16:29:18.478 WARN  [id="px-captcha"] 
+2021-10-21 16:29:34.491 INFO  Tried to solve captcha 2 times 
+2021-10-21 16:29:34.715 WARN  [id="px-captcha"] 
+2021-10-21 16:30:05.525 INFO  Tried to solve captcha 3 times 
+2021-10-21 16:30:48.288 INFO  Schedule date: 11-04-2021 
+2021-10-21 16:31:20.827 INFO  Successfully Managed. 
+2021-10-21 16:31:31.423 INFO  Successfully Added. 
+2021-10-21 16:31:42.868 INFO  Successfully Added. 
+2021-10-21 16:31:54.512 INFO  Registry Link: https://www.walmart.com/registry/ER/aef230eb-0881-4a87-9fb1-fbcb4e380294 
+2021-10-21 16:31:54.512 INFO  Adding registry link... 
+2021-10-21 16:31:56.480 ERROR Error while adding registry link to order.Request failed with status code 404
+{"message":"Request failed with status code 404","name":"Error","stack":"Error: Request failed with status code 404\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"https://admin.stlpro.com/v1/order_item/1518278","method":"post","data":"{\"note\":\"Preprocessed by Walmart Registry Bot\",\"flag\":\"Walmart Preprocessed\",\"shared_registry_link\":\"https://www.walmart.com/registry/ER/aef230eb-0881-4a87-9fb1-fbcb4e380294\"}","headers":{"Accept":"application/json, text/plain, */*","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 404
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-21 16:32:01.295 INFO  ORDER: {"id":1518279,"proxyIp":"127.0.0.1","proxyPort":24018,"email":"camuninh@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 16:32:19.574 INFO  New Signin Page. 
+2021-10-21 16:41:47.432 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 16:41:57.273 INFO  ORDER: {"id":1518280,"proxyIp":"127.0.0.1","proxyPort":24097,"email":"cussidly@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 16:42:37.786 INFO  New Signin Page. 
+2021-10-21 16:43:21.082 INFO  Sign In Success. Registering... 
+2021-10-21 16:44:05.973 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:44:12.466 INFO  Address successfully inserted. 
+2021-10-21 16:44:20.956 ERROR Evaluation failed: TypeError: Cannot read property 'click' of null
+    at __puppeteer_evaluation_script__:2:41
+{}
+Error: Evaluation failed: TypeError: Cannot read property 'click' of null
+    at __puppeteer_evaluation_script__:2:41
+    at ExecutionContext._evaluateInternal (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at async ExecutionContext.evaluate (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async WalmartRegistry.clickButton (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:192:5)
+    at async WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:76:5)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:169:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 16:47:36.717 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 16:47:41.574 INFO  ORDER: {"id":1518281,"proxyIp":"127.0.0.1","proxyPort":24071,"email":"andkewh@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 16:48:29.450 INFO  Old sign in page. 
+2021-10-21 16:49:11.488 INFO  Sign In Success. Registering... 
+2021-10-21 16:49:46.236 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:49:53.112 INFO  Address successfully inserted. 
+2021-10-21 16:50:06.582 WARN  [id="px-captcha"] 
+2021-10-21 16:50:23.785 INFO  Tried to solve captcha 1 times 
+2021-10-21 16:51:11.663 INFO  Schedule date: 11-04-2021 
+2021-10-21 16:51:44.300 INFO  Successfully Managed. 
+2021-10-21 16:52:00.640 INFO  Successfully Added. 
+2021-10-21 16:52:16.294 INFO  Successfully Added. 
+2021-10-21 16:52:28.865 INFO  Registry Link: https://www.walmart.com/registry/ER/c933b41b-10dd-4536-a989-a342359030b1 
+2021-10-21 16:52:28.865 INFO  Adding registry link... 
+2021-10-21 16:52:30.887 ERROR Error while adding registry link to order.Request failed with status code 404
+{"message":"Request failed with status code 404","name":"Error","stack":"Error: Request failed with status code 404\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"https://admin.stlpro.com/v1/order_item/1518281","method":"post","data":"{\"note\":\"Preprocessed by Walmart Registry Bot\",\"flag\":\"Walmart Preprocessed\",\"shared_registry_link\":\"https://www.walmart.com/registry/ER/c933b41b-10dd-4536-a989-a342359030b1\"}","headers":{"Accept":"application/json, text/plain, */*","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1"},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 404
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-21 16:52:35.698 INFO  ORDER: {"id":1518282,"proxyIp":"127.0.0.1","proxyPort":24019,"email":"enachment@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 16:54:10.902 INFO  Order Item IDs: ["04035516776930","22752834421338"] 
+2021-10-21 16:54:15.206 INFO  ORDER: {"id":1518283,"proxyIp":"127.0.0.1","proxyPort":24074,"email":"eftsion@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 16:55:03.598 INFO  Old sign in page. 
+2021-10-21 16:55:42.923 INFO  Sign In Success. Registering... 
+2021-10-21 16:56:20.770 INFO  No Address Check Modal Pops Up. 
+2021-10-21 16:56:26.617 INFO  Address successfully inserted. 
+2021-10-21 16:56:43.558 WARN  [id="px-captcha"] 
+2021-10-21 16:57:08.188 INFO  Tried to solve captcha 1 times 
+2021-10-21 16:57:59.894 INFO  Schedule date: 11-04-2021 
+2021-10-21 16:58:32.665 INFO  Successfully Managed. 
+2021-10-21 16:58:46.092 INFO  Successfully Added. 
+2021-10-21 16:58:58.234 INFO  Successfully Added. 
+2021-10-21 16:59:12.864 INFO  Registry Link: https://www.walmart.com/registry/ER/f586c95b-f286-40d6-bd6d-f1ab2b96e105 
+2021-10-21 16:59:12.864 INFO  Adding registry link... 
+2021-10-21 16:59:19.577 INFO  ORDER: {"id":1518284,"proxyIp":"127.0.0.1","proxyPort":24042,"email":"walhowed@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Karen","lastName":"Hendry","addressOne":"24240 SW MARTIN HWY","addressTwo":"","city":"OKEECHOBEE","state":"FL","zipCode":"34974-2103","phoneNumber":"3304848913"} 
+2021-10-21 16:59:41.297 INFO  Old sign in page. 
+2021-10-21 17:00:22.426 INFO  Sign In Success. Registering... 
+2021-10-21 17:00:53.099 INFO  No Address Check Modal Pops Up. 
+2021-10-21 17:00:58.576 INFO  Address successfully inserted. 
+2021-10-21 17:01:09.913 WARN  [id="px-captcha"] 
+2021-10-21 17:01:29.785 INFO  Tried to solve captcha 1 times 
+2021-10-21 17:02:13.628 INFO  Schedule date: 11-04-2021 
+2021-10-21 17:02:45.299 INFO  Successfully Managed. 
+2021-10-21 17:03:00.583 INFO  Successfully Added. 
+2021-10-21 17:03:12.356 INFO  Successfully Added. 
+2021-10-21 17:03:25.039 INFO  Registry Link: https://www.walmart.com/registry/ER/15ff84eb-985b-4815-b16f-32561fbc725e 
+2021-10-21 17:03:25.039 INFO  Adding registry link... 
+2021-10-21 17:07:52.811 INFO  Order Item IDs: ["04035516776930"] 
+2021-10-21 17:07:57.198 INFO  ORDER: {"id":1518285,"proxyIp":"127.0.0.1","proxyPort":24081,"email":"fcueckin@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 17:08:14.442 INFO  New Signin Page. 
+2021-10-21 17:08:56.558 INFO  Sign In Success. Registering... 
+2021-10-21 17:09:35.794 INFO  No Address Check Modal Pops Up. 
+2021-10-21 17:09:43.250 INFO  Address successfully inserted. 
+2021-10-21 17:09:58.328 WARN  [id="px-captcha"] 
+2021-10-21 17:10:30.988 INFO  Tried to solve captcha 1 times 
+2021-10-21 17:11:16.978 INFO  Schedule date: 11-04-2021 
+2021-10-21 17:11:40.172 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:169:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:22:7) 
+2021-10-21 17:12:03.302 INFO  Order Item IDs: ["04035516776930"] 
+2021-10-21 17:12:07.306 INFO  ORDER: {"id":1518286,"proxyIp":"127.0.0.1","proxyPort":24054,"email":"turnerkaylee18@yahoo.com","primaryItem":"308533145","primaryItemQty":1,"extraItem":"663523426","firstName":"Mark","lastName":"Klages","addressOne":"103 Chestnut St","addressTwo":"","city":"Sistersville","state":"WV","zipCode":"26175","phoneNumber":"5877942270"} 
+2021-10-21 17:12:54.757 INFO  Old sign in page. 
+2021-10-21 17:13:38.517 INFO  Sign In Success. Registering... 
+2021-10-21 17:14:17.095 INFO  Address Check Modal Pops Up. 
+2021-10-21 17:14:24.821 INFO  Address successfully inserted. 
+2021-10-21 17:14:38.288 WARN  [id="px-captcha"] 
+2021-10-21 17:15:03.763 INFO  Tried to solve captcha 1 times 
+2021-10-21 17:15:48.866 INFO  Schedule date: 11-04-2021 
+2021-10-21 17:16:21.967 INFO  Successfully Managed. 
+2021-10-21 17:16:33.710 INFO  Successfully Added. 
+2021-10-21 17:16:45.681 INFO  Successfully Added. 
+2021-10-21 17:16:59.672 INFO  Registry Link: https://www.walmart.com/registry/ER/cddf1e38-6f96-4a44-af79-b8fc5b3ff90b 
+2021-10-21 17:16:59.672 INFO  Adding registry link... 

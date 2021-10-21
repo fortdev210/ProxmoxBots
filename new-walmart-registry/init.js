@@ -17,7 +17,7 @@ async function main() {
     const orderInfo = await api.createDSOrder(orderItemId);
     const parsedOrder = parseDSOrderInfo(orderInfo);
     LOGGER.info("ORDER: ", parsedOrder);
-    const register = new WalmartRegister(parsedOrder);
+    const register = new WalmartRegister(parsedOrder, orderItemId);
     if (parsedOrder.extraItem) {
       await register.processOrderWithExtraItem();
     }
