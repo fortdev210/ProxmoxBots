@@ -1,6 +1,8 @@
 const LOGGER = require("../lib/logger");
 const WalmartBase = require("../lib/walmart");
 const { scheduleDate } = require("../lib/utils");
+const API = require("../lib/api");
+const api = new API();
 
 class WalmartRegistry extends WalmartBase {
   constructor(orderInfo) {
@@ -56,6 +58,75 @@ class WalmartRegistry extends WalmartBase {
     await this.page.evaluate(() => {
       $("button:contains(Create registry)").click(); // Click create registry button.
     });
+  }
+
+  async addItemToRegistry(itemNumber) {
+    const itemLink = `http://www.walmart.com/ip/${itemNumber}?selected=true`;
+    await this.openNewPage();
+    await this.openLink(itemLink);
+    await this.page.waitForXPath('//*[contains(text(), "Add to registry")]', {
+      timeout: 10000,
+    });
+    await this.page.evaluate(() => {
+      $("button:contains(Add to registry)").click();
+    });
+    await this.page.waitForXPath('//*[contains(text(), "Save")]');
+    await this.page.evaluate(() => {
+      $("button:contains(Save)").click();
+    });
+    LOGGER.info("Successfully Added.");
+  }
+
+  async getRegistryLink() {
+    await this.loadJqueryIntoPage();
+    await this.sleep(2000);
+    await this.page.waitForXPath(
+      '//*[contains(text(), "Share this registry")]'
+    );
+    await this.page.evaluate(() => {
+      $("button:contains(Share this registry)").click();
+    });
+    await this.sleep(3000);
+    // get the registry link
+    await this.waitForLoadingElement('[id="ld_ui_textfield_0"]');
+    const registryLink = await this.page.evaluate(() => {
+      return document.querySelector('[id="ld_ui_textfield_0"]').value;
+    });
+    return registryLink;
+  }
+
+  async processOrderWithExtraItem() {
+    await this.luminatiProxyManager("ON", [
+      this.orderInfo.proxyIp,
+      this.orderInfo.proxyPort,
+    ]);
+    await this.openSignInPage();
+    await this.signInWalmart();
+    const captchaDetected = await this.resolveCaptcha();
+    if (captchaDetected) {
+      LOGGER.error("Captcha detected.");
+      await this.clearSiteSettings();
+      await this.closeBrowser();
+      return;
+    }
+    LOGGER.info("Sign In Success. Registering...");
+    if (process.env.TEST_MODE !== "true") {
+      await api.putInProcessingFlag(this.orderInfo.id);
+    }
+    await this.luminatiProxyManager("OFF");
+    //////////////////////////////////////////////////////
+    await this.navigateToAddress();
+    await this.addAddress();
+    await this.manageRegistry();
+    await this.addItemToRegistry(this.orderInfo.primaryItem);
+    await this.addItemToRegistry(this.orderInfo.extraItem);
+    const pages = await this.browser.pages();
+    const registerPage = pages[pages.length - 3];
+    await registerPage.bringToFront();
+    this.page = registerPage;
+    const registryLink = await this.getRegistryLink();
+    LOGGER.info("Registry Link: " + registryLink);
+    await api.addRegistryLink(this.orderInfo.id, registryLink);
   }
 }
 
