@@ -120,7 +120,7 @@ class WalmartRegistry extends WalmartBase {
     await this.page.evaluate(() => {
       $("button:contains(Save)").click();
     });
-    LOGGER.info("Successfully Added.");
+    LOGGER.info("Successfully Added Item.");
   }
 
   async getRegistryLink() {
