@@ -142,11 +142,12 @@ class WalmartRegistry extends WalmartBase {
   }
 
   async processOrderWithExtraItem() {
+    await this.initPuppeteer();
+    await this.sleep(3000);
     await this.luminatiProxyManager("ON", [
       this.orderInfo.proxyIp,
       this.orderInfo.proxyPort,
     ]);
-    await this.initPuppeteer();
     await this.openSignInPage();
 
     try {
@@ -160,7 +161,7 @@ class WalmartRegistry extends WalmartBase {
       }
       LOGGER.info("Sign In Success. Registering...");
       if (process.env.TEST_MODE !== "true") {
-        await api.putInProcessingFlag(this.orderInfo.id);
+        await api.putInProcessingFlag(this.orderItemId);
       }
       await this.luminatiProxyManager("OFF");
       //////////////////////////////////////////////////////
@@ -175,6 +176,7 @@ class WalmartRegistry extends WalmartBase {
       this.page = registerPage;
       const registryLink = await this.getRegistryLink();
       LOGGER.info("Registry Link: " + registryLink);
+      await api.putEmailInPrep(this.orderItemId, this.orderInfo.email);
       await api.addRegistryLink(this.orderItemId, registryLink);
       await this.closeBrowser();
       LOGGER.info(" ");
