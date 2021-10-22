@@ -13,6 +13,10 @@ async function main() {
   const api = new API();
 
   const orderItems = await api.fetchOrderItems(flag);
+  if (orderItems.length === 0) {
+    LOGGER.info("No order items found. Please put orders in this folder.");
+    return;
+  }
   const orderItemIds = orderItems.map((order) => order.order_item_id);
   LOGGER.info("Order Item IDs: ", orderItemIds);
 

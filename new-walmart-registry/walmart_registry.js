@@ -29,7 +29,7 @@ class WalmartRegistry extends WalmartBase {
       await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
       await this.insertValue("#ld_select_4", this.orderInfo.state);
       await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
-      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
+      await this.reInsertValue2("#ld_select_5", this.orderInfo.zipCode);
       await this.clickButton('[id="isDefault"]');
       await this.clickButton('[type="submit"]');
     } catch (error) {
@@ -46,7 +46,7 @@ class WalmartRegistry extends WalmartBase {
       await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
       await this.insertValue("#ld_select_4", this.orderInfo.state);
       await this.insertValue("#ld_select_6", this.orderInfo.phoneNumber);
-      await this.insertValue("#ld_select_5", this.orderInfo.zipCode);
+      await this.reInsertValue2("#ld_select_5", this.orderInfo.zipCode);
       await this.clickButton('[id="isDefault"]');
       await this.clickButton('[type="submit"]');
     }
@@ -165,9 +165,6 @@ class WalmartRegistry extends WalmartBase {
         return;
       }
       LOGGER.info("Sign In Success. Registering...");
-      if (process.env.TEST_MODE !== "true") {
-        await api.putInProcessingFlag(this.orderItemId);
-      }
       await this.luminatiProxyManager("OFF");
       //////////////////////////////////////////////////////
       await this.navigateToAddress();
@@ -191,7 +188,6 @@ class WalmartRegistry extends WalmartBase {
       await api.putEmailInPrep(this.orderItemId, this.orderInfo.email);
       await api.addRegistryLink(this.orderItemId, registryLink);
       await this.closeBrowser();
-      LOGGER.info(" ");
     } catch (error) {
       LOGGER.error(error);
       await this.closeBrowser();
