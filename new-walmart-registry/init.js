@@ -21,10 +21,8 @@ async function main() {
     const parsedOrder = parseDSOrderInfo(orderInfo);
     LOGGER.info("ORDER: ", parsedOrder);
     const register = new WalmartRegister(parsedOrder, orderItemId);
-    if (parsedOrder.extraItem) {
-      await register.processOrderWithExtraItem();
-      console.log("");
-    }
+    await register.processOrderWithExtraItem();
+    console.log("");
   }
 }
 main();
