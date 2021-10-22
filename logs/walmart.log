@@ -985,3 +985,46 @@ TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceede
 2021-10-22 12:41:14.394 WARN  [id="px-captcha"] 
 2021-10-22 12:41:41.455 INFO  Tried to solve captcha 1 times 
 2021-10-22 12:41:58.881 WARN  [id="px-captcha"] 
+2021-10-22 13:09:21.128 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:10:01.422 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:13:18.437 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:20:20.249 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:21:09.825 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:22:16.699 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:22:33.604 INFO  ORDER: {"id":1518499,"proxyIp":"127.0.0.1","proxyPort":24031,"email":"GilbertaSoldeo@outlook.com","primaryItem":"537388483","primaryItemQty":2,"extraItem":null,"firstName":"Marcia","lastName":"Pauling","addressOne":"17151 S STATE ROUTE 44","addressTwo":"","city":"ALLENWOOD","state":"PA","zipCode":"17810-9553","phoneNumber":"9562920028"} 
+2021-10-22 13:23:03.071 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:24:57.421 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:25:17.251 INFO  ORDER: {"id":1518502,"proxyIp":"127.0.0.1","proxyPort":24093,"email":"TarinaPresnell23@outlook.com","primaryItem":"537388483","primaryItemQty":2,"extraItem":null,"firstName":"Marcia","lastName":"Pauling","addressOne":"17151 S STATE ROUTE 44","addressTwo":"","city":"ALLENWOOD","state":"PA","zipCode":"17810-9553","phoneNumber":"9562920028"} 
+2021-10-22 13:26:07.092 ERROR Execution context was destroyed, most likely because of a navigation.
+{}
+Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:265:23)
+    at async ExecutionContext._evaluateInternal (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:219:60)
+    at async ExecutionContext.evaluate (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async DOMWorld.content (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:127:16)
+    at async Page.content (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:815:16)
+    at async WalmartRegistry.checkCaptcha (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:15:25)
+    at async WalmartRegistry.resolveCaptcha (/home/jeff/Projects/ProxmoxBots/lib/walmart.js:38:27)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:160:31)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:24:5) 
+2021-10-22 13:26:39.965 INFO  Order Item IDs: ["37046749041154"] 
+2021-10-22 13:26:55.694 INFO  ORDER: {"id":1518504,"proxyIp":"127.0.0.1","proxyPort":24095,"email":"DomingaNatera12@outlook.com","primaryItem":"537388483","primaryItemQty":2,"extraItem":null,"firstName":"Marcia","lastName":"Pauling","addressOne":"17151 S STATE ROUTE 44","addressTwo":"","city":"ALLENWOOD","state":"PA","zipCode":"17810-9553","phoneNumber":"9562920028"} 
+2021-10-22 13:28:07.521 INFO  Sign In Success. Registering... 
+2021-10-22 13:28:46.731 INFO  No Address Check Modal Pops Up. 
+2021-10-22 13:28:53.491 INFO  Address successfully inserted. 
+2021-10-22 13:29:09.124 WARN  [id="px-captcha"] 
+2021-10-22 13:29:44.322 INFO  Tried to solve captcha 1 times 
+2021-10-22 13:30:30.774 INFO  Schedule date: 11-05-2021 
+2021-10-22 13:30:55.784 ERROR waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+{"name":"TimeoutError"}
+TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:509:34)
+    at DOMWorld.waitForSelectorInPage (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:420:26)
+    at Object.internalHandler.waitFor (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:313:29)
+    at Frame.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:841:51)
+    at Page.waitForSelector (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1335:33)
+    at WalmartRegistry.waitForLoadingElement (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:147:21)
+    at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:175:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:24:5) 

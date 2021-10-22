@@ -24,7 +24,7 @@ class WalmartRegistry extends WalmartBase {
       // Input address details
       await this.insertValue("#ld_select_0", this.orderInfo.firstName);
       await this.insertValue("#ld_select_1", this.orderInfo.lastName);
-      await this.insertValue("#ld_select_3", this.orderInfo.city);
+      await this.reInsertValue2("#ld_select_3", this.orderInfo.city);
       await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
       await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
       await this.insertValue("#ld_select_4", this.orderInfo.state);
@@ -41,7 +41,7 @@ class WalmartRegistry extends WalmartBase {
       // Input address details
       await this.insertValue("#ld_select_0", this.orderInfo.firstName);
       await this.insertValue("#ld_select_1", this.orderInfo.lastName);
-      await this.insertValue("#ld_select_3", this.orderInfo.city);
+      await this.reInsertValue2("#ld_select_3", this.orderInfo.city);
       await this.insertValue("#addressLineOne", this.orderInfo.addressOne);
       await this.insertValue("#ld_select_2", this.orderInfo.addressTwo);
       await this.insertValue("#ld_select_4", this.orderInfo.state);
@@ -148,10 +148,15 @@ class WalmartRegistry extends WalmartBase {
       this.orderInfo.proxyIp,
       this.orderInfo.proxyPort,
     ]);
-    await this.openSignInPage();
 
     try {
-      await this.signInWalmart(this.orderInfo.email);
+      if (this.orderInfo.extraItem) {
+        await this.openSignInPage();
+        await this.signInWalmart(this.orderInfo.email);
+      } else {
+        await this.openSignupPage();
+        await this.signUpWalmart(this.orderInfo);
+      }
       const captchaDetected = await this.resolveCaptcha();
       if (captchaDetected) {
         LOGGER.error("Captcha detected.");
@@ -169,9 +174,16 @@ class WalmartRegistry extends WalmartBase {
       await this.addAddress();
       await this.manageRegistry();
       await this.addItemToRegistry(this.orderInfo.primaryItem);
-      await this.addItemToRegistry(this.orderInfo.extraItem);
+      if (this.orderInfo.extraItem) {
+        await this.addItemToRegistry(this.orderInfo.extraItem);
+      }
       const pages = await this.browser.pages();
-      const registerPage = pages[pages.length - 3];
+      let registerPage = null;
+      if (this.orderInfo.extraItem) {
+        registerPage = pages[pages.length - 3];
+      } else {
+        registerPage = pages[pages.length - 2];
+      }
       await registerPage.bringToFront();
       this.page = registerPage;
       const registryLink = await this.getRegistryLink();
