@@ -1,18 +1,22 @@
 require("dotenv").config();
 const prefix = "Walmart+Prep";
-const flag =
+const botNumber =
   process.env.TEST_MODE === "true"
-    ? "Walmart+Prep3"
-    : prefix + require("os").hostname().replace(/\D/g, "").replace("0", "");
+    ? 3
+    : require("os").hostname().replace(/\D/g, "").replace("0", "");
+const flag = prefix + botNumber;
 const API = require("../lib/api");
 const LOGGER = require("../lib/logger");
 const { parseDSOrderInfo } = require("../lib/utils");
 const WalmartRegister = require("./walmart_registry");
+const { WAREHOUSE_PREP_BOTS_NUMBERS } = require("../constants/warehouse");
 
 async function main() {
   const api = new API();
 
-  const orderItems = await api.fetchOrderItems(flag);
+  const orderItems = WAREHOUSE_PREP_BOTS_NUMBERS.includes(botNumber)
+    ? await api.fetchWarehouseItems(flag)
+    : await api.fetchOrderItems(flag);
   if (orderItems.length === 0) {
     LOGGER.info("No order items found. Please put orders in this folder.");
     return;
