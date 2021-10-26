@@ -1028,3 +1028,4 @@ TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceede
     at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
     at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:175:7)
     at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:24:5) 
+2021-10-26 16:59:14.744 INFO  Order Item IDs: ["WH202110251525135938","WH20211025152517320"] 

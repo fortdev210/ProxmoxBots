@@ -2,7 +2,7 @@ require("dotenv").config();
 const prefix = "Walmart+Prep";
 const botNumber =
   process.env.TEST_MODE === "true"
-    ? 3
+    ? 7
     : require("os").hostname().replace(/\D/g, "").replace("0", "");
 const flag = prefix + botNumber;
 const API = require("../lib/api");
@@ -14,7 +14,7 @@ const { WAREHOUSE_PREP_BOTS_NUMBERS } = require("../constants/warehouse");
 async function main() {
   const api = new API();
 
-  const orderItems = WAREHOUSE_PREP_BOTS_NUMBERS.includes(botNumber)
+  const orderItems = WAREHOUSE_PREP_BOTS_NUMBERS.includes(Number(botNumber))
     ? await api.fetchWarehouseItems(flag)
     : await api.fetchOrderItems(flag);
   if (orderItems.length === 0) {
