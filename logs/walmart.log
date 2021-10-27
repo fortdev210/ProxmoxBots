@@ -1028,5 +1028,63 @@ TimeoutError: waiting for selector `#ld_radio_0` failed: timeout 10000ms exceede
     at WalmartRegistry.manageRegistry (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:91:16)
     at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:175:7)
     at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:24:5) 
+<<<<<<< HEAD
 2021-10-26 12:17:08.215 INFO  Add an item to cart. 
 2021-10-26 12:17:16.745 INFO  Add an item to cart. 
+=======
+2021-10-26 16:59:14.744 INFO  Order Item IDs: ["WH202110251525135938","WH20211025152517320"] 
+>>>>>>> 1df4e8aebc3a6143bb847a9c09133f854ac0f7cd
+2021-10-27 12:47:11.737 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 12:47:23.534 INFO  ORDER: {"id":1520057,"proxyIp":"127.0.0.1","proxyPort":24029,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 12:48:14.887 INFO  Add an item to cart. 
+2021-10-27 12:48:21.599 INFO  Add an item to cart. 
+2021-10-27 12:49:18.105 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 12:49:19.572 INFO  ORDER: {"id":1520061,"proxyIp":"127.0.0.1","proxyPort":24000,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 12:50:08.714 INFO  Add an item to cart. 
+2021-10-27 12:50:13.479 INFO  Add an item to cart. 
+2021-10-27 12:51:19.470 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 12:51:20.989 INFO  ORDER: {"id":1520064,"proxyIp":"127.0.0.1","proxyPort":24069,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 12:52:08.402 INFO  Add an item to cart. 
+2021-10-27 12:52:15.438 INFO  Add an item to cart. 
+2021-10-27 12:54:20.034 INFO  ORDER: {"id":1520072,"proxyIp":"127.0.0.1","proxyPort":24057,"email":"conistus@yahoo.com","primaryItem":"115756602","primaryItemQty":1,"extraItem":"687375927","firstName":"Lyndsay","lastName":"Rosenbalm","addressOne":"1811 KNOLLS DR","addressTwo":"","city":"NEWTON","state":"NC","zipCode":"28658-9382","phoneNumber":"9212647485","sharedRegistryLink":"https://www.walmart.com/registry/ER/127e6746-8d27-4bb2-9ac3-81c906efd870"} 
+2021-10-27 12:56:24.332 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 12:56:25.835 INFO  ORDER: {"id":1520073,"proxyIp":"127.0.0.1","proxyPort":24004,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 12:57:12.993 INFO  Add an item to cart. 
+2021-10-27 12:57:19.132 INFO  Add an item to cart. 
+2021-10-27 12:57:32.509 INFO  Old signin page. 
+2021-10-27 12:57:53.406 INFO  ORDER: {"id":1520079,"proxyIp":"127.0.0.1","proxyPort":24015,"email":"conistus@yahoo.com","primaryItem":"115756602","primaryItemQty":1,"extraItem":"687375927","firstName":"Lyndsay","lastName":"Rosenbalm","addressOne":"1811 KNOLLS DR","addressTwo":"","city":"NEWTON","state":"NC","zipCode":"28658-9382","phoneNumber":"9212647485","sharedRegistryLink":"https://www.walmart.com/registry/ER/127e6746-8d27-4bb2-9ac3-81c906efd870"} 
+2021-10-27 12:58:37.813 INFO  Add an item to cart. 
+2021-10-27 12:58:45.385 INFO  Add an item to cart. 
+2021-10-27 13:18:50.387 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 13:18:56.983 INFO  ORDER: {"id":1520107,"proxyIp":"127.0.0.1","proxyPort":24021,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 13:25:31.558 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 13:25:33.055 INFO  ORDER: {"id":1520111,"proxyIp":"127.0.0.1","proxyPort":24003,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 13:26:19.134 INFO  Add an item to cart. 
+2021-10-27 13:26:26.388 INFO  Add an item to cart. 
+2021-10-27 13:26:43.463 INFO  Old signin page. 
+2021-10-27 13:27:01.853 INFO  ORDER: {"id":1520112,"proxyIp":"127.0.0.1","proxyPort":24041,"email":"conistus@yahoo.com","primaryItem":"115756602","primaryItemQty":1,"extraItem":"687375927","firstName":"Lyndsay","lastName":"Rosenbalm","addressOne":"1811 KNOLLS DR","addressTwo":"","city":"NEWTON","state":"NC","zipCode":"28658-9382","phoneNumber":"9212647485","sharedRegistryLink":"https://www.walmart.com/registry/ER/127e6746-8d27-4bb2-9ac3-81c906efd870"} 
+2021-10-27 14:29:54.101 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 14:29:55.472 INFO  ORDER: {"id":1520153,"proxyIp":"127.0.0.1","proxyPort":24084,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 14:30:35.451 INFO  Add an item to cart. 
+2021-10-27 14:30:42.331 INFO  Add an item to cart. 
+2021-10-27 14:30:59.328 INFO  Old signin page. 
+2021-10-27 14:32:34.292 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 14:32:35.595 INFO  ORDER: {"id":1520154,"proxyIp":"127.0.0.1","proxyPort":24044,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 14:33:12.678 INFO  Add an item to cart. 
+2021-10-27 14:33:17.717 INFO  Add an item to cart. 
+2021-10-27 14:33:33.758 INFO  Old signin page. 
+2021-10-27 14:34:34.027 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 14:34:35.347 INFO  ORDER: {"id":1520156,"proxyIp":"127.0.0.1","proxyPort":24040,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 14:35:11.824 INFO  Add an item to cart. 
+2021-10-27 14:35:18.839 INFO  Add an item to cart. 
+2021-10-27 14:35:32.709 INFO  Old signin page. 
+2021-10-27 14:35:44.060 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 14:35:45.348 INFO  ORDER: {"id":1520158,"proxyIp":"127.0.0.1","proxyPort":24045,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 14:36:20.807 INFO  Add an item to cart. 
+2021-10-27 14:36:25.407 INFO  Add an item to cart. 
+2021-10-27 14:36:41.471 INFO  Old signin page. 
+2021-10-27 14:38:15.192 INFO  Order Item IDs: ["28977685183666","34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 14:38:16.472 INFO  ORDER: {"id":1520160,"proxyIp":"127.0.0.1","proxyPort":24027,"email":"univolal@yahoo.com","primaryItem":"603130816","primaryItemQty":1,"extraItem":"307503048","firstName":"Sonia","lastName":"Sonia","addressOne":"1787 COUNTY ROAD 71","addressTwo":"","city":"KILLEN","state":"AL","zipCode":"35645-5113","phoneNumber":"3365986945","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f7d211c-360c-4022-a222-68be3c6eef0a"} 
+2021-10-27 14:38:50.729 INFO  Add an item to cart. 
+2021-10-27 14:38:54.617 INFO  Add an item to cart. 
+2021-10-27 14:39:08.688 INFO  Old signin page. 
