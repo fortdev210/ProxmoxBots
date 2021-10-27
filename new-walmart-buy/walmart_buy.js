@@ -44,20 +44,9 @@ class WalmartBuy extends WalmartBase {
       await frame.type('[id="sign-in-password-no-otp"]', this.password, {
         delay: 300,
       });
-      await frame.click('[data-automation-id="signin-continue-submit-btn"]');
-      await this.sleep(2000);
-      await this.loadJqueryIntoPage();
-      await this.page.waitForXPath(
-        '//*[contains(text(), "Continue Checkout")]',
-        {
-          timeout: 10000,
-        }
-      );
-      await this.page.evaluate(() => {
-        $("button:contains(Continue Checkout)").click();
-      });
+      await this.pressEnter();
     } catch (error) {
-      LOGGER.info("Old signin page.");
+      LOGGER.info("Old signin page.", error);
       await frame.type("#password", this.password, { delay: 100 });
       await this.sleep(1000);
       await frame.click('[type="submit"]');
@@ -73,10 +62,11 @@ class WalmartBuy extends WalmartBase {
       timeout: 20000,
     });
     await this.loadJqueryIntoPage();
+
     const total = await this.page.evaluate(() => {
-      const content = $("span:contains(Estimated total)").text();
-      const pattern = /\d+(\.\d+)?$/;
-      return Number(content.match(pattern)[0]);
+      const value = document.querySelector('[for="grandTotal-label"]')
+        .nextElementSibling.innerText;
+      return Number(value.replace("$", ""));
     });
     LOGGER.info("Total Order Price is " + total);
     await api.sendTotal(total, this.orderInfo.id);
@@ -84,6 +74,7 @@ class WalmartBuy extends WalmartBase {
     let remnants = total;
     while (true) {
       const appliedAmount = await this.addGiftCard(index);
+      LOGGER.info("Applied value: " + appliedAmount);
       remnants = remnants - appliedAmount;
       if (remnants > 0) {
         index = index + 1;
@@ -102,14 +93,14 @@ class WalmartBuy extends WalmartBase {
     await this.waitForLoadingElement('[id="gc-number"]');
     await this.insertValue('[id="gc-number"]', giftCardInfo.cardNumber);
     await this.sleep(1000);
-    await this.waitForLoadingElement('[id="ld_select_2"]');
-    await this.insertValue('[id="ld_select_2"]', giftCardInfo.pinCode);
+    await this.waitForLoadingElement('[type="password"]');
+    await this.insertValue('[type="password"]', giftCardInfo.pinCode);
     await this.sleep(1000);
     await this.clickButton('[type="submit"]');
     await this.sleep(2000);
     await this.waitForLoadingElement(`[data-slide="${index}"]`);
     const gcAmount = await this.page.evaluate(
-      (i) => {
+      (index) => {
         const cardContent = document.querySelector(
           `[data-slide="${index}"]`
         ).innerText;
@@ -130,9 +121,37 @@ class WalmartBuy extends WalmartBase {
       this.orderInfo.id
     );
     await this.waitForLoadingElement('[aria-label="Add a new payment method"]');
-    await this.clickButton('[aria-label="Add a new payment method"]');
+    await this.page.evaluate(() => {
+      $("button:contains(Add a new payment method)").click();
+    });
+    await this.sleep(3000);
     return gcAmount;
   }
+
+  async placeOrder() {
+    await this.page.evaluate(() => {
+      $("button:contains(Place order)").click();
+    });
+    await this.sleep(3000);
+    await this.loadJqueryIntoPage();
+    const orderNumber = await this.page.evaluate(() => {
+      const orderNumber = $("span:contains(Order#)").text();
+      return orderNumber.replace(/\D/g, "");
+    });
+    return orderNumber;
+  }
+
+  async openOrderHistoryPage() {
+    await this.openLink("https://www.walmart.com/orders"); //5712108308439
+    await this.sleep(3000);
+    await this.loadJqueryIntoPage();
+    await this.page.evaluate(() => {
+      $("span:contains(View details)").click();
+    });
+    await this.sleep(3000);
+  }
+
+  async cancelExtraItem() {}
 
   async buy() {
     await this.initPuppeteer();
@@ -144,9 +163,23 @@ class WalmartBuy extends WalmartBase {
     try {
       await this.openRigistryPage(this.orderInfo.sharedRegistryLink);
       await this.addItemsToCart();
+      await this.resolveCaptcha();
       await this.continuetoCheckout();
       await this.fillSignInCart();
       await this.payOrder();
+      const orderNumber = await this.placeOrder();
+      await this.openOrderHistoryPage();
+      const items = [
+        {
+          id: this.orderInfo.primaryItem,
+          quantity_bought: this.orderInfo.primaryItemQty,
+        },
+      ];
+      await api.updatePurchasedOrderNumber(
+        this.orderInfo.id,
+        orderNumber,
+        items
+      );
     } catch (error) {
       console.error(error);
       await this.sleep(100000);
