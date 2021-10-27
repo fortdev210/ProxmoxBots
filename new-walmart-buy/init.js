@@ -1,5 +1,6 @@
+const WalmartBuy = require("./walmart_buy");
 require("dotenv").config();
-const prefix = "Walmart+Prep";
+const prefix = "Walmart+Pp";
 const botNumber =
   process.env.TEST_MODE === "true"
     ? 3
@@ -8,15 +9,14 @@ const flag = prefix + Number(botNumber);
 const API = require("../lib/api");
 const LOGGER = require("../lib/logger");
 const { parseDSOrderInfo } = require("../lib/utils");
-const WalmartRegister = require("./walmart_registry");
-const { WAREHOUSE_PREP_BOTS_NUMBERS } = require("../constants/warehouse");
+const { WAREHOUSE_BUY_BOTS_NUMBERS } = require("../constants/warehouse");
 
 async function main() {
   const api = new API();
-
-  const orderItems = WAREHOUSE_PREP_BOTS_NUMBERS.includes(Number(botNumber))
+  const orderItems = WAREHOUSE_BUY_BOTS_NUMBERS.includes(Number(botNumber))
     ? await api.fetchWarehouseItems(flag)
     : await api.fetchOrderItems(flag);
+
   if (orderItems.length === 0) {
     LOGGER.info("No order items found. Please put orders in this folder.");
     return;
@@ -28,9 +28,9 @@ async function main() {
     const orderInfo = await api.createDSOrder(orderItemId);
     const parsedOrder = parseDSOrderInfo(orderInfo);
     LOGGER.info("ORDER: ", parsedOrder);
-    const register = new WalmartRegister(parsedOrder, orderItemId);
-    await register.processOrderWithExtraItem();
-    console.log("");
+    const buyer = new WalmartBuy(parsedOrder);
+    await buyer.buy();
   }
 }
+
 main();
