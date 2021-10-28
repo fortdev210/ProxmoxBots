@@ -46,7 +46,6 @@ class WalmartBuy extends WalmartBase {
       });
       await this.pressEnter();
     } catch (error) {
-      LOGGER.info("Old signin page.", error);
       await frame.type("#password", this.password, { delay: 100 });
       await this.sleep(1000);
       await frame.click('[type="submit"]');
@@ -82,6 +81,18 @@ class WalmartBuy extends WalmartBase {
         break;
       }
     }
+    LOGGER.info("The total price is covered. Placing order...");
+    await this.sleep(1000);
+    try {
+      await this.page.evaluate(() => {
+        document.querySelectorAll('[class="ld ld-ChevronLeft"]')[1].click();
+      });
+      await this.sleep(1000);
+      await this.waitForLoadingElement('[data-test-id="continueBtn"]');
+      await this.clickButton('[data-test-id="continueBtn"]');
+    } catch (error) {}
+
+    await this.resolveCaptcha();
   }
 
   async addGiftCard(index) {
@@ -114,7 +125,12 @@ class WalmartBuy extends WalmartBase {
       },
       [index]
     );
-    LOGGER.info("Applied gift card info: ", giftCardInfo.cardNumber, gcAmount);
+    LOGGER.info(
+      "Applied gift card info: ",
+      giftCardInfo.cardNumber,
+      ", ",
+      gcAmount
+    );
     await api.sendCurrentGiftCard(
       giftCardInfo.cardNumber,
       gcAmount,
@@ -134,10 +150,12 @@ class WalmartBuy extends WalmartBase {
     });
     await this.sleep(3000);
     await this.loadJqueryIntoPage();
+    await this.sleep(1000);
     const orderNumber = await this.page.evaluate(() => {
       const orderNumber = $("span:contains(Order#)").text();
       return orderNumber.replace(/\D/g, "");
     });
+    console.log("=======>", orderNumber);
     return orderNumber;
   }
 
@@ -151,7 +169,46 @@ class WalmartBuy extends WalmartBase {
     await this.sleep(3000);
   }
 
-  async cancelExtraItem() {}
+  async cancelExtraItem() {
+    await this.loadJqueryIntoPage();
+    const itemNumbersOnOrder = await this.page.evaluate(() => {
+      const items = document.querySelectorAll('[link-identifier="itemClick"]');
+      let numbers = [];
+      for (let item of items) {
+        numbers.push(item.href.split("/").slice(-1)[0]);
+      }
+      return numbers;
+    });
+    const indexOfExtraItem = itemNumbersOnOrder.indexOf(
+      this.orderInfo.extraItem
+    );
+
+    // Click extra item remove btn.
+    await this.page.evaluate(
+      (ind) => {
+        $("button:contains(Remove item)")[ind].click();
+      },
+      [indexOfExtraItem]
+    );
+    await this.sleep(2000);
+    await this.page.evaluate(() => {
+      $("button:contains(Remove)").click();
+    });
+    await this.page.waitForXPath(
+      '//*[contains(text(), "Ordered wrong item or amount.")]',
+      {
+        timeout: 5000,
+      }
+    );
+    await this.page.evaluate(() => {
+      $("label:contains(Ordered wrong item or amount.)").click();
+    });
+    await this.sleep(1000);
+    await this.page.evaluate(() => {
+      $("button:contains(Remove)").click();
+    });
+    LOGGER.info("Extra item successfully removed.");
+  }
 
   async buy() {
     await this.initPuppeteer();
@@ -167,8 +224,11 @@ class WalmartBuy extends WalmartBase {
       await this.continuetoCheckout();
       await this.fillSignInCart();
       await this.payOrder();
+      await this.sleep(100000);
       const orderNumber = await this.placeOrder();
+      LOGGER.info("Order Number: " + orderNumber);
       await this.openOrderHistoryPage();
+      await this.cancelExtraItem();
       const items = [
         {
           id: this.orderInfo.primaryItem,
@@ -180,6 +240,7 @@ class WalmartBuy extends WalmartBase {
         orderNumber,
         items
       );
+      await this.closeBrowser();
     } catch (error) {
       console.error(error);
       await this.sleep(100000);

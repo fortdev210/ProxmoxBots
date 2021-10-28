@@ -1248,3 +1248,417 @@ Error: No node found for selector: [data-automation-id="signin-continue-submit-b
 2021-10-27 17:16:54.210 INFO  Add an item to cart. 
 2021-10-27 17:16:58.633 INFO  Add an item to cart. 
 2021-10-27 17:18:42.589 INFO  ORDER: {"id":1520238,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"benbkin@yahoo.com","primaryItem":"56113115","primaryItemQty":1,"extraItem":"50553649","firstName":"Erica","lastName":"Buckland","addressOne":"1536 S PIERSON ST","addressTwo":"APT 118 ","city":"LAKEWOOD","state":"CO","zipCode":"80232-6059","phoneNumber":"7312403927","sharedRegistryLink":"https://www.walmart.com/registry/ER/64dd6327-dea0-4d7c-afad-c54f026d1b34"} 
+2021-10-27 17:45:22.372 INFO  Order Item IDs: ["34726505205970","46487471312066","23522744619938","60917180731338"] 
+2021-10-27 17:45:23.446 INFO  ORDER: {"id":1520239,"proxyIp":"127.0.0.1","proxyPort":24087,"email":"conistus@yahoo.com","primaryItem":"115756602","primaryItemQty":1,"extraItem":"687375927","firstName":"Lyndsay","lastName":"Rosenbalm","addressOne":"1811 KNOLLS DR","addressTwo":"","city":"NEWTON","state":"NC","zipCode":"28658-9382","phoneNumber":"9212647485","sharedRegistryLink":"https://www.walmart.com/registry/ER/127e6746-8d27-4bb2-9ac3-81c906efd870"} 
+2021-10-27 17:45:46.940 INFO  Add an item to cart. 
+2021-10-27 17:45:52.982 INFO  Add an item to cart. 
+2021-10-27 17:46:37.481 INFO  Old signin page.No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+{}
+Error: No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:277:21)
+    at async WalmartBuy.fillSignInCart (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:42:7)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-27 17:46:57.554 INFO  Total Order Price is 37.92 
+2021-10-27 17:46:58.493 INFO  Successfully updated the total price in db 
+2021-10-27 17:47:34.570 INFO  Applied gift card info: 61863386004052413.24 
+2021-10-27 17:47:35.593 INFO  {"status":"success"} 
+2021-10-27 17:47:44.230 INFO  Applied value: 3.24 
+2021-10-27 17:48:18.274 INFO  Applied gift card info: 61863395840363833.24 
+2021-10-27 17:48:19.247 INFO  {"status":"success"} 
+2021-10-27 17:48:28.867 INFO  Applied value: 3.24 
+2021-10-27 17:49:00.189 INFO  Applied gift card info: 619970907880177031.36 
+2021-10-27 17:49:01.120 INFO  {"status":"success"} 
+2021-10-27 17:49:08.942 INFO  Applied value: 31.36 
+2021-10-27 17:49:41.153 INFO  Applied gift card info: 619233844504989128.2 
+2021-10-27 17:49:42.135 INFO  {"status":"success"} 
+2021-10-27 17:49:51.070 INFO  Applied value: 28.2 
+2021-10-27 17:50:08.685 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"url":"https://admin.stlpro.com/v2/ds_order/1520239/finish/","method":"post","data":"{\"supplier_order_number\":\"\",\"items\":[{\"id\":\"115756602\",\"quantity_bought\":1}]}","headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json;charset=utf-8","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.21.1","Content-Length":77},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1}}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:260:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-10-27 17:50:09.734 INFO  ORDER: {"id":1520240,"proxyIp":"127.0.0.1","proxyPort":24078,"email":"benbkin@yahoo.com","primaryItem":"56113115","primaryItemQty":1,"extraItem":"50553649","firstName":"Erica","lastName":"Buckland","addressOne":"1536 S PIERSON ST","addressTwo":"APT 118 ","city":"LAKEWOOD","state":"CO","zipCode":"80232-6059","phoneNumber":"7312403927","sharedRegistryLink":"https://www.walmart.com/registry/ER/64dd6327-dea0-4d7c-afad-c54f026d1b34"} 
+2021-10-28 11:14:27.360 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 11:14:29.518 INFO  ORDER: {"id":1520363,"proxyIp":"127.0.0.1","proxyPort":24100,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 11:15:16.983 INFO  Add an item to cart. 
+2021-10-28 11:15:24.070 INFO  Add an item to cart. 
+2021-10-28 11:16:10.705 INFO  Old signin page.No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+{}
+Error: No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:277:21)
+    at async WalmartBuy.fillSignInCart (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:42:7)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 11:17:01.019 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 11:17:03.085 INFO  ORDER: {"id":1520367,"proxyIp":"127.0.0.1","proxyPort":24072,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 11:17:32.252 INFO  Add an item to cart. 
+2021-10-28 11:17:37.900 INFO  Add an item to cart. 
+2021-10-28 11:18:25.819 INFO  Old signin page.No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+{}
+Error: No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:277:21)
+    at async WalmartBuy.fillSignInCart (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:42:7)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 11:20:22.261 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 11:20:25.383 INFO  ORDER: {"id":1520372,"proxyIp":"127.0.0.1","proxyPort":24018,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 11:20:46.996 INFO  Add an item to cart. 
+2021-10-28 11:20:54.171 INFO  Add an item to cart. 
+2021-10-28 11:20:54.407 WARN  [id="px-captcha"] 
+2021-10-28 11:21:18.971 INFO  Tried to solve captcha 1 times 
+2021-10-28 11:21:19.209 WARN  [id="px-captcha"] 
+2021-10-28 11:21:45.102 INFO  Tried to solve captcha 2 times 
+2021-10-28 11:24:01.861 INFO  ORDER: {"id":1520377,"proxyIp":"127.0.0.1","proxyPort":24073,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 11:24:31.524 INFO  Add an item to cart. 
+2021-10-28 11:24:36.612 INFO  Add an item to cart. 
+2021-10-28 11:25:22.231 INFO  Old signin page.No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+{}
+Error: No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:277:21)
+    at async WalmartBuy.fillSignInCart (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:42:7)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 11:25:42.033 INFO  Total Order Price is 38.51 
+2021-10-28 11:25:43.683 INFO  Successfully updated the total price in db 
+2021-10-28 11:26:15.744 INFO  Applied gift card info: 61882216746589630.11 
+2021-10-28 11:26:17.688 INFO  {"status":"success"} 
+2021-10-28 11:26:26.504 INFO  Applied value: 0.11 
+2021-10-28 11:28:49.263 INFO  ORDER: {"id":1520381,"proxyIp":"127.0.0.1","proxyPort":24017,"email":"salalhe@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Bonita","lastName":"Oberkirsch","addressOne":"2986 Spring Water Drive","addressTwo":"","city":"St. Louis","state":"Missouri","zipCode":"63129","phoneNumber":"9453805577","sharedRegistryLink":"https://www.walmart.com/registry/ER/fd7bccbe-8acc-457d-969e-0a1bd87447f2"} 
+2021-10-28 11:29:12.953 INFO  Add an item to cart. 
+2021-10-28 11:29:19.428 INFO  Add an item to cart. 
+2021-10-28 11:29:19.693 WARN  [id="px-captcha"] 
+2021-10-28 11:29:41.533 INFO  Tried to solve captcha 1 times 
+2021-10-28 11:29:41.816 WARN  [id="px-captcha"] 
+2021-10-28 11:30:11.804 INFO  Tried to solve captcha 2 times 
+2021-10-28 11:55:38.529 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 11:55:40.231 INFO  ORDER: {"id":1520397,"proxyIp":"127.0.0.1","proxyPort":24037,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 11:56:01.845 INFO  Add an item to cart. 
+2021-10-28 11:56:07.386 INFO  Add an item to cart. 
+2021-10-28 11:56:07.620 WARN  [id="px-captcha"] 
+2021-10-28 11:56:37.338 INFO  Tried to solve captcha 1 times 
+2021-10-28 11:56:37.571 WARN  [id="px-captcha"] 
+2021-10-28 11:57:02.029 INFO  Tried to solve captcha 2 times 
+2021-10-28 12:00:46.734 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 12:00:47.708 INFO  ORDER: {"id":1520409,"proxyIp":"127.0.0.1","proxyPort":24086,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 12:01:16.802 INFO  Add an item to cart. 
+2021-10-28 12:01:24.752 INFO  Add an item to cart. 
+2021-10-28 12:01:24.976 WARN  [id="px-captcha"] 
+2021-10-28 12:01:54.912 INFO  Tried to solve captcha 1 times 
+2021-10-28 12:01:55.127 WARN  [id="px-captcha"] 
+2021-10-28 12:02:27.382 INFO  Tried to solve captcha 2 times 
+2021-10-28 12:11:50.150 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 12:11:51.231 INFO  ORDER: {"id":1520414,"proxyIp":"127.0.0.1","proxyPort":24047,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 12:12:21.867 INFO  Add an item to cart. 
+2021-10-28 12:12:27.981 INFO  Add an item to cart. 
+2021-10-28 12:13:10.311 INFO  Old signin page.No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+{}
+Error: No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:277:21)
+    at async WalmartBuy.fillSignInCart (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:42:7)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 12:13:23.202 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 12:13:24.309 INFO  ORDER: {"id":1520416,"proxyIp":"127.0.0.1","proxyPort":24084,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 12:13:48.204 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 12:13:49.309 INFO  ORDER: {"id":1520417,"proxyIp":"127.0.0.1","proxyPort":24020,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 12:14:25.645 INFO  Add an item to cart. 
+2021-10-28 12:14:34.176 INFO  Add an item to cart. 
+2021-10-28 12:15:17.555 INFO  Old signin page.No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+{}
+Error: No node found for selector: [data-automation-id="signin-continue-submit-btn"]
+    at Object.assert (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/jeff/Projects/ProxmoxBots/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:277:21)
+    at async WalmartBuy.fillSignInCart (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:42:7)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:168:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 12:25:14.097 INFO  Order Item IDs: ["64293528714018","16211078685818","11842619626442"] 
+2021-10-28 12:25:15.223 INFO  ORDER: {"id":1520427,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"g.isabella95@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Meredith","lastName":"Beavers","addressOne":"32040 ELECTRIC BLVD","addressTwo":"","city":"AVON LAKE","state":"OH","zipCode":"44012-1870","phoneNumber":"9104410987","sharedRegistryLink":"https://www.walmart.com/registry/ER/0d1ec635-d841-49ce-84fe-b694e0989675"} 
+2021-10-28 12:44:39.205 INFO  Order Item IDs: ["16211078685818","11842619626442"] 
+2021-10-28 12:44:40.267 INFO  ORDER: {"id":1520444,"proxyIp":"127.0.0.1","proxyPort":24092,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 12:45:13.614 INFO  Add an item to cart. 
+2021-10-28 12:45:17.546 INFO  Add an item to cart. 
+2021-10-28 12:48:03.275 INFO  ORDER: {"id":1520450,"proxyIp":"127.0.0.1","proxyPort":24019,"email":"salalhe@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Bonita","lastName":"Oberkirsch","addressOne":"2986 Spring Water Drive","addressTwo":"","city":"St. Louis","state":"Missouri","zipCode":"63129","phoneNumber":"9453805577","sharedRegistryLink":"https://www.walmart.com/registry/ER/fd7bccbe-8acc-457d-969e-0a1bd87447f2"} 
+2021-10-28 12:48:56.123 INFO  Order Item IDs: ["16211078685818","11842619626442"] 
+2021-10-28 12:48:57.199 INFO  ORDER: {"id":1520451,"proxyIp":"127.0.0.1","proxyPort":24013,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 12:49:35.585 INFO  Add an item to cart. 
+2021-10-28 12:49:41.875 INFO  Add an item to cart. 
+2021-10-28 12:50:46.242 INFO  Total Order Price is 38.51 
+2021-10-28 12:50:47.171 INFO  Successfully updated the total price in db 
+2021-10-28 12:51:21.549 INFO  Applied gift card info: 61922685018287333.55 
+2021-10-28 12:51:22.538 INFO  {"status":"success"} 
+2021-10-28 12:51:32.811 INFO  Applied value: 3.55 
+2021-10-28 12:52:07.216 INFO  Applied gift card info: 61863385287460663.56 
+2021-10-28 12:52:08.185 INFO  {"status":"success"} 
+2021-10-28 12:52:16.676 INFO  Applied value: 3.56 
+2021-10-28 12:52:50.659 INFO  Applied gift card info: 619970907969785231.29 
+2021-10-28 12:52:51.621 INFO  {"status":"success"} 
+2021-10-28 12:52:59.145 INFO  Applied value: 31.29 
+2021-10-28 12:53:32.353 INFO  Applied gift card info: 618633866701604027.84 
+2021-10-28 12:53:33.341 INFO  {"status":"success"} 
+2021-10-28 12:53:42.466 INFO  Applied value: 27.84 
+2021-10-28 12:53:42.466 INFO  The total price is covered. Placing order... 
+2021-10-28 12:55:36.115 INFO  ORDER: {"id":1520462,"proxyIp":"127.0.0.1","proxyPort":24034,"email":"salalhe@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Bonita","lastName":"Oberkirsch","addressOne":"2986 Spring Water Drive","addressTwo":"","city":"St. Louis","state":"Missouri","zipCode":"63129","phoneNumber":"9453805577","sharedRegistryLink":"https://www.walmart.com/registry/ER/fd7bccbe-8acc-457d-969e-0a1bd87447f2"} 
+2021-10-28 13:05:54.508 INFO  Order Item IDs: ["16211078685818","11842619626442"] 
+2021-10-28 13:05:55.530 INFO  ORDER: {"id":1520472,"proxyIp":"127.0.0.1","proxyPort":24067,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 13:06:28.966 INFO  Add an item to cart. 
+2021-10-28 13:06:35.740 INFO  Add an item to cart. 
+2021-10-28 13:07:40.101 INFO  Total Order Price is 38.51 
+2021-10-28 13:07:41.040 INFO  Successfully updated the total price in db 
+2021-10-28 13:08:12.054 INFO  Applied gift card info: 61922342469763563.59 
+2021-10-28 13:08:13.043 INFO  {"status":"success"} 
+2021-10-28 13:08:20.055 INFO  Applied value: 3.59 
+2021-10-28 13:08:53.267 INFO  Applied gift card info: 61922682793349563.59 
+2021-10-28 13:08:54.243 INFO  {"status":"success"} 
+2021-10-28 13:09:03.329 INFO  Applied value: 3.59 
+2021-10-28 13:09:32.392 INFO  Applied gift card info: 619970907904420231.15 
+2021-10-28 13:09:33.379 INFO  {"status":"success"} 
+2021-10-28 13:09:41.851 INFO  Applied value: 31.15 
+2021-10-28 13:10:10.224 INFO  Applied gift card info: 618633905144314227.73 
+2021-10-28 13:10:11.187 INFO  {"status":"success"} 
+2021-10-28 13:10:20.896 INFO  Applied value: 27.73 
+2021-10-28 13:10:20.896 INFO  The total price is covered. Placing order... 
+2021-10-28 13:12:37.893 INFO  Order Number:  
+2021-10-28 13:13:49.996 INFO  Order Item IDs: ["16211078685818","11842619626442"] 
+2021-10-28 13:13:51.064 INFO  ORDER: {"id":1520476,"proxyIp":"127.0.0.1","proxyPort":24079,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 13:15:45.030 INFO  ORDER: {"id":1520477,"proxyIp":"127.0.0.1","proxyPort":24003,"email":"salalhe@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Bonita","lastName":"Oberkirsch","addressOne":"2986 Spring Water Drive","addressTwo":"","city":"St. Louis","state":"Missouri","zipCode":"63129","phoneNumber":"9453805577","sharedRegistryLink":"https://www.walmart.com/registry/ER/fd7bccbe-8acc-457d-969e-0a1bd87447f2"} 
+2021-10-28 13:16:00.446 INFO  Order Item IDs: ["16211078685818","11842619626442"] 
+2021-10-28 13:16:01.475 INFO  ORDER: {"id":1520478,"proxyIp":"127.0.0.1","proxyPort":24028,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 13:16:29.104 INFO  Add an item to cart. 
+2021-10-28 13:16:34.381 INFO  Add an item to cart. 
+2021-10-28 13:17:42.426 INFO  Total Order Price is 38.51 
+2021-10-28 13:17:43.363 INFO  Successfully updated the total price in db 
+2021-10-28 13:18:17.453 INFO  Applied gift card info: 61863390533502543.6 
+2021-10-28 13:18:18.473 INFO  {"status":"success"} 
+2021-10-28 13:18:26.863 INFO  Applied value: 3.6 
+2021-10-28 13:18:58.782 INFO  Applied gift card info: 61922304746360083.6 
+2021-10-28 13:18:59.772 INFO  {"status":"success"} 
+2021-10-28 13:19:08.217 INFO  Applied value: 3.6 
+2021-10-28 13:19:41.208 INFO  Applied gift card info: 619970908065724930.75 
+2021-10-28 13:19:42.175 INFO  {"status":"success"} 
+2021-10-28 13:19:48.496 INFO  Applied value: 30.75 
+2021-10-28 13:20:16.945 INFO  Applied gift card info: 619223079953307027.71 
+2021-10-28 13:20:17.904 INFO  {"status":"success"} 
+2021-10-28 13:20:24.946 INFO  Applied value: 27.71 
+2021-10-28 13:20:24.946 INFO  The total price is covered. Placing order... 
+2021-10-28 13:22:51.224 INFO  Order Number:  
+2021-10-28 13:24:45.387 INFO  ORDER: {"id":1520480,"proxyIp":"127.0.0.1","proxyPort":24017,"email":"salalhe@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Bonita","lastName":"Oberkirsch","addressOne":"2986 Spring Water Drive","addressTwo":"","city":"St. Louis","state":"Missouri","zipCode":"63129","phoneNumber":"9453805577","sharedRegistryLink":"https://www.walmart.com/registry/ER/fd7bccbe-8acc-457d-969e-0a1bd87447f2"} 
+2021-10-28 13:25:14.146 INFO  Add an item to cart. 
+2021-10-28 13:25:18.941 INFO  Add an item to cart. 
+2021-10-28 13:26:21.710 INFO  Total Order Price is 40.14 
+2021-10-28 13:26:22.635 INFO  Successfully updated the total price in db 
+2021-10-28 13:26:54.151 INFO  Applied gift card info: 61863384673468890.28 
+2021-10-28 13:26:55.108 INFO  {"status":"success"} 
+2021-10-28 13:27:03.493 INFO  Applied value: 0.28 
+2021-10-28 13:27:37.550 INFO  Applied gift card info: 61863387889572843.66 
+2021-10-28 13:27:38.527 INFO  {"status":"success"} 
+2021-10-28 13:27:48.849 INFO  Applied value: 3.66 
+2021-10-28 13:28:20.361 INFO  Applied gift card info: 619970919753594829.83 
+2021-10-28 13:28:21.319 INFO  {"status":"success"} 
+2021-10-28 13:28:27.937 INFO  Applied value: 29.83 
+2021-10-28 13:29:00.326 INFO  Applied gift card info: 619428875456708029.83 
+2021-10-28 13:29:01.308 INFO  {"status":"success"} 
+2021-10-28 13:29:11.054 INFO  Applied value: 29.83 
+2021-10-28 13:29:11.055 INFO  The total price is covered. Placing order... 
+2021-10-28 13:39:13.869 INFO  Order Item IDs: ["16211078685818","11842619626442"] 
+2021-10-28 13:39:14.935 INFO  ORDER: {"id":1520487,"proxyIp":"127.0.0.1","proxyPort":24052,"email":"jzzsqcm@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Yisleidy","lastName":"yglesias","addressOne":"7373 W 30TH CT","addressTwo":"","city":"HIALEAH","state":"FL","zipCode":"33018-5206","phoneNumber":"5588982394","sharedRegistryLink":"https://www.walmart.com/registry/ER/e704608d-568e-4bbd-b13d-9cc6c9c05662"} 
+2021-10-28 13:41:19.878 INFO  ORDER: {"id":1520489,"proxyIp":"127.0.0.1","proxyPort":24033,"email":"salalhe@yahoo.com","primaryItem":"865131760","primaryItemQty":1,"extraItem":"56074532","firstName":"Bonita","lastName":"Oberkirsch","addressOne":"2986 Spring Water Drive","addressTwo":"","city":"St. Louis","state":"Missouri","zipCode":"63129","phoneNumber":"9453805577","sharedRegistryLink":"https://www.walmart.com/registry/ER/fd7bccbe-8acc-457d-969e-0a1bd87447f2"} 
+2021-10-28 13:45:18.415 INFO  Order Item IDs: ["47006351422026","51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 13:45:19.418 INFO  ORDER: {"id":1520494,"proxyIp":"127.0.0.1","proxyPort":24078,"email":"morganrodriguez692@yahoo.com","primaryItem":"967564001","primaryItemQty":1,"extraItem":"56074532","firstName":"Brittany","lastName":"Thomas","addressOne":"4646 REDWOOD DR","addressTwo":"","city":"BRUNSWICK","state":"OH","zipCode":"44212-2430","phoneNumber":"3696454021","sharedRegistryLink":"https://www.walmart.com/registry/ER/7b9a7ab7-5834-447e-8b39-cfbfeae57674"} 
+2021-10-28 13:45:49.682 INFO  Add an item to cart. 
+2021-10-28 13:45:56.206 INFO  Add an item to cart. 
+2021-10-28 13:47:09.835 INFO  Total Order Price is 43.15 
+2021-10-28 13:47:11.360 INFO  Successfully updated the total price in db 
+2021-10-28 13:47:47.865 INFO  Applied gift card info: 61922760731842533.71 
+2021-10-28 13:47:48.840 INFO  {"status":"success"} 
+2021-10-28 13:47:58.172 INFO  Applied value: 3.71 
+2021-10-28 13:48:29.627 INFO  Applied gift card info: 61863390166693613.72 
+2021-10-28 13:48:30.732 INFO  {"status":"success"} 
+2021-10-28 13:48:41.448 INFO  Applied value: 3.72 
+2021-10-28 13:49:09.522 INFO  Applied gift card info: 618633845143889920.64 
+2021-10-28 13:49:10.518 INFO  {"status":"success"} 
+2021-10-28 13:49:20.235 INFO  Applied value: 20.64 
+2021-10-28 13:49:52.046 INFO  Applied gift card info: 618633958315647719.76 
+2021-10-28 13:49:53.015 INFO  {"status":"success"} 
+2021-10-28 13:50:01.429 INFO  Applied value: 19.76 
+2021-10-28 13:50:01.429 INFO  The total price is covered. Placing order... 
+2021-10-28 13:54:07.123 INFO  ORDER: {"id":1520496,"proxyIp":"127.0.0.1","proxyPort":24063,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 13:56:30.243 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 13:56:32.314 INFO  ORDER: {"id":1520499,"proxyIp":"127.0.0.1","proxyPort":24037,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 13:57:00.978 INFO  Add an item to cart. 
+2021-10-28 13:57:06.457 INFO  Add an item to cart. 
+2021-10-28 13:57:06.700 WARN  [id="px-captcha"] 
+2021-10-28 13:57:25.199 INFO  Tried to solve captcha 1 times 
+2021-10-28 13:57:36.653 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 13:57:37.647 INFO  ORDER: {"id":1520500,"proxyIp":"127.0.0.1","proxyPort":24086,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 13:58:14.417 INFO  Add an item to cart. 
+2021-10-28 13:58:18.906 INFO  Add an item to cart. 
+2021-10-28 13:59:29.412 INFO  Total Order Price is 39.09 
+2021-10-28 13:59:30.307 INFO  Successfully updated the total price in db 
+2021-10-28 13:59:59.787 INFO  Applied gift card info: 61863387409050563.74 
+2021-10-28 14:00:00.765 INFO  {"status":"success"} 
+2021-10-28 14:00:10.404 INFO  Applied value: 3.74 
+2021-10-28 14:00:38.383 INFO  Applied gift card info: 61922309122039763.74 
+2021-10-28 14:00:39.352 INFO  {"status":"success"} 
+2021-10-28 14:00:47.396 INFO  Applied value: 3.74 
+2021-10-28 14:01:21.679 INFO  Applied gift card info: 619227616625138217.41 
+2021-10-28 14:01:22.645 INFO  {"status":"success"} 
+2021-10-28 14:01:31.868 INFO  Applied value: 17.41 
+2021-10-28 14:02:04.783 INFO  Applied gift card info: 619970829169364817.19 
+2021-10-28 14:02:05.837 INFO  {"status":"success"} 
+2021-10-28 14:02:13.201 INFO  Applied value: 17.19 
+2021-10-28 14:02:13.201 INFO  The total price is covered. Placing order... 
+2021-10-28 14:04:35.828 INFO  Order Number:  
+2021-10-28 14:06:30.583 INFO  ORDER: {"id":1520505,"proxyIp":"127.0.0.1","proxyPort":24084,"email":"briannaphillips675@yahoo.com","primaryItem":"180248800","primaryItemQty":1,"extraItem":"50553649","firstName":"Emma","lastName":"Hughes","addressOne":"BETHESDA 9606 WADSWORTH DR","addressTwo":"","city":"BETHESDA","state":"MD","zipCode":"20817-2455","phoneNumber":"7728685847","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f156374-c9ef-4226-acfd-0a0a84463574"} 
+2021-10-28 14:06:58.589 INFO  Add an item to cart. 
+2021-10-28 14:07:05.285 INFO  Add an item to cart. 
+2021-10-28 14:08:09.151 INFO  Total Order Price is 41.24 
+2021-10-28 14:08:10.053 INFO  Successfully updated the total price in db 
+2021-10-28 14:08:39.216 INFO  Applied gift card info: 61922761661117733.77 
+2021-10-28 14:08:40.279 INFO  {"status":"success"} 
+2021-10-28 14:08:49.208 INFO  Applied value: 3.77 
+2021-10-28 14:09:26.850 INFO  Applied gift card info: 61806005104621703.78 
+2021-10-28 14:09:27.824 INFO  {"status":"success"} 
+2021-10-28 14:09:37.679 INFO  Applied value: 3.78 
+2021-10-28 14:10:11.621 INFO  Applied gift card info: 618633958097798914.97 
+2021-10-28 14:10:12.613 INFO  {"status":"success"} 
+2021-10-28 14:10:22.684 INFO  Applied value: 14.97 
+2021-10-28 14:10:56.915 INFO  Applied gift card info: 620155414940837818.72 
+2021-10-28 14:10:57.925 INFO  {"status":"success"} 
+2021-10-28 14:11:07.019 INFO  Applied value: 18.72 
+2021-10-28 14:11:07.019 INFO  The total price is covered. Placing order... 
+2021-10-28 14:13:28.725 INFO  Order Number:  
+2021-10-28 14:15:24.228 INFO  ORDER: {"id":1520509,"proxyIp":"127.0.0.1","proxyPort":24020,"email":"nelson.katherine11@yahoo.com","primaryItem":"967564001","primaryItemQty":1,"extraItem":"56074532","firstName":"Terri","lastName":"Harms","addressOne":"2544 Harbauer","addressTwo":"","city":"Springfield","state":"Illinois","zipCode":"62702","phoneNumber":"7988969138","sharedRegistryLink":"https://www.walmart.com/registry/ER/f44bbda6-a58e-4bff-8875-6566c470486a"} 
+2021-10-28 14:16:03.908 INFO  Add an item to cart. 
+2021-10-28 14:16:11.162 INFO  Add an item to cart. 
+2021-10-28 14:17:20.390 INFO  Total Order Price is 44.36 
+2021-10-28 14:17:22.340 INFO  Successfully updated the total price in db 
+2021-10-28 14:17:35.020 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:17:36.167 INFO  ORDER: {"id":1520511,"proxyIp":"127.0.0.1","proxyPort":24065,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:18:07.610 INFO  Add an item to cart. 
+2021-10-28 14:18:14.867 INFO  Add an item to cart. 
+2021-10-28 14:38:41.877 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:38:42.900 INFO  ORDER: {"id":1520521,"proxyIp":"127.0.0.1","proxyPort":24016,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:39:19.878 INFO  Add an item to cart. 
+2021-10-28 14:39:28.034 INFO  Add an item to cart. 
+2021-10-28 14:41:26.741 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:41:27.789 INFO  ORDER: {"id":1520523,"proxyIp":"127.0.0.1","proxyPort":24081,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:41:59.266 INFO  Add an item to cart. 
+2021-10-28 14:42:04.730 INFO  Add an item to cart. 
+2021-10-28 14:43:14.678 INFO  Total Order Price is 39.09 
+2021-10-28 14:43:15.616 INFO  Successfully updated the total price in db 
+2021-10-28 14:43:42.915 INFO  Applied gift card info: 61863384631384853.79 
+2021-10-28 14:43:43.871 INFO  {"status":"success"} 
+2021-10-28 14:43:54.317 INFO  Applied value: 3.79 
+2021-10-28 14:44:27.192 INFO  Applied gift card info: 61863384723919673.79 
+2021-10-28 14:44:28.202 INFO  {"status":"success"} 
+2021-10-28 14:44:33.810 INFO  Applied value: 3.79 
+2021-10-28 14:45:04.246 INFO  Applied gift card info: 619227223279347213.95 
+2021-10-28 14:45:05.240 INFO  {"status":"success"} 
+2021-10-28 14:45:14.232 INFO  Applied value: 13.95 
+2021-10-28 14:45:50.237 INFO  Applied gift card info: 620155414975381117.56 
+2021-10-28 14:45:51.183 INFO  {"status":"success"} 
+2021-10-28 14:46:00.833 INFO  Applied value: 17.56 
+2021-10-28 14:46:05.259 ERROR Error while fetching Cannot read property 'split' of null
+{}
+TypeError: Cannot read property 'split' of null
+    at API_MANAGER.getGiftCardByAPI (/home/jeff/Projects/ProxmoxBots/lib/api.js:56:44)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async WalmartBuy.addGiftCard (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:103:26)
+    at async WalmartBuy.payOrder (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:75:29)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:221:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 14:47:05.160 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:47:06.169 INFO  ORDER: {"id":1520525,"proxyIp":"127.0.0.1","proxyPort":24040,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:47:37.942 INFO  Add an item to cart. 
+2021-10-28 14:47:44.258 INFO  Add an item to cart. 
+2021-10-28 14:49:04.626 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:49:05.648 INFO  ORDER: {"id":1520528,"proxyIp":"127.0.0.1","proxyPort":24045,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:49:39.793 INFO  Add an item to cart. 
+2021-10-28 14:49:45.868 INFO  Add an item to cart. 
+2021-10-28 14:50:55.123 INFO  Total Order Price is 39.09 
+2021-10-28 14:50:56.055 INFO  Successfully updated the total price in db 
+2021-10-28 14:51:29.713 INFO  Applied gift card info: 61863387390064463.79 
+2021-10-28 14:51:30.732 INFO  {"status":"success"} 
+2021-10-28 14:51:39.111 INFO  Applied value: 3.79 
+2021-10-28 14:52:06.108 INFO  Applied gift card info: 61863390601264603.79 
+2021-10-28 14:52:07.176 INFO  {"status":"success"} 
+2021-10-28 14:52:15.603 INFO  Applied value: 3.79 
+2021-10-28 14:52:49.019 INFO  Applied gift card info: 618633847785309413.84 
+2021-10-28 14:52:50.114 INFO  {"status":"success"} 
+2021-10-28 14:52:56.934 INFO  Applied value: 13.84 
+2021-10-28 14:53:30.630 INFO  Applied gift card info: 620155414976829417.67 
+2021-10-28 14:53:32.115 INFO  {"status":"success"} 
+2021-10-28 14:53:40.938 INFO  Applied value: 17.67 
+2021-10-28 14:53:45.489 ERROR Error while fetching Cannot read property 'split' of null
+{}
+TypeError: Cannot read property 'split' of null
+    at API_MANAGER.getGiftCardByAPI (/home/jeff/Projects/ProxmoxBots/lib/api.js:56:44)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async WalmartBuy.addGiftCard (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:103:26)
+    at async WalmartBuy.payOrder (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:75:29)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:221:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-10-28 14:55:24.085 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:55:25.113 INFO  ORDER: {"id":1520532,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:55:49.406 INFO  Add an item to cart. 
+2021-10-28 14:55:55.814 INFO  Add an item to cart. 
+2021-10-28 14:55:56.034 WARN  [id="px-captcha"] 
+2021-10-28 14:56:27.381 INFO  Tried to solve captcha 1 times 
+2021-10-28 14:56:27.605 WARN  [id="px-captcha"] 
+2021-10-28 14:56:41.338 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:56:42.339 INFO  ORDER: {"id":1520534,"proxyIp":"127.0.0.1","proxyPort":24093,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:57:12.283 INFO  Add an item to cart. 
+2021-10-28 14:57:18.341 INFO  Add an item to cart. 
+2021-10-28 14:59:08.330 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 14:59:09.368 INFO  ORDER: {"id":1520535,"proxyIp":"127.0.0.1","proxyPort":24014,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 14:59:43.493 INFO  Add an item to cart. 
+2021-10-28 14:59:50.953 INFO  Add an item to cart. 
+2021-10-28 15:01:43.159 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 15:01:44.227 INFO  ORDER: {"id":1520538,"proxyIp":"127.0.0.1","proxyPort":24044,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 15:02:17.314 INFO  Add an item to cart. 
+2021-10-28 15:02:21.600 INFO  Add an item to cart. 
+2021-10-28 15:04:35.300 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 15:04:36.364 INFO  ORDER: {"id":1520540,"proxyIp":"127.0.0.1","proxyPort":24090,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 15:05:01.976 INFO  Add an item to cart. 
+2021-10-28 15:05:06.385 INFO  Add an item to cart. 
+2021-10-28 15:05:06.664 WARN  [id="px-captcha"] 
+2021-10-28 15:05:27.695 INFO  Order Item IDs: ["51960233875218","29420441730450","64480658241906","02484985125002"] 
+2021-10-28 15:05:28.728 INFO  ORDER: {"id":1520541,"proxyIp":"127.0.0.1","proxyPort":24057,"email":"unxpit@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Evan","lastName":"Catareli","addressOne":"3 HYLAND RD","addressTwo":"","city":"CENTER MORICHES","state":"NY","zipCode":"11934-3600","phoneNumber":"3148902310","sharedRegistryLink":"https://www.walmart.com/registry/ER/f0539348-ba3c-4150-b2d3-b461abe137dc"} 
+2021-10-28 15:05:58.086 INFO  Add an item to cart. 
+2021-10-28 15:06:06.334 INFO  Add an item to cart. 
+2021-10-28 15:07:09.461 INFO  Total Order Price is 39.09 
+2021-10-28 15:07:10.355 INFO  Successfully updated the total price in db 
+2021-10-28 15:07:41.273 INFO  Applied gift card info: 61997082919108563.79 
+2021-10-28 15:07:42.251 INFO  {"status":"success"} 
+2021-10-28 15:07:51.093 INFO  Applied value: 3.79 
+2021-10-28 15:08:20.003 INFO  Applied gift card info: 61863385289900733.8 
+2021-10-28 15:08:22.051 INFO  {"status":"success"} 
+2021-10-28 15:08:29.652 INFO  Applied value: 3.8 
+2021-10-28 15:09:05.432 INFO  Applied gift card info: 619227198485220213.76 
+2021-10-28 15:09:06.406 INFO  {"status":"success"} 
+2021-10-28 15:09:14.485 INFO  Applied value: 13.76 
+2021-10-28 15:09:53.723 INFO  Applied gift card info: 620155414972903317.74 
+2021-10-28 15:09:54.670 INFO  {"status":"success"} 
+2021-10-28 15:10:03.926 INFO  Applied value: 17.74 
+2021-10-28 15:10:09.234 ERROR Error while fetching Cannot read property 'split' of null
+{}
+TypeError: Cannot read property 'split' of null
+    at API_MANAGER.getGiftCardByAPI (/home/jeff/Projects/ProxmoxBots/lib/api.js:56:44)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async WalmartBuy.addGiftCard (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:103:26)
+    at async WalmartBuy.payOrder (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:75:29)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:221:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
