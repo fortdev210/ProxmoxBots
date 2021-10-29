@@ -1812,3 +1812,11 @@ Error: Request failed with status code 400
 2021-10-29 05:34:56.339 INFO  ORDER: {"id":1520606,"proxyIp":"127.0.0.1","proxyPort":24057,"email":"nelson.katherine11@yahoo.com","primaryItem":"967564001","primaryItemQty":1,"extraItem":"56074532","firstName":"Terri","lastName":"Harms","addressOne":"2544 Harbauer","addressTwo":"","city":"Springfield","state":"Illinois","zipCode":"62702","phoneNumber":"7988969138","sharedRegistryLink":"https://www.walmart.com/registry/ER/f44bbda6-a58e-4bff-8875-6566c470486a"} 
 2021-10-29 10:44:13.854 INFO  Order Item IDs: ["64480658241906"] 
 2021-10-29 10:44:14.878 INFO  ORDER: {"id":1520607,"proxyIp":"127.0.0.1","proxyPort":24045,"email":"nelson.katherine11@yahoo.com","primaryItem":"967564001","primaryItemQty":1,"extraItem":"56074532","firstName":"Terri","lastName":"Harms","addressOne":"2544 Harbauer","addressTwo":"","city":"Springfield","state":"Illinois","zipCode":"62702","phoneNumber":"7988969138","sharedRegistryLink":"https://www.walmart.com/registry/ER/f44bbda6-a58e-4bff-8875-6566c470486a"} 
+2021-10-29 11:17:08.987 INFO  Order Item IDs: ["29420441730450"] 
+2021-10-29 11:17:09.959 INFO  ORDER: {"id":1520615,"proxyIp":"127.0.0.1","proxyPort":24040,"email":"briannaphillips675@yahoo.com","primaryItem":"180248800","primaryItemQty":1,"extraItem":"50553649","firstName":"Emma","lastName":"Hughes","addressOne":"BETHESDA 9606 WADSWORTH DR","addressTwo":"","city":"BETHESDA","state":"MD","zipCode":"20817-2455","phoneNumber":"7728685847","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f156374-c9ef-4226-acfd-0a0a84463574"} 
+2021-10-29 11:17:40.134 INFO  Add an item to cart. 
+2021-10-29 11:17:43.682 INFO  Add an item to cart. 
+2021-10-29 11:25:04.699 INFO  Order Item IDs: ["29420441730450"] 
+2021-10-29 11:25:05.749 INFO  ORDER: {"id":1520617,"proxyIp":"127.0.0.1","proxyPort":24051,"email":"briannaphillips675@yahoo.com","primaryItem":"180248800","primaryItemQty":1,"extraItem":"50553649","firstName":"Emma","lastName":"Hughes","addressOne":"BETHESDA 9606 WADSWORTH DR","addressTwo":"","city":"BETHESDA","state":"MD","zipCode":"20817-2455","phoneNumber":"7728685847","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f156374-c9ef-4226-acfd-0a0a84463574"} 
+2021-10-29 11:25:38.254 INFO  Add an item to cart. 
+2021-10-29 11:25:44.825 INFO  Add an item to cart. 
