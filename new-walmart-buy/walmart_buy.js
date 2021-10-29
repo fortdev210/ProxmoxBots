@@ -145,12 +145,12 @@ class WalmartBuy extends WalmartBase {
   }
 
   async placeOrder() {
+    console.log("placeing order....");
+    await this.loadJqueryIntoPage();
     await this.page.evaluate(() => {
       $("button:contains(Place order)").click();
     });
     await this.sleep(3000);
-    await this.loadJqueryIntoPage();
-    await this.sleep(1000);
     const orderNumber = await this.page.evaluate(() => {
       const orderNumber = $("span:contains(Order#)").text();
       return orderNumber.replace(/\D/g, "");
@@ -182,14 +182,21 @@ class WalmartBuy extends WalmartBase {
     const indexOfExtraItem = itemNumbersOnOrder.indexOf(
       this.orderInfo.extraItem
     );
-
+    console.log("itemNumbers", itemNumbersOnOrder, "id", indexOfExtraItem);
     // Click extra item remove btn.
-    await this.page.evaluate(
-      (ind) => {
-        $("button:contains(Remove item)")[ind].click();
-      },
-      [indexOfExtraItem]
-    );
+    try {
+      await this.page.evaluate(
+        (ind) => {
+          $("button:contains(Remove item)")[ind].click();
+        },
+        [indexOfExtraItem]
+      );
+    } catch (error) {
+      await this.page.evaluate(() => {
+        $("button:contains(Cancel items)").click();
+      });
+    }
+
     await this.sleep(2000);
     await this.page.evaluate(() => {
       $("button:contains(Remove)").click();
@@ -227,8 +234,6 @@ class WalmartBuy extends WalmartBase {
       await this.sleep(100000);
       const orderNumber = await this.placeOrder();
       LOGGER.info("Order Number: " + orderNumber);
-      await this.openOrderHistoryPage();
-      await this.cancelExtraItem();
       const items = [
         {
           id: this.orderInfo.primaryItem,
@@ -240,6 +245,8 @@ class WalmartBuy extends WalmartBase {
         orderNumber,
         items
       );
+      await this.openOrderHistoryPage();
+      await this.cancelExtraItem();
       await this.closeBrowser();
     } catch (error) {
       console.error(error);
