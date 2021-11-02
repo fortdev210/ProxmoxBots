@@ -151,11 +151,11 @@ class WalmartBuy extends WalmartBase {
       $("button:contains(Place order)").click();
     });
     await this.sleep(3000);
+    await this.loadJqueryIntoPage();
     const orderNumber = await this.page.evaluate(() => {
       const orderNumber = $("span:contains(Order#)").text();
       return orderNumber.replace(/\D/g, "");
     });
-    console.log("=======>", orderNumber);
     return orderNumber;
   }
 
@@ -245,6 +245,7 @@ class WalmartBuy extends WalmartBase {
         orderNumber,
         items
       );
+      await this.sleep(3000);
       await this.openOrderHistoryPage();
       await this.cancelExtraItem();
       await this.closeBrowser();
