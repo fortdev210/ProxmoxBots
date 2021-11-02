@@ -2,7 +2,7 @@ require("dotenv").config();
 const prefix = "Walmart+Prep";
 const botNumber =
   process.env.TEST_MODE === "true"
-    ? 3
+    ? 1
     : require("os").hostname().replace(/\D/g, "").replace("0", "");
 const flag = prefix + Number(botNumber);
 const API = require("../lib/api");
