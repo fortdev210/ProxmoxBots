@@ -1820,3 +1820,8 @@ Error: Request failed with status code 400
 2021-10-29 11:25:05.749 INFO  ORDER: {"id":1520617,"proxyIp":"127.0.0.1","proxyPort":24051,"email":"briannaphillips675@yahoo.com","primaryItem":"180248800","primaryItemQty":1,"extraItem":"50553649","firstName":"Emma","lastName":"Hughes","addressOne":"BETHESDA 9606 WADSWORTH DR","addressTwo":"","city":"BETHESDA","state":"MD","zipCode":"20817-2455","phoneNumber":"7728685847","sharedRegistryLink":"https://www.walmart.com/registry/ER/6f156374-c9ef-4226-acfd-0a0a84463574"} 
 2021-10-29 11:25:38.254 INFO  Add an item to cart. 
 2021-10-29 11:25:44.825 INFO  Add an item to cart. 
+2021-11-02 11:39:01.173 INFO  No order items found. Please put orders in this folder. 
+2021-11-02 11:39:19.997 INFO  Order Item IDs: ["12318529129146","15332102193834","32069172481618","33379581505450","52237969010466","64503182335250"] 
+2021-11-02 11:40:16.808 ERROR Error while fetching order items 
+2021-11-02 11:40:39.340 ERROR Error while fetching order items 
+2021-11-02 11:40:54.386 INFO  Order Item IDs: ["12318529129146","15332102193834","32069172481618","33379581505450","52237969010466","64503182335250"] 
