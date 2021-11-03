@@ -3,7 +3,7 @@ require("dotenv").config();
 const prefix = "Walmart+Pp";
 const botNumber =
   process.env.TEST_MODE === "true"
-    ? 3
+    ? 2
     : require("os").hostname().replace(/\D/g, "").replace("0", "");
 const flag = prefix + Number(botNumber);
 const API = require("../lib/api");
@@ -28,7 +28,7 @@ async function main() {
     const orderInfo = await api.createDSOrder(orderItemId);
     const parsedOrder = parseDSOrderInfo(orderInfo);
     LOGGER.info("ORDER: ", parsedOrder);
-    const buyer = new WalmartBuy(parsedOrder);
+    const buyer = new WalmartBuy(parsedOrder, orderItemId);
     await buyer.buy();
   }
 }

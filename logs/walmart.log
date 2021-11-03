@@ -1825,3 +1825,272 @@ Error: Request failed with status code 400
 2021-11-02 11:40:16.808 ERROR Error while fetching order items 
 2021-11-02 11:40:39.340 ERROR Error while fetching order items 
 2021-11-02 11:40:54.386 INFO  Order Item IDs: ["12318529129146","15332102193834","32069172481618","33379581505450","52237969010466","64503182335250"] 
+2021-11-02 12:47:02.588 INFO  No order items found. Please put orders in this folder. 
+2021-11-02 13:47:16.119 INFO  No order items found. Please put orders in this folder. 
+2021-11-02 15:05:46.476 INFO  Order Item IDs: ["07312901470786","32069172481618","52237969010466","64503182335250"] 
+2021-11-02 15:05:47.488 INFO  ORDER: {"id":1520964,"proxyIp":"127.0.0.1","proxyPort":24036,"email":"zemmology@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Ellyssa","lastName":"Smith","addressOne":"1212 SW 28th ST","addressTwo":"","city":"Redmond","state":"OR","zipCode":"97756","phoneNumber":"4967697284","sharedRegistryLink":"https://www.walmart.com/registry/ER/ab6c1153-da42-417a-add5-2afde91f44b7"} 
+2021-11-02 15:07:49.359 INFO  Order Item IDs: ["07312901470786","32069172481618","52237969010466","64503182335250"] 
+2021-11-02 15:07:50.366 INFO  ORDER: {"id":1520965,"proxyIp":"127.0.0.1","proxyPort":24004,"email":"zemmology@yahoo.com","primaryItem":"537388483","primaryItemQty":1,"extraItem":"53313129","firstName":"Ellyssa","lastName":"Smith","addressOne":"1212 SW 28th ST","addressTwo":"","city":"Redmond","state":"OR","zipCode":"97756","phoneNumber":"4967697284","sharedRegistryLink":"https://www.walmart.com/registry/ER/ab6c1153-da42-417a-add5-2afde91f44b7"} 
+2021-11-02 15:08:20.107 INFO  Add an item to cart. 
+2021-11-02 15:08:26.396 INFO  Add an item to cart. 
+2021-11-02 15:09:33.911 INFO  Total Order Price is 31.98 
+2021-11-02 15:09:34.795 INFO  Successfully updated the total price in db 
+2021-11-02 15:10:08.139 INFO  Applied gift card info: 6186338467346889, 0.28 
+2021-11-02 15:10:09.156 INFO  {"status":"success"} 
+2021-11-02 15:10:18.016 INFO  Applied value: 0.28 
+2021-11-02 15:10:52.000 INFO  Applied gift card info: 6186339626775738, 0.38 
+2021-11-02 15:10:53.040 INFO  {"status":"success"} 
+2021-11-02 15:11:00.215 INFO  Applied value: 0.38 
+2021-11-02 15:11:30.749 INFO  Applied gift card info: 6199709079697852, 31.29 
+2021-11-02 15:11:31.710 INFO  {"status":"success"} 
+2021-11-02 15:11:40.152 INFO  Applied value: 31.29 
+2021-11-02 15:12:11.505 INFO  Applied gift card info: 6186339055393526, 29.86 
+2021-11-02 15:12:12.493 INFO  {"status":"success"} 
+2021-11-02 15:12:22.179 INFO  Applied value: 29.86 
+2021-11-02 15:12:22.179 INFO  The total price is covered. Placing order... 
+2021-11-02 15:16:33.100 INFO  ORDER: {"id":1520968,"proxyIp":"127.0.0.1","proxyPort":24069,"email":"faith.taylor54@yahoo.com","primaryItem":"115756602","primaryItemQty":1,"extraItem":"687375927","firstName":"Diane","lastName":"Zimmerman","addressOne":"4437 w Creedance","addressTwo":"","city":"Glendale","state":"AZ","zipCode":"85310","phoneNumber":"2842183674","sharedRegistryLink":"https://www.walmart.com/registry/ER/93699e07-1a7c-4343-b702-cbc0fec5b3b4"} 
+2021-11-02 15:18:36.740 INFO  Order Item IDs: ["52237969010466","64503182335250"] 
+2021-11-02 15:18:37.731 INFO  ORDER: {"id":1520970,"proxyIp":"127.0.0.1","proxyPort":24008,"email":"cogalie@yahoo.com","primaryItem":"967564001","primaryItemQty":1,"extraItem":"56074532","firstName":"Sandy","lastName":"Trivitt","addressOne":"405 KALAPUYA CT","addressTwo":"","city":"COTTAGE GROVE","state":"OR","zipCode":"97424-1325","phoneNumber":"9505660613","sharedRegistryLink":"https://www.walmart.com/registry/ER/611d1cbe-957b-4df7-95fb-8caf7eb64ef5"} 
+2021-11-02 15:19:07.603 INFO  Add an item to cart. 
+2021-11-02 15:19:14.562 INFO  Add an item to cart. 
+2021-11-02 15:20:16.629 INFO  Total Order Price is 40.42 
+2021-11-02 15:20:17.516 INFO  Successfully updated the total price in db 
+2021-11-02 15:20:51.538 INFO  Applied gift card info: 6192230693756279, 1.6 
+2021-11-02 15:20:52.509 INFO  {"status":"success"} 
+2021-11-02 15:21:00.420 INFO  Applied value: 1.6 
+2021-11-02 15:21:31.259 INFO  Applied gift card info: 6186338476851582, 1.6 
+2021-11-02 15:21:32.202 INFO  {"status":"success"} 
+2021-11-02 15:21:40.868 INFO  Applied value: 1.6 
+2021-11-02 15:22:14.446 INFO  Applied gift card info: 6201553931670883, 34.4 
+2021-11-02 15:22:15.377 INFO  {"status":"success"} 
+2021-11-02 15:22:23.948 INFO  Applied value: 34.4 
+2021-11-02 15:22:58.282 INFO  Applied gift card info: 6186338472637396, 34.39 
+2021-11-02 15:22:59.280 INFO  {"status":"success"} 
+2021-11-02 15:23:07.083 INFO  Applied value: 34.39 
+2021-11-02 15:23:07.083 INFO  The total price is covered. Placing order... 
+2021-11-02 15:25:35.263 INFO  Order Number: 5772154867132 
+2021-11-02 15:25:36.242 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":90},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1520970/finish/","data":"{\"supplier_order_number\":\"5772154867132\",\"items\":[{\"id\":\"967564001\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-11-02 15:27:39.200 INFO  ORDER: {"id":1520971,"proxyIp":"127.0.0.1","proxyPort":24013,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:24:41.374 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 11:24:42.429 INFO  ORDER: {"id":1520998,"proxyIp":"127.0.0.1","proxyPort":24064,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:25:16.719 INFO  Add an item to cart. 
+2021-11-03 11:25:22.616 INFO  Add an item to cart. 
+2021-11-03 11:26:24.904 INFO  Total Order Price is 43.69 
+2021-11-03 11:26:25.773 INFO  Successfully updated the total price in db 
+2021-11-03 11:27:00.469 INFO  Applied gift card info: 6186339040377234, 0.15 
+2021-11-03 11:27:01.478 INFO  {"status":"success"} 
+2021-11-03 11:27:09.504 INFO  Applied value: 0.15 
+2021-11-03 11:27:39.577 INFO  Applied gift card info: 6192267329980529, 0.19 
+2021-11-03 11:27:40.551 INFO  {"status":"success"} 
+2021-11-03 11:27:49.448 INFO  Applied value: 0.19 
+2021-11-03 11:28:23.040 INFO  Applied gift card info: 6186338530619784, 43.1 
+2021-11-03 11:28:24.090 INFO  {"status":"success"} 
+2021-11-03 11:28:33.242 INFO  Applied value: 43.1 
+2021-11-03 11:29:05.155 INFO  Applied gift card info: 6199708183561947, 42.88 
+2021-11-03 11:29:06.212 INFO  {"status":"success"} 
+2021-11-03 11:29:13.185 INFO  Applied value: 42.88 
+2021-11-03 11:29:13.185 INFO  The total price is covered. Placing order... 
+2021-11-03 11:30:23.342 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 11:30:24.410 INFO  ORDER: {"id":1521002,"proxyIp":"127.0.0.1","proxyPort":24028,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:30:58.990 INFO  Add an item to cart. 
+2021-11-03 11:31:04.813 INFO  Add an item to cart. 
+2021-11-03 11:33:04.386 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 11:33:05.403 INFO  ORDER: {"id":1521004,"proxyIp":"127.0.0.1","proxyPort":24088,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:33:36.055 INFO  Add an item to cart. 
+2021-11-03 11:33:43.152 INFO  Add an item to cart. 
+2021-11-03 11:33:43.370 WARN  [id="px-captcha"] 
+2021-11-03 11:34:02.391 INFO  Tried to solve captcha 1 times 
+2021-11-03 11:34:02.610 WARN  [id="px-captcha"] 
+2021-11-03 11:34:32.374 INFO  Tried to solve captcha 2 times 
+2021-11-03 11:36:18.806 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 11:36:19.791 INFO  ORDER: {"id":1521005,"proxyIp":"127.0.0.1","proxyPort":24061,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:36:50.924 INFO  Add an item to cart. 
+2021-11-03 11:36:56.587 INFO  Add an item to cart. 
+2021-11-03 11:37:58.669 INFO  Total Order Price is 43.69 
+2021-11-03 11:37:59.571 INFO  Successfully updated the total price in db 
+2021-11-03 11:38:36.671 INFO  Applied gift card info: 6188214345280318, 0.2 
+2021-11-03 11:38:37.570 INFO  {"status":"success"} 
+2021-11-03 11:38:44.138 INFO  Applied value: 0.2 
+2021-11-03 11:39:12.827 INFO  Applied gift card info: 6199708292295515, 0.22 
+2021-11-03 11:39:13.746 INFO  {"status":"success"} 
+2021-11-03 11:39:24.074 INFO  Applied value: 0.22 
+2021-11-03 11:39:58.192 INFO  Applied gift card info: 6201553933900192, 43.27 
+2021-11-03 11:39:59.164 INFO  {"status":"success"} 
+2021-11-03 11:40:07.420 INFO  Applied value: 43.27 
+2021-11-03 11:40:07.420 INFO  The total price is covered. Placing order... 
+2021-11-03 11:40:53.184 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 11:40:55.249 INFO  ORDER: {"id":1521007,"proxyIp":"127.0.0.1","proxyPort":24043,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:41:26.569 INFO  Add an item to cart. 
+2021-11-03 11:41:34.683 INFO  Add an item to cart. 
+2021-11-03 11:42:39.380 INFO  Total Order Price is 43.69 
+2021-11-03 11:42:40.408 INFO  Successfully updated the total price in db 
+2021-11-03 11:43:10.713 INFO  Applied gift card info: 6186338420830988, 0.93 
+2021-11-03 11:43:11.718 INFO  {"status":"success"} 
+2021-11-03 11:43:20.355 INFO  Applied value: 0.93 
+2021-11-03 11:43:50.860 INFO  Applied gift card info: 6192235291887036, 1 
+2021-11-03 11:43:51.776 INFO  {"status":"success"} 
+2021-11-03 11:43:58.173 INFO  Applied value: 1 
+2021-11-03 11:44:31.990 INFO  Applied gift card info: 6201553932990911, 34.22 
+2021-11-03 11:44:32.904 INFO  {"status":"success"} 
+2021-11-03 11:44:38.891 INFO  Applied value: 34.22 
+2021-11-03 11:45:04.011 INFO  Applied gift card info: 6199709011588435, 34.22 
+2021-11-03 11:45:04.969 INFO  {"status":"success"} 
+2021-11-03 11:45:12.268 INFO  Applied value: 34.22 
+2021-11-03 11:45:12.268 INFO  The total price is covered. Placing order... 
+2021-11-03 11:46:05.093 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 11:46:06.133 INFO  ORDER: {"id":1521009,"proxyIp":"127.0.0.1","proxyPort":24017,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 11:46:38.172 INFO  Add an item to cart. 
+2021-11-03 11:46:43.276 INFO  Add an item to cart. 
+2021-11-03 11:47:48.719 INFO  Total Order Price is 43.69 
+2021-11-03 11:47:49.609 INFO  Successfully updated the total price in db 
+2021-11-03 11:48:24.853 INFO  Applied gift card info: 6186338741444284, 1.03 
+2021-11-03 11:48:25.810 INFO  {"status":"success"} 
+2021-11-03 11:48:34.521 INFO  Applied value: 1.03 
+2021-11-03 11:49:06.524 INFO  Applied gift card info: 6183018494682918, 1.39 
+2021-11-03 11:49:07.505 INFO  {"status":"success"} 
+2021-11-03 11:49:14.063 INFO  Applied value: 1.39 
+2021-11-03 11:49:45.507 INFO  Applied gift card info: 6201554149708754, 34.06 
+2021-11-03 11:49:46.460 INFO  {"status":"success"} 
+2021-11-03 11:49:55.364 INFO  Applied value: 34.06 
+2021-11-03 11:50:26.254 INFO  Applied gift card info: 6186338791464679, 34.06 
+2021-11-03 11:50:27.294 INFO  {"status":"success"} 
+2021-11-03 11:50:37.620 INFO  Applied value: 34.06 
+2021-11-03 11:50:37.620 INFO  The total price is covered. Placing order... 
+2021-11-03 11:53:05.159 INFO  Order Number:  
+2021-11-03 11:53:06.123 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":87},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1521009/finish/","data":"{\"supplier_order_number\":\"\",\"items\":[{\"order_item_id\":\"51233039\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-11-03 12:00:10.504 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 12:00:11.515 INFO  ORDER: {"id":1521014,"proxyIp":"127.0.0.1","proxyPort":24091,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 12:00:43.754 INFO  Add an item to cart. 
+2021-11-03 12:00:49.815 INFO  Add an item to cart. 
+2021-11-03 12:00:50.053 WARN  [id="px-captcha"] 
+2021-11-03 12:01:16.909 INFO  Tried to solve captcha 1 times 
+2021-11-03 12:01:54.088 INFO  Order Item IDs: ["64503182335250"] 
+2021-11-03 12:01:55.066 INFO  ORDER: {"id":1521017,"proxyIp":"127.0.0.1","proxyPort":24002,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 12:02:29.350 INFO  Add an item to cart. 
+2021-11-03 12:02:35.957 INFO  Add an item to cart. 
+2021-11-03 12:03:40.915 INFO  Total Order Price is 43.69 
+2021-11-03 12:03:41.827 INFO  Successfully updated the total price in db 
+2021-11-03 12:04:12.122 INFO  Applied gift card info: 6192235291639749, 1.45 
+2021-11-03 12:04:13.177 INFO  {"status":"success"} 
+2021-11-03 12:04:21.128 INFO  Applied value: 1.45 
+2021-11-03 12:04:54.005 INFO  Applied gift card info: 6186338600804780, 1.63 
+2021-11-03 12:04:54.925 INFO  {"status":"success"} 
+2021-11-03 12:05:03.952 INFO  Applied value: 1.63 
+2021-11-03 12:05:37.241 INFO  Applied gift card info: 6201553931495502, 34.04 
+2021-11-03 12:05:38.177 INFO  {"status":"success"} 
+2021-11-03 12:05:46.801 INFO  Applied value: 34.04 
+2021-11-03 12:06:14.024 INFO  Applied gift card info: 6186338601936394, 34.03 
+2021-11-03 12:06:14.949 INFO  {"status":"success"} 
+2021-11-03 12:06:25.866 INFO  Applied value: 34.03 
+2021-11-03 12:06:25.866 INFO  The total price is covered. Placing order... 
+2021-11-03 12:06:27.246 INFO  Cart id: cae7b036-8834-45eb-a115-050cbc208d47 
+2021-11-03 12:07:08.901 INFO  Order Number:  
+2021-11-03 12:07:09.875 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":87},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1521017/finish/","data":"{\"supplier_order_number\":\"\",\"items\":[{\"order_item_id\":\"51233039\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-11-03 12:07:31.540 INFO  Extra item successfully removed. 
+2021-11-03 12:09:35.803 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:09:36.847 INFO  ORDER: {"id":1521023,"proxyIp":"127.0.0.1","proxyPort":24020,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:10:11.210 INFO  Add an item to cart. 
+2021-11-03 12:10:17.931 INFO  Add an item to cart. 
+2021-11-03 12:11:20.671 INFO  Total Order Price is 39.67 
+2021-11-03 12:11:21.558 INFO  Successfully updated the total price in db 
+2021-11-03 12:11:53.194 INFO  Applied gift card info: 6192271791777041, 1.65 
+2021-11-03 12:11:54.276 INFO  {"status":"success"} 
+2021-11-03 12:12:02.006 INFO  Applied value: 1.65 
+2021-11-03 12:12:38.262 INFO  Applied gift card info: 6186338471474759, 1.65 
+2021-11-03 12:12:39.270 INFO  {"status":"success"} 
+2021-11-03 12:12:48.867 INFO  Applied value: 1.65 
+2021-11-03 12:13:23.261 INFO  Applied gift card info: 6201553931370428, 33.98 
+2021-11-03 12:13:24.248 INFO  {"status":"success"} 
+2021-11-03 12:13:31.242 INFO  Applied value: 33.98 
+2021-11-03 12:14:02.298 INFO  Applied gift card info: 6192271538738767, 33.94 
+2021-11-03 12:14:03.204 INFO  {"status":"success"} 
+2021-11-03 12:14:13.925 INFO  Applied value: 33.94 
+2021-11-03 12:14:13.925 INFO  The total price is covered. Placing order... 
+2021-11-03 12:14:15.418 INFO  Cart id: 5615aa5e-4f5e-4ca1-8ad6-95519e7011af 
+2021-11-03 12:14:30.550 WARN  [id="px-captcha"] 
+2021-11-03 12:14:59.893 INFO  Tried to solve captcha 1 times 
+2021-11-03 12:15:00.134 WARN  [id="px-captcha"] 
+2021-11-03 12:15:19.203 INFO  Tried to solve captcha 2 times 
+2021-11-03 12:15:19.433 WARN  [id="px-captcha"] 
+2021-11-03 12:15:35.021 INFO  Tried to solve captcha 3 times 
+2021-11-03 12:15:35.258 WARN  [id="px-captcha"] 
+2021-11-03 12:16:05.998 INFO  Tried to solve captcha 4 times 
+2021-11-03 12:16:36.184 INFO  Order Number: 5782165757609 
+2021-11-03 12:16:37.131 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (node:events:377:35)\n    at endReadableNT (node:internal/streams/readable:1312:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":100},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1521023/finish/","data":"{\"supplier_order_number\":\"5782165757609\",\"items\":[{\"order_item_id\":\"22581912\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+2021-11-03 12:17:02.843 INFO  Extra item successfully removed. 
+2021-11-03 12:17:03.901 INFO  ORDER: {"id":1521028,"proxyIp":"127.0.0.1","proxyPort":24047,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:29:34.030 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:29:35.006 INFO  ORDER: {"id":1521031,"proxyIp":"127.0.0.1","proxyPort":24072,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:31:46.085 INFO  ORDER: {"id":1521032,"proxyIp":"127.0.0.1","proxyPort":24074,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:32:23.845 INFO  Add an item to cart. 
+2021-11-03 12:32:28.629 INFO  Add an item to cart. 
+2021-11-03 12:33:29.792 INFO  Total Order Price is 39.69 
+2021-11-03 12:33:30.637 INFO  Successfully updated the total price in db 
+2021-11-03 12:34:06.729 INFO  Applied gift card info: 6186338321665377, 0.64 
+2021-11-03 12:34:07.638 INFO  {"status":"success"} 
+2021-11-03 12:34:18.452 INFO  Applied value: 0.64 
+2021-11-03 12:34:48.552 INFO  Applied gift card info: 6192276169123769, 0.65 
+2021-11-03 12:34:49.518 INFO  {"status":"success"} 
+2021-11-03 12:34:59.187 INFO  Applied value: 0.65 
+2021-11-03 12:35:28.046 INFO  Applied gift card info: 6201553935380364, 33.65 
+2021-11-03 12:35:28.949 INFO  {"status":"success"} 
+2021-11-03 12:35:36.221 INFO  Applied value: 33.65 
+2021-11-03 12:36:08.987 INFO  Applied gift card info: 6192268279991859, 33.65 
+2021-11-03 12:36:09.877 INFO  {"status":"success"} 
+2021-11-03 12:36:17.874 INFO  Applied value: 33.65 
+2021-11-03 12:36:17.874 INFO  The total price is covered. Placing order... 
+2021-11-03 12:36:19.561 INFO  Cart id: 4cd61216-a893-4c29-ba77-1d2bdb7a87f1 
+2021-11-03 12:36:34.605 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:36:35.575 INFO  ORDER: {"id":1521033,"proxyIp":"127.0.0.1","proxyPort":24023,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:38:44.802 INFO  ORDER: {"id":1521035,"proxyIp":"127.0.0.1","proxyPort":24068,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:40:29.764 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:40:30.739 INFO  ORDER: {"id":1521036,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:42:44.320 INFO  ORDER: {"id":1521037,"proxyIp":"127.0.0.1","proxyPort":24099,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:45:00.161 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:45:01.176 INFO  ORDER: {"id":1521039,"proxyIp":"127.0.0.1","proxyPort":24055,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:47:03.509 INFO  ORDER: {"id":1521040,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:48:56.515 INFO  ORDER: {"id":1521041,"proxyIp":"127.0.0.1","proxyPort":24035,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 13:14:34.716 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:14:35.697 INFO  ORDER: {"id":1521043,"proxyIp":"127.0.0.1","proxyPort":24065,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:15:07.592 INFO  Add an item to cart. 
+2021-11-03 13:15:12.160 INFO  Add an item to cart. 
+2021-11-03 13:16:36.902 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:16:37.862 INFO  ORDER: {"id":1521044,"proxyIp":"127.0.0.1","proxyPort":24063,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:17:12.774 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:17:13.749 INFO  ORDER: {"id":1521045,"proxyIp":"127.0.0.1","proxyPort":24005,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:19:10.251 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:19:12.548 INFO  ORDER: {"id":1521046,"proxyIp":"127.0.0.1","proxyPort":24026,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:19:52.937 INFO  Add an item to cart. 
+2021-11-03 13:19:58.675 INFO  Add an item to cart. 
