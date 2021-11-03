@@ -28,7 +28,7 @@ async function main() {
     const orderInfo = await api.createDSOrder(orderItemId);
     const parsedOrder = parseDSOrderInfo(orderInfo);
     LOGGER.info("ORDER: ", parsedOrder);
-    const buyer = new WalmartBuy(parsedOrder);
+    const buyer = new WalmartBuy(parsedOrder, orderItemId);
     await buyer.buy();
   }
 }

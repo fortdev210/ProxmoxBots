@@ -4,10 +4,11 @@ const API = require("../lib/api");
 const api = new API();
 
 class WalmartBuy extends WalmartBase {
-  constructor(orderInfo) {
+  constructor(orderInfo, orderItemId) {
     super();
     this.orderInfo = orderInfo;
     this.password = "Forte1long!";
+    this.orderItemId = orderItemId;
   }
 
   async openRigistryPage(link) {
@@ -83,16 +84,20 @@ class WalmartBuy extends WalmartBase {
     }
     LOGGER.info("The total price is covered. Placing order...");
     await this.sleep(1000);
-    try {
-      await this.page.evaluate(() => {
-        document.querySelectorAll('[class="ld ld-ChevronLeft"]')[1].click();
-      });
-      await this.sleep(1000);
-      await this.waitForLoadingElement('[data-test-id="continueBtn"]');
-      await this.clickButton('[data-test-id="continueBtn"]');
-    } catch (error) {}
-
-    await this.resolveCaptcha();
+    const url = await this.page.url();
+    let cartId = "";
+    // https://www.walmart.com/checkout/review-order?cartId=cae7b036-8834-45eb-a115-050cbc208d47&wv=add_gift_card
+    if (url.indexOf("&wv=") > -1) {
+      const pattern = /cartId=(.*)&/;
+      cartId = url.match(pattern)[1];
+    } else {
+      const pattern = /cartId=(.*)/;
+      cartId = url.match(pattern)[1];
+    }
+    LOGGER.info("Cart id: " + cartId);
+    const placeOrderLink = `https://www.walmart.com/checkout/review-order?cartId=${cartId}`;
+    await this.openLink(placeOrderLink);
+    await this.sleep(5000);
   }
 
   async addGiftCard(index) {
@@ -145,12 +150,12 @@ class WalmartBuy extends WalmartBase {
   }
 
   async placeOrder() {
-    console.log("placeing order....");
+    console.log("Placing order....");
     await this.loadJqueryIntoPage();
     await this.page.evaluate(() => {
       $("button:contains(Place order)").click();
     });
-    await this.sleep(3000);
+    await this.resolveCaptcha();
     await this.loadJqueryIntoPage();
     const orderNumber = await this.page.evaluate(() => {
       const orderNumber = $("span:contains(Order#)").text();
@@ -231,7 +236,6 @@ class WalmartBuy extends WalmartBase {
       await this.continuetoCheckout();
       await this.fillSignInCart();
       await this.payOrder();
-      await this.sleep(100000);
       const orderNumber = await this.placeOrder();
       LOGGER.info("Order Number: " + orderNumber);
       const items = [
