@@ -240,7 +240,7 @@ class WalmartBuy extends WalmartBase {
       LOGGER.info("Order Number: " + orderNumber);
       const items = [
         {
-          id: this.orderInfo.primaryItem,
+          id: this.orderItemId,
           quantity_bought: this.orderInfo.primaryItemQty,
         },
       ];

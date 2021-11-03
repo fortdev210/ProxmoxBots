@@ -2051,3 +2051,46 @@ Error: Request failed with status code 400
     at processTicksAndRejections (node:internal/process/task_queues:83:21) 
 2021-11-03 12:17:02.843 INFO  Extra item successfully removed. 
 2021-11-03 12:17:03.901 INFO  ORDER: {"id":1521028,"proxyIp":"127.0.0.1","proxyPort":24047,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:29:34.030 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:29:35.006 INFO  ORDER: {"id":1521031,"proxyIp":"127.0.0.1","proxyPort":24072,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:31:46.085 INFO  ORDER: {"id":1521032,"proxyIp":"127.0.0.1","proxyPort":24074,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:32:23.845 INFO  Add an item to cart. 
+2021-11-03 12:32:28.629 INFO  Add an item to cart. 
+2021-11-03 12:33:29.792 INFO  Total Order Price is 39.69 
+2021-11-03 12:33:30.637 INFO  Successfully updated the total price in db 
+2021-11-03 12:34:06.729 INFO  Applied gift card info: 6186338321665377, 0.64 
+2021-11-03 12:34:07.638 INFO  {"status":"success"} 
+2021-11-03 12:34:18.452 INFO  Applied value: 0.64 
+2021-11-03 12:34:48.552 INFO  Applied gift card info: 6192276169123769, 0.65 
+2021-11-03 12:34:49.518 INFO  {"status":"success"} 
+2021-11-03 12:34:59.187 INFO  Applied value: 0.65 
+2021-11-03 12:35:28.046 INFO  Applied gift card info: 6201553935380364, 33.65 
+2021-11-03 12:35:28.949 INFO  {"status":"success"} 
+2021-11-03 12:35:36.221 INFO  Applied value: 33.65 
+2021-11-03 12:36:08.987 INFO  Applied gift card info: 6192268279991859, 33.65 
+2021-11-03 12:36:09.877 INFO  {"status":"success"} 
+2021-11-03 12:36:17.874 INFO  Applied value: 33.65 
+2021-11-03 12:36:17.874 INFO  The total price is covered. Placing order... 
+2021-11-03 12:36:19.561 INFO  Cart id: 4cd61216-a893-4c29-ba77-1d2bdb7a87f1 
+2021-11-03 12:36:34.605 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:36:35.575 INFO  ORDER: {"id":1521033,"proxyIp":"127.0.0.1","proxyPort":24023,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:38:44.802 INFO  ORDER: {"id":1521035,"proxyIp":"127.0.0.1","proxyPort":24068,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:40:29.764 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:40:30.739 INFO  ORDER: {"id":1521036,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:42:44.320 INFO  ORDER: {"id":1521037,"proxyIp":"127.0.0.1","proxyPort":24099,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:45:00.161 INFO  Order Item IDs: ["19135299780106","38255874509306","64503182335250"] 
+2021-11-03 12:45:01.176 INFO  ORDER: {"id":1521039,"proxyIp":"127.0.0.1","proxyPort":24055,"email":"kylie.m65@yahoo.com","primaryItem":"22581912","primaryItemQty":1,"extraItem":"56074532","firstName":"Brian","lastName":"Smith","addressOne":"252 BREVOORT RD","addressTwo":"","city":"COLUMBUS","state":"OH","zipCode":"43214-3826","phoneNumber":"4314671999","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a6a257e-d9b9-4cd6-adfd-a49a129eddc5"} 
+2021-11-03 12:47:03.509 INFO  ORDER: {"id":1521040,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 12:48:56.515 INFO  ORDER: {"id":1521041,"proxyIp":"127.0.0.1","proxyPort":24035,"email":"stoteof@yahoo.com","primaryItem":"51233039","primaryItemQty":1,"extraItem":"50553649","firstName":"Susan","lastName":"Marr","addressOne":"C/O PHOEBE A HEARST PRESCHOOL","addressTwo":"1315 ELLIS ST","city":"SAN FRANCISCO","state":"CA","zipCode":"94115-4215","phoneNumber":"8179752057","sharedRegistryLink":"https://www.walmart.com/registry/ER/888d9bf0-34d1-4209-bb79-ece36b447717"} 
+2021-11-03 13:14:34.716 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:14:35.697 INFO  ORDER: {"id":1521043,"proxyIp":"127.0.0.1","proxyPort":24065,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:15:07.592 INFO  Add an item to cart. 
+2021-11-03 13:15:12.160 INFO  Add an item to cart. 
+2021-11-03 13:16:36.902 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:16:37.862 INFO  ORDER: {"id":1521044,"proxyIp":"127.0.0.1","proxyPort":24063,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:17:12.774 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:17:13.749 INFO  ORDER: {"id":1521045,"proxyIp":"127.0.0.1","proxyPort":24005,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:19:10.251 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:19:12.548 INFO  ORDER: {"id":1521046,"proxyIp":"127.0.0.1","proxyPort":24026,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-03 13:19:52.937 INFO  Add an item to cart. 
+2021-11-03 13:19:58.675 INFO  Add an item to cart. 
