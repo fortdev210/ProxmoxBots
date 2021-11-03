@@ -2094,3 +2094,5 @@ Error: Request failed with status code 400
 2021-11-03 13:19:12.548 INFO  ORDER: {"id":1521046,"proxyIp":"127.0.0.1","proxyPort":24026,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
 2021-11-03 13:19:52.937 INFO  Add an item to cart. 
 2021-11-03 13:19:58.675 INFO  Add an item to cart. 
+2021-11-03 13:50:11.521 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
+2021-11-03 13:50:12.791 INFO  ORDER: {"id":1521057,"proxyIp":"127.0.0.1","proxyPort":24083,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
