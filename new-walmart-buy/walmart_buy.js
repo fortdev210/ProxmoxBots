@@ -223,6 +223,7 @@ class WalmartBuy extends WalmartBase {
     await this.page.evaluate(() => {
       $("button:contains(Remove)").click();
     });
+    await this.sleep(3000);
     LOGGER.info("Extra item successfully removed.");
   }
 
