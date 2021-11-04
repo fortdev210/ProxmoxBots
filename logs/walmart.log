@@ -2096,3 +2096,8 @@ Error: Request failed with status code 400
 2021-11-03 13:19:58.675 INFO  Add an item to cart. 
 2021-11-03 13:50:11.521 INFO  Order Item IDs: ["38255874509306","64503182335250"] 
 2021-11-03 13:50:12.791 INFO  ORDER: {"id":1521057,"proxyIp":"127.0.0.1","proxyPort":24083,"email":"zohol@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Katharine","lastName":"Thorne","addressOne":"632 S OVID ST","addressTwo":"","city":"ELSIE","state":"MI","zipCode":"48831-9708","phoneNumber":"5699563200","sharedRegistryLink":"https://www.walmart.com/registry/ER/095ee01f-71c7-4da8-9fc7-e29fd7ef08be"} 
+2021-11-04 13:23:47.294 ERROR Error while fetching order items 
+2021-11-04 13:24:44.643 INFO  Order Item IDs: ["31783069137802","38984030100290"] 
+2021-11-04 13:24:45.857 INFO  ORDER: {"id":1521552,"proxyIp":"127.0.0.1","proxyPort":24100,"email":"s.faith78@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Allison","lastName":"Duncan","addressOne":"110 N 6TH ST","addressTwo":"# 162 ","city":"MANHATTAN","state":"MT","zipCode":"59741-2224","phoneNumber":"2466113631","sharedRegistryLink":"https://www.walmart.com/registry/ER/5840f711-8552-4d03-af39-c1ba0a768bf9"} 
+2021-11-04 13:25:39.430 INFO  Add an item to cart. 
+2021-11-04 13:25:45.339 INFO  Add an item to cart. 
