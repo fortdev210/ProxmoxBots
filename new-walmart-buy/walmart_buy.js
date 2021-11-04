@@ -52,11 +52,15 @@ class WalmartBuy extends WalmartBase {
       await frame.click('[type="submit"]');
     }
     await this.sleep(5000);
+    LOGGER.info("Sign In Success");
   }
 
   async payOrder() {
     // click add payment method button
-    await this.clickButton('[aria-label="add a payment method"]');
+    await this.loadJqueryIntoPage();
+    await this.page.evaluate(() => {
+      $("button:contains(Add a payment method)").click();
+    });
     await this.sleep(1000);
     await this.page.waitForXPath('//*[contains(text(), "Estimated total")]', {
       timeout: 20000,
