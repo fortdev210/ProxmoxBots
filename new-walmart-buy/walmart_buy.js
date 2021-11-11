@@ -38,7 +38,8 @@ class WalmartBuy extends WalmartBase {
     await this.waitForLoadingElement("iframe");
     const formHanlde = await this.page.$('[id="auth-frame"]');
     const frame = await formHanlde.contentFrame();
-    await frame.type('[id="email"]', this.orderInfo.email, { delay: 100 });
+    await frame.type('[id="email"]', this.orderInfo.email, { delay: 300 });
+    await this.sleep(3000)
     try {
       await frame.click('[data-automation-id="signin-continue-submit-btn"]');
       await this.sleep(2000);

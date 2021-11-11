@@ -2101,3 +2101,199 @@ Error: Request failed with status code 400
 2021-11-04 13:24:45.857 INFO  ORDER: {"id":1521552,"proxyIp":"127.0.0.1","proxyPort":24100,"email":"s.faith78@yahoo.com","primaryItem":"154531930","primaryItemQty":1,"extraItem":"56074532","firstName":"Allison","lastName":"Duncan","addressOne":"110 N 6TH ST","addressTwo":"# 162 ","city":"MANHATTAN","state":"MT","zipCode":"59741-2224","phoneNumber":"2466113631","sharedRegistryLink":"https://www.walmart.com/registry/ER/5840f711-8552-4d03-af39-c1ba0a768bf9"} 
 2021-11-04 13:25:39.430 INFO  Add an item to cart. 
 2021-11-04 13:25:45.339 INFO  Add an item to cart. 
+2021-11-10 14:45:06.710 INFO  Order Item IDs: ["18495587808898","49653782644874"] 
+2021-11-10 14:45:07.973 INFO  ORDER: {"id":1522654,"proxyIp":"127.0.0.1","proxyPort":24057,"email":"SheritaBaille6@outlook.com","primaryItem":"51233039","primaryItemQty":2,"extraItem":null,"firstName":"Jared","lastName":"Hart","addressOne":"106 W CRUMP ST","addressTwo":"","city":"BAY CITY","state":"MI","zipCode":"48706-5025","phoneNumber":"8349051078","sharedRegistryLink":"https://www.walmart.com/registry/ER/72bc634b-a6c7-4d53-8a57-95dd4d7a982a"} 
+2021-11-10 14:47:27.342 INFO  ORDER: {"id":1522655,"proxyIp":"127.0.0.1","proxyPort":24097,"email":"juliaw62@yahoo.com","primaryItem":"33358436","primaryItemQty":1,"extraItem":"56074532","firstName":"Jason","lastName":"Dohanish","addressOne":"6 HENNING DR","addressTwo":"","city":"FAIRFIELD","state":"NJ","zipCode":"07004-1706","phoneNumber":"4338710881","sharedRegistryLink":"https://www.walmart.com/registry/ER/9e3c4232-37bb-4e64-9e65-7c0e0b051669"} 
+2021-11-10 14:55:55.034 INFO  Order Item IDs: ["18495587808898","49653782644874"] 
+2021-11-10 14:55:56.281 INFO  ORDER: {"id":1522658,"proxyIp":"127.0.0.1","proxyPort":24069,"email":"SheritaBaille6@outlook.com","primaryItem":"51233039","primaryItemQty":2,"extraItem":null,"firstName":"Jared","lastName":"Hart","addressOne":"106 W CRUMP ST","addressTwo":"","city":"BAY CITY","state":"MI","zipCode":"48706-5025","phoneNumber":"8349051078","sharedRegistryLink":"https://www.walmart.com/registry/ER/72bc634b-a6c7-4d53-8a57-95dd4d7a982a"} 
+2021-11-10 14:56:22.286 INFO  Order Item IDs: ["18495587808898","49653782644874"] 
+2021-11-10 14:56:23.499 INFO  ORDER: {"id":1522659,"proxyIp":"127.0.0.1","proxyPort":24083,"email":"SheritaBaille6@outlook.com","primaryItem":"51233039","primaryItemQty":2,"extraItem":null,"firstName":"Jared","lastName":"Hart","addressOne":"106 W CRUMP ST","addressTwo":"","city":"BAY CITY","state":"MI","zipCode":"48706-5025","phoneNumber":"8349051078","sharedRegistryLink":"https://www.walmart.com/registry/ER/72bc634b-a6c7-4d53-8a57-95dd4d7a982a"} 
+2021-11-10 15:05:34.822 INFO  Order Item IDs: ["18495587808898","48002871227938","49653782644874"] 
+2021-11-10 15:05:36.068 INFO  ORDER: {"id":1522661,"proxyIp":"127.0.0.1","proxyPort":24009,"email":"SheritaBaille6@outlook.com","primaryItem":"51233039","primaryItemQty":2,"extraItem":null,"firstName":"Jared","lastName":"Hart","addressOne":"106 W CRUMP ST","addressTwo":"","city":"BAY CITY","state":"MI","zipCode":"48706-5025","phoneNumber":"8349051078","sharedRegistryLink":"https://www.walmart.com/registry/ER/72bc634b-a6c7-4d53-8a57-95dd4d7a982a"} 
+2021-11-10 15:07:48.722 INFO  ORDER: {"id":1522662,"proxyIp":"127.0.0.1","proxyPort":24049,"email":"newokia@yahoo.com","primaryItem":"49085969","primaryItemQty":1,"extraItem":"687375927","firstName":"Vincent","lastName":"Scheib","addressOne":"4165 GEORGIA AVE","addressTwo":"","city":"PALO ALTO","state":"CA","zipCode":"94306-3813","phoneNumber":"3867122352","sharedRegistryLink":"https://www.walmart.com/registry/ER/f4cda388-560c-4932-9a7f-736e77d0934e"} 
+2021-11-10 15:28:44.563 INFO  Order Item IDs: ["18495587808898","48002871227938","49653782644874"] 
+2021-11-10 15:28:45.977 INFO  ORDER: {"id":1522663,"proxyIp":"127.0.0.1","proxyPort":24008,"email":"SheritaBaille6@outlook.com","primaryItem":"51233039","primaryItemQty":2,"extraItem":null,"firstName":"Jared","lastName":"Hart","addressOne":"106 W CRUMP ST","addressTwo":"","city":"BAY CITY","state":"MI","zipCode":"48706-5025","phoneNumber":"8349051078","sharedRegistryLink":"https://www.walmart.com/registry/ER/72bc634b-a6c7-4d53-8a57-95dd4d7a982a"} 
+2021-11-10 15:29:30.305 INFO  Order Item IDs: ["48002871227938","49653782644874"] 
+2021-11-10 15:29:31.651 INFO  ORDER: {"id":1522664,"proxyIp":"127.0.0.1","proxyPort":24038,"email":"newokia@yahoo.com","primaryItem":"49085969","primaryItemQty":1,"extraItem":"687375927","firstName":"Vincent","lastName":"Scheib","addressOne":"4165 GEORGIA AVE","addressTwo":"","city":"PALO ALTO","state":"CA","zipCode":"94306-3813","phoneNumber":"3867122352","sharedRegistryLink":"https://www.walmart.com/registry/ER/f4cda388-560c-4932-9a7f-736e77d0934e"} 
+2021-11-11 11:30:31.329 INFO  Order Item IDs: ["47245766195458","48002871227938","49653782644874"] 
+2021-11-11 11:30:32.758 INFO  ORDER: {"id":1522715,"proxyIp":"127.0.0.1","proxyPort":24075,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 11:31:23.618 INFO  Add an item to cart. 
+2021-11-11 11:31:23.923 WARN  [id="px-captcha"] 
+2021-11-11 11:32:04.380 INFO  Tried to solve captcha 1 times 
+2021-11-11 11:32:04.643 WARN  [id="px-captcha"] 
+2021-11-11 11:32:31.637 INFO  Tried to solve captcha 2 times 
+2021-11-11 11:32:32.040 WARN  [id="px-captcha"] 
+2021-11-11 11:32:57.028 INFO  Tried to solve captcha 3 times 
+2021-11-11 11:35:17.867 INFO  ORDER: {"id":1522718,"proxyIp":"127.0.0.1","proxyPort":24062,"email":"newokia@yahoo.com","primaryItem":"49085969","primaryItemQty":1,"extraItem":"687375927","firstName":"Vincent","lastName":"Scheib","addressOne":"4165 GEORGIA AVE","addressTwo":"","city":"PALO ALTO","state":"CA","zipCode":"94306-3813","phoneNumber":"3867122352","sharedRegistryLink":"https://www.walmart.com/registry/ER/f4cda388-560c-4932-9a7f-736e77d0934e"} 
+2021-11-11 11:36:03.683 INFO  Add an item to cart. 
+2021-11-11 11:36:09.675 INFO  Add an item to cart. 
+2021-11-11 11:37:10.954 INFO  Sign In Success 
+2021-11-11 11:39:23.808 INFO  ORDER: {"id":1522720,"proxyIp":"127.0.0.1","proxyPort":24050,"email":"juliaw62@yahoo.com","primaryItem":"33358436","primaryItemQty":1,"extraItem":"56074532","firstName":"Jason","lastName":"Dohanish","addressOne":"6 HENNING DR","addressTwo":"","city":"FAIRFIELD","state":"NJ","zipCode":"07004-1706","phoneNumber":"4338710881","sharedRegistryLink":"https://www.walmart.com/registry/ER/9e3c4232-37bb-4e64-9e65-7c0e0b051669"} 
+2021-11-11 11:40:08.013 INFO  Add an item to cart. 
+2021-11-11 11:40:14.069 INFO  Add an item to cart. 
+2021-11-11 11:40:14.320 WARN  [id="px-captcha"] 
+2021-11-11 11:40:53.910 INFO  Tried to solve captcha 1 times 
+2021-11-11 11:40:54.147 WARN  [id="px-captcha"] 
+2021-11-11 11:41:12.454 INFO  Tried to solve captcha 2 times 
+2021-11-11 11:56:10.452 INFO  Order Item IDs: ["47245766195458","48002871227938","49653782644874"] 
+2021-11-11 11:56:14.279 INFO  ORDER: {"id":1522722,"proxyIp":"127.0.0.1","proxyPort":24031,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 11:56:58.593 INFO  Add an item to cart. 
+2021-11-11 11:58:04.555 INFO  Sign In Success 
+2021-11-11 11:58:08.232 INFO  Total Order Price is 32.98 
+2021-11-11 11:58:10.726 INFO  Successfully updated the total price in db 
+2021-11-11 12:00:15.843 INFO  ORDER: {"id":1522723,"proxyIp":"127.0.0.1","proxyPort":24026,"email":"newokia@yahoo.com","primaryItem":"49085969","primaryItemQty":1,"extraItem":"687375927","firstName":"Vincent","lastName":"Scheib","addressOne":"4165 GEORGIA AVE","addressTwo":"","city":"PALO ALTO","state":"CA","zipCode":"94306-3813","phoneNumber":"3867122352","sharedRegistryLink":"https://www.walmart.com/registry/ER/f4cda388-560c-4932-9a7f-736e77d0934e"} 
+2021-11-11 12:00:55.491 INFO  Add an item to cart. 
+2021-11-11 12:01:01.744 INFO  Add an item to cart. 
+2021-11-11 12:01:59.549 INFO  Sign In Success 
+2021-11-11 12:02:04.936 INFO  Total Order Price is 40.26 
+2021-11-11 12:02:13.598 INFO  Successfully updated the total price in db 
+2021-11-11 12:04:23.228 INFO  ORDER: {"id":1522725,"proxyIp":"127.0.0.1","proxyPort":24055,"email":"juliaw62@yahoo.com","primaryItem":"33358436","primaryItemQty":1,"extraItem":"56074532","firstName":"Jason","lastName":"Dohanish","addressOne":"6 HENNING DR","addressTwo":"","city":"FAIRFIELD","state":"NJ","zipCode":"07004-1706","phoneNumber":"4338710881","sharedRegistryLink":"https://www.walmart.com/registry/ER/9e3c4232-37bb-4e64-9e65-7c0e0b051669"} 
+2021-11-11 12:04:54.711 INFO  Order Item IDs: ["47245766195458","55181807740802","70348857833810"] 
+2021-11-11 12:04:56.128 INFO  ORDER: {"id":1522727,"proxyIp":"127.0.0.1","proxyPort":24003,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 12:05:36.303 INFO  Add an item to cart. 
+2021-11-11 12:06:36.063 INFO  Sign In Success 
+2021-11-11 12:08:42.253 INFO  ORDER: {"id":1522730,"proxyIp":"127.0.0.1","proxyPort":24035,"email":"polyaht@yahoo.com","primaryItem":"55835580","primaryItemQty":1,"extraItem":"50553649","firstName":"Gaonu","lastName":"Xiong","addressOne":"4672 N 72ND ST","addressTwo":"","city":"MILWAUKEE","state":"WI","zipCode":"53218-4856","phoneNumber":"5222406319","sharedRegistryLink":"https://www.walmart.com/registry/ER/3872eb10-b269-4c39-89bb-8218fdcf83a8"} 
+2021-11-11 12:09:20.489 INFO  Add an item to cart. 
+2021-11-11 12:09:27.300 INFO  Add an item to cart. 
+2021-11-11 12:10:20.446 INFO  Sign In Success 
+2021-11-11 12:11:29.451 INFO  Order Item IDs: ["47245766195458","55181807740802"] 
+2021-11-11 12:11:30.738 INFO  ORDER: {"id":1522733,"proxyIp":"127.0.0.1","proxyPort":24004,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 12:12:15.216 INFO  Add an item to cart. 
+2021-11-11 12:13:14.811 INFO  Sign In Success 
+2021-11-11 13:53:36.578 INFO  Order Item IDs: ["47245766195458","55181807740802"] 
+2021-11-11 13:53:37.947 INFO  ORDER: {"id":1522756,"proxyIp":"127.0.0.1","proxyPort":24036,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 13:54:09.014 INFO  Add an item to cart. 
+2021-11-11 13:54:09.278 WARN  [id="px-captcha"] 
+2021-11-11 13:54:43.231 INFO  Tried to solve captcha 1 times 
+2021-11-11 13:54:43.461 WARN  [id="px-captcha"] 
+2021-11-11 13:55:21.345 INFO  Tried to solve captcha 2 times 
+2021-11-11 13:57:40.218 INFO  ORDER: {"id":1522759,"proxyIp":"127.0.0.1","proxyPort":24014,"email":"polyaht@yahoo.com","primaryItem":"55835580","primaryItemQty":1,"extraItem":"50553649","firstName":"Gaonu","lastName":"Xiong","addressOne":"4672 N 72ND ST","addressTwo":"","city":"MILWAUKEE","state":"WI","zipCode":"53218-4856","phoneNumber":"5222406319","sharedRegistryLink":"https://www.walmart.com/registry/ER/3872eb10-b269-4c39-89bb-8218fdcf83a8"} 
+2021-11-11 13:58:10.715 INFO  Add an item to cart. 
+2021-11-11 13:58:18.117 INFO  Add an item to cart. 
+2021-11-11 13:58:18.323 WARN  [id="px-captcha"] 
+2021-11-11 13:58:37.860 INFO  Tried to solve captcha 1 times 
+2021-11-11 13:58:38.065 WARN  [id="px-captcha"] 
+2021-11-11 13:59:19.194 INFO  Tried to solve captcha 2 times 
+2021-11-11 14:09:35.412 INFO  Order Item IDs: ["47245766195458","55181807740802"] 
+2021-11-11 14:09:36.715 INFO  ORDER: {"id":1522764,"proxyIp":"127.0.0.1","proxyPort":24005,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 14:10:06.790 INFO  Add an item to cart. 
+2021-11-11 14:11:08.398 INFO  Sign In Success 
+2021-11-11 14:13:15.198 INFO  ORDER: {"id":1522766,"proxyIp":"127.0.0.1","proxyPort":24063,"email":"polyaht@yahoo.com","primaryItem":"55835580","primaryItemQty":1,"extraItem":"50553649","firstName":"Gaonu","lastName":"Xiong","addressOne":"4672 N 72ND ST","addressTwo":"","city":"MILWAUKEE","state":"WI","zipCode":"53218-4856","phoneNumber":"5222406319","sharedRegistryLink":"https://www.walmart.com/registry/ER/3872eb10-b269-4c39-89bb-8218fdcf83a8"} 
+2021-11-11 14:13:47.563 INFO  Add an item to cart. 
+2021-11-11 14:13:52.708 INFO  Add an item to cart. 
+2021-11-11 14:14:50.504 INFO  Sign In Success 
+2021-11-11 14:14:54.611 INFO  Total Order Price is 39.28 
+2021-11-11 14:14:55.625 INFO  Successfully updated the total price in db 
+2021-11-11 14:15:31.056 INFO  Applied gift card info: 6186339628327361, 2.09 
+2021-11-11 14:15:32.192 INFO  {"status":"success"} 
+2021-11-11 14:15:41.910 INFO  Applied value: 2.09 
+2021-11-11 14:16:08.776 INFO  Applied gift card info: 6186339637190588, 2.09 
+2021-11-11 14:16:09.872 INFO  {"status":"success"} 
+2021-11-11 14:16:19.658 INFO  Applied value: 2.09 
+2021-11-11 14:16:56.497 INFO  Applied gift card info: 6188221674817858, 34.9 
+2021-11-11 14:16:57.619 INFO  {"status":"success"} 
+2021-11-11 14:17:06.068 INFO  Applied value: 34.9 
+2021-11-11 14:17:39.946 INFO  Applied gift card info: 6186338476016184, 33 
+2021-11-11 14:17:41.036 INFO  {"status":"success"} 
+2021-11-11 14:17:48.035 INFO  Applied value: 33 
+2021-11-11 14:17:48.035 INFO  The total price is covered. Placing order... 
+2021-11-11 14:17:51.652 INFO  Cart id: f617d122-fa4e-4b51-bd33-9c9e0ec06344 
+2021-11-11 14:18:11.229 WARN  [id="px-captcha"] 
+2021-11-11 14:18:52.086 INFO  Tried to solve captcha 1 times 
+2021-11-11 14:18:52.330 WARN  [id="px-captcha"] 
+2021-11-11 14:19:21.843 INFO  Tried to solve captcha 2 times 
+2021-11-11 14:19:52.040 INFO  Order Number: 5862131194796 
+2021-11-11 14:19:53.696 INFO  Successfully submitted order number: 5862131194796 
+2021-11-11 14:20:21.438 INFO  Extra item successfully removed. 
+2021-11-11 14:54:38.341 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 14:54:39.608 INFO  ORDER: {"id":1522782,"proxyIp":"127.0.0.1","proxyPort":24085,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 14:55:14.519 INFO  Add an item to cart. 
+2021-11-11 14:56:15.035 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 14:56:16.264 INFO  ORDER: {"id":1522784,"proxyIp":"127.0.0.1","proxyPort":24095,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 14:56:53.319 INFO  Add an item to cart. 
+2021-11-11 14:58:00.305 INFO  Sign In Success 
+2021-11-11 14:58:03.835 INFO  Total Order Price is 32.98 
+2021-11-11 14:58:04.908 INFO  Successfully updated the total price in db 
+2021-11-11 14:58:38.905 INFO  Applied gift card info: 6192271802720540, 1.28 
+2021-11-11 14:58:40.135 INFO  {"status":"success"} 
+2021-11-11 14:58:49.593 INFO  Applied value: 1.28 
+2021-11-11 14:59:24.662 INFO  Applied gift card info: 6186338667251010, 2.1 
+2021-11-11 14:59:25.890 INFO  {"status":"success"} 
+2021-11-11 14:59:34.489 INFO  Applied value: 2.1 
+2021-11-11 15:00:05.395 INFO  Applied gift card info: 6186338530546158, 28.65 
+2021-11-11 15:00:06.512 INFO  {"status":"success"} 
+2021-11-11 15:00:15.017 INFO  Applied value: 28.65 
+2021-11-11 15:00:51.003 INFO  Applied gift card info: 6192235971941561, 27.49 
+2021-11-11 15:00:52.117 INFO  {"status":"success"} 
+2021-11-11 15:01:01.176 INFO  Applied value: 27.49 
+2021-11-11 15:01:01.176 INFO  The total price is covered. Placing order... 
+2021-11-11 15:01:03.377 INFO  Cart id: d9703ad2-acc7-4251-9783-51ff366204bf 
+2021-11-11 15:01:16.706 WARN  [id="px-captcha"] 
+2021-11-11 15:01:49.232 INFO  Tried to solve captcha 1 times 
+2021-11-11 15:02:19.399 INFO  Order Number:  
+2021-11-11 15:02:20.595 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (events.js:388:22)\n    at endReadableNT (internal/streams/readable.js:1336:12)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":82},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1522784/finish/","data":"{\"supplier_order_number\":\"\",\"items\":[{\"id\":\"47245766195458\",\"quantity_bought\":2}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (events.js:388:22)
+    at endReadableNT (internal/streams/readable.js:1336:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) 
+2021-11-11 15:03:30.325 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 15:03:31.573 INFO  ORDER: {"id":1522790,"proxyIp":"127.0.0.1","proxyPort":24073,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 15:04:11.285 INFO  Add an item to cart. 
+2021-11-11 15:05:11.576 INFO  Sign In Success 
+2021-11-11 16:49:51.746 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 16:49:53.129 INFO  ORDER: {"id":1522794,"proxyIp":"127.0.0.1","proxyPort":24039,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 16:50:22.394 INFO  Add an item to cart. 
+2021-11-11 16:51:24.669 INFO  Sign In Success 
+2021-11-11 16:51:28.640 INFO  Total Order Price is 32.98 
+2021-11-11 16:51:29.681 INFO  Successfully updated the total price in db 
+2021-11-11 16:52:13.410 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 16:52:14.758 INFO  ORDER: {"id":1522795,"proxyIp":"127.0.0.1","proxyPort":24076,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 16:52:49.704 INFO  Add an item to cart. 
+2021-11-11 16:53:50.743 INFO  Sign In Success 
+2021-11-11 16:55:06.721 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 16:55:08.064 INFO  ORDER: {"id":1522796,"proxyIp":"127.0.0.1","proxyPort":24013,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 16:55:38.232 INFO  Add an item to cart. 
+2021-11-11 16:56:36.148 INFO  Sign In Success 
+2021-11-11 17:02:32.072 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 17:02:33.365 INFO  ORDER: {"id":1522797,"proxyIp":"127.0.0.1","proxyPort":24006,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 17:03:07.559 INFO  Add an item to cart. 
+2021-11-11 17:04:08.206 INFO  Sign In Success 
+2021-11-11 17:35:55.408 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 17:35:56.797 INFO  ORDER: {"id":1522798,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 17:36:30.329 INFO  Add an item to cart. 
+2021-11-11 17:37:28.733 INFO  Sign In Success 
+2021-11-11 17:41:03.344 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 17:41:04.618 INFO  ORDER: {"id":1522799,"proxyIp":"127.0.0.1","proxyPort":24002,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 17:41:40.494 INFO  Add an item to cart. 
+2021-11-11 17:42:46.857 INFO  Sign In Success 
+2021-11-11 17:45:34.360 INFO  Order Item IDs: ["47245766195458"] 
+2021-11-11 17:45:35.670 INFO  ORDER: {"id":1522800,"proxyIp":"127.0.0.1","proxyPort":24051,"email":"SidneySaltmarsh627@outlook.com","primaryItem":"23215266","primaryItemQty":2,"extraItem":null,"firstName":"Regina","lastName":"Schilling","addressOne":"6321 SE 58TH AVE","addressTwo":"","city":"PORTLAND","state":"OR","zipCode":"97206-6709","phoneNumber":"3153011132","sharedRegistryLink":"https://www.walmart.com/registry/ER/7ec5887b-7a77-4b83-9a0c-5eb8290dfb4d"} 
+2021-11-11 17:46:12.100 INFO  Add an item to cart. 
+2021-11-11 17:47:26.489 INFO  Sign In Success 
+2021-11-11 17:47:32.279 INFO  Total Order Price is 32.98 
+2021-11-11 17:47:33.332 INFO  Successfully updated the total price in db 
+2021-11-11 17:48:05.952 INFO  Applied gift card info: 6192230589556470, 2.11 
+2021-11-11 17:48:07.110 INFO  {"status":"success"} 
+2021-11-11 17:48:14.148 INFO  Applied value: 2.11 
+2021-11-11 17:48:48.106 INFO  Applied gift card info: 6183015258458089, 2.12 
+2021-11-11 17:48:49.182 INFO  {"status":"success"} 
+2021-11-11 17:48:59.066 INFO  Applied value: 2.12 
+2021-11-11 17:49:29.041 INFO  Applied gift card info: 6201553932901634, 28.62 
+2021-11-11 17:49:30.178 INFO  {"status":"success"} 
+2021-11-11 17:49:38.597 INFO  Applied value: 28.62 
+2021-11-11 17:50:13.000 INFO  Applied gift card info: 6186338474453055, 26.63 
+2021-11-11 17:50:14.122 INFO  {"status":"success"} 
+2021-11-11 17:50:21.826 INFO  Applied value: 26.63 
+2021-11-11 17:50:21.826 INFO  The total price is covered. Placing order... 
+2021-11-11 17:50:24.037 INFO  Cart id: d9703ad2-acc7-4251-9783-51ff366204bf 
+2021-11-11 17:50:37.488 WARN  [id="px-captcha"] 
+2021-11-11 17:51:18.862 INFO  Tried to solve captcha 1 times 
+2021-11-11 17:51:19.083 WARN  [id="px-captcha"] 
+2021-11-11 17:51:55.911 INFO  Tried to solve captcha 2 times 
+2021-11-11 17:52:26.123 INFO  Order Number: 5862133871472 
+2021-11-11 17:52:27.649 INFO  Successfully submitted order number: 5862133871472 
+2021-11-11 17:52:57.422 INFO  Extra item successfully removed. 
