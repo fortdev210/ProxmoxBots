@@ -2297,3 +2297,28 @@ Error: Request failed with status code 400
 2021-11-11 17:52:26.123 INFO  Order Number: 5862133871472 
 2021-11-11 17:52:27.649 INFO  Successfully submitted order number: 5862133871472 
 2021-11-11 17:52:57.422 INFO  Extra item successfully removed. 
+2021-11-15 10:24:58.311 INFO  No order items found. Please put orders in this folder. 
+2021-11-15 10:25:21.418 INFO  Order Item IDs: ["29410307898706","37094404509394","39476719540794","43733235820130","44640837850082","51469250470146"] 
+2021-11-15 10:25:31.299 INFO  ORDER: {"id":1523675,"proxyIp":"127.0.0.1","proxyPort":24007,"email":"purccvx@yahoo.com","primaryItem":"23215266","primaryItemQty":1,"extraItem":"53313129","firstName":"Olivia","lastName":"Kory","addressOne":"547 MERRITT LN","addressTwo":"","city":"BIRMINGHAM","state":"MI","zipCode":"48009-4417","phoneNumber":"2567137800","sharedRegistryLink":null} 
+2021-11-15 10:26:10.503 INFO  Old sign in page. 
+2021-11-15 10:26:23.045 WARN  [id="px-captcha"] 
+2021-11-15 10:27:03.252 INFO  Tried to solve captcha 1 times 
+2021-11-15 10:27:03.495 WARN  [id="px-captcha"] 
+2021-11-15 10:27:35.828 INFO  Tried to solve captcha 2 times 
+2021-11-15 10:28:05.874 INFO  Sign In Success. Registering... 
+2021-11-15 10:28:19.549 ERROR Cannot read property 'focus' of null
+{}
+TypeError: Cannot read property 'focus' of null
+    at WalmartRegistry.insertValue (/home/jeff/Projects/ProxmoxBots/lib/puppeeteer.js:146:17)
+    at async WalmartRegistry.addAddress (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:42:7)
+    at async WalmartRegistry.processOrderWithExtraItem (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/walmart_registry.js:171:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-registry/init.js:32:5) 
+2021-11-15 10:28:25.014 INFO  ORDER: {"id":1523676,"proxyIp":"127.0.0.1","proxyPort":24054,"email":"coartyard@yahoo.com","primaryItem":"53967682","primaryItemQty":1,"extraItem":"56074532","firstName":"Dan","lastName":"Firnekas","addressOne":"122 TA BI DR","addressTwo":"","city":"WORLAND","state":"WY","zipCode":"82401-9569","phoneNumber":"7969836648","sharedRegistryLink":null} 
+2021-11-15 10:28:51.262 INFO  Order Item IDs: ["29410307898706","37094404509394","39476719540794","43733235820130","44640837850082","51469250470146"] 
+2021-11-15 10:29:00.461 INFO  ORDER: {"id":1523677,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"ainnmrv@yahoo.com","primaryItem":"23215266","primaryItemQty":1,"extraItem":"53313129","firstName":"Olivia","lastName":"Kory","addressOne":"547 MERRITT LN","addressTwo":"","city":"BIRMINGHAM","state":"MI","zipCode":"48009-4417","phoneNumber":"2567137800","sharedRegistryLink":null} 
+2021-11-15 10:29:30.455 INFO  Old sign in page. 
+2021-11-15 10:29:41.228 WARN  [id="px-captcha"] 
+2021-11-15 10:29:58.679 INFO  Tried to solve captcha 1 times 
+2021-11-15 10:29:58.898 WARN  [id="px-captcha"] 
+2021-11-15 10:30:31.967 INFO  Tried to solve captcha 2 times 
+2021-11-15 10:30:32.188 WARN  [id="px-captcha"] 
