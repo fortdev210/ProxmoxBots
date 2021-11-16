@@ -39,7 +39,7 @@ class WalmartBuy extends WalmartBase {
     const formHanlde = await this.page.$('[id="auth-frame"]');
     const frame = await formHanlde.contentFrame();
     await frame.type('[id="email"]', this.orderInfo.email, { delay: 300 });
-    await this.sleep(3000)
+    await this.sleep(3000);
     try {
       await frame.click('[data-automation-id="signin-continue-submit-btn"]');
       await this.sleep(2000);
@@ -111,7 +111,17 @@ class WalmartBuy extends WalmartBase {
     });
     await this.sleep(1000);
     const giftCardInfo = await api.getGiftCardByAPI(this.orderInfo.id);
-    await this.waitForLoadingElement('[id="gc-number"]');
+    try {
+      await this.waitForLoadingElement('[id="gc-number"]');
+    } catch (error) {
+      await this.page.evaluate(() => {
+        $("button:contains(Add a payment method)").click();
+      });
+      await this.page.evaluate(() => {
+        $("span:contains(Gift card)").click();
+      });
+      await this.waitForLoadingElement('[id="gc-number"]');
+    }
     await this.insertValue('[id="gc-number"]', giftCardInfo.cardNumber);
     await this.sleep(1000);
     await this.waitForLoadingElement('[type="password"]');
