@@ -140,24 +140,33 @@ class WalmartBuy extends WalmartBase {
     await this.insertValue('[type="password"]', giftCardInfo.pinCode);
     await this.sleep(1000);
     await this.clickButton('[type="submit"]');
-    await this.sleep(2000);
     await this.waitForLoadingElement(`[data-slide="${index}"]`);
-    await this.sleep(2300);
-    const gcAmount = await this.page.evaluate(
-      (index) => {
-        const cardContent = document.querySelector(
-          `[data-slide="${index}"]`
-        ).innerText;
-        const pattern = /Amount applied(.*)/g;
-        const amount = cardContent
-          .match(pattern)[0]
+    await this.sleep(1000);
+    const usedCardInfo = await this.page.evaluate(() => {
+      const cards = document.querySelectorAll("[data-slide]");
+      let cardNumList = [];
+      let amountList = [];
+      const numpatt = /\d{4}/g;
+      const amountPatt = /Amount applied(.*)/g;
+
+      for (let i = 0; i < cards.length; i++) {
+        const content = cards[i].innerText;
+        cardNumList.push(content.match(numpatt)[0]);
+        const amount = content
+          .match(amountPatt)[0]
           .replace("Amount applied:", "")
           .trim()
           .replace("$", "");
-        return Number(amount);
-      },
-      [index]
-    );
+        amountList.push(Number(amount));
+      }
+      return [cardNumList, amountList];
+    });
+
+    const gcAmount =
+      usedCardInfo[1][
+        usedCardInfo[0].indexOf(giftCardInfo.cardNumber.slice(-4))
+      ];
+
     LOGGER.info(
       "Applied gift card info: ",
       giftCardInfo.cardNumber,
@@ -183,7 +192,10 @@ class WalmartBuy extends WalmartBase {
     await this.page.evaluate(() => {
       $("button:contains(Place order)").click();
     });
-    await this.resolveCaptcha();
+    await this.sleep(1000);
+    try {
+      await this.resolveCaptcha();
+    } catch (error) {}
     await this.loadJqueryIntoPage();
     const orderNumber = await this.page.evaluate(() => {
       const orderNumber = $("span:contains(Order#)").text();
@@ -243,10 +255,13 @@ class WalmartBuy extends WalmartBase {
     await this.page.evaluate(() => {
       $("label:contains(Ordered wrong item or amount.)").click();
     });
+    await this.clickButton('[data-testid="radio-2"]');
+    console.log("Select reason.");
     await this.sleep(1000);
-    await this.page.evaluate(() => {
-      $("button:contains(Remove)").click();
-    });
+    // await this.page.evaluate(() => {
+    //   $("button:contains(Remove)").click();
+    // });
+    await this.clickButton('[data-testid="panel-cancel-cta"]');
     await this.sleep(3000);
     LOGGER.info("Extra item successfully removed.");
   }
