@@ -2853,3 +2853,108 @@ TypeError: Cannot read property 'split' of null
 2021-11-16 16:27:14.292 INFO  Tried to solve captcha 1 times 
 2021-11-16 16:27:44.508 INFO  Order Number: 5912146040130 
 2021-11-16 16:27:45.745 INFO  Successfully submitted order number: 5912146040130 
+2021-11-16 16:43:03.613 INFO  Order Item IDs: ["19347960953538","53883751257858","59955325941362"] 
+2021-11-16 16:43:04.665 INFO  ORDER: {"id":1524282,"proxyIp":"127.0.0.1","proxyPort":24047,"email":"termodact@yahoo.com","primaryItem":"51799538","primaryItemQty":1,"extraItem":"922484274","firstName":"Nasir","lastName":"Allen","addressOne":"25050 LAKE SHORE BLVD","addressTwo":"","city":"EUCLID","state":"OH","zipCode":"44132-3905","phoneNumber":"4835208285","sharedRegistryLink":"https://www.walmart.com/registry/ER/4d4f38a7-49a9-46b8-97f0-53b60beb04b5"} 
+2021-11-16 16:43:34.073 INFO  Add an item to cart. 
+2021-11-16 16:43:40.609 INFO  Add an item to cart. 
+2021-11-16 16:44:40.118 INFO  Sign In Success 
+2021-11-16 16:44:43.584 INFO  Total Order Price is 43.1 
+2021-11-16 16:44:44.491 INFO  Successfully updated the total price in db 
+2021-11-16 16:45:22.172 INFO  Order Item IDs: ["19347960953538","53883751257858","59955325941362"] 
+2021-11-16 16:45:23.205 INFO  ORDER: {"id":1524283,"proxyIp":"127.0.0.1","proxyPort":24093,"email":"termodact@yahoo.com","primaryItem":"51799538","primaryItemQty":1,"extraItem":"922484274","firstName":"Nasir","lastName":"Allen","addressOne":"25050 LAKE SHORE BLVD","addressTwo":"","city":"EUCLID","state":"OH","zipCode":"44132-3905","phoneNumber":"4835208285","sharedRegistryLink":"https://www.walmart.com/registry/ER/4d4f38a7-49a9-46b8-97f0-53b60beb04b5"} 
+2021-11-16 16:45:52.976 INFO  Add an item to cart. 
+2021-11-16 16:45:59.421 INFO  Add an item to cart. 
+2021-11-16 16:47:01.886 INFO  Sign In Success 
+2021-11-16 16:47:04.232 INFO  Total Order Price is 43.1 
+2021-11-16 16:47:05.153 INFO  Successfully updated the total price in db 
+2021-11-16 16:48:04.938 INFO  Applied gift card info: 6201554255084907, 8.19 
+2021-11-16 16:48:05.998 INFO  {"status":"success"} 
+2021-11-16 16:48:15.759 INFO  Applied value: 8.19 
+2021-11-16 16:48:49.426 INFO  Applied gift card info: 6186338449208979, 8.18 
+2021-11-16 16:48:50.418 INFO  {"status":"success"} 
+2021-11-16 16:49:01.164 INFO  Applied value: 8.18 
+2021-11-16 16:49:34.494 INFO  Applied gift card info: 6192267772352032, 8.18 
+2021-11-16 16:49:35.430 INFO  {"status":"success"} 
+2021-11-16 16:49:45.369 INFO  Applied value: 8.18 
+2021-11-16 16:50:15.983 INFO  Applied gift card info: 6201555327027039, 18.55 
+2021-11-16 16:50:16.992 INFO  {"status":"success"} 
+2021-11-16 16:50:25.676 INFO  Applied value: 18.55 
+2021-11-16 16:50:29.363 ERROR Error while fetching Cannot read property 'split' of null
+{}
+TypeError: Cannot read property 'split' of null
+    at API_MANAGER.getGiftCardByAPI (/home/jeff/Projects/ProxmoxBots/lib/api.js:56:44)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async WalmartBuy.addGiftCard (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:115:26)
+    at async WalmartBuy.payOrder (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:82:29)
+    at async WalmartBuy.buy (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/walmart_buy.js:283:7)
+    at async main (/home/jeff/Projects/ProxmoxBots/new-walmart-buy/init.js:32:5) 
+2021-11-16 16:52:17.101 INFO  ORDER: {"id":1524284,"proxyIp":"127.0.0.1","proxyPort":24013,"email":"ghasschat@yahoo.com","primaryItem":"46039816","primaryItemQty":1,"extraItem":"922484274","firstName":"mia","lastName":"davis","addressOne":"341 Private Road 8444","addressTwo":"","city":"Carthage","state":"Texas","zipCode":"75633","phoneNumber":"4449594881","sharedRegistryLink":"https://www.walmart.com/registry/ER/69a8f32b-f365-4fa2-b2ac-307854aa532c"} 
+2021-11-16 16:52:55.837 INFO  Order Item IDs: ["19347960953538","53883751257858","59955325941362"] 
+2021-11-16 16:52:56.844 INFO  ORDER: {"id":1524285,"proxyIp":"127.0.0.1","proxyPort":24087,"email":"termodact@yahoo.com","primaryItem":"51799538","primaryItemQty":1,"extraItem":"922484274","firstName":"Nasir","lastName":"Allen","addressOne":"25050 LAKE SHORE BLVD","addressTwo":"","city":"EUCLID","state":"OH","zipCode":"44132-3905","phoneNumber":"4835208285","sharedRegistryLink":"https://www.walmart.com/registry/ER/4d4f38a7-49a9-46b8-97f0-53b60beb04b5"} 
+2021-11-16 16:53:27.877 INFO  Add an item to cart. 
+2021-11-16 16:53:33.070 INFO  Add an item to cart. 
+2021-11-16 16:54:33.156 INFO  Sign In Success 
+2021-11-16 16:54:36.862 INFO  Total Order Price is 43.1 
+2021-11-16 16:54:37.744 INFO  Successfully updated the total price in db 
+2021-11-16 16:55:32.695 INFO  Applied gift card info: 6186338791065355, 8.12 
+2021-11-16 16:55:33.851 INFO  {"status":"success"} 
+2021-11-16 16:55:39.340 INFO  Applied value: 8.12 
+2021-11-16 16:56:12.693 INFO  Applied gift card info: 6186338848647248, 8.12 
+2021-11-16 16:56:13.786 INFO  {"status":"success"} 
+2021-11-16 16:56:22.891 INFO  Applied value: 8.12 
+2021-11-16 16:56:52.369 INFO  Applied gift card info: 6178902766520846, 8.07 
+2021-11-16 16:56:53.337 INFO  {"status":"success"} 
+2021-11-16 16:57:01.697 INFO  Applied value: 8.07 
+2021-11-16 16:57:34.977 INFO  Applied gift card info: 6201555327132677, 18.79 
+2021-11-16 16:57:35.970 INFO  {"status":"success"} 
+2021-11-16 16:57:44.508 INFO  Applied value: 18.79 
+2021-11-16 16:57:44.508 INFO  The total price is covered. Placing order... 
+2021-11-16 16:57:46.266 INFO  Cart id: 5a6cdd75-010e-458c-a261-e4815af1d1f2 
+2021-11-16 16:58:02.261 WARN  [id="px-captcha"] 
+2021-11-16 16:58:27.945 INFO  Tried to solve captcha 1 times 
+2021-11-16 16:58:58.201 INFO  Order Number: 5912145797277 
+2021-11-16 16:58:59.533 INFO  Successfully submitted order number: 5912145797277 
+2021-11-16 17:01:00.320 INFO  ORDER: {"id":1524286,"proxyIp":"127.0.0.1","proxyPort":24020,"email":"ghasschat@yahoo.com","primaryItem":"46039816","primaryItemQty":1,"extraItem":"922484274","firstName":"mia","lastName":"davis","addressOne":"341 Private Road 8444","addressTwo":"","city":"Carthage","state":"Texas","zipCode":"75633","phoneNumber":"4449594881","sharedRegistryLink":"https://www.walmart.com/registry/ER/69a8f32b-f365-4fa2-b2ac-307854aa532c"} 
+2021-11-16 17:01:59.260 INFO  Order Item IDs: ["53883751257858","59955325941362"] 
+2021-11-16 17:02:00.283 INFO  ORDER: {"id":1524287,"proxyIp":"127.0.0.1","proxyPort":24035,"email":"ghasschat@yahoo.com","primaryItem":"46039816","primaryItemQty":1,"extraItem":"922484274","firstName":"mia","lastName":"davis","addressOne":"341 Private Road 8444","addressTwo":"","city":"Carthage","state":"Texas","zipCode":"75633","phoneNumber":"4449594881","sharedRegistryLink":"https://www.walmart.com/registry/ER/69a8f32b-f365-4fa2-b2ac-307854aa532c"} 
+2021-11-16 17:02:35.848 INFO  Order Item IDs: ["53883751257858","59955325941362"] 
+2021-11-16 17:02:36.848 INFO  ORDER: {"id":1524288,"proxyIp":"127.0.0.1","proxyPort":24063,"email":"ghasschat@yahoo.com","primaryItem":"46039816","primaryItemQty":1,"extraItem":"922484274","firstName":"mia","lastName":"davis","addressOne":"341 Private Road 8444","addressTwo":"","city":"Carthage","state":"Texas","zipCode":"75633","phoneNumber":"4449594881","sharedRegistryLink":"https://www.walmart.com/registry/ER/69a8f32b-f365-4fa2-b2ac-307854aa532c"} 
+2021-11-16 17:03:07.213 INFO  Add an item to cart. 
+2021-11-16 17:03:13.524 INFO  Add an item to cart. 
+2021-11-16 17:04:14.252 INFO  Sign In Success 
+2021-11-16 17:04:17.050 INFO  Total Order Price is 41.25 
+2021-11-16 17:04:17.933 INFO  Successfully updated the total price in db 
+2021-11-16 17:04:42.806 INFO  Order Item IDs: ["53883751257858","59955325941362"] 
+2021-11-16 17:04:43.807 INFO  ORDER: {"id":1524289,"proxyIp":"127.0.0.1","proxyPort":24067,"email":"ghasschat@yahoo.com","primaryItem":"46039816","primaryItemQty":1,"extraItem":"922484274","firstName":"mia","lastName":"davis","addressOne":"341 Private Road 8444","addressTwo":"","city":"Carthage","state":"Texas","zipCode":"75633","phoneNumber":"4449594881","sharedRegistryLink":"https://www.walmart.com/registry/ER/69a8f32b-f365-4fa2-b2ac-307854aa532c"} 
+2021-11-16 17:05:13.171 INFO  Add an item to cart. 
+2021-11-16 17:05:17.587 INFO  Add an item to cart. 
+2021-11-16 17:06:16.300 INFO  Sign In Success 
+2021-11-16 17:06:19.642 INFO  Total Order Price is 41.25 
+2021-11-16 17:06:20.557 INFO  Successfully updated the total price in db 
+2021-11-16 17:07:17.280 INFO  Applied gift card info: 6192234760198545, 8.02 
+2021-11-16 17:07:18.381 INFO  {"status":"success"} 
+2021-11-16 17:07:29.011 INFO  Applied value: 8.02 
+2021-11-16 17:08:00.599 INFO  Applied gift card info: 6192276073061376, 8.02 
+2021-11-16 17:08:01.697 INFO  {"status":"success"} 
+2021-11-16 17:08:11.321 INFO  Applied value: 8.02 
+2021-11-16 17:08:42.849 INFO  Applied gift card info: 6192234146578339, 8.02 
+2021-11-16 17:08:43.829 INFO  {"status":"success"} 
+2021-11-16 17:08:50.734 INFO  Applied value: 8.02 
+2021-11-16 17:09:22.765 INFO  Applied gift card info: 6201555327374207, 17.19 
+2021-11-16 17:09:23.740 INFO  {"status":"success"} 
+2021-11-16 17:09:33.055 INFO  Applied value: 17.19 
+2021-11-16 17:09:33.055 INFO  The total price is covered. Placing order... 
+2021-11-16 17:09:34.874 INFO  Cart id: 2c50778f-1f47-418e-b880-d4969891dcc7 
+2021-11-16 17:09:50.913 WARN  [id="px-captcha"] 
+2021-11-16 17:10:14.406 INFO  Tried to solve captcha 1 times 
+2021-11-16 17:10:44.599 INFO  Order Number: 5912146968195 
+2021-11-16 17:10:45.867 INFO  Successfully submitted order number: 5912146968195 
+2021-11-16 17:12:50.029 INFO  ORDER: {"id":1524290,"proxyIp":"127.0.0.1","proxyPort":24030,"email":"mitchellmadison749@yahoo.com","primaryItem":"123350799","primaryItemQty":1,"extraItem":"307503048","firstName":"Jessica","lastName":"Zeh","addressOne":"337 LANEIL LN","addressTwo":"","city":"DAVENPORT","state":"NY","zipCode":"13750-1347","phoneNumber":"4633912900","sharedRegistryLink":"https://www.walmart.com/registry/ER/40d06c03-deff-413a-b4de-6995d9c40317"} 
+2021-11-16 17:19:41.072 INFO  Order Item IDs: ["59955325941362"] 
+2021-11-16 17:19:42.146 INFO  ORDER: {"id":1524291,"proxyIp":"127.0.0.1","proxyPort":24000,"email":"mitchellmadison749@yahoo.com","primaryItem":"123350799","primaryItemQty":1,"extraItem":"307503048","firstName":"Jessica","lastName":"Zeh","addressOne":"337 LANEIL LN","addressTwo":"","city":"DAVENPORT","state":"NY","zipCode":"13750-1347","phoneNumber":"4633912900","sharedRegistryLink":"https://www.walmart.com/registry/ER/40d06c03-deff-413a-b4de-6995d9c40317"} 
+2021-11-16 17:20:14.236 INFO  Add an item to cart. 
+2021-11-16 17:20:20.615 INFO  Add an item to cart. 
+2021-11-16 17:20:20.858 WARN  [id="px-captcha"] 
+2021-11-16 17:20:52.300 INFO  Tried to solve captcha 1 times 
+2021-11-16 17:20:52.535 WARN  [id="px-captcha"] 

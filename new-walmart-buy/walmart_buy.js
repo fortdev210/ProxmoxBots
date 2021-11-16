@@ -82,7 +82,8 @@ class WalmartBuy extends WalmartBase {
       const appliedAmount = await this.addGiftCard(index);
       LOGGER.info("Applied value: " + appliedAmount);
       remnants = remnants - appliedAmount;
-      if (remnants > 0) {
+
+      if (remnants > 0.01) {
         index = index + 1;
       } else {
         break;
@@ -253,15 +254,15 @@ class WalmartBuy extends WalmartBase {
       }
     );
     await this.page.evaluate(() => {
-      $("label:contains(Ordered wrong item or amount.)").click();
+      // $("label:contains(Ordered wrong item or amount.)").click();
+      document.querySelectorAll('[id*="radio-"]')[2].click();
     });
-    await this.clickButton('[data-testid="radio-2"]');
-    console.log("Select reason.");
     await this.sleep(1000);
-    // await this.page.evaluate(() => {
-    //   $("button:contains(Remove)").click();
-    // });
-    await this.clickButton('[data-testid="panel-cancel-cta"]');
+    await this.page.evaluate(() => {
+      // $("button:contains(Remove)").click();
+      document.querySelectorAll('[data-testid="cancel-cta"]')[0].click();
+    });
+
     await this.sleep(3000);
     LOGGER.info("Extra item successfully removed.");
   }
