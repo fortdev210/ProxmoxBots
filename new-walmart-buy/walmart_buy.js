@@ -38,8 +38,9 @@ class WalmartBuy extends WalmartBase {
     await this.waitForLoadingElement("iframe");
     const formHanlde = await this.page.$('[id="auth-frame"]');
     const frame = await formHanlde.contentFrame();
-    await frame.type('[id="email"]', this.orderInfo.email, { delay: 300 });
-    await this.sleep(3000);
+    await this.sleep(1000);
+    await frame.type('[id="email"]', this.orderInfo.email, { delay: 100 });
+
     try {
       await frame.click('[data-automation-id="signin-continue-submit-btn"]');
       await this.sleep(2000);
@@ -107,7 +108,7 @@ class WalmartBuy extends WalmartBase {
 
   async addGiftCard(index) {
     await this.page.evaluate(() => {
-      $("span:contains(Gift card)").click();
+      $("button:contains(Gift card)").click();
     });
     await this.sleep(1000);
     const giftCardInfo = await api.getGiftCardByAPI(this.orderInfo.id);
@@ -118,9 +119,20 @@ class WalmartBuy extends WalmartBase {
         $("button:contains(Add a payment method)").click();
       });
       await this.page.evaluate(() => {
-        $("span:contains(Gift card)").click();
+        $("button:contains(Gift card)").click();
       });
-      await this.waitForLoadingElement('[id="gc-number"]');
+      try {
+        await this.waitForLoadingElement('[id="gc-number"]');
+      } catch (error) {
+        await this.page.evaluate(() => {
+          $("button:contains(Change payments)").click();
+        });
+        await this.sleep(2000);
+        await this.page.evaluate(() => {
+          $("button:contains(Gift card)").click();
+        });
+        await this.waitForLoadingElement('[id="gc-number"]');
+      }
     }
     await this.insertValue('[id="gc-number"]', giftCardInfo.cardNumber);
     await this.sleep(1000);
@@ -130,6 +142,7 @@ class WalmartBuy extends WalmartBase {
     await this.clickButton('[type="submit"]');
     await this.sleep(2000);
     await this.waitForLoadingElement(`[data-slide="${index}"]`);
+    await this.sleep(2300);
     const gcAmount = await this.page.evaluate(
       (index) => {
         const cardContent = document.querySelector(

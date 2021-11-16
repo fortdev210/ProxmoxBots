@@ -2322,3 +2322,216 @@ TypeError: Cannot read property 'focus' of null
 2021-11-15 10:29:58.898 WARN  [id="px-captcha"] 
 2021-11-15 10:30:31.967 INFO  Tried to solve captcha 2 times 
 2021-11-15 10:30:32.188 WARN  [id="px-captcha"] 
+2021-11-16 12:19:05.025 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:19:06.155 INFO  ORDER: {"id":1524180,"proxyIp":"127.0.0.1","proxyPort":24068,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:19:57.129 INFO  Add an item to cart. 
+2021-11-16 12:20:03.469 INFO  Add an item to cart. 
+2021-11-16 12:21:07.669 INFO  Sign In Success 
+2021-11-16 12:21:13.425 INFO  Total Order Price is 40.27 
+2021-11-16 12:21:14.399 INFO  Successfully updated the total price in db 
+2021-11-16 12:21:47.923 INFO  Applied gift card info: 6192234247316676, 10.58 
+2021-11-16 12:21:49.080 INFO  {"status":"success"} 
+2021-11-16 12:21:58.646 INFO  Applied value: 10.58 
+2021-11-16 12:22:33.489 INFO  Applied gift card info: 6194293258829113, 10.58 
+2021-11-16 12:22:34.616 INFO  {"status":"success"} 
+2021-11-16 12:22:42.788 INFO  Applied value: 10.58 
+2021-11-16 12:23:12.490 INFO  Applied gift card info: 6201554258200324, 10.58 
+2021-11-16 12:23:13.506 INFO  {"status":"success"} 
+2021-11-16 12:23:22.559 INFO  Applied value: 10.58 
+2021-11-16 12:23:53.318 INFO  Applied gift card info: 6186338472053439, 10.58 
+2021-11-16 12:23:54.430 INFO  {"status":"success"} 
+2021-11-16 12:24:02.954 INFO  Applied value: 10.58 
+2021-11-16 12:24:02.954 INFO  The total price is covered. Placing order... 
+2021-11-16 12:24:06.707 INFO  Cart id: 64c23d00-8430-469f-b121-c864d89b75ca 
+2021-11-16 12:24:52.251 INFO  Order Number:  
+2021-11-16 12:24:53.371 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (events.js:388:22)\n    at endReadableNT (internal/streams/readable.js:1336:12)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":82},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1524180/finish/","data":"{\"supplier_order_number\":\"\",\"items\":[{\"id\":\"17005030877546\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (events.js:388:22)
+    at endReadableNT (internal/streams/readable.js:1336:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) 
+2021-11-16 12:25:23.148 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:25:24.266 INFO  ORDER: {"id":1524181,"proxyIp":"127.0.0.1","proxyPort":24063,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:25:58.485 INFO  Add an item to cart. 
+2021-11-16 12:26:05.935 INFO  Add an item to cart. 
+2021-11-16 12:27:13.659 INFO  Sign In Success 
+2021-11-16 12:27:16.397 INFO  Total Order Price is 40.27 
+2021-11-16 12:27:17.389 INFO  Successfully updated the total price in db 
+2021-11-16 12:28:02.065 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:28:03.233 INFO  ORDER: {"id":1524182,"proxyIp":"127.0.0.1","proxyPort":24006,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:28:35.774 INFO  Add an item to cart. 
+2021-11-16 12:28:44.220 INFO  Add an item to cart. 
+2021-11-16 12:29:48.247 INFO  Sign In Success 
+2021-11-16 12:29:53.806 INFO  Total Order Price is 40.27 
+2021-11-16 12:29:54.800 INFO  Successfully updated the total price in db 
+2021-11-16 12:30:26.296 INFO  Applied gift card info: 6199707994990469, 10.55 
+2021-11-16 12:30:27.415 INFO  {"status":"success"} 
+2021-11-16 12:30:37.549 INFO  Applied value: 10.55 
+2021-11-16 12:31:11.450 INFO  Applied gift card info: 6201554255774877, 10.55 
+2021-11-16 12:31:12.546 INFO  {"status":"success"} 
+2021-11-16 12:31:19.378 INFO  Applied value: 10.55 
+2021-11-16 12:31:50.284 INFO  Applied gift card info: 6186339585392570, 10.55 
+2021-11-16 12:31:51.391 INFO  {"status":"success"} 
+2021-11-16 12:32:01.764 INFO  Applied value: 10.55 
+2021-11-16 12:32:29.435 INFO  Applied gift card info: 6186339019350967, 10.55 
+2021-11-16 12:32:30.451 INFO  {"status":"success"} 
+2021-11-16 12:32:41.264 INFO  Applied value: 10.55 
+2021-11-16 12:32:41.264 INFO  The total price is covered. Placing order... 
+2021-11-16 12:32:42.700 INFO  Cart id: 64c23d00-8430-469f-b121-c864d89b75ca 
+2021-11-16 12:33:25.703 INFO  Order Number:  
+2021-11-16 12:33:26.801 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (events.js:388:22)\n    at endReadableNT (internal/streams/readable.js:1336:12)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":82},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1524182/finish/","data":"{\"supplier_order_number\":\"\",\"items\":[{\"id\":\"17005030877546\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (events.js:388:22)
+    at endReadableNT (internal/streams/readable.js:1336:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) 
+2021-11-16 12:33:49.786 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:33:50.883 INFO  ORDER: {"id":1524186,"proxyIp":"127.0.0.1","proxyPort":24076,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:34:27.911 INFO  Add an item to cart. 
+2021-11-16 12:34:33.822 INFO  Add an item to cart. 
+2021-11-16 12:35:40.127 INFO  Sign In Success 
+2021-11-16 12:35:49.819 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:35:50.912 INFO  ORDER: {"id":1524187,"proxyIp":"127.0.0.1","proxyPort":24027,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:37:17.555 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:37:18.578 INFO  ORDER: {"id":1524188,"proxyIp":"127.0.0.1","proxyPort":24035,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:37:45.697 INFO  Add an item to cart. 
+2021-11-16 12:37:52.319 INFO  Add an item to cart. 
+2021-11-16 12:38:57.326 INFO  Sign In Success 
+2021-11-16 12:39:01.545 INFO  Total Order Price is 40.27 
+2021-11-16 12:39:02.529 INFO  Successfully updated the total price in db 
+2021-11-16 12:40:30.637 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:40:31.684 INFO  ORDER: {"id":1524189,"proxyIp":"127.0.0.1","proxyPort":24047,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:41:04.487 INFO  Add an item to cart. 
+2021-11-16 12:41:10.265 INFO  Add an item to cart. 
+2021-11-16 12:42:16.196 INFO  Sign In Success 
+2021-11-16 12:42:20.103 INFO  Total Order Price is 40.27 
+2021-11-16 12:42:21.013 INFO  Successfully updated the total price in db 
+2021-11-16 12:42:53.536 INFO  Applied gift card info: 6199709011900401, 10.28 
+2021-11-16 12:42:54.623 INFO  {"status":"success"} 
+2021-11-16 12:43:03.059 INFO  Applied value: 10.28 
+2021-11-16 12:43:34.197 INFO  Applied gift card info: 6186593100722838, 10.28 
+2021-11-16 12:43:35.263 INFO  {"status":"success"} 
+2021-11-16 12:43:45.400 INFO  Applied value: 10.28 
+2021-11-16 12:44:15.335 INFO  Applied gift card info: 6192271119606158, 10.28 
+2021-11-16 12:44:16.332 INFO  {"status":"success"} 
+2021-11-16 12:44:23.894 INFO  Applied value: 10.28 
+2021-11-16 12:44:59.769 INFO  Applied gift card info: 6199707994146980, 10.28 
+2021-11-16 12:45:00.760 INFO  {"status":"success"} 
+2021-11-16 12:45:07.495 INFO  Applied value: 10.28 
+2021-11-16 12:45:07.496 INFO  The total price is covered. Placing order... 
+2021-11-16 12:45:10.420 INFO  Cart id: 64c23d00-8430-469f-b121-c864d89b75ca 
+2021-11-16 12:45:55.124 INFO  Order Number:  
+2021-11-16 12:45:56.214 ERROR Error while submitting order number.Request failed with status code 400
+{"message":"Request failed with status code 400","name":"Error","stack":"Error: Request failed with status code 400\n    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)\n    at IncomingMessage.emit (events.js:388:22)\n    at endReadableNT (internal/streams/readable.js:1336:12)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","Authorization":"Basic YnV5Ym90OmZvcnRlMWxvbmc=","User-Agent":"axios/0.24.0","Content-Length":82},"method":"post","url":"https://admin.stlpro.com/v2/ds_order/1524189/finish/","data":"{\"supplier_order_number\":\"\",\"items\":[{\"id\":\"17005030877546\",\"quantity_bought\":1}]}"},"status":400}
+Error: Request failed with status code 400
+    at createError (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/jeff/Projects/ProxmoxBots/node_modules/axios/lib/adapters/http.js:293:11)
+    at IncomingMessage.emit (events.js:388:22)
+    at endReadableNT (internal/streams/readable.js:1336:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) 
+2021-11-16 12:46:29.972 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:46:31.034 INFO  ORDER: {"id":1524191,"proxyIp":"127.0.0.1","proxyPort":24013,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:47:03.286 INFO  Add an item to cart. 
+2021-11-16 12:47:11.611 INFO  Add an item to cart. 
+2021-11-16 12:48:21.423 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:48:22.498 INFO  ORDER: {"id":1524192,"proxyIp":"127.0.0.1","proxyPort":24087,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:48:50.897 INFO  Add an item to cart. 
+2021-11-16 12:48:56.846 INFO  Add an item to cart. 
+2021-11-16 12:50:02.448 INFO  Sign In Success 
+2021-11-16 12:50:04.893 INFO  Total Order Price is 40.27 
+2021-11-16 12:50:05.836 INFO  Successfully updated the total price in db 
+2021-11-16 12:52:10.963 INFO  ORDER: {"id":1524194,"proxyIp":"127.0.0.1","proxyPort":24039,"email":"lemuredae@yahoo.com","primaryItem":"253791462","primaryItemQty":1,"extraItem":"56074532","firstName":"Daphne","lastName":"Lofton","addressOne":"152 E MAYS RD","addressTwo":"","city":"STOCKBRIDGE","state":"GA","zipCode":"30281-1826","phoneNumber":"2453434634","sharedRegistryLink":"https://www.walmart.com/registry/ER/ba6ccaac-e4d7-446a-aa76-53e3dbd276a0"} 
+2021-11-16 12:55:00.975 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:55:02.078 INFO  ORDER: {"id":1524196,"proxyIp":"127.0.0.1","proxyPort":24000,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:55:38.356 INFO  Add an item to cart. 
+2021-11-16 12:55:44.457 INFO  Add an item to cart. 
+2021-11-16 12:56:50.959 INFO  Sign In Success 
+2021-11-16 12:56:54.650 INFO  Total Order Price is 40.27 
+2021-11-16 12:56:55.583 INFO  Successfully updated the total price in db 
+2021-11-16 12:57:41.022 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 12:57:42.082 INFO  ORDER: {"id":1524199,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 12:58:21.095 INFO  Add an item to cart. 
+2021-11-16 12:58:25.872 INFO  Add an item to cart. 
+2021-11-16 12:59:35.960 INFO  Sign In Success 
+2021-11-16 12:59:40.163 INFO  Total Order Price is 40.27 
+2021-11-16 12:59:41.124 INFO  Successfully updated the total price in db 
+2021-11-16 13:29:57.471 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:29:58.547 INFO  ORDER: {"id":1524207,"proxyIp":"127.0.0.1","proxyPort":24058,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:30:31.661 INFO  Add an item to cart. 
+2021-11-16 13:30:36.852 INFO  Add an item to cart. 
+2021-11-16 13:31:43.561 INFO  Sign In Success 
+2021-11-16 13:31:46.984 INFO  Total Order Price is 40.27 
+2021-11-16 13:31:47.934 INFO  Successfully updated the total price in db 
+2021-11-16 13:32:55.492 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:32:56.539 INFO  ORDER: {"id":1524209,"proxyIp":"127.0.0.1","proxyPort":24029,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:33:27.110 INFO  Add an item to cart. 
+2021-11-16 13:33:33.198 INFO  Add an item to cart. 
+2021-11-16 13:34:38.593 INFO  Sign In Success 
+2021-11-16 13:34:51.814 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:34:52.857 INFO  ORDER: {"id":1524211,"proxyIp":"127.0.0.1","proxyPort":24044,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:35:23.687 INFO  Add an item to cart. 
+2021-11-16 13:35:27.800 INFO  Add an item to cart. 
+2021-11-16 13:36:35.974 INFO  Sign In Success 
+2021-11-16 13:36:50.756 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:36:51.794 INFO  ORDER: {"id":1524213,"proxyIp":"127.0.0.1","proxyPort":24074,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:37:26.676 INFO  Add an item to cart. 
+2021-11-16 13:37:32.855 INFO  Add an item to cart. 
+2021-11-16 13:38:37.294 INFO  Sign In Success 
+2021-11-16 13:38:41.752 INFO  Total Order Price is 37.99 
+2021-11-16 13:38:42.686 INFO  Successfully updated the total price in db 
+2021-11-16 13:39:54.189 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:39:55.239 INFO  ORDER: {"id":1524215,"proxyIp":"127.0.0.1","proxyPort":24056,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:40:33.401 INFO  Add an item to cart. 
+2021-11-16 13:40:37.144 INFO  Add an item to cart. 
+2021-11-16 13:42:45.395 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:42:46.459 INFO  ORDER: {"id":1524218,"proxyIp":"127.0.0.1","proxyPort":24033,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:43:16.976 INFO  Add an item to cart. 
+2021-11-16 13:43:22.928 INFO  Add an item to cart. 
+2021-11-16 13:44:37.836 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:44:38.913 INFO  ORDER: {"id":1524220,"proxyIp":"127.0.0.1","proxyPort":24069,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:45:10.921 INFO  Add an item to cart. 
+2021-11-16 13:45:16.233 INFO  Add an item to cart. 
+2021-11-16 13:46:18.376 INFO  Sign In Success 
+2021-11-16 13:46:21.511 INFO  Total Order Price is 40.27 
+2021-11-16 13:46:22.449 INFO  Successfully updated the total price in db 
+2021-11-16 13:48:27.889 INFO  ORDER: {"id":1524221,"proxyIp":"127.0.0.1","proxyPort":24009,"email":"lemuredae@yahoo.com","primaryItem":"253791462","primaryItemQty":1,"extraItem":"56074532","firstName":"Daphne","lastName":"Lofton","addressOne":"152 E MAYS RD","addressTwo":"","city":"STOCKBRIDGE","state":"GA","zipCode":"30281-1826","phoneNumber":"2453434634","sharedRegistryLink":"https://www.walmart.com/registry/ER/ba6ccaac-e4d7-446a-aa76-53e3dbd276a0"} 
+2021-11-16 13:49:52.973 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:49:54.063 INFO  ORDER: {"id":1524222,"proxyIp":"127.0.0.1","proxyPort":24094,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:50:27.762 INFO  Add an item to cart. 
+2021-11-16 13:50:33.637 INFO  Add an item to cart. 
+2021-11-16 13:51:29.040 INFO  Sign In Success 
+2021-11-16 13:51:35.016 INFO  Total Order Price is 40.27 
+2021-11-16 13:51:35.928 INFO  Successfully updated the total price in db 
+2021-11-16 13:53:38.601 INFO  Order Item IDs: ["17005030877546","23302132684114","51645294227634"] 
+2021-11-16 13:53:39.666 INFO  ORDER: {"id":1524224,"proxyIp":"127.0.0.1","proxyPort":24007,"email":"stanleeg@yahoo.com","primaryItem":"55467849","primaryItemQty":1,"extraItem":"922484274","firstName":"Bryson","lastName":"Gratton","addressOne":"1418 NEW YORK ST","addressTwo":"","city":"MIDDLETON","state":"ID","zipCode":"83644-5822","phoneNumber":"5297175999","sharedRegistryLink":"https://www.walmart.com/registry/ER/a92552df-7ecd-4572-b6b3-abae2f4900fc"} 
+2021-11-16 13:54:08.673 INFO  Add an item to cart. 
+2021-11-16 13:54:13.778 INFO  Add an item to cart. 
+2021-11-16 13:55:15.488 INFO  Sign In Success 
+2021-11-16 13:55:19.100 INFO  Total Order Price is 40.27 
+2021-11-16 13:55:20.038 INFO  Successfully updated the total price in db 
+2021-11-16 13:56:23.971 INFO  Applied gift card info: 6192271119842224, 9.12 
+2021-11-16 13:56:25.201 INFO  {"status":"success"} 
+2021-11-16 13:56:34.894 INFO  Applied value: 9.12 
+2021-11-16 13:57:10.519 INFO  Applied gift card info: 6192276073618954, 9.12 
+2021-11-16 13:57:11.681 INFO  {"status":"success"} 
+2021-11-16 13:57:17.988 INFO  Applied value: 9.12 
+2021-11-16 13:57:56.491 INFO  Applied gift card info: 6186339628777408, 9.12 
+2021-11-16 13:57:57.471 INFO  {"status":"success"} 
+2021-11-16 13:58:07.020 INFO  Applied value: 9.12 
+2021-11-16 13:58:40.422 INFO  Applied gift card info: 6186338473499078, 12.95 
+2021-11-16 13:58:41.439 INFO  {"status":"success"} 
+2021-11-16 13:58:50.930 INFO  Applied value: 12.95 
+2021-11-16 13:58:50.931 INFO  The total price is covered. Placing order... 
+2021-11-16 13:58:54.300 INFO  Cart id: 64c23d00-8430-469f-b121-c864d89b75ca 
+2021-11-16 13:59:09.991 WARN  [id="px-captcha"] 
+2021-11-16 13:59:40.811 INFO  Tried to solve captcha 1 times 
+2021-11-16 13:59:50.807 WARN  [id="px-captcha"] 
+2021-11-16 14:00:17.516 INFO  Tried to solve captcha 2 times 
+2021-11-16 14:02:00.658 INFO  ORDER: {"id":1524226,"proxyIp":"127.0.0.1","proxyPort":24057,"email":"lemuredae@yahoo.com","primaryItem":"253791462","primaryItemQty":1,"extraItem":"56074532","firstName":"Daphne","lastName":"Lofton","addressOne":"152 E MAYS RD","addressTwo":"","city":"STOCKBRIDGE","state":"GA","zipCode":"30281-1826","phoneNumber":"2453434634","sharedRegistryLink":"https://www.walmart.com/registry/ER/ba6ccaac-e4d7-446a-aa76-53e3dbd276a0"} 
