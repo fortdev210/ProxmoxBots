@@ -213,6 +213,13 @@ class WalmartBuy extends WalmartBase {
       $("span:contains(View details)").click();
     });
     await this.sleep(3000);
+    await this.loadJqueryIntoPage();
+    await this.sleep(1000);
+    const orderNumber = await this.page.evaluate(() => {
+      const orderNumber = $("span:contains(Order#)").text();
+      return orderNumber.replace(/\D/g, "");
+    });
+    return orderNumber;
   }
 
   async cancelExtraItem() {
@@ -253,17 +260,21 @@ class WalmartBuy extends WalmartBase {
         timeout: 5000,
       }
     );
-    await this.page.evaluate(() => {
-      // $("label:contains(Ordered wrong item or amount.)").click();
-      document.querySelectorAll('[id*="radio-"]')[2].click();
-    });
+    console.log("Open drawer.");
+    const [button] = await this.page.$x(
+      "//label[contains(text(), 'Ordered wrong item or amount.')]"
+    );
+    if (button) {
+      await button.click();
+      console.log("Select reason");
+    }
     await this.sleep(1000);
     await this.page.evaluate(() => {
       // $("button:contains(Remove)").click();
       document.querySelectorAll('[data-testid="cancel-cta"]')[0].click();
     });
 
-    await this.sleep(3000);
+    await this.sleep(3000000);
     LOGGER.info("Extra item successfully removed.");
   }
 
@@ -281,22 +292,24 @@ class WalmartBuy extends WalmartBase {
       await this.continuetoCheckout();
       await this.fillSignInCart();
       await this.payOrder();
-      const orderNumber = await this.placeOrder();
-      LOGGER.info("Order Number: " + orderNumber);
       const items = [
         {
           id: this.orderItemId,
           quantity_bought: this.orderInfo.primaryItemQty,
         },
       ];
+      await this.placeOrder();
+      await this.sleep(3000);
+      const orderNumber = await this.openOrderHistoryPage();
+      LOGGER.info("Order Number: " + orderNumber);
       await api.updatePurchasedOrderNumber(
         this.orderInfo.id,
         orderNumber,
         items
       );
-      await this.sleep(3000);
-      await this.openOrderHistoryPage();
-      await this.cancelExtraItem();
+      if (this.orderInfo.extraItem) {
+        await this.cancelExtraItem();
+      }
       await this.closeBrowser();
     } catch (error) {
       console.error(error);
