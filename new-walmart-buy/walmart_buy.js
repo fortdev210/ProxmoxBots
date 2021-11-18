@@ -18,14 +18,54 @@ class WalmartBuy extends WalmartBase {
   }
 
   async addItemsToCart() {
-    await this.clickButton('[aria-label*="Add to cart"]');
-    await this.sleep(2000);
-    LOGGER.info("Add an item to cart.");
-    try {
+    if (this.orderInfo.extraItem) {
+      const isFirstPrimary = await this.page.evaluate(
+        (primaryItemNumber) => {
+          const firstItemHref = document
+            .querySelectorAll("[data-item-id]")[0]
+            .querySelector("a").href;
+          if (firstItemHref.indexOf(primaryItemNumber) > -1) {
+            return true;
+          }
+          return false;
+        },
+        [this.orderInfo.primaryItem]
+      );
+      if (isFirstPrimary) {
+        await this.clickButton('[aria-label*="Add to cart"]');
+        await this.sleep(2000);
+        if (this.orderInfo.primaryItemQty > 1) {
+          for (let i = 1; i < this.orderInfo.primaryItemQty; i++) {
+            await this.clickButton('[aria-label*="Increase quantity]');
+            await this.sleep(100);
+          }
+        }
+      } else {
+        const addToCartBtns = await this.page.$$('[aria-label*="Add to cart"]');
+        const primaryBtn = addToCartBtns[1];
+        await primaryBtn.click();
+        await this.sleep(1000);
+        if (this.orderInfo.primaryItemQty > 1) {
+          for (let i = 1; i < this.orderInfo.primaryItemQty; i++) {
+            await this.clickButton('[aria-label*="Increase quantity]');
+            await this.sleep(100);
+          }
+        }
+      }
+      // Add extra item
       await this.clickButton('[aria-label*="Add to cart"]');
       await this.sleep(2000);
-      LOGGER.info("Add an item to cart.");
-    } catch (error) {}
+    } else {
+      await this.clickButton('[aria-label*="Add to cart"]');
+      await this.sleep(2000);
+      if (this.orderInfo.primaryItemQty > 1) {
+        for (let i = 1; i < this.orderInfo.primaryItemQty; i++) {
+          await this.clickButton('[aria-label*="Increase quantity]');
+          await this.sleep(100);
+        }
+      }
+    }
+    LOGGER.info("Add an item to cart.");
   }
 
   async continuetoCheckout() {

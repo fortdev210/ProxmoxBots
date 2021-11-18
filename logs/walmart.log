@@ -3523,3 +3523,33 @@ Error: Request failed with status code 400
 2021-11-18 10:44:07.702 INFO  Add an item to cart. 
 2021-11-18 10:44:15.751 INFO  Add an item to cart. 
 2021-11-18 10:44:16.029 WARN  [id="px-captcha"] 
+2021-11-18 10:56:29.606 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 10:56:31.049 INFO  ORDER: {"id":1524723,"proxyIp":"127.0.0.1","proxyPort":24096,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 10:57:04.344 INFO  Add an item to cart. 
+2021-11-18 10:57:09.876 INFO  Add an item to cart. 
+2021-11-18 10:57:57.131 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 10:57:58.536 INFO  ORDER: {"id":1524724,"proxyIp":"127.0.0.1","proxyPort":24078,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 10:59:01.782 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 10:59:03.220 INFO  ORDER: {"id":1524725,"proxyIp":"127.0.0.1","proxyPort":24032,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:03:51.778 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:03:53.181 INFO  ORDER: {"id":1524726,"proxyIp":"127.0.0.1","proxyPort":24006,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:05:36.288 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:05:37.704 INFO  ORDER: {"id":1524727,"proxyIp":"127.0.0.1","proxyPort":24019,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:27:29.597 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:27:30.917 INFO  ORDER: {"id":1524760,"proxyIp":"127.0.0.1","proxyPort":24010,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:29:00.445 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:29:01.804 INFO  ORDER: {"id":1524761,"proxyIp":"127.0.0.1","proxyPort":24065,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:29:49.242 INFO  Add an item to cart. 
+2021-11-18 11:30:51.100 INFO  Sign In Success 
+2021-11-18 11:31:32.457 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:31:33.895 INFO  ORDER: {"id":1524764,"proxyIp":"127.0.0.1","proxyPort":24069,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:32:15.605 INFO  Add an item to cart. 
+2021-11-18 11:33:18.279 INFO  Sign In Success 
+2021-11-18 11:35:55.583 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:35:56.814 INFO  ORDER: {"id":1524766,"proxyIp":"127.0.0.1","proxyPort":24008,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:36:46.824 INFO  Add an item to cart. 
+2021-11-18 11:37:48.617 INFO  Sign In Success 
+2021-11-18 11:43:16.339 INFO  Order Item IDs: ["WH202111161547349287","WH202111161547386975","WH202111161547426216"] 
+2021-11-18 11:43:17.706 INFO  ORDER: {"id":1524773,"proxyIp":"127.0.0.1","proxyPort":24098,"email":"phillipssophia683@yahoo.com","primaryItem":"220425544","primaryItemQty":1,"extraItem":"687375927","firstName":"Filipe","lastName":"LastName","addressOne":"1380 S Kingshighway Blvd","addressTwo":"Rear","city":"St. Louis","state":"MO","zipCode":"63110","phoneNumber":"5197482025","sharedRegistryLink":"https://www.walmart.com/registry/ER/4a24e888-2f35-4c80-a8f8-da59862a9c29"} 
+2021-11-18 11:44:05.401 INFO  Add an item to cart. 
+2021-11-18 11:45:04.653 INFO  Sign In Success 
