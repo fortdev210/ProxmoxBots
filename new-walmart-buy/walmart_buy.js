@@ -301,19 +301,25 @@ class WalmartBuy extends WalmartBase {
         timeout: 5000,
       }
     );
-    console.log("Open drawer.");
-    const [button] = await this.page.$x(
-      "//label[contains(text(), 'Ordered wrong item or amount.')]"
-    );
-    if (button) {
-      await button.click();
-      console.log("Select reason");
-    }
+
+    // const [button] = await this.page.$x(
+    //   "//label[contains(text(), 'Ordered wrong item or amount.')]"
+    // );
+    // if (button) {
+    //   await button.click();
+    //   console.log("Select reason");
+    // }
+    const reasonOptions = await this.page.$$('[id*="radio-"]');
+    const properOptions = await reasonOptions[2];
+    await properOptions.focus();
+    await properOptions.click();
+
     await this.sleep(1000);
-    await this.page.evaluate(() => {
-      // $("button:contains(Remove)").click();
-      document.querySelectorAll('[data-testid="cancel-cta"]')[0].click();
-    });
+    await this.page.click('[data-testid="cancel-cta"]');
+    // await this.page.evaluate(() => {
+    //   // $("button:contains(Remove)").click();
+    //   document.querySelectorAll('[data-testid="cancel-cta"]')[0].click();
+    // });
 
     await this.sleep(3000000);
     LOGGER.info("Extra item successfully removed.");
