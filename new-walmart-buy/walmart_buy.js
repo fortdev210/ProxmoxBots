@@ -2,6 +2,7 @@ const LOGGER = require("../lib/logger");
 const WalmartBase = require("../lib/walmart");
 const API = require("../lib/api");
 const api = new API();
+const { WALMART } = require("../constants/urls");
 
 class WalmartBuy extends WalmartBase {
   constructor(orderInfo, orderItemId) {
@@ -318,6 +319,38 @@ class WalmartBuy extends WalmartBase {
     LOGGER.info("Extra item successfully removed.");
   }
 
+  async checkAlreadyPurchased() {
+    const purchased = await this.page.evaluate(() => {
+      if ($("h2:contains(Purchased)").length) return true;
+      return false;
+    });
+    if (purchased) {
+      LOGGER.info("Items are already purchased.");
+      await this.openLink(WALMART.AUTH_LINK);
+      await this.signInWalmart(this.orderInfo.email);
+      await this.resolveCaptcha();
+      try {
+        await this.openLink(WALMART.ORDER_LINK);
+        await this.sleep(1000);
+        await this.loadJqueryIntoPage();
+        await this.sleep(1000);
+        await this.page.evaluate(() => {
+          $("span:contains(View details)").click();
+        });
+        await this.loadJqueryIntoPage();
+        console.log("Details pages");
+        await this.sleep(1000);
+        const orderNumber = await this.page.evaluate(() => {
+          const orderNumber = $("span:contains(Order#)").text();
+          return orderNumber.replace(/\D/g, "");
+        });
+        LOGGER.info("Order number", orderNumber);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
+
   async buy() {
     await this.initPuppeteer();
     await this.sleep(3000);
@@ -327,7 +360,11 @@ class WalmartBuy extends WalmartBase {
     ]);
     try {
       await this.openRigistryPage(this.orderInfo.sharedRegistryLink);
-      await this.addItemsToCart();
+      try {
+        await this.addItemsToCart();
+      } catch (error) {
+        await this.checkAlreadyPurchased();
+      }
       await this.resolveCaptcha();
       await this.continuetoCheckout();
       await this.fillSignInCart();
